@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Philip\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Philip\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_NTOProject2024-2025.-1460673000.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Philip\Documents\LocalProjects\NTOProject2024-2025" t="IncludeRecursive">
+    <e p="C:\Users\Philip\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_NTOProject2024-2025.330127729.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Philip\Documents\GitHub\NTO2024-2025\NTOProject2024-2025" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -35,7 +35,12 @@
             <e p="SceneTransitionManager.cs" t="Include" />
           </e>
           <e p="PlayerInput" t="Include">
-            <e p="MovementCharacter.cs" t="Include" />
+            <e p="CharacterMovement" t="Include">
+              <e p="CameraFollowTarget.cs" t="Include" />
+              <e p="Helpers.cs" t="Include" />
+              <e p="MovementCharacter.cs" t="Include" />
+              <e p="PlayerAnimationController.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>
