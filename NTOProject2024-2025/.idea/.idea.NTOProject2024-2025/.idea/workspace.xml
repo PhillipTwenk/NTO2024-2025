@@ -20,14 +20,285 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/MovementCharacter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/MovementCharacter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/MovementCharacterAC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animation/MovementCharacterAC.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/BlockingLoop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/BlockingLoop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/BowShot.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/BowShot.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/Buff.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/Buff.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/CastingLoop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/CastingLoop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/Death.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/Death.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/GetHit.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/GetHit.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/IdleCombat.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/IdleCombat.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/MeeleeAttack_OneHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/MeeleeAttack_OneHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/MeeleeAttack_TwoHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/MeeleeAttack_TwoHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/PunchLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/PunchLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/PunchRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/PunchRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpellCast.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpellCast.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinAttack_TwoHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinAttack_TwoHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinAttack_TwoWeapons.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinAttack_TwoWeapons.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinLoop_TwoHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinLoop_TwoHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinToWin_OneHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinToWin_OneHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinToWin_TwoHanded.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/SpinToWin_TwoHanded.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/StunnedLoop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Combat/StunnedLoop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Gathering.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Gathering/Gathering.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Gathering/Gathering.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Gathering/MiningLoop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Gathering/MiningLoop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/FallingLoop.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/FallingLoop.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/JumpWhileRunning.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/JumpWhileRunning.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Jumps.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Jumps.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollBackward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollBackward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollForward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollForward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RollRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackwardLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackwardLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackwardRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunBackwardRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunForward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunForward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/RunRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Sprint.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/Sprint.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/StrafeLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/StrafeLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/StrafeRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/StrafeRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackwardLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackwardLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackwardRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkBackwardRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForwardLeft.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForwardLeft.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForwardRight.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Movement/WalkForwardRight.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMale/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMaleSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/DEMO_FreeStylizedHumanMaleSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/PPProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/PPProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/StylizedHumanAnimator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Demo_Characters/StylizedHumanAnimator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Materials_ArmorsHumans/StarterArmor_3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_BaseColor3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Normals.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Normals.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Textures_ArmorsHumans/StarterArmor_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Accessories.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Accessories.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Beard1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Beard1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Beard3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Beard3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Eyebrows.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Eyebrows.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Eyes.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Eyes.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/EyesOuter.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/EyesOuter.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Face1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Face1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Hair1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Hair1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Hair2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Materials_Humans/Hair2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/HumanMale_Character.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/HumanMale_Character.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Beard3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Beard3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Eyebrow1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Eyebrow1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Face1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Face1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Hair2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Hair2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Sideburns1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_Sideburns1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_TopKnot.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Meshes_Humans/StylizedHumanMale_TopKnot.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Prefabs_Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Prefabs_Humans/HumanMale_Character_Free.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Prefabs_Humans/HumanMale_Character_Free.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_BaseColor3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Accessories_T_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_1_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Beard_3_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Body_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyebrows_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Eyes_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Face_1_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_1_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/Stylized/Humans/Textures_Humans/HM_Hair_2_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +326,19 @@
         <option value="$PROJECT_DIR$/Assets/Quests/QuestOwner.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/Inventory/CollectableItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/Inventory/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEventListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/QuestController.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Objective.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Quest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/CameraFollowTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
       </list>
     </option>
@@ -82,6 +353,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -114,7 +386,8 @@
       <updated>1731425891230</updated>
       <workItem from="1731425896096" duration="41000" />
       <workItem from="1731425957457" duration="7412000" />
-      <workItem from="1731538466767" duration="939000" />
+      <workItem from="1731538466767" duration="1455000" />
+      <workItem from="1731581575899" duration="13027000" />
     </task>
     <servers />
   </component>
@@ -133,11 +406,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="707" y="361" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1731582389475">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="707" y="361" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1032@0.0.1920.1032" timestamp="1731582389475" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1731582516706">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1731582516706" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1731427292029">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

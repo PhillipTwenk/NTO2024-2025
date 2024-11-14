@@ -33,4 +33,25 @@ public class PlayerAnimationController : MonoBehaviour
             t = 0;
         }
     }
+
+    public void JumpAnim(string mode, bool IsInAir)
+    {
+        if (mode == "start")
+        {
+            animController.SetBool("Jump", true);
+            if (IsInAir)
+            {
+                animController.SetBool("IsInAir", true);
+            }
+        }else if (mode == "end")
+        {
+            animController.SetBool("Jump", false);
+            animController.SetBool("IsInAir", false);
+        }
+    }
+
+    public void Falling()
+    {
+        animController.SetBool("IsInAir",true);
+    }
 }

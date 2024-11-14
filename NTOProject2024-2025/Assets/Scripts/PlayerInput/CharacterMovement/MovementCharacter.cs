@@ -2,21 +2,28 @@ using UnityEngine;
 
 public class MovementCharacter : MonoBehaviour
 {
-    Rigidbody _rb; //RigidBody
-    Vector3 _input; // вектор для управления
-    public float speed; // скорость движения
-    public float speedTurn; // скорость поворота
+    [SerializeField] private EntityID playerID;
+    private Rigidbody _rb;
+    private PlayerAnimationController _animationController;
+    
+    private Vector3 _input; // вектор для управления
     public bool matrix = false; // Преобразование поворота для изометрии
-    Vector3 relative;
-    void Start()
+    private Vector3 relative;
+    private bool isGrounded;
+    private int jumpCount;
+    private bool IsInAir;
+    
+    private void Start()
     {
+        _animationController = GetComponent<PlayerAnimationController>();
         _rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Update()
     {
         InputGet();
         Look();
+        Jump();
     }
     private void FixedUpdate()
     {
@@ -27,20 +34,20 @@ public class MovementCharacter : MonoBehaviour
     }
     void InputGet()
     {
-        _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); // получаем данные с клавиатуры
-        if (Input.GetKey(KeyCode.LeftShift)) // ускорение при шифте
+        _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (Input.GetButton("Sprint")) 
         {
-            speed = 5f;
+            playerID.playerStats.Speed = playerID.playerStats.SprintSpeed;
         }
         else
         {
-            speed = 3f;
+            playerID.playerStats.Speed = playerID.playerStats.NormalSpeed;
         }
 
     }
     void Move()
     {
-        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*speed * Time.deltaTime); // сообственно само движение
+        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.playerStats.Speed * Time.deltaTime); 
     }
 
     void Look()
@@ -57,12 +64,46 @@ public class MovementCharacter : MonoBehaviour
             }
 
             var rot = Quaternion.LookRotation(relative, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, speedTurn * Time.deltaTime);
-            GetComponent<PlayerAnimationController>().Run(speed, true); // включаем анимации 
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.playerStats.SpeedTurn * Time.deltaTime);
+            _animationController.Run(playerID.playerStats.Speed, true); // включаем анимации 
         }
         else
         {
-            GetComponent<PlayerAnimationController>().Run(speed, false);
+            _animationController.Run(playerID.playerStats.Speed, false);
+        }
+    }
+    
+    private void Jump()
+    {
+        // Проверяем, находится ли игрок на земле
+        if (Physics.Raycast(transform.position, Vector3.down, 0.5f))
+        {
+            isGrounded = true;
+            IsInAir = false;
+            _animationController.JumpAnim("end", false);
+        }
+        else
+        {
+            isGrounded = false;
+        }
+        
+        //Проверка, падает ли игрок
+        if (Physics.Raycast(transform.position, Vector3.down, 3.3f))
+        {
+            IsInAir = false;
+            _animationController.JumpAnim("end", false);
+        }
+        else
+        {
+            IsInAir = true;
+            _animationController.Falling();
+        }
+    
+        // Проверяем нажатие пробела
+        if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
+        {
+            _animationController.JumpAnim("start", IsInAir);
+            _rb.AddForce(Vector3.up * playerID.playerStats.JumpForce, ForceMode.Impulse);
         }
     }
 }
