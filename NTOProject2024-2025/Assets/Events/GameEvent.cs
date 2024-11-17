@@ -5,8 +5,11 @@ using UnityEngine;
 /// SO для создания ивентов, а также предоставление методов работы с ними
 /// </summary>
 [CreateAssetMenu(menuName ="Game Event")]  
-public class GameEvent : ScriptableObject  
-{  
+public class GameEvent : ScriptableObject
+{
+    [TextArea]
+    [SerializeField] private string Description;
+    
     //Список скриптов-слушателей  
     private List<GameEventListener> listeners = new List<GameEventListener>();  
   

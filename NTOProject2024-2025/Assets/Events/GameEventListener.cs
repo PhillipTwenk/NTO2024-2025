@@ -9,6 +9,9 @@ using UnityEngine.Events;
 /// </summary>
 public class GameEventListener : MonoBehaviour
 {
+    //[TextArea]
+    //[SerializeField] private string Description;
+    
     //Сюда загружается нужный SO-экземпляр ивента
     public GameEvent gameEvent;
 

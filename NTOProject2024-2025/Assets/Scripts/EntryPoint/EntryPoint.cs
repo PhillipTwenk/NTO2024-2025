@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 public class EntryPoint : MonoBehaviour
 {
     [SerializeField] private GameEvent MoveToMainMenuSceneEvent;
+    [SerializeField] private string PersistentManagerName;
+    [SerializeField] private string MainMenuName;
+    [SerializeField] private string BootstrapName;
     
     /// <summary>
     ///Запускает инициализацию данных и загружает две изначальные сцены, после чего выгружает Bootstrap 
@@ -18,9 +21,9 @@ public class EntryPoint : MonoBehaviour
         InitializeData();
         
         AsyncOperation LoadingScenePersistentManagers =
-            SceneManager.LoadSceneAsync("PersistentManagers", LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(PersistentManagerName, LoadSceneMode.Additive);
         AsyncOperation LoadingSceneMainMenu = 
-            SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(MainMenuName, LoadSceneMode.Additive);
             
             
         //Пока не завершится выгрузка сцены точки вхождения
@@ -28,12 +31,12 @@ public class EntryPoint : MonoBehaviour
         Debug.Log("PersistentManagers и MainMenu сцены были загружены");
         
         //Установка сцены главного меню основной
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu"));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(MainMenuName));
         
         MoveToMainMenuSceneEvent.TriggerEvent();
         
         //Выгрузка сцены - точки входа
-        SceneManager.UnloadSceneAsync("Bootstrap");
+        SceneManager.UnloadSceneAsync(BootstrapName);
     }
 
     private void InitializeData()
