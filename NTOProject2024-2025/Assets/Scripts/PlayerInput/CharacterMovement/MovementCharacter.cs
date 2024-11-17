@@ -23,7 +23,7 @@ public class MovementCharacter : MonoBehaviour
     {
         InputGet();
         Look();
-        Jump();
+        //Jump();
     }
     private void FixedUpdate()
     {
@@ -73,6 +73,7 @@ public class MovementCharacter : MonoBehaviour
         }
     }
     
+    //Не используется
     private void Jump()
     {
         // Проверяем, находится ли игрок на земле
