@@ -30,6 +30,13 @@
           <e p="QuestOwner.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="APIControl" t="Include">
+            <e p="APIRsControlInChoicePlayerPanel.cs" t="Include" />
+            <e p="HTTPRequests.cs" t="Include" />
+            <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerResources.cs" t="Include" />
+            <e p="ShopData.cs" t="Include" />
+          </e>
           <e p="EntryPoint" t="Include">
             <e p="EntryPoint.cs" t="Include" />
           </e>

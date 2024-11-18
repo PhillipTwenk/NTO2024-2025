@@ -8,6 +8,9 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "ForEntities/Entity")]
 public class EntityID : ScriptableObject
 {
+    [TextArea] public string Name;
+    
+    
     public Stats playerStats;
     public Inventory playerInventory;
     public Quest currentQuest;

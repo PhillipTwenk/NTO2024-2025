@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,11 +9,31 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class EntryPoint : MonoBehaviour
 {
+    
+    [SerializeField] private bool IsInEditor;
+    [SerializeField] private string DefaultNamePlayer;
+    
+    
     [SerializeField] private GameEvent MoveToMainMenuSceneEvent;
     [SerializeField] private string PersistentManagerName;
     [SerializeField] private string MainMenuName;
     [SerializeField] private string BootstrapName;
-    
+
+    [SerializeField] private EntityID player1;
+    [SerializeField] private EntityID player2;
+    [SerializeField] private EntityID player3;
+
+    private void Awake()
+    {
+        //TestInEditor
+        if (IsInEditor)
+        {
+            player1.Name = DefaultNamePlayer;
+            player2.Name = DefaultNamePlayer;
+            player3.Name = DefaultNamePlayer;
+        }
+    }
+
     /// <summary>
     ///Запускает инициализацию данных и загружает две изначальные сцены, после чего выгружает Bootstrap 
     /// </summary>

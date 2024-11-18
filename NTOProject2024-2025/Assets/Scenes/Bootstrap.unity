@@ -163,10 +163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ad057fa2acd5e47967ad1840016061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsInEditor: 1
+  DefaultNamePlayer: None
   MoveToMainMenuSceneEvent: {fileID: 11400000, guid: 5170f17f5c3edc64d8f979cd3a052d96, type: 2}
   PersistentManagerName: PersistentManagers
   MainMenuName: MainMenu
   BootstrapName: Bootstrap
+  player1: {fileID: 11400000, guid: 7ebb1e7c1eb3f9443bba2238db1615d3, type: 2}
+  player2: {fileID: 11400000, guid: fece30a5395bb1044867d15a78a33fa1, type: 2}
+  player3: {fileID: 11400000, guid: d09f65a1a74320746a42ef5838d8e41f, type: 2}
 --- !u!1 &794757783
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,13 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private GameEvent StartGameButtonClickEvent;
     [SerializeField] private GameEvent SettingsButtonClickEvent;
     [SerializeField] private GameEvent ReturnToMainMenuEvent;
+    [SerializeField] private GameEvent ReturnToPlayerChoicePanelEvent;
+    [SerializeField] private GameEvent ClickCreateNewPlayerButtonEvent;
+    [SerializeField] private GameEvent StartGameInChoiceCharacterPanel;
+    //[SerializeField] private EntityID player1;
+    //[SerializeField] private EntityID player2;
+    //[SerializeField] private EntityID player3;
+    
         
         
         
@@ -89,6 +96,43 @@ public class UIManagerMainMenu : MonoBehaviour
     /// </summary>
     public void ReturnToMainMenu()
     {
-        ReturnToMainMenuEvent.TriggerEvent();
+        Debug.Log("Возврат в Главное меню");
+        ReturnToMainMenuEvent.TriggerEvent(); 
     }
+    
+    /// <summary>
+    /// Вернуться в меню выбора персонажа
+    /// </summary>
+    public void ReturnToPlayerChoicePanel()
+    {
+        Debug.Log("Возврат в меню выбора персонажа");
+        ReturnToPlayerChoicePanelEvent.TriggerEvent(); 
+    }
+    
+    /// <summary>
+    /// Нажатие на кнопку создания 
+    /// </summary>
+    public void ChoiceNewPlayer(EntityID player)
+    {
+        if (player.Name == "None")
+        {
+            Debug.Log("Создание нового персонажа");
+            ClickCreateNewPlayerButtonEvent.TriggerEvent(); 
+        }
+        else
+        {
+            Debug.Log("Вход в игру с существующим персонажем");
+            StartGameInChoiceCharacterPanel.TriggerEvent();
+        }
+        
+    }
+    
+//     /// <summary>
+//     /// Начать игру после создания персонажа
+//     /// </summary>
+//     public void StartGameAfterCreateChoice()
+//     {
+//         Debug.Log("Вход в игру с существующим персонажем");
+//         StartGameInChoiceCharacterPanel.TriggerEvent(); 
+//     }
 }
