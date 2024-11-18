@@ -36,6 +36,7 @@
             <e p="PlayerData.cs" t="Include" />
             <e p="PlayerResources.cs" t="Include" />
             <e p="ShopData.cs" t="Include" />
+            <e p="ShopResources.cs" t="Include" />
           </e>
           <e p="EntryPoint" t="Include">
             <e p="EntryPoint.cs" t="Include" />
