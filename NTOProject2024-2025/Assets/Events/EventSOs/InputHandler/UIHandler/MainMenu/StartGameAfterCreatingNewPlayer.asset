@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445159c59dae30f4aaea3120971a625a, type: 3}
-  m_Name: MainPlayerInventory
+  m_Script: {fileID: 11500000, guid: 4f9168cf067106c40836d917dc3df619, type: 3}
+  m_Name: StartGameAfterCreatingNewPlayer
   m_EditorClassIdentifier: 
-  items: []
-  maxSlots: 10
+  Description: 

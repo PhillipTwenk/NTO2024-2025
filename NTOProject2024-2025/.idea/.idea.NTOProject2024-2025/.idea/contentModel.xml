@@ -12,11 +12,6 @@
         </e>
         <e p="Entities" t="Include">
           <e p="EntityID.cs" t="Include" />
-          <e p="Inventory" t="Include">
-            <e p="CollectableItem.cs" t="Include" />
-            <e p="Inventory.cs" t="Include" />
-            <e p="Item.cs" t="Include" />
-          </e>
           <e p="Stats.cs" t="Include" />
         </e>
         <e p="Events" t="Include">
@@ -31,11 +26,17 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="APIControl" t="Include">
+            <e p="APIManager.cs" t="Include" />
             <e p="APIRsControlInChoicePlayerPanel.cs" t="Include" />
             <e p="HTTPRequests.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerDataList.cs" t="Include" />
+            <e p="PlayerLog.cs" t="Include" />
             <e p="PlayerResources.cs" t="Include" />
+            <e p="ProductChangesShopLog.cs" t="Include" />
+            <e p="ResourcesChangedPlayerLog.cs" t="Include" />
             <e p="ShopData.cs" t="Include" />
+            <e p="ShopLog.cs" t="Include" />
             <e p="ShopResources.cs" t="Include" />
           </e>
           <e p="EntryPoint" t="Include">

@@ -20,8 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerInventory.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerInventory.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1Stats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1Stats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2Stats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2Stats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3Stats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3Stats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/CollectableItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/CollectableItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/Inventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/Inventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/Item.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Inventory/ItemsSOs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,19 +64,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Quests/QuestOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ProductChangesShopLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Events/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Events/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Entities/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Entities/Inventory/CollectableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Entities/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/EntityID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Buildings/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quests/Objective.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerDataList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quests/QuestController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,21 +94,31 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/CameraFollowTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEventListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerResources.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/Log.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedLog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerLog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ProductChangesShopLog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedPlayerLog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerDataList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +168,8 @@
       <workItem from="1731538466767" duration="1455000" />
       <workItem from="1731581575899" duration="13027000" />
       <workItem from="1731859232530" duration="9773000" />
-      <workItem from="1731950340247" duration="13960000" />
+      <workItem from="1731950340247" duration="14042000" />
+      <workItem from="1732029904800" duration="25828000" />
     </task>
     <servers />
   </component>
@@ -165,5 +206,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1731427292029" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1732038602502">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1732038602502" />
   </component>
 </project>

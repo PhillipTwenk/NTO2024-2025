@@ -1,5 +1,10 @@
 [System.Serializable]
-public class ShopResources 
+public class ShopResources
 {
-    //Здесь будут чертежи
+    public int ApiaryShop;
+    public int HoneyGunShop;
+    public int MobileBaseShop;
+    public int StorageShop;
+    public int ResidentialModuleShop;
+    public int BreadwinnerShop;
 }

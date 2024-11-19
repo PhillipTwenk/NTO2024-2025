@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsInEditor: 1
-  DefaultNamePlayer: None
   MoveToMainMenuSceneEvent: {fileID: 11400000, guid: 5170f17f5c3edc64d8f979cd3a052d96, type: 2}
   PersistentManagerName: PersistentManagers
   MainMenuName: MainMenu

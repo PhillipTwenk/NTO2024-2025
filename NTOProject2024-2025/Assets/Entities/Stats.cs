@@ -6,14 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ForEntities/Stats")]
 public class Stats : ScriptableObject
 {
-    //[SerializeField] private int defaultHealth;
-    //[SerializeField] private int health;
     [SerializeField] private float speed;
     [SerializeField] private float sprintSpeed;
     [SerializeField] private float normalSpeed;
     [SerializeField] private float speedTurn;
     [SerializeField] private int jumpForce;
-    //[SerializeField] private int damage;
 
     // public int DefaultHealth
     // {

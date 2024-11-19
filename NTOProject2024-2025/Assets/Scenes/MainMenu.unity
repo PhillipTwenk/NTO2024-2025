@@ -1115,6 +1115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367973258}
+  - component: {fileID: 367973259}
   m_Layer: 5
   m_Name: Player3
   m_TagString: Untagged
@@ -1145,6 +1146,23 @@ RectTransform:
   m_AnchoredPosition: {x: 496.79996, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &367973259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367973257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a423925c67922346b76eeb523b79dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPlayername: "\u041D\u0430\u0447\u0430\u0442\u044C \u043D\u043E\u0432\u0443\u044E
+    \u0438\u0433\u0440\u0443"
+  player: {fileID: 11400000, guid: d09f65a1a74320746a42ef5838d8e41f, type: 2}
+  textNewCharacter: {fileID: 1877599273}
+  textPlayerName: {fileID: 1202165729}
 --- !u!1 &411695084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1811,12 @@ MonoBehaviour:
   ReturnToPlayerChoicePanelEvent: {fileID: 11400000, guid: b92f7f4becabca645b3c3b2ca10a3148, type: 2}
   ClickCreateNewPlayerButtonEvent: {fileID: 11400000, guid: 11ea68b8ee0c57547b681baa29992597, type: 2}
   StartGameInChoiceCharacterPanel: {fileID: 11400000, guid: d6c89d05f72894a439c0286242fe118e, type: 2}
+  StartGameAfterCreatingCharacter: {fileID: 11400000, guid: eb18c4a5b3023c04fb7feeeff90fe2a1, type: 2}
+  inputFieldNewName: {fileID: 1893696308}
+  StartValueIron: 0
+  StartValueEnergy: 0
+  StartValueFood: 0
+  StartValueCrioCrystal: 0
 --- !u!1 &582827661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,6 +2530,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 565739903}
+        m_TargetAssemblyTypeName: UIManagerMainMenu, Assembly-CSharp
+        m_MethodName: ChangeActiveChoicePlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d09f65a1a74320746a42ef5838d8e41f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: EntityID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &848190469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3053,6 +3089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 907309035}
+  - component: {fileID: 907309036}
   m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
@@ -3083,6 +3120,23 @@ RectTransform:
   m_AnchoredPosition: {x: 328.69995, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &907309036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907309034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a423925c67922346b76eeb523b79dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPlayername: "\u041D\u0430\u0447\u0430\u0442\u044C \u043D\u043E\u0432\u0443\u044E
+    \u0438\u0433\u0440\u0443"
+  player: {fileID: 11400000, guid: fece30a5395bb1044867d15a78a33fa1, type: 2}
+  textNewCharacter: {fileID: 1456622932}
+  textPlayerName: {fileID: 2080515954}
 --- !u!1 &954287746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,6 +4149,18 @@ MonoBehaviour:
       - m_Target: {fileID: 565739903}
         m_TargetAssemblyTypeName: UIManagerMainMenu, Assembly-CSharp
         m_MethodName: ChoiceNewPlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7ebb1e7c1eb3f9443bba2238db1615d3, type: 2}
+          m_ObjectArgumentAssemblyTypeName: EntityID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 565739903}
+        m_TargetAssemblyTypeName: UIManagerMainMenu, Assembly-CSharp
+        m_MethodName: ChangeActiveChoicePlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 7ebb1e7c1eb3f9443bba2238db1615d3, type: 2}
@@ -7183,6 +7249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983984765}
+  - component: {fileID: 1983984766}
   m_Layer: 5
   m_Name: Player1
   m_TagString: Untagged
@@ -7213,6 +7280,23 @@ RectTransform:
   m_AnchoredPosition: {x: 163.9, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1983984766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983984764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a423925c67922346b76eeb523b79dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPlayername: "\u041D\u0430\u0447\u0430\u0442\u044C \u043D\u043E\u0432\u0443\u044E
+    \u0438\u0433\u0440\u0443"
+  player: {fileID: 11400000, guid: 7ebb1e7c1eb3f9443bba2238db1615d3, type: 2}
+  textNewCharacter: {fileID: 1924207236}
+  textPlayerName: {fileID: 1350695513}
 --- !u!1 &1991918451
 GameObject:
   m_ObjectHideFlags: 0
@@ -7298,6 +7382,18 @@ MonoBehaviour:
       - m_Target: {fileID: 565739903}
         m_TargetAssemblyTypeName: UIManagerMainMenu, Assembly-CSharp
         m_MethodName: ChoiceNewPlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: fece30a5395bb1044867d15a78a33fa1, type: 2}
+          m_ObjectArgumentAssemblyTypeName: EntityID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 565739903}
+        m_TargetAssemblyTypeName: UIManagerMainMenu, Assembly-CSharp
+        m_MethodName: ChangeActiveChoicePlayer
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: fece30a5395bb1044867d15a78a33fa1, type: 2}

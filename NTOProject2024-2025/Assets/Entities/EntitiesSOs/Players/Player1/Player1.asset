@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   Name: 
+  DefaultName: None
   playerStats: {fileID: 11400000, guid: 0adc02daf4e753a45a75b4a456e3a883, type: 2}
-  playerInventory: {fileID: 0}
   currentQuest: {fileID: 0}
   openQuests: []

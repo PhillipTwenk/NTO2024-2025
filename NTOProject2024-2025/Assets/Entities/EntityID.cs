@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -9,11 +8,16 @@ using System.Collections.Generic;
 public class EntityID : ScriptableObject
 {
     [TextArea] public string Name;
+    public string DefaultName;
     
     
     public Stats playerStats;
-    public Inventory playerInventory;
     public Quest currentQuest;
     public List<Quest> openQuests;
+
+    public void DefaultRevert()
+    {
+        Name = DefaultName;
+    }
 }
 

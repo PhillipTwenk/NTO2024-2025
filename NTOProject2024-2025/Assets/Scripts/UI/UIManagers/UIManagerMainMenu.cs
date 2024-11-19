@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManagerMainMenu : MonoBehaviour
 {
@@ -8,6 +10,15 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private GameEvent ReturnToPlayerChoicePanelEvent;
     [SerializeField] private GameEvent ClickCreateNewPlayerButtonEvent;
     [SerializeField] private GameEvent StartGameInChoiceCharacterPanel;
+    [SerializeField] private GameEvent StartGameAfterCreatingCharacter;
+    
+    [SerializeField] private TMP_InputField inputFieldNewName;
+    [SerializeField] private int StartValueIron;
+    [SerializeField] private int StartValueEnergy;
+    [SerializeField] private int StartValueFood;
+    [SerializeField] private int StartValueCrioCrystal;
+
+    private EntityID WhichPlayerCreate;
     //[SerializeField] private EntityID player1;
     //[SerializeField] private EntityID player2;
     //[SerializeField] private EntityID player3;
@@ -114,7 +125,7 @@ public class UIManagerMainMenu : MonoBehaviour
     /// </summary>
     public void ChoiceNewPlayer(EntityID player)
     {
-        if (player.Name == "None")
+        if (player.Name == player.DefaultName)
         {
             Debug.Log("Создание нового персонажа");
             ClickCreateNewPlayerButtonEvent.TriggerEvent(); 
@@ -127,12 +138,22 @@ public class UIManagerMainMenu : MonoBehaviour
         
     }
     
-//     /// <summary>
-//     /// Начать игру после создания персонажа
-//     /// </summary>
-//     public void StartGameAfterCreateChoice()
-//     {
-//         Debug.Log("Вход в игру с существующим персонажем");
-//         StartGameInChoiceCharacterPanel.TriggerEvent(); 
-//     }
+     /// <summary>
+     /// Начать игру после создания персонажа
+     /// </summary>
+     public void StartGameAfterCreateChoice()
+     {
+         string newName = inputFieldNewName.text;
+         APIManager.Instance.CreatePlayer(newName, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
+         WhichPlayerCreate.Name = newName;
+         StartGameAfterCreatingCharacter.TriggerEvent(); 
+     }
+
+     /// <summary>
+     /// Назначить персонажа для создания
+     /// </summary>
+     public void ChangeActiveChoicePlayer(EntityID player)
+     {
+         WhichPlayerCreate = player;
+     }
 }

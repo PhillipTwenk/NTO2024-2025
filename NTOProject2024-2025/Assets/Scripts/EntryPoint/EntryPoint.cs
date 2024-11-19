@@ -11,9 +11,8 @@ public class EntryPoint : MonoBehaviour
 {
     
     [SerializeField] private bool IsInEditor;
-    [SerializeField] private string DefaultNamePlayer;
-    
-    
+
+
     [SerializeField] private GameEvent MoveToMainMenuSceneEvent;
     [SerializeField] private string PersistentManagerName;
     [SerializeField] private string MainMenuName;
@@ -28,9 +27,9 @@ public class EntryPoint : MonoBehaviour
         //TestInEditor
         if (IsInEditor)
         {
-            player1.Name = DefaultNamePlayer;
-            player2.Name = DefaultNamePlayer;
-            player3.Name = DefaultNamePlayer;
+            player1.DefaultRevert();
+            player2.DefaultRevert();
+            player3.DefaultRevert();
         }
     }
 
