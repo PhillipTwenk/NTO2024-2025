@@ -12,6 +12,7 @@
         </e>
         <e p="Entities" t="Include">
           <e p="EntityID.cs" t="Include" />
+          <e p="ResourcesSO.cs" t="Include" />
           <e p="Stats.cs" t="Include" />
         </e>
         <e p="Events" t="Include">
@@ -24,6 +25,7 @@
           <e p="QuestController.cs" t="Include" />
           <e p="QuestOwner.cs" t="Include" />
         </e>
+        <e p="README.txt" t="Include" />
         <e p="Scripts" t="Include">
           <e p="APIControl" t="Include">
             <e p="APIManager.cs" t="Include" />
@@ -40,7 +42,9 @@
             <e p="ShopResources.cs" t="Include" />
           </e>
           <e p="EntryPoint" t="Include">
+            <e p="EntryLocationControl.cs" t="Include" />
             <e p="EntryPoint.cs" t="Include" />
+            <e p="EntryPointMainMenu.cs" t="Include" />
           </e>
           <e p="Interscene Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -54,10 +58,13 @@
               <e p="PlayerAnimationController.cs" t="Include" />
             </e>
           </e>
+          <e p="Test.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="UIManagers" t="Include">
+              <e p="UIManagerLocation.cs" t="Include" />
               <e p="UIManagerMainMenu.cs" t="Include" />
             </e>
+            <e p="UpdatePanelResources.cs" t="Include" />
             <e p="VolumeSlider.cs" t="Include" />
           </e>
         </e>

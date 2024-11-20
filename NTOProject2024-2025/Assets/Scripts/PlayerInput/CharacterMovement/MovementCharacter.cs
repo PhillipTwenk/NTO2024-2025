@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MovementCharacter : MonoBehaviour
 {
-    [SerializeField] private EntityID playerID;
+    private EntityID playerID;
     private Rigidbody _rb;
     private PlayerAnimationController _animationController;
     
@@ -12,22 +12,34 @@ public class MovementCharacter : MonoBehaviour
     private bool isGrounded;
     private int jumpCount;
     private bool IsInAir;
+
+    private bool IsSceneLoaded;
     
     private void Start()
     {
         _animationController = GetComponent<PlayerAnimationController>();
         _rb = GetComponent<Rigidbody>();
+        IsInAir = false;
+    }
+
+    public void InitializePlayer()
+    {
+        playerID = UIManagerLocation.WhichPlayerCreate;
+        IsSceneLoaded = true;
+        Debug.Log("Персонаж готов");
     }
 
     private void Update()
     {
-        InputGet();
-        Look();
-        //Jump();
+        if (IsSceneLoaded)
+        {
+            InputGet();
+            Look();   
+        }
     }
     private void FixedUpdate()
     {
-        if (_input != Vector3.zero)
+        if (_input != Vector3.zero && IsSceneLoaded)
         {
             Move();
         }

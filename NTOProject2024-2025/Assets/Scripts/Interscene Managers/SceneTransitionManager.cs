@@ -8,8 +8,9 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private string LocationSceneName;
     [SerializeField] private string MainMenuSceneName;
     [SerializeField] private string UISceneName;
-    
-    
+
+
+
     /// <summary>
     /// Метод перехода на основную сцену
     /// </summary>
@@ -23,6 +24,7 @@ public class SceneTransitionManager : MonoBehaviour
     /// </summary>
     private IEnumerator MoveToSceneLocationCoroutine()
     {
+        EntityID ActivePlayer = UIManagerMainMenu.WhichPlayerCreate;
         // //Панель загрузки
         // LoadingCanvas.SetActive(true);
         
@@ -31,7 +33,9 @@ public class SceneTransitionManager : MonoBehaviour
         //Загрузка уровня
         AsyncOperation LoadingSceneLocation = 
             SceneManager.LoadSceneAsync(LocationSceneName, LoadSceneMode.Additive);
-        yield return new WaitUntil(()=>LoadingSceneLocation.isDone); 
+        yield return new WaitUntil(()=>LoadingSceneLocation.isDone);
+
+        UIManagerLocation.WhichPlayerCreate = ActivePlayer;
 
         //Установка уровня как основной сцены
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(LocationSceneName));
@@ -54,8 +58,6 @@ public class SceneTransitionManager : MonoBehaviour
         }
         
         //LoadingCanvas.SetActive(false);
-        
         EndMoveToSceneLocationEvent.TriggerEvent();
-        
     }
 }

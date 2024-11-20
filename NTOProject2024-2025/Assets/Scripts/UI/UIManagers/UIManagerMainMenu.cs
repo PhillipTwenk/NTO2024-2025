@@ -18,7 +18,7 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private int StartValueFood;
     [SerializeField] private int StartValueCrioCrystal;
 
-    private EntityID WhichPlayerCreate;
+    public static EntityID WhichPlayerCreate;
     //[SerializeField] private EntityID player1;
     //[SerializeField] private EntityID player2;
     //[SerializeField] private EntityID player3;
@@ -133,6 +133,7 @@ public class UIManagerMainMenu : MonoBehaviour
         else
         {
             Debug.Log("Вход в игру с существующим персонажем");
+            WhichPlayerCreate = player;
             StartGameInChoiceCharacterPanel.TriggerEvent();
         }
         
@@ -141,10 +142,10 @@ public class UIManagerMainMenu : MonoBehaviour
      /// <summary>
      /// Начать игру после создания персонажа
      /// </summary>
-     public void StartGameAfterCreateChoice()
+     public async void StartGameAfterCreateChoice()
      {
-         string newName = inputFieldNewName.text;
-         APIManager.Instance.CreatePlayer(newName, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
+         string newName = inputFieldNewName.text; 
+         await APIManager.Instance.CreatePlayer(newName, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
          WhichPlayerCreate.Name = newName;
          StartGameAfterCreatingCharacter.TriggerEvent(); 
      }

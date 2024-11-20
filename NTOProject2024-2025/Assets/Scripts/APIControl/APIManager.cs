@@ -12,11 +12,11 @@ public class Requests
     public static string CreatePlayerURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/";
     public static string GetPlayersURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/";
 
-    public static string GetPlayerURL(string playerName) =>  $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}";
+    public static string GetPlayerURL(string playerName) =>  $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}/";
 
-    public static string PutPlayerURL(string playerName) => $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}";
+    public static string PutPlayerURL(string playerName) => $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}/";
 
-    public static string DeletePlayerURL(string playerName) => $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}";
+    public static string DeletePlayerURL(string playerName) => $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/{playerName}/";
 
     public static string CreateLogURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/logs/";
 
@@ -41,10 +41,12 @@ public class Requests
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance { get; private set; }
+    public GameObject LoadingMenu;
 
     private void Awake()
     {
         Instance = this;
+        LoadingMenu.SetActive(false);
     }
 
     /// <summary>
@@ -55,8 +57,10 @@ public class APIManager : MonoBehaviour
     /// <param name="playerEnergy"> Количество энергии </param>
     /// <param name="playerFood"> Количество пищи </param>
     /// <param name="playerCrioCrystal"> Количество Криокристаллов </param>
-    public void CreatePlayer(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
+    public async Task CreatePlayer(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
+        LoadingMenu.SetActive(true);
+        // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
             name = playerName,
@@ -65,22 +69,34 @@ public class APIManager : MonoBehaviour
                 Iron = playerIron,
                 Energy = playerEnergy,
                 Food = playerFood,
-                CrioCrystal = playerCrioCrystal
+                CryoCrystal = playerCrioCrystal
             }
         };
-        
+
+        // Преобразуем в JSON
         string json = JsonUtility.ToJson(playerData, true);
-        
+
+        // Создаем TaskCompletionSource для ожидания ответа
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем POST-запрос
         HTTPRequests.Instance.Post(Requests.CreatePlayerURL, json, 
-            onSuccess: responce =>
+            onSuccess: response =>
             {
-               Debug.Log("Персонаж успешно создан");
+                Debug.Log("Персонаж успешно создан");
+                LoadingMenu.SetActive(false);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
-            onError: responce =>
+            onError: error =>
             {
-                Debug.Log("Возникла ошибка при создании персонажа");
+                Debug.LogError($"Ошибка при создании персонажа: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
             });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
+
     
     /// <summary>
     /// Возвращает Dictionary cо всеми игроками
@@ -88,6 +104,9 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<Dictionary<string, PlayerData>> GetPlayersList()
     {
+        LoadingMenu.SetActive(true);
+        
+        
         // Создаем TaskCompletionSource для обработки асинхронного ответа
         var taskCompletionSource = new TaskCompletionSource<Dictionary<string, PlayerData>>();
 
@@ -111,6 +130,8 @@ public class APIManager : MonoBehaviour
                         }
                     }
 
+                    LoadingMenu.SetActive(false);
+                    
                     // Завершаем Task успешным результатом
                     taskCompletionSource.SetResult(playerDict);
                 }
@@ -140,6 +161,10 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<PlayerResources> GetPlayerResources(string playerName)   
     {
+        
+        //LoadingMenu.SetActive(true);
+        
+        
         string URL = Requests.GetPlayerURL(playerName);
 
         // Создаем TaskCompletionSource для ожидания результата запроса
@@ -150,6 +175,7 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Данные о ресурсах персонажа успешно получены");
                 PlayerData playerData = JsonUtility.FromJson<PlayerData>(response);
+                //LoadingMenu.SetActive(false);
                 taskCompletionSource.SetResult(playerData.resources); // Устанавливаем результат
             },
             onError: error =>
@@ -171,49 +197,83 @@ public class APIManager : MonoBehaviour
     /// <param name="playerEnergy"> Энергомед </param>
     /// <param name="playerFood"> Еда </param>
     /// <param name="playerCrioCrystal"> Криосталы </param>
-    public void PutPlayerResources(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
+    public async Task PutPlayerResources(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
-        PlayerResources resources = new PlayerResources()
+        // Создаем объект PlayerData
+        PlayerData playerData = new PlayerData()
         {
-            Iron = playerIron,
-            Energy = playerEnergy,
-            Food = playerFood,
-            CrioCrystal = playerCrioCrystal
+            name = playerName,
+            resources = new PlayerResources()
+            {
+                Iron = playerIron,
+                Energy = playerEnergy,
+                Food = playerFood,
+                CryoCrystal = playerCrioCrystal
+            }
         };
-        
-        string json = JsonUtility.ToJson(resources, true);
 
+        // Преобразуем объект в JSON
+        string json = JsonUtility.ToJson(playerData, true);
+        
+        Debug.Log(json);
+
+        // Формируем URL для PUT-запроса
         string URL = Requests.PutPlayerURL(playerName);
-        
-        
+
+        // Создаем TaskCompletionSource для ожидания завершения запроса
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем PUT-запрос
         HTTPRequests.Instance.Put(URL, json,
-            onSuccess: responce =>
+            onSuccess: response =>
             {
                 Debug.Log("Ресурсы персонажа успешно обновлены");
+                Debug.Log(response);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
-            onError: responce =>
+            onError: error =>
             {
-                Debug.Log("Возникла ошибка при обновлении ресурсов персонажа");
+                Debug.LogError($"Ошибка при обновлении ресурсов персонажа: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
             });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
+
 
     /// <summary>
     /// Удаление игрока
     /// </summary>
     /// <param name="playerName"></param>
-    public void DeletePlayer(string playerName)
+    public async Task DeletePlayer(string playerName)
     {
+        LoadingMenu.SetActive(true);
+        
+        // Формируем URL для удаления игрока
         string URL = Requests.DeletePlayerURL(playerName);
+
+        // Создаем TaskCompletionSource для обработки результата запроса
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем DELETE-запрос
         HTTPRequests.Instance.Delete(URL,
-            onSuccess: responce =>
+            onSuccess: response =>
             {
                 Debug.Log("Персонаж успешно удален");
+                LoadingMenu.SetActive(false);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
-            onError: responce =>
+            onError: error =>
             {
-                Debug.Log("Возникла ошибка при удалении персонажа");
+                Debug.LogError($"Ошибка при удалении персонажа: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
             });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
+
 
     public void CreatePlayerLog(string comment, string playerName, string changedIron, string changedEnergy, string changedFood, string changedCrioCrystal)
     {

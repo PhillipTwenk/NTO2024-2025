@@ -4,5 +4,5 @@ public class PlayerResources
     public int Iron;
     public int Energy;
     public int Food;
-    public int CrioCrystal;
+    public int CryoCrystal;
 }

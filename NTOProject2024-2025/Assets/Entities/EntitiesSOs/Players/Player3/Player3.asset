@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ae3d7a2c70f8e45a7c5fd09cbe68af, type: 3}
   m_Name: Player3
   m_EditorClassIdentifier: 
-  Name: 
+  Name: None
   DefaultName: None
+  index: 3
   playerStats: {fileID: 11400000, guid: 1cc86692e04a33d43b84ae2d0c600374, type: 2}
   currentQuest: {fileID: 0}
   openQuests: []

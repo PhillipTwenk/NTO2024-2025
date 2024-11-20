@@ -9,28 +9,14 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class EntryPoint : MonoBehaviour
 {
-    
-    [SerializeField] private bool IsInEditor;
-
-
     [SerializeField] private GameEvent MoveToMainMenuSceneEvent;
     [SerializeField] private string PersistentManagerName;
     [SerializeField] private string MainMenuName;
     [SerializeField] private string BootstrapName;
-
-    [SerializeField] private EntityID player1;
-    [SerializeField] private EntityID player2;
-    [SerializeField] private EntityID player3;
-
+    
     private void Awake()
     {
-        //TestInEditor
-        if (IsInEditor)
-        {
-            player1.DefaultRevert();
-            player2.DefaultRevert();
-            player3.DefaultRevert();
-        }
+        
     }
 
     /// <summary>
