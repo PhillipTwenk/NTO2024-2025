@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
     [SerializeField] private GameEvent EndMoveToSceneLocationEvent;
-
     [SerializeField] private string LocationSceneName;
     [SerializeField] private string MainMenuSceneName;
     [SerializeField] private string UISceneName;

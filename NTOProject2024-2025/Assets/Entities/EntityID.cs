@@ -13,11 +13,15 @@ public class EntityID : ScriptableObject
     
     public Stats playerStats;
     public Quest currentQuest;
+
+    public bool IsThisCharacterLoadInThisGame;
+
     public List<Quest> openQuests;
 
     public void DefaultRevert()
     {
         Name = DefaultName;
+        IsThisCharacterLoadInThisGame = false;
     }
 }
 
