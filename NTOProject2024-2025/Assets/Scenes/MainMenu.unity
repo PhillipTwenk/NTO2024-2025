@@ -1813,10 +1813,17 @@ MonoBehaviour:
   StartGameInChoiceCharacterPanel: {fileID: 11400000, guid: d6c89d05f72894a439c0286242fe118e, type: 2}
   StartGameAfterCreatingCharacter: {fileID: 11400000, guid: eb18c4a5b3023c04fb7feeeff90fe2a1, type: 2}
   inputFieldNewName: {fileID: 1893696308}
-  StartValueIron: 0
-  StartValueEnergy: 0
-  StartValueFood: 0
-  StartValueCrioCrystal: 0
+  StartValueIron: 1
+  StartValueEnergy: 1
+  StartValueFood: 1
+  StartValueCrioCrystal: 1
+  StartValueApiaryShop: 1
+  StartValueHoneyGunShop: 1
+  StartValueMobileBaseShop: 1
+  StartValueStorageShop: 1
+  StartValueResidentialModuleShop: 1
+  StartValueBreadwinnerShop: 1
+  StartValuePierShop: 1
 --- !u!1 &582827661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,7 +4193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1200424108
 Transform:
   m_ObjectHideFlags: 0

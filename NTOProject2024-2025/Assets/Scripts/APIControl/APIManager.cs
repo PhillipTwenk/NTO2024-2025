@@ -41,12 +41,13 @@ public class Requests
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance { get; private set; }
-    public GameObject LoadingMenu;
+    public GameObject LoadingMenuPost;
+    public GameObject LoadingMenuPutGet;
 
     private void Awake()
     {
         Instance = this;
-        LoadingMenu.SetActive(false);
+        LoadingMenuPost.SetActive(false);
     }
 
     /// <summary>
@@ -59,7 +60,7 @@ public class APIManager : MonoBehaviour
     /// <param name="playerCrioCrystal"> Количество Криокристаллов </param>
     public async Task CreatePlayer(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
-        LoadingMenu.SetActive(true);
+        LoadingMenuPost.SetActive(true);
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
@@ -84,7 +85,7 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Персонаж успешно создан");
-                LoadingMenu.SetActive(false);
+                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -104,7 +105,7 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<Dictionary<string, PlayerData>> GetPlayersList()
     {
-        LoadingMenu.SetActive(true);
+        LoadingMenuPutGet.SetActive(true);
         
         
         // Создаем TaskCompletionSource для обработки асинхронного ответа
@@ -130,7 +131,7 @@ public class APIManager : MonoBehaviour
                         }
                     }
 
-                    LoadingMenu.SetActive(false);
+                    LoadingMenuPutGet.SetActive(false);
                     
                     // Завершаем Task успешным результатом
                     taskCompletionSource.SetResult(playerDict);
@@ -157,12 +158,12 @@ public class APIManager : MonoBehaviour
     /// <summary>
     /// Получение ресурсов игрока 
     /// </summary>
-    /// <param name="playerName"></param>
+    /// <param name="playerName"> Имя игрока </param>
     /// <returns></returns>
     public async Task<PlayerResources> GetPlayerResources(string playerName)   
     {
         
-        //LoadingMenu.SetActive(true);
+        LoadingMenuPutGet.SetActive(true);
         
         
         string URL = Requests.GetPlayerURL(playerName);
@@ -175,7 +176,7 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Данные о ресурсах персонажа успешно получены");
                 PlayerData playerData = JsonUtility.FromJson<PlayerData>(response);
-                //LoadingMenu.SetActive(false);
+                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(playerData.resources); // Устанавливаем результат
             },
             onError: error =>
@@ -199,6 +200,7 @@ public class APIManager : MonoBehaviour
     /// <param name="playerCrioCrystal"> Криосталы </param>
     public async Task PutPlayerResources(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
+        LoadingMenuPutGet.SetActive(true);
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
@@ -229,6 +231,7 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Ресурсы персонажа успешно обновлены");
                 Debug.Log(response);
+                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -248,7 +251,7 @@ public class APIManager : MonoBehaviour
     /// <param name="playerName"></param>
     public async Task DeletePlayer(string playerName)
     {
-        LoadingMenu.SetActive(true);
+        LoadingMenuPost.SetActive(true);
         
         // Формируем URL для удаления игрока
         string URL = Requests.DeletePlayerURL(playerName);
@@ -261,7 +264,7 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Персонаж успешно удален");
-                LoadingMenu.SetActive(false);
+                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -286,31 +289,241 @@ public class APIManager : MonoBehaviour
         return playerLog;
     }
 
-    public void CreateShop(string shopName, int ApiaryShop, int HoneyGunShop, int MobileBaseShop, int StorageShop, int ResidentialModuleShop, int BreadwinnerShop)
+    /// <summary>
+    /// Создает магазин
+    /// </summary>
+    /// <param name="playerName"> имя игрока </param>
+    /// <param name="shopName"> имя магазина </param>
+    /// <param name="apiaryShop"> чертеж пасеки </param>
+    /// <param name="honeyGunShop"> чертеж медопушки </param>
+    /// <param name="mobileBaseShop"> чертеж мобильной базы </param>
+    /// <param name="storageShop"> чертеж хранилища </param>
+    /// <param name="residentialModuleShop"> чертеж жилого модуля </param>
+    /// <param name="breadwinnerShop"> чертеж добытчика</param>
+    /// <param name="pierShop"> чертеж пристани </param>
+    /// <returns></returns>
+    public async Task CreateShop(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
     {
+        LoadingMenuPost.SetActive(true);
         
+        // Создаем объект ShopData
+        ShopData shopData = new ShopData()
+        {
+            name = shopName,
+            resources = new ShopResources()
+            {
+                ApiaryShop = apiaryShop,
+                HoneyGunShop = honeyGunShop,
+                MobileBaseShop = mobileBaseShop,
+                StorageShop = storageShop,
+                ResidentialModuleShop = residentialModuleShop,
+                BreadwinnerShop = breadwinnerShop,
+                PierShop = pierShop
+            }
+        };
+
+        // Преобразуем в JSON
+        string json = JsonUtility.ToJson(shopData, true);
+
+        // Создаем TaskCompletionSource для ожидания ответа
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем POST-запрос
+        HTTPRequests.Instance.Post(Requests.CreateShopURL(playerName), json, 
+            onSuccess: response =>
+            {
+                Debug.Log("Магазин персонажа успешно создан");
+                LoadingMenuPost.SetActive(false);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+            },
+            onError: error =>
+            {
+                Debug.LogError($"Ошибка при создании Магазина персонажа: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+            });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
 
-    public List<ShopData> GetShopsList()
+    /// <summary>
+    /// Получает Dictionary со списком магазинов игрока
+    /// </summary>
+    /// <param name="playerName"> имя игрока</param>
+    /// <returns></returns>
+    public async Task<Dictionary<string, ShopData>> GetShopsList(string playerName)
     {
-        List<ShopData> shopList = new List<ShopData>();
-        return shopList;
-    }
-
-    public ShopResources GetShopResources(string shopName)
-    {
-        ShopResources resources = new ShopResources();
-        return resources;
-    }
-
-    public void PutShopResources(string shopName, int ApiaryShop, int HoneyGunShop, int MobileBaseShop, int StorageShop, int ResidentialModuleShop, int BreadwinnerShop)
-    {
+        LoadingMenuPutGet.SetActive(true);
         
+        
+        // Создаем TaskCompletionSource для обработки асинхронного ответа
+        var taskCompletionSource = new TaskCompletionSource<Dictionary<string, ShopData>>();
+
+        string URL = Requests.GetShopsURL(playerName);
+        
+        HTTPRequests.Instance.Get(URL,
+            onSuccess: response =>
+            {
+                try
+                {
+                    // Парсим ответ
+                    List<ShopData> shops = JsonUtility.FromJson<ShopsDataList>($"{{\"shops\":{response}}}").shops;
+
+                    // Проверяем, есть ли игроки
+                    var shopsDict = new Dictionary<string, ShopData>();
+                    foreach (var shop in shops)
+                    {
+                        if (!shopsDict.ContainsKey(shop.name))
+                        {
+                            shopsDict[shop.name] = shop;
+                        }
+                    }
+
+                    LoadingMenuPutGet.SetActive(false);
+                    
+                    // Завершаем Task успешным результатом
+                    taskCompletionSource.SetResult(shopsDict);
+                }
+                catch (Exception ex)
+                {
+                    // Завершаем Task с ошибкой при возникновении исключения
+                    Debug.LogError($"Ошибка при обработке данных: {ex.Message}");
+                    taskCompletionSource.SetException(ex);
+                }
+            },
+            onError: error =>
+            {
+                // Завершаем Task с ошибкой при проблемах с запросом
+                Debug.LogError($"Ошибка запроса: {error}");
+                taskCompletionSource.SetException(new Exception(error));
+            });
+
+        // Ждем завершения Task и возвращаем результат
+        return await taskCompletionSource.Task;
     }
 
-    public void DeleteShop(string shopName)
+    /// <summary>
+    /// Получение данных о ресурсах магазина 
+    /// </summary>
+    /// <param name="playerName"> Имя игрока </param>
+    /// <param name="shopName"> Имя магазина </param>
+    /// <returns></returns>
+    public async Task<ShopResources> GetShopResources(string playerName, string shopName)
     {
+        LoadingMenuPutGet.SetActive(true);
         
+        string URL = Requests.GetShopURL(playerName, shopName);
+
+        // Создаем TaskCompletionSource для ожидания результата запроса
+        var taskCompletionSource = new TaskCompletionSource<ShopResources>();
+
+        HTTPRequests.Instance.Get(URL, 
+            onSuccess: response =>
+            {
+                Debug.Log("Данные о ресурсах магазина успешно получены");
+                ShopData shopData = JsonUtility.FromJson<ShopData>(response);
+                LoadingMenuPutGet.SetActive(false);
+                taskCompletionSource.SetResult(shopData.resources); // Устанавливаем результат
+            },
+            onError: error =>
+            {
+                Debug.LogError("Возникла ошибка при получении данных о магазине: " + error);
+                taskCompletionSource.SetException(new Exception(error)); // Устанавливаем исключение
+            });
+
+        // Ждем завершения Task и возвращаем результат
+        return await taskCompletionSource.Task;
+    }
+
+    /// <summary>
+    /// Обновляет ресурсы в магазине
+    /// </summary>
+    /// <param name="playerName"> имя игрока </param>
+    /// <param name="shopName"> имя магазина </param>
+    /// <param name="apiaryShop"> чертеж пасеки </param>
+    /// <param name="honeyGunShop"> чертеж медопушки </param>
+    /// <param name="mobileBaseShop"> чертеж мобильной базы </param>
+    /// <param name="storageShop"> чертеж хранилища </param>
+    /// <param name="residentialModuleShop"> чертеж жилого модуля </param>
+    /// <param name="breadwinnerShop"> чертеж добытчика</param>
+    /// <param name="pierShop"> чертеж пристани </param>
+    /// <returns></returns>
+    public async Task PutShopResources(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
+    {
+        LoadingMenuPutGet.SetActive(true);
+        
+        // Создаем объект ShopData
+        ShopData shopData = new ShopData()
+        {
+            name = shopName,
+            resources = new ShopResources()
+            {
+                ApiaryShop = apiaryShop,
+                HoneyGunShop = honeyGunShop,
+                MobileBaseShop = mobileBaseShop,
+                StorageShop = storageShop,
+                ResidentialModuleShop = residentialModuleShop,
+                BreadwinnerShop = breadwinnerShop,
+                PierShop = pierShop
+            }
+        };
+
+        // Преобразуем в JSON
+        string json = JsonUtility.ToJson(shopData, true);
+
+        // Создаем TaskCompletionSource для ожидания ответа
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем PUT-запрос
+        HTTPRequests.Instance.Put(Requests.PutShopURL(playerName, shopName), json, 
+            onSuccess: response =>
+            {
+                Debug.Log("Магазин персонажа успешно обновлен");
+                LoadingMenuPutGet.SetActive(false);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+            },
+            onError: error =>
+            {
+                Debug.LogError($"Ошибка при обновлении Магазина персонажа: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+            });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
+    }
+
+    /// <summary>
+    /// Удаляет магазин определенного игрока
+    /// </summary>
+    /// <param name="playerName"> имя игрока </param>
+    /// <param name="shopName"> имя магазина </param>
+    /// <returns></returns>
+    public async Task DeleteShop(string playerName, string shopName)
+    {
+        LoadingMenuPost.SetActive(true);
+        
+        // Формируем URL для удаления игрока
+        string URL = Requests.DeleteShopURL(playerName, shopName);
+
+        // Создаем TaskCompletionSource для обработки результата запроса
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+
+        // Выполняем DELETE-запрос
+        HTTPRequests.Instance.Delete(URL,
+            onSuccess: response =>
+            {
+                Debug.Log("Магазин успешно удален");
+                LoadingMenuPost.SetActive(false);
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+            },
+            onError: error =>
+            {
+                Debug.LogError($"Ошибка при удалении магазина: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+            });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
     
     public void CreateShopLog(string comment, string playerName, string shopName, string ChangedApiaryShop, string ChangedHoneyGunShop, string ChangedMobileBaseShop, string ChangedStorageShop, string ChangedResidentialModuleShop, string ChangedBreadwinnerShop)

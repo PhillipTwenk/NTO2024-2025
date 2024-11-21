@@ -167,6 +167,10 @@ MonoBehaviour:
   PersistentManagerName: PersistentManagers
   MainMenuName: MainMenu
   BootstrapName: Bootstrap
+  player1: {fileID: 11400000, guid: 7ebb1e7c1eb3f9443bba2238db1615d3, type: 2}
+  player2: {fileID: 11400000, guid: fece30a5395bb1044867d15a78a33fa1, type: 2}
+  player3: {fileID: 11400000, guid: d09f65a1a74320746a42ef5838d8e41f, type: 2}
+  IsInEditor: 1
 --- !u!1 &794757783
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,5 +392,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 794757786}
-  - {fileID: 42942750}
   - {fileID: 2147065578}
+  - {fileID: 42942750}

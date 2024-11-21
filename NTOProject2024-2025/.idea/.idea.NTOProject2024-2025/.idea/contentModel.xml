@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Buildings" t="Include">
           <e p="Building.cs" t="Include" />
+          <e p="Plan.cs" t="Include" />
         </e>
         <e p="Entities" t="Include">
           <e p="EntityID.cs" t="Include" />
@@ -40,6 +41,7 @@
             <e p="ShopData.cs" t="Include" />
             <e p="ShopLog.cs" t="Include" />
             <e p="ShopResources.cs" t="Include" />
+            <e p="ShopsDataList.cs" t="Include" />
           </e>
           <e p="EntryPoint" t="Include">
             <e p="EntryLocationControl.cs" t="Include" />
@@ -59,8 +61,10 @@
             </e>
           </e>
           <e p="Test.cs" t="Include" />
+          <e p="TestBuy.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="UIManagers" t="Include">
+              <e p="UIManager.cs" t="Include" />
               <e p="UIManagerLocation.cs" t="Include" />
               <e p="UIManagerMainMenu.cs" t="Include" />
             </e>

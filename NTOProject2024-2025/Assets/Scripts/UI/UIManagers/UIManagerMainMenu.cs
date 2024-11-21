@@ -17,6 +17,14 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private int StartValueEnergy;
     [SerializeField] private int StartValueFood;
     [SerializeField] private int StartValueCrioCrystal;
+    
+    [SerializeField] private int StartValueApiaryShop;
+    [SerializeField] private int StartValueHoneyGunShop;
+    [SerializeField] private int StartValueMobileBaseShop;
+    [SerializeField] private int StartValueStorageShop;
+    [SerializeField] private int StartValueResidentialModuleShop;
+    [SerializeField] private int StartValueBreadwinnerShop;
+    [SerializeField] private int StartValuePierShop;
 
     public static EntityID WhichPlayerCreate;
     //[SerializeField] private EntityID player1;
@@ -147,6 +155,10 @@ public class UIManagerMainMenu : MonoBehaviour
          string newName = inputFieldNewName.text; 
          await APIManager.Instance.CreatePlayer(newName, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
          WhichPlayerCreate.Name = newName;
+
+         string shopName = $"{newName}'sShop";
+         await APIManager.Instance.CreateShop(newName, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
+         
          StartGameAfterCreatingCharacter.TriggerEvent(); 
      }
 

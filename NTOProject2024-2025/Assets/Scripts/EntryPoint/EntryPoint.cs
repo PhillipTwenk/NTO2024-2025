@@ -14,11 +14,12 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private string MainMenuName;
     [SerializeField] private string BootstrapName;
     
-    private void Awake()
-    {
-        
-    }
-
+    [SerializeField] private EntityID player1;
+    [SerializeField] private EntityID player2;
+    [SerializeField] private EntityID player3;
+    
+    [SerializeField] private bool IsInEditor;
+    
     /// <summary>
     ///Запускает инициализацию данных и загружает две изначальные сцены, после чего выгружает Bootstrap 
     /// </summary>
@@ -36,6 +37,16 @@ public class EntryPoint : MonoBehaviour
         yield return new WaitUntil(()=>LoadingSceneMainMenu.isDone && LoadingScenePersistentManagers.isDone);
         Debug.Log("PersistentManagers и MainMenu сцены были загружены");
         
+        //TestInEditor
+        if (IsInEditor)
+        {
+            player1.DefaultRevert();
+            player2.DefaultRevert();
+            player3.DefaultRevert();
+        }
+
+        InitializeData();
+        
         //Установка сцены главного меню основной
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(MainMenuName));
         
@@ -44,7 +55,7 @@ public class EntryPoint : MonoBehaviour
         //Выгрузка сцены - точки входа
         SceneManager.UnloadSceneAsync(BootstrapName);
     }
-
+    
     private void InitializeData()
     {
         

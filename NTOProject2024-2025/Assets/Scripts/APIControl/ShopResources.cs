@@ -7,4 +7,5 @@ public class ShopResources
     public int StorageShop;
     public int ResidentialModuleShop;
     public int BreadwinnerShop;
+    public int PierShop;
 }

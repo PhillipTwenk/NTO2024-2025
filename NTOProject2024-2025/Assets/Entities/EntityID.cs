@@ -21,6 +21,9 @@ public class EntityID : ScriptableObject
     {
         if (Name != DefaultName)
         {
+            string shopName = $"{Name}'sShop";
+            APIManager.Instance.DeleteShop(Name, shopName);
+            
             APIManager.Instance.DeletePlayer(Name);
         }
         

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a43369429e4514688ff1e94a774111, type: 3}
+  m_Name: ResidentialModule
+  m_EditorClassIdentifier: 
+  Title: "\u0416\u0438\u043B\u043E\u0439 \u043C\u043E\u0434\u0443\u043B\u044C"
+  Description: "\u0421\u0442\u0440\u043E\u0435\u043D\u0438\u0435, \u0433\u0434\u0435
+    \u043C\u0435\u0434\u0432\u0435\u0434\u0438 \u0436\u0438\u0432\u0443\u0442 \u0438
+    \u043E\u0442\u0434\u044B\u0445\u0430\u044E\u0442. \u0414\u0430\u043D\u043D\u043E\u0435
+    \u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E
+    \u0435\u0441\u043B\u0438 \u043F\u043E\u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F
+    \u0435\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u044E\u043D\u0438\u0442\u043E\u0432"
+  durability: 150
+  energyHoneyConsumption: "10 \u044D\u043D\u0435\u0440\u0433\u0438\u0438 / 10 \u0441\u0435\u043A\u0443\u043D\u0434"
+  resourceProduction: 0
+  PlanPrefab: {fileID: 1548010156175141855, guid: 403a162ede92c5c41882054e4ff115d5, type: 3}
+  planSprite: {fileID: -6724736103782100004, guid: c74b50273ef35a64ebb9c02d681abed9, type: 3}
