@@ -7,6 +7,20 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AssetsStore" t="Include">
+          <e p="QuickOutline" t="Include">
+            <e p="README.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="OutlineFill.shader" t="Include" />
+                <e p="OutlineMask.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Outline.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Buildings" t="Include">
           <e p="Building.cs" t="Include" />
           <e p="Plan.cs" t="Include" />
@@ -32,6 +46,7 @@
             <e p="APIManager.cs" t="Include" />
             <e p="APIRsControlInChoicePlayerPanel.cs" t="Include" />
             <e p="HTTPRequests.cs" t="Include" />
+            <e p="LoadingCanvasController.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="PlayerDataList.cs" t="Include" />
             <e p="PlayerLog.cs" t="Include" />
@@ -42,6 +57,11 @@
             <e p="ShopLog.cs" t="Include" />
             <e p="ShopResources.cs" t="Include" />
             <e p="ShopsDataList.cs" t="Include" />
+          </e>
+          <e p="BuildingSystem" t="Include">
+            <e p="BuildingManager.cs" t="Include" />
+            <e p="PlacementSystem.cs" t="Include" />
+            <e p="YouCantBuildHereTrigger.cs" t="Include" />
           </e>
           <e p="EntryPoint" t="Include">
             <e p="EntryLocationControl.cs" t="Include" />
@@ -63,6 +83,7 @@
           <e p="Test.cs" t="Include" />
           <e p="TestBuy.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="OutlineControl.cs" t="Include" />
             <e p="UIManagers" t="Include">
               <e p="UIManager.cs" t="Include" />
               <e p="UIManagerLocation.cs" t="Include" />

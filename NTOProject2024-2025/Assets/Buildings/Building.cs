@@ -3,17 +3,34 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Building")]
 public class Building : ScriptableObject
 {
-    [SerializeField] private int level; // Уровень 
+    [SerializeField] private int level; // Уровень
+    [SerializeField] private int levelDefault; // Начальный уровень
     [SerializeField] private int durability; // Прочность
+    [SerializeField] private int durabilityDefault; // Начальная прочность
     [SerializeField] private int energyHoneyConsumption; // Потребление энергомеда
+    [SerializeField] private int energyHoneyConsumptionDefault; // Начальное Потребление энергомеда
     [SerializeField] private int resourceProduction; // Производство собственного ресурса
+    [SerializeField] private int resourceProductionDefault; // Начальное Производство собственного ресурса
     [SerializeField] private bool isActive; // Активно ли данное здание ( Можно менять в меню подробного просмотра )
     [SerializeField] private bool isBuilt; // Построено ли данное здание
     [SerializeField] private Transform depositPosition; // Местоположение данного здания
     [SerializeField] private int storage; // Локальное хранилище здания
+    [SerializeField] private int storageDefault; // начальное Локальное хранилище здания
     [SerializeField] private int storageLimit; // Лимит хранилища данного здания
     [SerializeField] private GameObject prefabBuilding; // Префаб строения
+    [SerializeField] private GameObject prefabBeforeBuilding; // Префаб триггера перед поставновкой здания
 
+    public void DefaultRevert()
+    {
+        level = levelDefault;
+        durability = durabilityDefault;
+        energyHoneyConsumption = energyHoneyConsumptionDefault;
+        resourceProduction = resourceProductionDefault;
+        isActive = false;
+        isBuilt = false;
+        depositPosition = null;
+        storage = storageDefault;
+    }
     public int Level
     {
         get => level;
@@ -71,5 +88,10 @@ public class Building : ScriptableObject
     public GameObject PrefabBuilding
     {
         get => prefabBuilding;
+    }
+    
+    public GameObject PrefabBeforeBuilding
+    {
+        get => prefabBeforeBuilding;
     }
 }

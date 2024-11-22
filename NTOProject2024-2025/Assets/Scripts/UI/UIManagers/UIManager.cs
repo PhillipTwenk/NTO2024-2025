@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public GameEvent OpenBuildingPanelEvent;
     public GameEvent CloseBuildingPanelEvent;
+    public GameEvent StartPlacingBuildEvent;
+    public GameEvent EndPlacingBuildEvent;
 
     [SerializeField] private Transform NewPlanPosition;
     [SerializeField] private Transform ContentPanel;
@@ -30,6 +32,7 @@ public class UIManager : MonoBehaviour
         if (Input.GetButtonDown("OpenBuildingPanel") && !IsOpenBuildingPanel)
         {
             Debug.Log("Закрыта панель строительства");
+            EndPlacingBuildEvent.TriggerEvent();
             CloseBuildingPanelEvent.TriggerEvent();
             IsOpenBuildingPanel = true;
             return;
@@ -58,5 +61,20 @@ public class UIManager : MonoBehaviour
         durabilityTMPro.text = $"- Прочность: {plan.durability}";
         energyHoneyConsumptionTMPro.text = $"- Потребляет: {plan.energyHoneyConsumption}";
         resourceProductionTMPro.text = $"- Производит: {plan.resourceProduction}";
+
+        Button ButtonComponent = newPlanGameObject.GetComponent<Button>();
+        ButtonComponent.onClick.AddListener(() => StartPlacingNewBuilding(plan));
+    }
+
+    /// <summary>
+    /// Нажатие на кнопку старта строительства
+    /// Начинаем размещать строение на земле
+    /// </summary>
+    public void StartPlacingNewBuilding(Plan plan)
+    {
+        GameObject PlaseNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
+        BuildingManager.Instance.MouseIndicator = PlaseNewBuildingTrigger;
+        BuildingManager.Instance.CurrentBuilding = plan.buildingSO;
+        StartPlacingBuildEvent.TriggerEvent();
     }
 }

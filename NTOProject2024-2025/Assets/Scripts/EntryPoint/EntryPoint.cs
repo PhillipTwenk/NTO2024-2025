@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,9 +14,8 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private string MainMenuName;
     [SerializeField] private string BootstrapName;
     
-    [SerializeField] private EntityID player1;
-    [SerializeField] private EntityID player2;
-    [SerializeField] private EntityID player3;
+    [SerializeField] private List<EntityID> playersList;
+    [SerializeField] private List<Building> buildingsList;
     
     [SerializeField] private bool IsInEditor;
     
@@ -40,9 +39,15 @@ public class EntryPoint : MonoBehaviour
         //TestInEditor
         if (IsInEditor)
         {
-            player1.DefaultRevert();
-            player2.DefaultRevert();
-            player3.DefaultRevert();
+            foreach (var player in playersList)
+            {
+                player.DefaultRevert();
+            }
+
+            foreach (var building in buildingsList)
+            {
+                building.DefaultRevert();
+            }
         }
 
         InitializeData();

@@ -788,6 +788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpenBuildingPanelEvent: {fileID: 11400000, guid: 6f8015b47bb3ade41b8941819990014d, type: 2}
   CloseBuildingPanelEvent: {fileID: 11400000, guid: afaada27fd6279f4daae787068f3a3e1, type: 2}
+  StartPlacingBuildEvent: {fileID: 11400000, guid: 8ad91f56fb0a52f41acb08be77bec77d, type: 2}
+  EndPlacingBuildEvent: {fileID: 11400000, guid: 2b5afc9116036644ebec60e9dabdb898, type: 2}
   NewPlanPosition: {fileID: 2112722335}
   ContentPanel: {fileID: 1183574894}
 --- !u!1 &582833704

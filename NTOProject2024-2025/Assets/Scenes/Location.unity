@@ -144,12 +144,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484852756}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 499.8579, y: 221.64319, z: 393.28662}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 502.64624, y: 218.06378, z: 398.21582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1444096220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &484852758
 MonoBehaviour:
@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 696342244}
   - component: {fileID: 696342243}
   - component: {fileID: 696342247}
+  - component: {fileID: 696342248}
   m_Layer: 0
   m_Name: PierShop
   m_TagString: Untagged
@@ -330,6 +331,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &696342248
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696342241}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &699553322
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +758,7 @@ GameObject:
   - component: {fileID: 984782109}
   - component: {fileID: 984782108}
   - component: {fileID: 984782112}
+  - component: {fileID: 984782113}
   m_Layer: 0
   m_Name: ApiaryShop
   m_TagString: Untagged
@@ -846,6 +875,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &984782113
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984782106}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1009592301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1107,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.28, y: 0, z: 6.39}
-  m_LocalScale: {x: 1.5457681, y: 1.5457681, z: 1.5457681}
+  m_LocalScale: {x: 63.5759, y: 63.5759, z: 63.5759}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498323005}
@@ -1483,6 +1539,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1444096219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444096220}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444096220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444096219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.788331, y: 3.5794098, z: -4.9291964}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 484852757}
+  - {fileID: 2129551053}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498323004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1806,7 @@ GameObject:
   - component: {fileID: 1545371569}
   - component: {fileID: 1545371568}
   - component: {fileID: 1545371572}
+  - component: {fileID: 1545371573}
   m_Layer: 0
   m_Name: ResidentialModuleShop
   m_TagString: Untagged
@@ -1833,6 +1923,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &1545371573
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545371566}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1698304810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2315,7 @@ GameObject:
   - component: {fileID: 1796102336}
   - component: {fileID: 1796102335}
   - component: {fileID: 1796102339}
+  - component: {fileID: 1796102340}
   m_Layer: 0
   m_Name: BreadwinnerShop
   m_TagString: Untagged
@@ -2314,6 +2432,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &1796102340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796102333}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1858872737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,6 +2472,7 @@ GameObject:
   - component: {fileID: 1858872739}
   - component: {fileID: 1858872738}
   - component: {fileID: 1858872742}
+  - component: {fileID: 1858872743}
   m_Layer: 0
   m_Name: TEST
   m_TagString: Untagged
@@ -2436,6 +2582,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpdateResources: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
+--- !u!54 &1858872743
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858872737}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1884877416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,6 +2622,7 @@ GameObject:
   - component: {fileID: 1884877419}
   - component: {fileID: 1884877418}
   - component: {fileID: 1884877422}
+  - component: {fileID: 1884877423}
   m_Layer: 0
   m_Name: StorageShop
   m_TagString: Untagged
@@ -2565,6 +2739,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &1884877423
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884877416}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1914093126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,6 +2779,7 @@ GameObject:
   - component: {fileID: 1914093129}
   - component: {fileID: 1914093128}
   - component: {fileID: 1914093132}
+  - component: {fileID: 1914093133}
   m_Layer: 0
   m_Name: HoneyGunShop
   m_TagString: Untagged
@@ -2694,6 +2896,33 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &1914093133
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914093126}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1946972549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2985,7 @@ GameObject:
   - component: {fileID: 2021641425}
   - component: {fileID: 2021641424}
   - component: {fileID: 2021641428}
+  - component: {fileID: 2021641429}
   m_Layer: 0
   m_Name: MobileBaseShop
   m_TagString: Untagged
@@ -2872,6 +3102,144 @@ MonoBehaviour:
   ResidentialModuleShopEvent: {fileID: 11400000, guid: 856bbb3a7140ead458d4b3931925cc9a, type: 2}
   BreadwinnerShopEvent: {fileID: 11400000, guid: 0e8d1cf31484610429df8cfb24ae2180, type: 2}
   PierShopEvent: {fileID: 11400000, guid: f510b884f2dbdb645aa757762f626acd, type: 2}
+--- !u!54 &2021641429
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021641422}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &2129551052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129551053}
+  - component: {fileID: 2129551054}
+  - component: {fileID: 2129551055}
+  - component: {fileID: 2129551056}
+  m_Layer: 0
+  m_Name: BuildingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2129551053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129551052}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.788331, y: -3.5794098, z: 4.9291964}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444096220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2129551054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129551052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9190f026611d86940a4dbb4c4dd469a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBuilding: 0
+  MainCamera: {fileID: 745702789}
+  MouseIndicator: {fileID: 0}
+  placementLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  YplaceVector: 3.99
+  CurrentBuilding: {fileID: 0}
+  awaitValueBuild: 0
+--- !u!114 &2129551055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129551052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773d569e9cd2dda4aa8a812a2865713e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8ad91f56fb0a52f41acb08be77bec77d, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2129551054}
+        m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
+        m_MethodName: StartPlacingBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2129551056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129551052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773d569e9cd2dda4aa8a812a2865713e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2b5afc9116036644ebec60e9dabdb898, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2129551054}
+        m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
+        m_MethodName: EndPlacingBuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2139687136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3424,6 @@ SceneRoots:
   - {fileID: 1498323005}
   - {fileID: 1543541977}
   - {fileID: 719755134}
-  - {fileID: 484852757}
   - {fileID: 1858872741}
   - {fileID: 684082394}
+  - {fileID: 1444096220}

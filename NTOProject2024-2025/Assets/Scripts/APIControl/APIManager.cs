@@ -41,13 +41,10 @@ public class Requests
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance { get; private set; }
-    public GameObject LoadingMenuPost;
-    public GameObject LoadingMenuPutGet;
 
     private void Awake()
     {
         Instance = this;
-        LoadingMenuPost.SetActive(false);
     }
 
     /// <summary>
@@ -60,7 +57,6 @@ public class APIManager : MonoBehaviour
     /// <param name="playerCrioCrystal"> Количество Криокристаллов </param>
     public async Task CreatePlayer(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
-        LoadingMenuPost.SetActive(true);
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
@@ -85,7 +81,6 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Персонаж успешно создан");
-                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -105,9 +100,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<Dictionary<string, PlayerData>> GetPlayersList()
     {
-        LoadingMenuPutGet.SetActive(true);
-        
-        
         // Создаем TaskCompletionSource для обработки асинхронного ответа
         var taskCompletionSource = new TaskCompletionSource<Dictionary<string, PlayerData>>();
 
@@ -130,8 +122,6 @@ public class APIManager : MonoBehaviour
                             playerDict[player.name] = player;
                         }
                     }
-
-                    LoadingMenuPutGet.SetActive(false);
                     
                     // Завершаем Task успешным результатом
                     taskCompletionSource.SetResult(playerDict);
@@ -162,10 +152,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<PlayerResources> GetPlayerResources(string playerName)   
     {
-        
-        LoadingMenuPutGet.SetActive(true);
-        
-        
         string URL = Requests.GetPlayerURL(playerName);
 
         // Создаем TaskCompletionSource для ожидания результата запроса
@@ -176,7 +162,6 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Данные о ресурсах персонажа успешно получены");
                 PlayerData playerData = JsonUtility.FromJson<PlayerData>(response);
-                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(playerData.resources); // Устанавливаем результат
             },
             onError: error =>
@@ -200,7 +185,6 @@ public class APIManager : MonoBehaviour
     /// <param name="playerCrioCrystal"> Криосталы </param>
     public async Task PutPlayerResources(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
-        LoadingMenuPutGet.SetActive(true);
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
@@ -231,7 +215,6 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Ресурсы персонажа успешно обновлены");
                 Debug.Log(response);
-                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -251,8 +234,6 @@ public class APIManager : MonoBehaviour
     /// <param name="playerName"></param>
     public async Task DeletePlayer(string playerName)
     {
-        LoadingMenuPost.SetActive(true);
-        
         // Формируем URL для удаления игрока
         string URL = Requests.DeletePlayerURL(playerName);
 
@@ -264,7 +245,6 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Персонаж успешно удален");
-                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -304,8 +284,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task CreateShop(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
     {
-        LoadingMenuPost.SetActive(true);
-        
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
         {
@@ -333,7 +311,6 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Магазин персонажа успешно создан");
-                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -353,9 +330,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<Dictionary<string, ShopData>> GetShopsList(string playerName)
     {
-        LoadingMenuPutGet.SetActive(true);
-        
-        
         // Создаем TaskCompletionSource для обработки асинхронного ответа
         var taskCompletionSource = new TaskCompletionSource<Dictionary<string, ShopData>>();
 
@@ -378,9 +352,6 @@ public class APIManager : MonoBehaviour
                             shopsDict[shop.name] = shop;
                         }
                     }
-
-                    LoadingMenuPutGet.SetActive(false);
-                    
                     // Завершаем Task успешным результатом
                     taskCompletionSource.SetResult(shopsDict);
                 }
@@ -410,8 +381,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<ShopResources> GetShopResources(string playerName, string shopName)
     {
-        LoadingMenuPutGet.SetActive(true);
-        
         string URL = Requests.GetShopURL(playerName, shopName);
 
         // Создаем TaskCompletionSource для ожидания результата запроса
@@ -422,7 +391,6 @@ public class APIManager : MonoBehaviour
             {
                 Debug.Log("Данные о ресурсах магазина успешно получены");
                 ShopData shopData = JsonUtility.FromJson<ShopData>(response);
-                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(shopData.resources); // Устанавливаем результат
             },
             onError: error =>
@@ -450,8 +418,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task PutShopResources(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
     {
-        LoadingMenuPutGet.SetActive(true);
-        
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
         {
@@ -479,7 +445,6 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Магазин персонажа успешно обновлен");
-                LoadingMenuPutGet.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
@@ -500,8 +465,6 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task DeleteShop(string playerName, string shopName)
     {
-        LoadingMenuPost.SetActive(true);
-        
         // Формируем URL для удаления игрока
         string URL = Requests.DeleteShopURL(playerName, shopName);
 
@@ -513,7 +476,6 @@ public class APIManager : MonoBehaviour
             onSuccess: response =>
             {
                 Debug.Log("Магазин успешно удален");
-                LoadingMenuPost.SetActive(false);
                 taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
             },
             onError: error =>
