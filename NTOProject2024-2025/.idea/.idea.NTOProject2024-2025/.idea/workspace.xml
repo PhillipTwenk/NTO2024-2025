@@ -20,31 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/White.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/SimpleMaterials/White.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Plan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Plan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Apiary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Breadwinner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/HoneyGun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/MobileBase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Pier.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/ResidentialModule.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Storage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/MovementCharacterAC.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animation/MovementCharacterAC.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsStore/Blink/Art/Animations/Movement/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsStore/Blink/Art/Animations/Movement/Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerID.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerID.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerStats.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/MainPlayer/MainPlayerStats.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +179,8 @@
       <workItem from="1732029904800" duration="25828000" />
       <workItem from="1732121377556" duration="14673000" />
       <workItem from="1732205319342" duration="20296000" />
-      <workItem from="1732289812312" duration="22036000" />
+      <workItem from="1732289812312" duration="22037000" />
+      <workItem from="1732379503694" duration="1915000" />
     </task>
     <servers />
   </component>
