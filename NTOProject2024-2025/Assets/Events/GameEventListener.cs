@@ -32,6 +32,6 @@ public class GameEventListener : MonoBehaviour
     //Метод запускает все нужные методы из onEventTriggered
     public void OnEventTriggered()
     {
-        onEventTriggered.Invoke();
+        onEventTriggered.Invoke();     
     }
 }

@@ -13,12 +13,19 @@ MonoBehaviour:
   m_Name: Pier
   m_EditorClassIdentifier: 
   level: 0
+  levelDefault: 0
   durability: 0
+  durabilityDefault: 0
   energyHoneyConsumption: 0
+  energyHoneyConsumptionDefault: 0
   resourceProduction: 0
+  resourceProductionDefault: 0
   isActive: 0
   isBuilt: 0
   depositPosition: {fileID: 0}
   storage: 0
+  storageDefault: 0
   storageLimit: 0
   prefabBuilding: {fileID: 0}
+  prefabBeforeBuilding: {fileID: 0}
+  OwnIndex: 0
