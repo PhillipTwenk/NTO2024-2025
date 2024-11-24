@@ -22,44 +22,9 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiary.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwiner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwiner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPier.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Plan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Plan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Apiary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Breadwinner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/HoneyGun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/MobileBase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Pier.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/ResidentialModule.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/PlanSOs/Storage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/TestBuildings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/TestBuildings/1TestBuilding.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/TestBuildings/1TestBuilding.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/TestBuildings/2TestBuilding.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/TestBuildings/2TestBuilding.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Quests/Objective.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Quest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs" />
@@ -152,10 +116,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Plan.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
       </list>
     </option>
   </component>
@@ -211,7 +176,7 @@
       <workItem from="1732205319342" duration="20296000" />
       <workItem from="1732289812312" duration="22037000" />
       <workItem from="1732379503694" duration="16629000" />
-      <workItem from="1732445765757" duration="15924000" />
+      <workItem from="1732445765757" duration="24308000" />
     </task>
     <servers />
   </component>

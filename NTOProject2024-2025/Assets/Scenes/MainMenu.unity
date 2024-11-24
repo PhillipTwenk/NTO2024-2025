@@ -1813,10 +1813,10 @@ MonoBehaviour:
   StartGameInChoiceCharacterPanel: {fileID: 11400000, guid: d6c89d05f72894a439c0286242fe118e, type: 2}
   StartGameAfterCreatingCharacter: {fileID: 11400000, guid: eb18c4a5b3023c04fb7feeeff90fe2a1, type: 2}
   inputFieldNewName: {fileID: 1893696308}
-  StartValueIron: 1
-  StartValueEnergy: 1
-  StartValueFood: 1
-  StartValueCrioCrystal: 1
+  StartValueIron: 999
+  StartValueEnergy: 999
+  StartValueFood: 999
+  StartValueCrioCrystal: 999
   StartValueApiaryShop: 1
   StartValueHoneyGunShop: 1
   StartValueMobileBaseShop: 1

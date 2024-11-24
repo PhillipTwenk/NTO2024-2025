@@ -440,12 +440,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingTypeSO: {fileID: 11400000, guid: 1c664cdfdc9b9df4f987f9fa0083fdfb, type: 2}
-  Title: "\u041C\u043E\u0431\u0434\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u0430\u0437\u0430"
-  Level: 0
-  Durability: 0
+  Title: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u0430\u0437\u0430"
+  Level: 1
+  Durability: 175
   Production: 0
-  HoneyConsumption: 0
-  Storage: 0
+  HoneyConsumption: 20
+  Storage: 2147483647
 --- !u!114 &3551532011499192407
 MonoBehaviour:
   m_ObjectHideFlags: 0
