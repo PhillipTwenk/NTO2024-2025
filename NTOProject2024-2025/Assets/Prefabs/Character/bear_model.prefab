@@ -1766,10 +1766,10 @@ SkinnedMeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1159078439656868970, guid: 14a163e9399a69d42843984817089d4f, type: 3}
+  - {fileID: 2100000, guid: 7610e7099c4f5c246815011a778d4fe5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
