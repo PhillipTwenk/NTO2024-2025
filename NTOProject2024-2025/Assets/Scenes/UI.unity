@@ -752,6 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 462131443}
   - component: {fileID: 462131444}
+  - component: {fileID: 462131445}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -792,6 +793,42 @@ MonoBehaviour:
   EndPlacingBuildEvent: {fileID: 11400000, guid: 2b5afc9116036644ebec60e9dabdb898, type: 2}
   NewPlanPosition: {fileID: 2112722335}
   ContentPanel: {fileID: 1183574894}
+  plansArray:
+  - {fileID: 11400000, guid: 8236e3b831e1b22488399426e09002a7, type: 2}
+  - {fileID: 11400000, guid: 508c13712d7dee04c96a14650db9c214, type: 2}
+  - {fileID: 11400000, guid: 5d69796b015845641a9446d5ca250918, type: 2}
+  - {fileID: 11400000, guid: 105c033192a116c4fa55df5e86c5178c, type: 2}
+  - {fileID: 11400000, guid: 4ef5a709cc2871c4985e0d06b2cb9f9a, type: 2}
+  - {fileID: 11400000, guid: 01dc186f96c3eb6478c07f9029a93438, type: 2}
+  - {fileID: 11400000, guid: 44954120eec618e45a5e0a1455692762, type: 2}
+--- !u!114 &462131445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462131442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773d569e9cd2dda4aa8a812a2865713e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a9b84c69e3adf7d479b6c7ff086bc6a8, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 462131444}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: InitializeBuildingPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &582833704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1516,41 @@ RectTransform:
   m_AnchoredPosition: {x: 207.1, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1478624169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478624170}
+  m_Layer: 5
+  m_Name: DescriptionPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1478624170
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478624169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871247926}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1756244411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1783,7 @@ RectTransform:
   m_Children:
   - {fileID: 2123709917}
   - {fileID: 582833705}
+  - {fileID: 1478624170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

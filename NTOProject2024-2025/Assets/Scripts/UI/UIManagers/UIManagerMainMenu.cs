@@ -140,6 +140,7 @@ public class UIManagerMainMenu : MonoBehaviour
         }
         else
         {
+            LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(true);
             Debug.Log("Вход в игру с существующим персонажем");
             WhichPlayerCreate = player;
             StartGameInChoiceCharacterPanel.TriggerEvent();
@@ -159,10 +160,12 @@ public class UIManagerMainMenu : MonoBehaviour
 
          string shopName = $"{newName}'sShop";
          await APIManager.Instance.CreateShop(newName, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
-         LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);
          StartGameAfterCreatingCharacter.TriggerEvent(); 
+         
+         LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);
      }
-
+     
+     
      /// <summary>
      /// Назначить персонажа для создания
      /// </summary>

@@ -179,7 +179,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32cc812b594bfdc42a239181b28e4d7f, type: 2}
   - {fileID: 11400000, guid: 1045c09b0f777c9448181554ec481f2c, type: 2}
   - {fileID: 11400000, guid: c5486c64f7e54a540b018484d4110f4a, type: 2}
-  IsInEditor: 1
+  IsInEditor: 0
 --- !u!1 &794757783
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Transform NewPlanPosition;
     [SerializeField] private Transform ContentPanel;
+
+    [SerializeField] private List<Plan> plansArray;
 
     private bool IsOpenBuildingPanel;
 
@@ -34,6 +37,7 @@ public class UIManager : MonoBehaviour
             Debug.Log("Закрыта панель строительства");
             EndPlacingBuildEvent.TriggerEvent();
             CloseBuildingPanelEvent.TriggerEvent();
+            Destroy(BuildingManager.Instance.MouseIndicator);
             IsOpenBuildingPanel = true;
             return;
         }
@@ -67,14 +71,42 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Инициализация панели строительства
+    /// </summary>
+    public async void InitializeBuildingPanel()
+    {
+        string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        string shopName = $"{playerName}'sShop";
+        ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
+
+        if (shopResources.ApiaryShop == 0)
+            AddNewPlanInPanel(plansArray[0]);
+        if (shopResources.HoneyGunShop == 0)
+            AddNewPlanInPanel(plansArray[1]);
+        if (shopResources.MobileBaseShop == 0)
+            AddNewPlanInPanel(plansArray[2]);
+        if (shopResources.StorageShop == 0)
+            AddNewPlanInPanel(plansArray[3]);
+        if (shopResources.ResidentialModuleShop == 0)
+            AddNewPlanInPanel(plansArray[4]);
+        if (shopResources.BreadwinnerShop == 0)
+            AddNewPlanInPanel(plansArray[5]);
+        if (shopResources.PierShop == 0)
+            AddNewPlanInPanel(plansArray[6]);
+
+        LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);
+        
+    }
+
+    /// <summary>
     /// Нажатие на кнопку старта строительства
     /// Начинаем размещать строение на земле
     /// </summary>
     public void StartPlacingNewBuilding(Plan plan)
     {
-        GameObject PlaseNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
+        GameObject PlaseNewBuildingTrigger = Instantiate(plan.PrefabBeforeBuilding);
         BuildingManager.Instance.MouseIndicator = PlaseNewBuildingTrigger;
-        BuildingManager.Instance.CurrentBuilding = plan.buildingSO;
+        BuildingManager.Instance.CurrentBuilding = plan.PrefabBuilding;
         StartPlacingBuildEvent.TriggerEvent();
     }
 }

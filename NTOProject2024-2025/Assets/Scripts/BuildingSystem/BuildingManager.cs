@@ -17,7 +17,7 @@ public class BuildingManager : MonoBehaviour
 
     [SerializeField] private float YplaceVector;
 
-    public Building CurrentBuilding;
+    public GameObject CurrentBuilding;
 
     [SerializeField] private float awaitValueBuild;
 
@@ -72,8 +72,8 @@ public class BuildingManager : MonoBehaviour
     public void PlaceBuilding(Vector3 mousePosition)
     {
         Debug.Log(mousePosition);
-        MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
-        GameObject newBuildingObject = Instantiate(CurrentBuilding.PrefabBuilding);
+        MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z); 
+        GameObject newBuildingObject = Instantiate(CurrentBuilding);
         newBuildingObject.transform.position = MouseIndicator.transform.position;
         Debug.Log(newBuildingObject.transform.position);
         Destroy(MouseIndicator);

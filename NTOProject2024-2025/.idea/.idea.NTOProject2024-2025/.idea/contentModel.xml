@@ -59,6 +59,7 @@
             <e p="ShopsDataList.cs" t="Include" />
           </e>
           <e p="BuildingSystem" t="Include">
+            <e p="BuildingControl.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
             <e p="PlacementSystem.cs" t="Include" />
             <e p="YouCantBuildHereTrigger.cs" t="Include" />
@@ -82,7 +83,11 @@
           </e>
           <e p="Test.cs" t="Include" />
           <e p="TestBuy.cs" t="Include" />
+          <e p="TriggerHandlers" t="Include">
+            <e p="InteractionBuildingController.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
+            <e p="AddTextToDescriptionPanel.cs" t="Include" />
             <e p="OutlineControl.cs" t="Include" />
             <e p="UIManagers" t="Include">
               <e p="UIManager.cs" t="Include" />
