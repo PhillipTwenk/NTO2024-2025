@@ -26,6 +26,6 @@ MonoBehaviour:
   storage: 0
   storageDefault: 0
   storageLimit: 0
-  prefabBuilding: {fileID: 0}
-  prefabBeforeBuilding: {fileID: 0}
+  prefabBuilding: {fileID: 7359515488963141187, guid: baa2e5d9955876445843e1e00005119c, type: 3}
+  prefabBeforeBuilding: {fileID: 7359515488963141187, guid: b56dd7f539bb53846aad350dcd94ef52, type: 3}
   OwnIndex: 0

@@ -27,6 +27,5 @@ MonoBehaviour:
     \u0418\u041B\u0418 1 \u043A\u0440\u0438\u043E\u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B
     / 10 \u0441\u0435\u043A\u0443\u043D\u0434"
   PlanPrefab: {fileID: 1548010156175141855, guid: 403a162ede92c5c41882054e4ff115d5, type: 3}
-  PrefabBeforeBuilding: {fileID: 7359515488963141187, guid: 32e13c9f1f9fe7b47afbb8aeb824b0eb, type: 3}
-  PrefabBuilding: {fileID: 7359515488963141187, guid: ba6a3bc021d9e8440b6d23318755befa, type: 3}
+  buildingSO: {fileID: 11400000, guid: 8d298ed468768774185c6e21b2dbb0d3, type: 2}
   planSprite: {fileID: -2497925948893592730, guid: 26e61136020874c4aa862091988d3eb0, type: 3}

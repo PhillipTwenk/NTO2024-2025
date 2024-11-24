@@ -19,7 +19,6 @@ public class Building : ScriptableObject
     [SerializeField] private int storageLimit; // Лимит хранилища данного здания
     [SerializeField] private GameObject prefabBuilding; // Префаб строения
     [SerializeField] private GameObject prefabBeforeBuilding; // Префаб триггера перед поставновкой здания
-    [SerializeField] private int OwnIndex; //Какое по счету здание, среди зданий такого эе типа, начинается с 0
 
     public void DefaultRevert()
     {

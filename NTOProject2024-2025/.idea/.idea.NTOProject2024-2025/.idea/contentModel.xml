@@ -59,7 +59,7 @@
             <e p="ShopsDataList.cs" t="Include" />
           </e>
           <e p="BuildingSystem" t="Include">
-            <e p="BuildingControl.cs" t="Include" />
+            <e p="BuildingData.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
             <e p="PlacementSystem.cs" t="Include" />
             <e p="YouCantBuildHereTrigger.cs" t="Include" />

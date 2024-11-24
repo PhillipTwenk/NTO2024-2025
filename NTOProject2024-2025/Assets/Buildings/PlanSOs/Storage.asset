@@ -21,6 +21,5 @@ MonoBehaviour:
   energyHoneyConsumption: '0 '
   resourceProduction: 0
   PlanPrefab: {fileID: 1548010156175141855, guid: 403a162ede92c5c41882054e4ff115d5, type: 3}
-  PrefabBeforeBuilding: {fileID: 7359515488963141187, guid: 88b11aeb9bfe7084fb65d5d918b662c2, type: 3}
-  PrefabBuilding: {fileID: 7359515488963141187, guid: 8ab9cfced93a80d419763d710a75c8b6, type: 3}
+  buildingSO: {fileID: 11400000, guid: c5486c64f7e54a540b018484d4110f4a, type: 2}
   planSprite: {fileID: 3220864445873050726, guid: 07f2bc7b88693a7459af6cedee0970e9, type: 3}

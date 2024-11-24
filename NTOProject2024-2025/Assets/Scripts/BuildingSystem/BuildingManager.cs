@@ -32,6 +32,7 @@ public class BuildingManager : MonoBehaviour
     private void Start()
     {
         IsBuildingActive = false;
+        CanBuilding = true;
     }
 
     private void Update()

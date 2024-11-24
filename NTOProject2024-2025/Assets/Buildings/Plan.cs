@@ -11,8 +11,8 @@ public class Plan : ScriptableObject
     public string resourceProduction;
 
     public GameObject PlanPrefab;
-    public GameObject PrefabBeforeBuilding;
-    public GameObject PrefabBuilding;
+
+    public Building buildingSO;
 
     public Sprite planSprite;
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BuildingControl : MonoBehaviour
+public class BuildingData : MonoBehaviour
 {
     public Building buildingTypeSO;
     

@@ -1,16 +1,33 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractionBuildingController : MonoBehaviour
 {
     private bool CanPutE;
     [SerializeField] private GameEvent OpenDescriptionPanel;
-    private BuildingControl _buildingControl;
+    private BuildingData _buildingData;
+
+    [SerializeField] private UnityEvent InteractionEvent;
+    
+    public GameEvent OpenBarterMenuEvent;
+    public GameEvent CloseBarterMenuEvent;
+
+    public GameObject Texthint;
 
     private void Start()
     {
-        _buildingControl = GetComponent<BuildingControl>();
+        _buildingData = GetComponent<BuildingData>();
         CanPutE = false;
+        Texthint.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("InteractionWithBuilding") && CanPutE)
+        {
+            InteractionEvent?.Invoke();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -18,6 +35,8 @@ public class InteractionBuildingController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CanPutE = true;
+            Texthint.SetActive(true);
+            
         }
     }
     
@@ -26,6 +45,7 @@ public class InteractionBuildingController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CanPutE = false;
+            Texthint.SetActive(false);
         }
     }
 
@@ -34,9 +54,28 @@ public class InteractionBuildingController : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
-        AddTextToDescriptionPanel.buildingControl = _buildingControl;
+        AddTextToDescriptionPanel.buildingData = _buildingData;
         AddTextToDescriptionPanel.buildingTransform = gameObject.transform;
+        AddTextToDescriptionPanel.buildingSO = _buildingData.buildingTypeSO;
         
         OpenDescriptionPanel.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// Октрытие меню бартера
+    /// Вызывается из ивента в InteractionBuildingController на скрипте здания
+    /// Ивент слушает UIActiveControl
+    /// </summary>
+    public void OpenBarterMenu()
+    {
+        OpenBarterMenuEvent.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// Закрытие меню бартера
+    /// </summary>
+    public void CloseBarterMenu()
+    {
+        CloseBarterMenuEvent.TriggerEvent();
     }
 }

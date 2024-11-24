@@ -10,6 +10,10 @@ public class UIManager : MonoBehaviour
     public GameEvent CloseBuildingPanelEvent;
     public GameEvent StartPlacingBuildEvent;
     public GameEvent EndPlacingBuildEvent;
+    public GameEvent OpenBarterMenuEvent;
+    public GameEvent CloseBarterMenuEvent;
+    public GameEvent OpenHiringWorkersPanelEvent;
+    public GameEvent CloseHiringWorkersPanelEvent;
 
     [SerializeField] private Transform NewPlanPosition;
     [SerializeField] private Transform ContentPanel;
@@ -104,9 +108,41 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void StartPlacingNewBuilding(Plan plan)
     {
-        GameObject PlaseNewBuildingTrigger = Instantiate(plan.PrefabBeforeBuilding);
+        GameObject PlaseNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
         BuildingManager.Instance.MouseIndicator = PlaseNewBuildingTrigger;
-        BuildingManager.Instance.CurrentBuilding = plan.PrefabBuilding;
+        BuildingManager.Instance.CurrentBuilding = plan.buildingSO.PrefabBuilding;
         StartPlacingBuildEvent.TriggerEvent();
+    }
+
+    /// <summary>
+    /// Октрытие меню бартера
+    /// </summary>
+    public void OpenBarterMenu()
+    {
+        OpenBarterMenuEvent.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// Закрытие меню бартера
+    /// </summary>
+    public void CloseBarterMenu()
+    {
+        CloseBarterMenuEvent.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// Октрытие меню торговли медведями
+    /// </summary>
+    public void OpenHiringWorkersPanel()
+    {
+        OpenHiringWorkersPanelEvent.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// Закрытие меню торговли медведями
+    /// </summary>
+    public void CloseHiringWorkersPanel()
+    {
+        CloseHiringWorkersPanelEvent.TriggerEvent();
     }
 }

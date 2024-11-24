@@ -14,22 +14,29 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject point;
 
-    public static BuildingControl buildingControl;
+    public static BuildingData buildingData;
     public static Transform buildingTransform;
+    public static Building buildingSO;
 
     [SerializeField] private Transform pointInPanelAngle1;
     [SerializeField] private Transform pointInPanelAngle2;
     [SerializeField] private Transform pointInPanelAngle3;
     [SerializeField] private Transform pointInPanelAngle4;
-    
-    public LineRenderer lineRenderer;
-    public Camera mainCamera;
+    private bool IsPanelActive;
 
     private void Start()
     {
         panel.SetActive(false);
         point.SetActive(false);
-        lineRenderer.enabled = false;
+        IsPanelActive = false; 
+    }
+
+    private void Update()
+    {
+        if (IsPanelActive)
+        {
+            ShowDescriptionPanel();
+        }
     }
 
     /// <summary>
@@ -38,67 +45,72 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
+        IsPanelActive = true;
+        
         point.SetActive(true);
         panel.SetActive(true);
-        
+
         // Центр экрана
         float centerX = Screen.width / 2;
         float centerY = Screen.height / 2;
 
         // Экранные координаты объекта
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(buildingTransform.position);
+            
+        float offsetX = Screen.width * 0.15f; // 10% от ширины экрана
+        float offsetY = Screen.height * 0.1f; // 5% от высоты экрана
+        
+        point.transform.position = screenPosition;
         
         // Определяем четверть
         if (screenPosition.x > centerX && screenPosition.y > centerY)
         {
             Debug.Log("Объект находится в первой четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(-100, -50, 0);
-            panel.transform.position = panelPosition;
+            Vector3 panelPosition = screenPosition + new Vector3(-offsetX, -offsetY, 0);
             
-            lineRenderer.enabled = true;
-            lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(0, lineRenderer.gameObject.transform.position);
-            lineRenderer.SetPosition(1, mainCamera.ScreenToWorldPoint(new Vector3(pointInPanelAngle1.position.x, pointInPanelAngle1.position.x, mainCamera.nearClipPlane)));
+            panel.transform.position = panelPosition;
         }
         else if (screenPosition.x < centerX && screenPosition.y > centerY)
         {
             Debug.Log("Объект находится во второй четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(100, -50, 0);
+            Vector3 panelPosition = screenPosition + new Vector3(offsetX, -offsetY, 0);
             panel.transform.position = panelPosition;
-            
-            lineRenderer.enabled = true;
-            lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(0, lineRenderer.gameObject.transform.position);
-            lineRenderer.SetPosition(1, mainCamera.ScreenToWorldPoint(new Vector3(pointInPanelAngle2.position.x, pointInPanelAngle2.position.x, mainCamera.nearClipPlane)));
         }
         else if (screenPosition.x < centerX && screenPosition.y < centerY)
         {
             Debug.Log("Объект находится в третьей четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(100, 50, 0);
+            Vector3 panelPosition = screenPosition + new Vector3(offsetX, offsetY, 0);
             panel.transform.position = panelPosition;
             
-            lineRenderer.enabled = true;
-            lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(0, lineRenderer.gameObject.transform.position);
-            lineRenderer.SetPosition(1, mainCamera.ScreenToWorldPoint(new Vector3(pointInPanelAngle3.position.x, pointInPanelAngle3.position.x, mainCamera.nearClipPlane)));
         }
         else if (screenPosition.x > centerX && screenPosition.y < centerY)
         {
             Debug.Log("Объект находится в четвёртой четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(-100, 50, 0);
+            Vector3 panelPosition = screenPosition + new Vector3(-offsetX, offsetY, 0);
             panel.transform.position = panelPosition;
             
-            lineRenderer.enabled = true;
-            lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(0, lineRenderer.gameObject.transform.position);
-            lineRenderer.SetPosition(1, mainCamera.ScreenToWorldPoint(new Vector3(pointInPanelAngle4.position.x, pointInPanelAngle4.position.x, mainCamera.nearClipPlane)));
         }
         
-        Title.text = buildingControl.Title;
-        Level.text = Convert.ToString(buildingControl.Level);
-        Durability.text = Convert.ToString(buildingControl.Durability);
-        Production.text = Convert.ToString(buildingControl.Production);
-        HoneyConsumption.text = Convert.ToString(buildingControl.HoneyConsumption);
-        Storage.text = Convert.ToString(buildingControl.Storage);
+        Title.text = buildingData.Title;
+        Level.text = $"Уровень: {Convert.ToString(buildingData.Level)}";
+        Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)}";
+        Production.text = $"Производит: {Convert.ToString(buildingData.Production)}";
+        HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingData.HoneyConsumption)}";
+        Storage.text = $"Количество ресурсов: {Convert.ToString(buildingData.Storage)} / {buildingSO.StorageLimit}";
+        
+        //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
+        //DescriptionCanvas.worldCamera = mainCamera;
+    }
+
+    /// <summary>
+    /// Сокрытие панели подробного описания здания
+    /// </summary>
+    public void HideDescriptionPanel()
+    {
+        IsPanelActive = false;
+        point.SetActive(false);
+        panel.SetActive(false);
+        //DescriptionCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        //DescriptionCanvas.worldCamera = null;
     }
 }
