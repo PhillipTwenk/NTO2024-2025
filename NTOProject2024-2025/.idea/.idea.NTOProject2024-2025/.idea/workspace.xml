@@ -22,30 +22,10 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation/Idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation/Idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/bear_model.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/bear_model.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Base_color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Base_color.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Opacity.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Opacity.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Roughness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Base_color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Base_color.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Metallic.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Roughness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 153033.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 153033.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 175115.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 175115.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PlacementSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PlacementSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +180,7 @@
       <workItem from="1732289812312" duration="22037000" />
       <workItem from="1732379503694" duration="16629000" />
       <workItem from="1732445765757" duration="24308000" />
-      <workItem from="1732548585896" duration="11280000" />
+      <workItem from="1732548585896" duration="13084000" />
     </task>
     <servers />
   </component>
