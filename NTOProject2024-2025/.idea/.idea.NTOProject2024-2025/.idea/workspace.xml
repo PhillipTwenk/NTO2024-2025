@@ -22,9 +22,30 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Animation/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/bear_model.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/bear_model.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Base_color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Base_color.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Opacity.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Opacity.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/Real Bear_Roughness.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Base_color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Base_color.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Metallic.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/textures/gears_Roughness.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 153033.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 153033.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 175115.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Screenshot 2024-11-24 175115.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +63,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ProductChangesShopLog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Buildings/Plan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/EntityID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,9 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Quests/Quest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/Helpers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/CameraFollowTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEvent.cs" />
@@ -89,11 +109,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerDataList.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/ResourcesSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" />
         <option value="$PROJECT_DIR$/Assets/README.txt" />
@@ -105,22 +123,27 @@
         <option value="$PROJECT_DIR$/Assets/AssetsStore/QuickOutline/Scripts/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/AssetsStore/QuickOutline/Scripts/OutlineUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/OutlineBuildingPanelControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/YouCantBuildHereTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/LoadingCanvasController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CanPutEBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEventListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Plan.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
       </list>
     </option>
   </component>
@@ -177,6 +200,7 @@
       <workItem from="1732289812312" duration="22037000" />
       <workItem from="1732379503694" duration="16629000" />
       <workItem from="1732445765757" duration="24308000" />
+      <workItem from="1732548585896" duration="11280000" />
     </task>
     <servers />
   </component>
@@ -213,9 +237,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1732296478472" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1732038602502">
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1732549356205">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1732038602502" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1732549356205" />
   </component>
 </project>

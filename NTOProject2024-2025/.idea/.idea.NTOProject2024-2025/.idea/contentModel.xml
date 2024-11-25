@@ -41,6 +41,9 @@
           <e p="QuestOwner.cs" t="Include" />
         </e>
         <e p="README.txt" t="Include" />
+        <e p="SaveData" t="Include">
+          <e p="PLayerSaveData.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="APIControl" t="Include">
             <e p="APIManager.cs" t="Include" />
@@ -83,6 +86,7 @@
           </e>
           <e p="Test.cs" t="Include" />
           <e p="TestBuy.cs" t="Include" />
+          <e p="TestMovementCharacter.cs" t="Include" />
           <e p="TriggerHandlers" t="Include">
             <e p="InteractionBuildingController.cs" t="Include" />
           </e>

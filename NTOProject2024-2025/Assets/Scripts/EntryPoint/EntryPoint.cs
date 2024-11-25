@@ -16,6 +16,7 @@ public class EntryPoint : MonoBehaviour
     
     [SerializeField] private List<EntityID> playersList;
     [SerializeField] private List<Building> buildingsList;
+    [SerializeField] private List<PlayerSaveData> playerSaveDatas;
     
     [SerializeField] private bool IsInEditor;
     
@@ -47,6 +48,11 @@ public class EntryPoint : MonoBehaviour
             foreach (var building in buildingsList)
             {
                 building.DefaultRevert();
+            }
+
+            foreach (var psd in playerSaveDatas)
+            {
+                psd.RevertBuildingsData();
             }
         }
 

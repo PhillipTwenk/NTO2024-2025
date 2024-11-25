@@ -35,6 +35,7 @@ public class BuildingManager : MonoBehaviour
         CanBuilding = true;
     }
 
+    
     private void Update()
     {
         if (IsBuildingActive)
@@ -72,18 +73,24 @@ public class BuildingManager : MonoBehaviour
     /// <param name="mousePosition"></param>
     public void PlaceBuilding(Vector3 mousePosition)
     {
-        Debug.Log(mousePosition);
-        MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z); 
+        MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
+        
         GameObject newBuildingObject = Instantiate(CurrentBuilding);
         newBuildingObject.transform.position = MouseIndicator.transform.position;
-        Debug.Log(newBuildingObject.transform.position);
+        
         Destroy(MouseIndicator);
+        
         CurrentBuilding = null;
         IsBuildingActive = false;
         CanBuilding = true;
+
+        PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+        pLayerSaveData.playerBuildings.Add(newBuildingObject.transform.GetChild(0).GetComponent<BuildingData>().buildingTypeSO.PrefabBuilding);
+        
+        TransformData transformData = new TransformData(newBuildingObject.transform);
+        pLayerSaveData.buildingsTransform.Add(transformData);
         //StartCoroutine(TimerBuildingCoroutine(awaitValueBuild));
     }
-
     // private IEnumerator TimerBuildingCoroutine(float await)
     // {
     //     

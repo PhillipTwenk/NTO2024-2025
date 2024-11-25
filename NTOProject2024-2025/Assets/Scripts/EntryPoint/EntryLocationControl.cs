@@ -8,5 +8,8 @@ public class EntryLocationControl : MonoBehaviour
     public void InitizilizePLayer()
     {
         UpdateResourcesEvent.TriggerEvent();
+
+        PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+        pLayerSaveData.InitializeBuildings();
     }
 }

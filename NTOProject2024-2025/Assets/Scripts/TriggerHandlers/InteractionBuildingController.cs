@@ -19,7 +19,10 @@ public class InteractionBuildingController : MonoBehaviour
     {
         _buildingData = GetComponent<BuildingData>();
         CanPutE = false;
-        Texthint.SetActive(false);
+        if (_buildingData.Title == "Мобильная база")
+        {
+            Texthint.SetActive(false);
+        }
     }
 
     private void Update()

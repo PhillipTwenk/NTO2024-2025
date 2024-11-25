@@ -21,7 +21,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [SerializeField] private Transform pointInPanelAngle1;
     [SerializeField] private Transform pointInPanelAngle2;
     [SerializeField] private Transform pointInPanelAngle3;
-    [SerializeField] private Transform pointInPanelAngle4;
+    [SerializeField] private Transform pointInPanelAngle4; 
     private bool IsPanelActive;
 
     private void Start()
