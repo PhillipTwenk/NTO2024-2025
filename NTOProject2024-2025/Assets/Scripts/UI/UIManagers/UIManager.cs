@@ -21,7 +21,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private List<Plan> plansArray;
 
     private bool IsOpenBuildingPanel;
+    
+    public static UIManager Instance { get; set; }
 
+    public void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         IsOpenBuildingPanel = true;

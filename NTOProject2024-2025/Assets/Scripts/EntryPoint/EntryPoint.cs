@@ -45,10 +45,10 @@ public class EntryPoint : MonoBehaviour
                 player.DefaultRevert();
             }
 
-            foreach (var building in buildingsList)
-            {
-                building.DefaultRevert();
-            }
+            // foreach (var building in buildingsList)
+            // {
+            //     building.DefaultRevert();
+            // }
 
             foreach (var psd in playerSaveDatas)
             {

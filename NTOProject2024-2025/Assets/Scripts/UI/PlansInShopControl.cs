@@ -30,6 +30,11 @@ public class PlansInShopControl : MonoBehaviour
     [SerializeField] private string StorageName;
     [SerializeField] private string PierName;
 
+    [SerializeField] private Plan HGPlan;
+    [SerializeField] private Plan SPlan;
+    [SerializeField] private Plan PPlan;
+    
+
     private string WhichPanelActive;
 
 
@@ -117,6 +122,7 @@ public class PlansInShopControl : MonoBehaviour
                 IsHoneyGunBought = true;
                 PanelHoneyGunBought.SetActive(true);
                 _buttonHG.enabled = false;
+                UIManager.Instance.AddNewPlanInPanel(HGPlan);
             }
             if (WhichPanelActive == StorageName && !IsStorageBought)
             {
@@ -125,6 +131,7 @@ public class PlansInShopControl : MonoBehaviour
                 IsStorageBought = true;
                 PanelStorageBought.SetActive(true);
                 _buttonS.enabled = false;
+                UIManager.Instance.AddNewPlanInPanel(SPlan);
             }
             if (WhichPanelActive == PierName && !IsPierBought)
             {
@@ -133,6 +140,7 @@ public class PlansInShopControl : MonoBehaviour
                 IsPierBought = true;
                 PanelPierBought.SetActive(true);
                 _buttonP.enabled = false;
+                UIManager.Instance.AddNewPlanInPanel(PPlan);
             }
         }
         else

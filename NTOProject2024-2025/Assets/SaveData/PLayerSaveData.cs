@@ -6,6 +6,7 @@ public class PlayerSaveData : ScriptableObject
 {
     public List<GameObject> playerBuildings;
     public List<TransformData> buildingsTransform;
+    public List<BuildingSaveData> BuildingDatas;
 
     /// <summary>
     /// Инициализирует все построеные здания в игре
@@ -21,6 +22,11 @@ public class PlayerSaveData : ScriptableObject
                 newBuilding.transform.position = buildingsTransform[i].position;
                 newBuilding.transform.rotation = buildingsTransform[i].rotation;
                 newBuilding.transform.localScale = buildingsTransform[i].scale;
+
+                BuildingData buildingData = newBuilding.GetComponent<BuildingData>();
+                buildingData.Level = BuildingDatas[i].Level;
+                buildingData.Durability = BuildingDatas[i].Durability;
+                buildingData.Storage = BuildingDatas[i].Storage;
                 i++;
             }
         }
@@ -41,11 +47,16 @@ public class PlayerSaveData : ScriptableObject
     /// <param name="building"> GameObject конкретного здания </param>
     public void DeleteBuilding(GameObject building)
     {
-        Destroy(building);
+        if (playerBuildings is not null)
+        {
+            int indexBuilding = building.GetComponent<BuildingData>().SaveListIndex;
+            playerBuildings.Remove(building);
+            Debug.Log(indexBuilding);
+            buildingsTransform.Remove(buildingsTransform[indexBuilding]);
+            BuildingDatas.Remove(BuildingDatas[indexBuilding]);
 
-        int indexBuilding = playerBuildings.IndexOf(building);
-        playerBuildings.Remove(building);
-        buildingsTransform.Remove(buildingsTransform[indexBuilding]); 
+            Destroy(building);
+        }
     }
     
 }
@@ -62,5 +73,22 @@ public class TransformData
         position = transform.position;
         rotation = transform.rotation;
         scale = transform.localScale;
+    }
+}
+
+[System.Serializable]
+public class BuildingSaveData
+{
+    public int Level;
+    public int Durability;
+    public int Storage;
+    public int SaveListIndex;
+
+    public BuildingSaveData(BuildingData buildingData)
+    {
+        Level = buildingData.Level;
+        Durability = buildingData.Durability;
+        Storage = buildingData.Storage;
+        SaveListIndex = buildingData.SaveListIndex;
     }
 }

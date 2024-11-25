@@ -93,10 +93,10 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         
         Title.text = buildingData.Title;
         Level.text = $"Уровень: {Convert.ToString(buildingData.Level)}";
-        Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)}";
-        Production.text = $"Производит: {Convert.ToString(buildingData.Production)}";
-        HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingData.HoneyConsumption)}";
-        Storage.text = $"Количество ресурсов: {Convert.ToString(buildingData.Storage)} / {buildingSO.StorageLimit}";
+        Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)} / {buildingSO.Durability(buildingData.Level)}";
+        Production.text = $"Производит: {Convert.ToString(buildingSO.Production(buildingData.Level))}";
+        HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))}";
+        Storage.text = $"Количество ресурсов: {Convert.ToString(buildingData.Storage)} / {buildingSO.StorageLimit(buildingData.Level)}";
         
         //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
         //DescriptionCanvas.worldCamera = mainCamera;
@@ -112,5 +112,31 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         panel.SetActive(false);
         //DescriptionCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
         //DescriptionCanvas.worldCamera = null;
+    }
+
+    /// <summary>
+    /// Разрушение здания
+    /// </summary>
+    public async void DestroyBuilding()
+    {
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
+
+        HideDescriptionPanel();
+        
+        string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+        
+        GameObject building = buildingTransform.gameObject;
+        Building buildingSO = building.GetComponent<BuildingData>().buildingTypeSO;
+
+        int NewIron = buildingSO.priceBuilding / 2;
+
+        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
+            playerResources.CryoCrystal);
+        
+        PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+        playerSaveData.DeleteBuilding(buildingSO.PrefabBuilding);
+
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 }

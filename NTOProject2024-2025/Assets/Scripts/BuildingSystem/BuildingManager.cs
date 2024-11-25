@@ -84,11 +84,17 @@ public class BuildingManager : MonoBehaviour
         IsBuildingActive = false;
         CanBuilding = true;
 
+        BuildingData buildingData = newBuildingObject.transform.GetChild(0).GetComponent<BuildingData>();
         PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
-        pLayerSaveData.playerBuildings.Add(newBuildingObject.transform.GetChild(0).GetComponent<BuildingData>().buildingTypeSO.PrefabBuilding);
+        pLayerSaveData.playerBuildings.Add(buildingData.buildingTypeSO.PrefabBuilding);
         
         TransformData transformData = new TransformData(newBuildingObject.transform);
         pLayerSaveData.buildingsTransform.Add(transformData);
+        
+        BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
+        pLayerSaveData.BuildingDatas.Add(buildingSaveData);
+
+        buildingData.SaveListIndex = pLayerSaveData.BuildingDatas.IndexOf(buildingSaveData);
         //StartCoroutine(TimerBuildingCoroutine(awaitValueBuild));
     }
     // private IEnumerator TimerBuildingCoroutine(float await)

@@ -12,20 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: Apiary
   m_EditorClassIdentifier: 
-  level: 0
-  levelDefault: 0
-  durability: 0
-  durabilityDefault: 0
-  energyHoneyConsumption: 0
-  energyHoneyConsumptionDefault: 0
-  resourceProduction: 0
-  resourceProductionDefault: 0
-  isActive: 0
-  isBuilt: 0
-  depositPosition: {fileID: 0}
-  storage: 0
-  storageDefault: 0
-  storageLimit: 0
+  levelListLevel: 0100000002000000
+  durabilityListLevel: 320000004b000000
+  energyHoneyConsumptionListLevel: 0000000000000000
+  resourceProductionListLevel: 280000003c000000
+  storageListLevel: 0000000000000000
+  priceBuilding: 50
   prefabBuilding: {fileID: 7359515488963141187, guid: baa2e5d9955876445843e1e00005119c, type: 3}
   prefabBeforeBuilding: {fileID: 7359515488963141187, guid: b56dd7f539bb53846aad350dcd94ef52, type: 3}
-  OwnIndex: 0

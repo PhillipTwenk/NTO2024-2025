@@ -2289,8 +2289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 140.25006, y: -60.574097}
-  m_SizeDelta: {x: 383.3497, y: 133.8513}
+  m_AnchoredPosition: {x: 229.65125, y: -57.911224}
+  m_SizeDelta: {x: 205.2784, y: 139.1445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448263632
 MonoBehaviour:
@@ -3005,6 +3005,9 @@ MonoBehaviour:
   HoneyGunName: HoneyGun
   StorageName: Storage
   PierName: Pier
+  HGPlan: {fileID: 11400000, guid: 508c13712d7dee04c96a14650db9c214, type: 2}
+  SPlan: {fileID: 11400000, guid: 105c033192a116c4fa55df5e86c5178c, type: 2}
+  PPlan: {fileID: 11400000, guid: 44954120eec618e45a5e0a1455692762, type: 2}
 --- !u!1 &606801276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,7 +4635,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 14}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1183574895
 MonoBehaviour:
@@ -4662,11 +4665,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 0
-    m_Right: 0
-    m_Top: 14
+    m_Right: -18
+    m_Top: -29
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 16.19
+  m_Spacing: -37.79
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -6862,8 +6865,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 140.64291, y: -60.94937}
-  m_SizeDelta: {x: 384.1375, y: 134.6026}
+  m_AnchoredPosition: {x: 229.8615, y: -58.2947}
+  m_SizeDelta: {x: 205.7003, y: 139.9121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933061126
 MonoBehaviour:
@@ -7294,7 +7297,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1075247869}
   m_HandleRect: {fileID: 1075247868}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

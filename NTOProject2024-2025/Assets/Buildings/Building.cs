@@ -1,88 +1,149 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Building")]
 public class Building : ScriptableObject
 {
-    [SerializeField] private int level; // Уровень
-    [SerializeField] private int levelDefault; // Начальный уровень
-    [SerializeField] private int durability; // Прочность
-    [SerializeField] private int durabilityDefault; // Начальная прочность
-    [SerializeField] private int energyHoneyConsumption; // Потребление энергомеда
-    [SerializeField] private int energyHoneyConsumptionDefault; // Начальное Потребление энергомеда
-    [SerializeField] private int resourceProduction; // Производство собственного ресурса
-    [SerializeField] private int resourceProductionDefault; // Начальное Производство собственного ресурса
-    [SerializeField] private bool isActive; // Активно ли данное здание ( Можно менять в меню подробного просмотра )
-    [SerializeField] private bool isBuilt; // Построено ли данное здание
-    [SerializeField] private Transform depositPosition; // Местоположение данного здания
-    [SerializeField] private int storage; // Локальное хранилище здания
-    [SerializeField] private int storageDefault; // начальное Локальное хранилище здания
-    [SerializeField] private int storageLimit; // Лимит хранилища данного здания
+    [SerializeField] private List<int> levelListLevel;
+    
+    [SerializeField] private List<int> durabilityListLevel;
+    
+    [SerializeField] private List<int> energyHoneyConsumptionListLevel;
+
+    [SerializeField] private List<int> resourceProductionListLevel;
+    
+    [SerializeField] private List<int> storageListLevel;
+    
+    public int priceBuilding; // Стоимость здания
+    
     [SerializeField] private GameObject prefabBuilding; // Префаб строения
     [SerializeField] private GameObject prefabBeforeBuilding; // Префаб триггера перед поставновкой здания
 
-    public void DefaultRevert()
-    {
-        level = levelDefault;
-        durability = durabilityDefault;
-        energyHoneyConsumption = energyHoneyConsumptionDefault;
-        resourceProduction = resourceProductionDefault;
-        isActive = false;
-        isBuilt = false;
-        depositPosition = null;
-        storage = storageDefault;
-    }
-    public int Level
-    {
-        get => level;
-        set => level = value;
-    }
+    // public void DefaultRevert()
+    // {
+    //     level = levelDefault;
+    //     durability = durabilityDefault;
+    //     energyHoneyConsumption = energyHoneyConsumptionDefault;
+    //     resourceProduction = resourceProductionDefault;
+    //     isActive = false;
+    //     isBuilt = false;
+    //     depositPosition = null;
+    //     storage = storageDefault;
+    // }
+    // public int Level
+    // {
+    //     get => level;
+    //     set => level = value;
+    // }
 
-    public int Durability
+    /// <summary>
+    /// Возвращает значение уровня
+    /// </summary>
+    /// <param name="levelMobileBase"></param>
+    /// <returns></returns>
+    public int Level(int levelMobileBase)
     {
-        get => durability;
-        set => durability = value;
+        switch (levelMobileBase)
+        {
+            case 1:
+                return levelListLevel[0];
+                break;
+            case 2:
+                return levelListLevel[1];
+                break;
+            case 3:
+                return levelListLevel[2];
+                break;
+            default: return levelListLevel[0];
+        }
     }
     
-    public int EnergyHoneyConsumption
+    /// <summary>
+    /// Возвращает значение лимита локальных ресурсов в зависимости от уровня базы
+    /// </summary>
+    /// <param name="levelMobileBase"></param>
+    /// <returns></returns>
+    public int StorageLimit(int levelMobileBase)
     {
-        get => energyHoneyConsumption;
-        set => energyHoneyConsumption = value;
+        switch (levelMobileBase)
+        {
+            case 1:
+                return storageListLevel[0];
+                break;
+            case 2:
+                return storageListLevel[1];
+                break;
+            case 3:
+                return storageListLevel[2];
+                break;
+            default: return storageListLevel[0];
+        }
     }
     
-    public int ResourceProduction
+    /// <summary>
+    /// Возвращает значение медопотребления в зависимости от уровня базы
+    /// </summary>
+    /// <param name="levelMobileBase"></param>
+    /// <returns></returns>
+    public int EnergyHoneyConsumpiton(int levelMobileBase)
     {
-        get => resourceProduction;
-        set => resourceProduction = value;
-    }
-
-    public bool IsActive
-    {
-        get => isActive;
-        set => isActive = value;
+        switch (levelMobileBase)
+        {
+            case 1:
+                return energyHoneyConsumptionListLevel[0];
+                break;
+            case 2:
+                return energyHoneyConsumptionListLevel[1];
+                break;
+            case 3:
+                return energyHoneyConsumptionListLevel[2];
+                break;
+            default: return energyHoneyConsumptionListLevel[0];
+        }
     }
     
-    public bool IsBuilt
+    /// <summary>
+    /// Возвращает значение Прочности в зависимости от уровня базы
+    /// </summary>
+    /// <param name="levelMobileBase"></param>
+    /// <returns></returns>
+    public int Durability(int levelMobileBase)
     {
-        get => isBuilt;
-        set => isBuilt = value;
+        switch (levelMobileBase)
+        {
+            case 1:
+                return durabilityListLevel[0];
+                break;
+            case 2:
+                return durabilityListLevel[1];
+                break;
+            case 3:
+                return durabilityListLevel[2];
+                break;
+            default: return durabilityListLevel[0];
+        }
     }
     
-    public Transform DepositPosition
+    /// <summary>
+    /// Возвращает значение производства в зависимости от уровня базы
+    /// </summary>
+    /// <param name="levelMobileBase"></param>
+    /// <returns></returns>
+    public int Production(int levelMobileBase)
     {
-        get => depositPosition;
-        set => depositPosition = value;
-    }
-
-    public int Storage
-    {
-        get => storage;
-        set => storage = value;
-    }
-
-    public int StorageLimit
-    {
-        get => storageLimit;
-        set => storageLimit = value;
+        switch (levelMobileBase)
+        {
+            case 1:
+                return resourceProductionListLevel[0];
+                break;
+            case 2:
+                return resourceProductionListLevel[1];
+                break;
+            case 3:
+                return resourceProductionListLevel[2];
+                break;
+            default: return resourceProductionListLevel[0];
+        }
     }
 
     public GameObject PrefabBuilding

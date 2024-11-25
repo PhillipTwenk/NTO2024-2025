@@ -20,12 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/ANDREWKOLESNICHENKOTESTSCENEFORMOVEMENTCHARACTER.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PlacementSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PlacementSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +51,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/fc/0c5e26ce/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Quests/QuestOwner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/ResourcesSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,19 +126,19 @@
         <option value="$PROJECT_DIR$/Assets/Events/GameEventListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Plan.cs" />
-        <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +195,7 @@
       <workItem from="1732289812312" duration="22037000" />
       <workItem from="1732379503694" duration="16629000" />
       <workItem from="1732445765757" duration="24308000" />
-      <workItem from="1732548585896" duration="13084000" />
+      <workItem from="1732548585896" duration="23443000" />
     </task>
     <servers />
   </component>
