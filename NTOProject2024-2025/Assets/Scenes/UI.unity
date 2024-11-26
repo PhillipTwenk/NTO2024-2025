@@ -2994,6 +2994,7 @@ MonoBehaviour:
   PanelStorageBought: {fileID: 2043142058}
   PanelPierBought: {fileID: 9395731}
   NotEnoughtResourcesTextPanel: {fileID: 1599332984}
+  UpdateResourcesEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
   _buttonHG: {fileID: 413128463}
   _buttonS: {fileID: 1612915980}
   _buttonP: {fileID: 933987016}

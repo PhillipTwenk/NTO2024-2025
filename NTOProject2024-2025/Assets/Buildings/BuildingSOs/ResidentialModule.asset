@@ -12,19 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: ResidentialModule
   m_EditorClassIdentifier: 
-  levelDefault: 0
-  durabilityDefault: 0
-  durabilityLevel2: 0
-  durabilityLevel3: 0
-  energyHoneyConsumptionDefault: 0
-  energyHoneyConsumptionLevel2: 0
-  energyHoneyConsumptionLevel3: 0
-  resourceProductionDefault: 0
-  resourceProductionLevel2: 0
-  resourceProductionLevel3: 0
-  storageDefault: 0
-  storageLevel2: 0
-  storageLevel3: 0
+  levelListLevel: 01000000
+  durabilityListLevel: 96000000
+  energyHoneyConsumptionListLevel: 0a000000
+  resourceProductionListLevel: 00000000
+  storageListLevel: 02000000
   priceBuilding: 50
+  MBLevelForBuidlingthisIron: 2
   prefabBuilding: {fileID: 7359515488963141187, guid: e19066c4dbaa3be42bf6af8c10c9b804, type: 3}
   prefabBeforeBuilding: {fileID: 7359515488963141187, guid: cef29b3925b8c5548b04290c1f27dc78, type: 3}

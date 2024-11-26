@@ -15,6 +15,8 @@ public class PlansInShopControl : MonoBehaviour
     [SerializeField] private GameObject PanelPierBought;
     [SerializeField] private GameObject NotEnoughtResourcesTextPanel;
 
+    [SerializeField] private GameEvent UpdateResourcesEvent;
+
     [SerializeField] private Button _buttonHG;
     [SerializeField] private Button _buttonS;
     [SerializeField] private Button _buttonP;
@@ -147,6 +149,8 @@ public class PlansInShopControl : MonoBehaviour
         {
             NotEnoughtResourcesTextPanel.SetActive(true);
         }
+        
+        UpdateResourcesEvent.TriggerEvent();
         
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }

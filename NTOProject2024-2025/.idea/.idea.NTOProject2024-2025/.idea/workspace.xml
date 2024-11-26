@@ -20,26 +20,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiary.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiary.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiaryBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTApiary/TESTApiaryBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwiner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwiner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwinerBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTBreadwiner/TESTBreadwinerBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGun.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGun.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGunBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTHoneyGun/TESTHoneyGunBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBase.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBaseBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTMobileBase/TESTMobileBaseBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPier.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPier.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPierBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTPier/TESTPierBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModuleBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModuleBB.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorage.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorage.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorageBB.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingPrefabs/TEst/TESTStorage/TESTStorageBB.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +97,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/ResourcesSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ProductChangesShopLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitilities/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Buildings/Plan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +105,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/EntityID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SaveData/Json/ISerializableSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildingSystem/YouCantBuildHereTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerDataList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,6 +115,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Entities/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Events/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerResources.cs" root0="FORCE_HIGHLIGHTING" />
@@ -88,10 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/CameraFollowTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/PlayerAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Events/GameEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/Log.cs" />
@@ -109,18 +149,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" />
-        <option value="$PROJECT_DIR$/Assets/README.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopsDataList.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" />
         <option value="$PROJECT_DIR$/Assets/AssetsStore/QuickOutline/Scripts/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/AssetsStore/QuickOutline/Scripts/OutlineUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/OutlineBuildingPanelControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/YouCantBuildHereTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/LoadingCanvasController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CanPutEBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Events/GameEventListener.cs" />
@@ -132,13 +168,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/README.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitilities/Utility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/LoadingCanvasController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/Json/ISerializableSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
       </list>
     </option>
   </component>
@@ -156,6 +200,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads\NTOProject2024-2025.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Philip\Downloads" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -196,6 +248,7 @@
       <workItem from="1732379503694" duration="16629000" />
       <workItem from="1732445765757" duration="24308000" />
       <workItem from="1732548585896" duration="23443000" />
+      <workItem from="1732634004861" duration="20314000" />
     </task>
     <servers />
   </component>
