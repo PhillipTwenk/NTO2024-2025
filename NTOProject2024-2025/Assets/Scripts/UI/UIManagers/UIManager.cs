@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public GameEvent CloseBarterMenuEvent;
     public GameEvent OpenHiringWorkersPanelEvent;
     public GameEvent CloseHiringWorkersPanelEvent;
+    public GameEvent CloseTabletMenuEvent;
 
     [SerializeField] private Transform NewPlanPosition;
     [SerializeField] private Transform ContentPanel;
@@ -150,5 +151,13 @@ public class UIManager : MonoBehaviour
     public void CloseHiringWorkersPanel()
     {
         CloseHiringWorkersPanelEvent.TriggerEvent();
+    }
+    
+    /// <summary>
+    /// закрываааааааает окошко юный колонизатор
+    /// </summary>
+    public void FunctionCloseTabletMenu()
+    {
+        CloseTabletMenuEvent.TriggerEvent();
     }
 }
