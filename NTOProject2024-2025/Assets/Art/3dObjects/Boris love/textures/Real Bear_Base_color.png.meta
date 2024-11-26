@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Real Bear_Base_color_0: 4620039145734190732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

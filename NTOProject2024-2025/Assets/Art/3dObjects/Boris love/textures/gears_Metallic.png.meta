@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gears_Metallic_0: 6461337811169736727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
