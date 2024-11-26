@@ -12,19 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: Storage
   m_EditorClassIdentifier: 
-  levelDefault: 0
-  durabilityDefault: 0
-  durabilityLevel2: 0
-  durabilityLevel3: 0
-  energyHoneyConsumptionDefault: 0
-  energyHoneyConsumptionLevel2: 0
-  energyHoneyConsumptionLevel3: 0
-  resourceProductionDefault: 0
-  resourceProductionLevel2: 0
-  resourceProductionLevel3: 0
-  storageDefault: 0
-  storageLevel2: 0
-  storageLevel3: 0
+  levelListLevel: 0100000002000000
+  durabilityListLevel: 6400000096000000
+  energyHoneyConsumptionListLevel: 0000000000000000
+  resourceProductionListLevel: 0000000000000000
+  storageListLevel: dc050000b80b0000
   priceBuilding: 70
+  MBLevelForBuidlingthisIron: 2
   prefabBuilding: {fileID: 7359515488963141187, guid: 8ab9cfced93a80d419763d710a75c8b6, type: 3}
   prefabBeforeBuilding: {fileID: 7359515488963141187, guid: 88b11aeb9bfe7084fb65d5d918b662c2, type: 3}

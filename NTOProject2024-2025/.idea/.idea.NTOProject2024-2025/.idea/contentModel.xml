@@ -42,6 +42,10 @@
         </e>
         <e p="README.txt" t="Include" />
         <e p="SaveData" t="Include">
+          <e p="Json" t="Include">
+            <e p="ISerializableSO.cs" t="Include" />
+            <e p="JSONSerializeManager.cs" t="Include" />
+          </e>
           <e p="PLayerSaveData.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
@@ -100,6 +104,9 @@
             </e>
             <e p="UpdatePanelResources.cs" t="Include" />
             <e p="VolumeSlider.cs" t="Include" />
+          </e>
+          <e p="Unitilities" t="Include">
+            <e p="Utility.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

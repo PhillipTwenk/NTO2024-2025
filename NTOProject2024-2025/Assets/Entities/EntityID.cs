@@ -5,8 +5,23 @@ using System.Collections.Generic;
 /// Общее описание свойств сущности
 /// </summary>
 [CreateAssetMenu(menuName = "ForEntities/Entity")]
-public class EntityID : ScriptableObject
+public class EntityID : ScriptableObject, ISerializableSO
 {
+    // Реализация ISerializableSO
+    public string SerializeToJson()
+    {
+        return JsonUtility.ToJson(this, true);
+    }
+
+    public void DeserializeFromJson(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, this);
+    }
+    
+    
+    
+    
+    
     [TextArea] public string Name;
     public string DefaultName;
     public int index;

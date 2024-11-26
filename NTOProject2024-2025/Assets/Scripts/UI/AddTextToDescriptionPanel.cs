@@ -21,7 +21,9 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [SerializeField] private Transform pointInPanelAngle1;
     [SerializeField] private Transform pointInPanelAngle2;
     [SerializeField] private Transform pointInPanelAngle3;
-    [SerializeField] private Transform pointInPanelAngle4; 
+    [SerializeField] private Transform pointInPanelAngle4;
+
+    [SerializeField] private GameEvent UpdateResourcesEvent;
     private bool IsPanelActive;
 
     private void Start()
@@ -135,7 +137,10 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             playerResources.CryoCrystal);
         
         PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
-        playerSaveData.DeleteBuilding(buildingSO.PrefabBuilding);
+        
+        playerSaveData.DeleteBuilding(building);
+        
+        UpdateResourcesEvent.TriggerEvent();
 
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
