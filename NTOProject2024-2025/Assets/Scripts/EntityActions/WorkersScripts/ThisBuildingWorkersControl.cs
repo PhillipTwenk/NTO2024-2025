@@ -33,23 +33,5 @@ public class ThisBuildingWorkersControl : MonoBehaviour
         }
     }
 
-    public void TextPanelBuildingControl(bool IsOpen, string WhichAction)
-    {
-        if (IsOpen)
-        {
-            AwaitBuildingThisTMPro.gameObject.SetActive(IsOpen);
-
-            if (WhichAction == AwaitWorkerActionText)
-            {
-                AwaitBuildingThisTMPro.text = TextAwaitArriveWorker;
-            }else if (WhichAction == AwaitBuildingActionText)
-            {
-                AwaitBuildingThisTMPro.text = TextAwaitBuildingThis;
-            }
-        }
-        else
-        {
-            AwaitBuildingThisTMPro.gameObject.SetActive(IsOpen);
-        }
-    }
+    
 }

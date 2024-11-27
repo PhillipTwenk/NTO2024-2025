@@ -22,7 +22,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     // public GameObject TextHintGameObject;
     // public TextMeshProUGUI HintTextTMPro;
 
-    public event Action IsWorkerHereEvent;
+    public event Action IsWorkerHereEvent; // Игрок прибыл
 
     private bool IsWorkersHere;
 
@@ -51,25 +51,22 @@ public class WorkersInterBuildingControl : MonoBehaviour
     ///</summary>
     public async Task SendWorkerToBuilding(bool IsSend, BuildingData buildingData)
     {
-        if(NumberOfActiveWorkers < CurrentValueOfWorkers && IsSend)
+        if(NumberOfActiveWorkers < CurrentValueOfWorkers && IsSend) // Ержана дернули с кровати и отправили строить крымский мост
         {
+            Debug.Log("Рабочий отправился строить здание, ожидаем его прибытия");
             NumberOfActiveWorkers += 1;
             CurrentValueOfWorkers -= 1;
-
-            ThisBuildingWorkersControl TBWC = buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>();
-            TBWC.TextPanelBuildingControl(true, TBWC.TextAwaitArriveWorker);
+            
+            buildingData.TextPanelBuildingControl(true, buildingData.AwaitWorkerActionText);
             
             //Ожидаем прибытия рабочего
             await WaitForWorkerArrival();
-
-
-
-        }else if(!IsSend && CurrentValueOfWorkers != MaxValueOfWorkers)
+            
+        }else if(!IsSend) // Отправка рабочего обратно на базу
         {
             NumberOfActiveWorkers -= 1;
             CurrentValueOfWorkers += 1;
-        }
-        else
+        }else
         {
             //ShowHint(HintTextNotEnoughtWorkers);
             Debug.Log("Нет рабочих");
@@ -111,15 +108,16 @@ public class WorkersInterBuildingControl : MonoBehaviour
     ///</summary>
     public async Task WorkerEndWork(BuildingData buildingData)
     {
-        ThisBuildingWorkersControl TBWC = buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>();
-        TBWC.TextPanelBuildingControl(true, TBWC.TextAwaitBuildingThis);
+        buildingData.TextPanelBuildingControl(true, buildingData.AwaitBuildingActionText);
 
         await AwaitEndWorking(buildingData);
 
+        Debug.Log("Рабочий достроил, идет обратно");
+        
         //Отправляем рабочего обратно на базу
         SendWorkerToBuilding(false, buildingData);
 
-        TBWC.TextPanelBuildingControl(false, TBWC.TextAwaitBuildingThis);
+        buildingData.TextPanelBuildingControl(false, buildingData.AwaitBuildingActionText);
     }
 
     private async Task AwaitEndWorking(BuildingData buildingData)

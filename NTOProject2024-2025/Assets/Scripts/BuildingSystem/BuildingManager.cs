@@ -17,6 +17,7 @@ public class BuildingManager : MonoBehaviour
 
     public bool IsBuildingActive;
     public bool CanBuilding;
+    public bool ProcessWorkerBuildingActive;
     
     [SerializeField] private Camera MainCamera;
     private Vector3 lastPosition;
@@ -42,6 +43,7 @@ public class BuildingManager : MonoBehaviour
     
     private void Start()
     {
+        ProcessWorkerBuildingActive = false;
         IsBuildingActive = false;
         CanBuilding = true;
     }
@@ -84,6 +86,7 @@ public class BuildingManager : MonoBehaviour
     /// <param name="mousePosition"></param>
     public async void PlaceBuilding(Vector3 mousePosition)
     {
+        ProcessWorkerBuildingActive = true;
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
 
         
@@ -99,7 +102,8 @@ public class BuildingManager : MonoBehaviour
             {
                 int CNoW = WorkersInterBuildingControl.Instance.CurrentValueOfWorkers;
                 int MVoW = WorkersInterBuildingControl.Instance.MaxValueOfWorkers;
-                if(CNoW <= MVoW)
+                int AW = WorkersInterBuildingControl.Instance.NumberOfActiveWorkers;
+                if(CNoW <= MVoW && AW < CNoW)
                 {
                     await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
                 playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
@@ -110,6 +114,7 @@ public class BuildingManager : MonoBehaviour
                     newBuildingObject.transform.position = MouseIndicator.transform.position;
                     Destroy(MouseIndicator);
         
+                    IsBuildingActive = false;
                     CurrentBuilding = null;
                     CanBuilding = true;
 
@@ -117,15 +122,16 @@ public class BuildingManager : MonoBehaviour
                     GameObject ComponentContainingBuilding = newBuildingObject.transform.GetChild(0).gameObject;
                     BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
 
+                    LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+                    
                     //Ожидаем прибытия рабочего 
                     await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData);
-
+                    
                     //Ожидаем завершения его строительства
                     await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData);
 
-                    IsBuildingActive = false;
 
-
+                    LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
                     //Сохранение данных здания в SO сохранения
                     PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
                     pLayerSaveData.playerBuildings.Add(buildingData.buildingTypeSO.PrefabBuilding);
@@ -138,11 +144,15 @@ public class BuildingManager : MonoBehaviour
 
                     buildingData.SaveListIndex = pLayerSaveData.BuildingDatas.IndexOf(buildingSaveData);
 
-                    ThisBuildingWorkersControl thisBuildingWorkersControl = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
-                    WorkersContolSaveData worlersSaveData = new WorkersContolSaveData(thisBuildingWorkersControl);
-                    pLayerSaveData.BuildingWorkersInformationList.Add(worlersSaveData);
+                    if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
+                    {
+                        ThisBuildingWorkersControl thisBuildingWorkersControl = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
+                        WorkersContolSaveData worlersSaveData = new WorkersContolSaveData(thisBuildingWorkersControl);
+                        pLayerSaveData.BuildingWorkersInformationList.Add(worlersSaveData);
 
-                    WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                    }
+                    ProcessWorkerBuildingActive = false;
                 }
                 else
                 {
@@ -166,7 +176,6 @@ public class BuildingManager : MonoBehaviour
         }
         
         UpdateResourcesEvent.TriggerEvent();
-        
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 }

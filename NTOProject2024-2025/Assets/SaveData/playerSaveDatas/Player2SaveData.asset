@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b1747875eeec945aaf7034e37a0e2d, type: 3}
   m_Name: Player2SaveData
   m_EditorClassIdentifier: 
+  BuildingPrefabsPath: 
   playerBuildings:
   - {fileID: 7359515488963141187, guid: 92be245eb4a8afa4fb4711ade305d210, type: 3}
   buildingsTransform:
-  - position: {x: 5.424583, y: 3.99, z: -19.149467}
+  - position: {x: 5.229767, y: 3.99, z: -91.0889}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    scale: {x: 1, y: 1, z: 1}
+    scale: {x: 12, y: 12, z: 12}
   BuildingDatas:
-  - Level: 0
-    Durability: 0
+  - Level: 1
+    Durability: 75
     Storage: 0
     SaveListIndex: 0
+  BuildingWorkersInformationList:
+  - CurrentNumberOfWorkersInThisBuilding: 1
+    MaxValueOfWorkersInThisBuilding: 1

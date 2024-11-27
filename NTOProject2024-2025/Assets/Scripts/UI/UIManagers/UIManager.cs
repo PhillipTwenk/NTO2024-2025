@@ -115,8 +115,8 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void StartPlacingNewBuilding(Plan plan)
     {
-        GameObject PlaseNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
-        BuildingManager.Instance.MouseIndicator = PlaseNewBuildingTrigger;
+        GameObject PlaceNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
+        BuildingManager.Instance.MouseIndicator = PlaceNewBuildingTrigger;
         BuildingManager.Instance.CurrentBuilding = plan.buildingSO.PrefabBuilding;
         StartPlacingBuildEvent.TriggerEvent();
     }

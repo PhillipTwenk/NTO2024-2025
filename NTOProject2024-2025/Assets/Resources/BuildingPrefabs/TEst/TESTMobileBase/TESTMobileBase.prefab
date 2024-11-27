@@ -447,6 +447,12 @@ MonoBehaviour:
   Durability: 175
   Storage: 0
   SaveListIndex: 0
+  AwaitBuildingThisTMPro: {fileID: 4449596022409991680}
+  TextAwaitArriveWorker: "\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440\u0430.
+    . . "
+  TextAwaitBuildingThis: "\u0421\u0442\u0440\u043E\u0438\u043C. . . "
+  AwaitWorkerActionText: AwaitWorker
+  AwaitBuildingActionText: AwaitBuilding
 --- !u!114 &3551532011499192407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3507915442534533305
 RectTransform:
   m_ObjectHideFlags: 0

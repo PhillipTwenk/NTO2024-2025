@@ -40,8 +40,9 @@ public class InteractionBuildingController : MonoBehaviour
             CanPutE = true;
             Texthint.SetActive(true);
         }else if(other.gameObject.CompareTag("Worker")){
-            if (BuildingManager.Instance.IsBuildingActive)
+            if (BuildingManager.Instance.ProcessWorkerBuildingActive)
             {
+                Debug.Log("Рабочий добрался, начинает строить здание");
                 WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
             }
         }

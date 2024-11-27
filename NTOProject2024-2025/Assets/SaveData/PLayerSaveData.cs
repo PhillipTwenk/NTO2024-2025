@@ -119,6 +119,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             playerBuildings.Remove(buildingData.buildingTypeSO.PrefabBuilding);
             buildingsTransform.Remove(buildingsTransform[indexBuilding]);
             BuildingDatas.Remove(BuildingDatas[indexBuilding]);
+            BuildingWorkersInformationList.Remove(BuildingWorkersInformationList[indexBuilding]);
 
             if (buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>())
             {
