@@ -7,7 +7,7 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     public int MaxValueOfWorkersInThisBuilding;
     public int NumberOfActiveWorkersInThisBuilding;
 
-    public TextMeshProUGUI AwaitBuildingThisTMPro;
+    public TextMeshPro AwaitBuildingThisTMPro;
 
     [TextArea] public string TextAwaitArriveWorker;
     [TextArea] public string TextAwaitBuildingThis;

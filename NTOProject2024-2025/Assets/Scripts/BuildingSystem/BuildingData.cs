@@ -5,7 +5,7 @@ public class BuildingData : MonoBehaviour
 {
     public Building buildingTypeSO;
     public string Title;
-    public TextMeshProUGUI textHintBuilding;
+    public TextMeshPro textHintBuilding;
 
     public int Level;
     public int Durability;

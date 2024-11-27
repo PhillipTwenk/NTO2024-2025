@@ -70,6 +70,12 @@
             <e p="BuildingManager.cs" t="Include" />
             <e p="YouCantBuildHereTrigger.cs" t="Include" />
           </e>
+          <e p="EntityActions" t="Include">
+            <e p="WorkersScripts" t="Include">
+              <e p="ThisBuildingWorkersControl.cs" t="Include" />
+              <e p="WorkersInterBuildingControl.cs" t="Include" />
+            </e>
+          </e>
           <e p="EntryPoint" t="Include">
             <e p="EntryLocationControl.cs" t="Include" />
             <e p="EntryPoint.cs" t="Include" />
@@ -86,6 +92,10 @@
               <e p="MovementCharacter.cs" t="Include" />
               <e p="PlayerAnimationController.cs" t="Include" />
             </e>
+          </e>
+          <e p="TabletScripts" t="Include">
+            <e p="Tablet.cs" t="Include" />
+            <e p="TabletSO.cs" t="Include" />
           </e>
           <e p="Test.cs" t="Include" />
           <e p="TestBuy.cs" t="Include" />

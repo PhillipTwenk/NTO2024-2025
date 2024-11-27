@@ -19,8 +19,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
     public List<ThisBuildingWorkersControl> listOfActiveBuildingWithWorkers;
 
-    public GameObject TextHintGameObject;
-    public TextMeshProUGUI HintTextTMPro;
+    // public GameObject TextHintGameObject;
+    // public TextMeshProUGUI HintTextTMPro;
 
     public event Action IsWorkerHereEvent;
 
@@ -47,7 +47,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     }
 
     ///<summary> 
-    /// Отправляет рабочих на строиельство / возвращает их обратно
+    /// Отправляет рабочих на строительство / возвращает их обратно
     ///</summary>
     public async Task SendWorkerToBuilding(bool IsSend, BuildingData buildingData)
     {
@@ -58,6 +58,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
             ThisBuildingWorkersControl TBWC = buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>();
             TBWC.TextPanelBuildingControl(true, TBWC.TextAwaitArriveWorker);
+            
             //Ожидаем прибытия рабочего
             await WaitForWorkerArrival();
 

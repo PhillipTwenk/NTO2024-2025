@@ -100,6 +100,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
         playerBuildings.Clear();
         buildingsTransform.Clear();
         BuildingDatas.Clear();
+        BuildingWorkersInformationList.Clear();
     }
 
     /// <summary>
@@ -118,7 +119,11 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             playerBuildings.Remove(buildingData.buildingTypeSO.PrefabBuilding);
             buildingsTransform.Remove(buildingsTransform[indexBuilding]);
             BuildingDatas.Remove(BuildingDatas[indexBuilding]);
-            WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
+
+            if (buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>())
+            {
+                WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
+            }
 
             Destroy(building.transform.parent.gameObject);
 
