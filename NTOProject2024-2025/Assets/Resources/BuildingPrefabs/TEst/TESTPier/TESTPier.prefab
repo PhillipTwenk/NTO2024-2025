@@ -154,12 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573ca4b9fe5bb744d8437411654e99f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveListIndex: 0
   buildingTypeSO: {fileID: 11400000, guid: 32cc812b594bfdc42a239181b28e4d7f, type: 2}
   Title: "\u041F\u0440\u0438\u0441\u0442\u0430\u043D\u044C"
   Level: 0
   Durability: 0
-  Production: 0
-  HoneyConsumption: 0
   Storage: 0
 --- !u!114 &1833170226058605371
 MonoBehaviour:
@@ -174,6 +173,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpenDescriptionPanel: {fileID: 11400000, guid: 0d9b22dcf1857b944bdeffd19b8f09ee, type: 2}
+  InteractionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OpenBarterMenuEvent: {fileID: 0}
+  CloseBarterMenuEvent: {fileID: 0}
+  Texthint: {fileID: 0}
 --- !u!1 &7359515488963141187
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +190,7 @@ GameObject:
   - component: {fileID: 2924200054753896187}
   m_Layer: 0
   m_Name: TESTPier
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

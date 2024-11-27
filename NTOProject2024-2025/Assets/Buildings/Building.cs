@@ -17,7 +17,8 @@ public class Building : ScriptableObject
     public int priceBuilding; // Стоимость здания ( металл )
     //public int priceBuildingCC; //Стоимость здания ( кристаллы )
     public int MBLevelForBuidlingthisIron; // Минимальный уровень мобильной базы для постройки данного здания, = 0 если строим Мобильную базу (Металл)
-    
+    public float TimeAwaitBuildingThis; //Cколько нужно ждать для завершения строительства данного здания
+
     [SerializeField] private GameObject prefabBuilding; // Префаб строения
     [SerializeField] private GameObject prefabBeforeBuilding; // Префаб триггера перед поставновкой здания
     

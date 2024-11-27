@@ -39,7 +39,11 @@ public class InteractionBuildingController : MonoBehaviour
         {
             CanPutE = true;
             Texthint.SetActive(true);
-            
+        }else if(other.gameObject.CompareTag("Worker")){
+            if (BuildingManager.Instance.IsBuildingActive)
+            {
+                WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+            }
         }
     }
     

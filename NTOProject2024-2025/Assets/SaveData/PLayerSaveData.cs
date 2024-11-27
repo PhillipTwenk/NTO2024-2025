@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Сохранения данных о зданиях 
+/// </summary>
 [CreateAssetMenu(menuName = "SaveData/PLayerSaveData")]
 public class PlayerSaveData : ScriptableObject, ISerializableSO
 {
@@ -44,6 +47,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
     public List<GameObject> playerBuildings;
     public List<TransformData> buildingsTransform;
     public List<BuildingSaveData> BuildingDatas;
+    public List<WorkersContolSaveData> BuildingWorkersInformationList;
 
     private bool IsDeleteBuidlingProcessActive;
 
@@ -63,13 +67,25 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 newBuilding.transform.rotation = buildingsTransform[i].rotation;
                 newBuilding.transform.localScale = buildingsTransform[i].scale;
 
-                BuildingData buildingData = newBuilding.transform.GetChild(0).GetComponent<BuildingData>();
+                GameObject ComponentContainingBuilding = newBuilding.transform.GetChild(0).gameObject;
+
+                BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
                 buildingData.Level = BuildingDatas[i].Level;
                 buildingData.Durability = BuildingDatas[i].Durability;
                 buildingData.Storage = BuildingDatas[i].Storage;
+                buildingData.SaveListIndex = BuildingDatas[i].SaveListIndex;
                 if (i == 0)
                 {
                     PlansInShopControl.BaseLevel = buildingData.Level;
+                }
+
+                if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
+                {
+                    ThisBuildingWorkersControl workers = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
+                    workers.CurrentNumberWorkersInThisBuilding = BuildingWorkersInformationList[i].CurrentNumberOfWorkersInThisBuilding;
+                    workers.MaxValueOfWorkersInThisBuilding = BuildingWorkersInformationList[i].MaxValueOfWorkersInThisBuilding;
+
+                    WorkersInterBuildingControl.Instance.AddNewBuilding(workers);
                 }
                 i++;
             }
@@ -95,12 +111,14 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
         if (playerBuildings is not null && !IsDeleteBuidlingProcessActive)
         {
             IsDeleteBuidlingProcessActive = true;
+
             BuildingData buildingData = building.GetComponent<BuildingData>();
             int indexBuilding = buildingData.SaveListIndex;
+
             playerBuildings.Remove(buildingData.buildingTypeSO.PrefabBuilding);
-            Debug.Log(indexBuilding);
             buildingsTransform.Remove(buildingsTransform[indexBuilding]);
             BuildingDatas.Remove(BuildingDatas[indexBuilding]);
+            WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
 
             Destroy(building.transform.parent.gameObject);
 
@@ -139,6 +157,19 @@ public class BuildingSaveData
         Durability = buildingData.Durability;
         Storage = buildingData.Storage;
         SaveListIndex = buildingData.SaveListIndex;
+    }
+}
+
+[System.Serializable]
+public class WorkersContolSaveData
+{
+    public int CurrentNumberOfWorkersInThisBuilding;
+    public int MaxValueOfWorkersInThisBuilding;
+
+    public WorkersContolSaveData(ThisBuildingWorkersControl buildingWorkersControl)
+    {
+        CurrentNumberOfWorkersInThisBuilding = buildingWorkersControl.CurrentNumberWorkersInThisBuilding;
+        MaxValueOfWorkersInThisBuilding = buildingWorkersControl.MaxValueOfWorkersInThisBuilding;
     }
 }
 
