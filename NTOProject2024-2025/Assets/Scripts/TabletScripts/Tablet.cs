@@ -15,8 +15,12 @@ public class Tablet : MonoBehaviour
         
     }
 
-    private void OnMouseDown() {
-        OpenTabletMenuEvent.TriggerEvent();
-        isCollected = true;
+    public void OnMouseDown() {
+        if(isCollected){
+            Debug.Log(1);
+            isCollected = true;
+            UIManager.currentTablet = TabletInfo;
+            OpenTabletMenuEvent.TriggerEvent();
+        }
     }
 }

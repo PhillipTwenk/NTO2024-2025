@@ -15,9 +15,15 @@ public class UIManager : MonoBehaviour
     public GameEvent OpenHiringWorkersPanelEvent;
     public GameEvent CloseHiringWorkersPanelEvent;
     public GameEvent CloseTabletMenuEvent;
+    public static TabletSO currentTablet; 
 
     [SerializeField] private Transform NewPlanPosition;
     [SerializeField] private Transform ContentPanel;
+    [SerializeField] private GameObject TabletPanel;
+    [SerializeField] private TMP_Text TitleTabletPanel;
+    [SerializeField] private TMP_Text DescriptionTabletPanel;
+    [SerializeField] private GameObject ImageTabletPanel;
+    
 
     [SerializeField] private List<Plan> plansArray;
 
@@ -153,11 +159,21 @@ public class UIManager : MonoBehaviour
         CloseHiringWorkersPanelEvent.TriggerEvent();
     }
     
+    public void FunctionOpenTabletMenu()
+    {
+        Debug.Log(TitleTabletPanel);
+        TitleTabletPanel.text = "Юный колонизатор\n" + $"#{currentTablet.tablet_id} - " + currentTablet.title;
+        DescriptionTabletPanel.text = currentTablet.description;
+        ImageTabletPanel.GetComponent<Image>().sprite = currentTablet.picture;
+
+        TabletPanel.SetActive(true);       
+    }
+
     /// <summary>
     /// закрываааааааает окошко юный колонизатор
     /// </summary>
     public void FunctionCloseTabletMenu()
     {
-        CloseTabletMenuEvent.TriggerEvent();
+        TabletPanel.SetActive(false);
     }
 }

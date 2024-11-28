@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class TabletSO : ScriptableObject
 {
     public string tablet_id;
-    public string Title;
+    public string title;
     public Sprite picture;
     public string description;
     public TransformData transformData;
