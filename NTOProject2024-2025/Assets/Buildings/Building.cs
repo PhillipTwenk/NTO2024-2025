@@ -15,8 +15,11 @@ public class Building : ScriptableObject
     [SerializeField] private List<ResourceData> storageListLevel;
     
     public int priceBuilding; // Стоимость здания ( металл )
-    //public int priceBuildingCC; //Стоимость здания ( кристаллы )
+    public int priceUpgrade;//Стоимость улучшения
+    public int MBLevelForUpgradethisIron; //Минимальный уровень улучшения данного здания, =0 если улучшаем мобильную базу
+    
     public int MBLevelForBuidlingthisIron; // Минимальный уровень мобильной базы для постройки данного здания, = 0 если строим Мобильную базу (Металл)
+    
     public float TimeAwaitBuildingThis; //Cколько нужно ждать для завершения строительства данного здания
 
     [SerializeField] private GameObject prefabBuilding; // Префаб строения
@@ -39,7 +42,7 @@ public class Building : ScriptableObject
 
         return levelListLevel[0];
     }
-    
+
     /// <summary>
     /// Возвращает значение лимита локальных ресурсов в зависимости от уровня базы
     /// </summary>
@@ -47,7 +50,6 @@ public class Building : ScriptableObject
     /// <returns></returns>
     public ResourceData StorageLimit(int levelMobileBase)
     {
-        
         foreach (var level in levelListLevel)
         {
             if (level  == levelMobileBase)
@@ -55,7 +57,6 @@ public class Building : ScriptableObject
                 return storageListLevel[level - 1];
             }
         }
-
         return storageListLevel[0];
     }
     
@@ -103,7 +104,6 @@ public class Building : ScriptableObject
     /// <returns></returns>
     public ResourceData Production(int levelMobileBase)
     {
-        
         foreach (var level in levelListLevel)
         {
             if (level  == levelMobileBase)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ae3d7a2c70f8e45a7c5fd09cbe68af, type: 3}
   m_Name: Player2
   m_EditorClassIdentifier: 
-  Name: None
+  Name: 3w
   DefaultName: None
   index: 2
   playerStats: {fileID: 11400000, guid: a9be5365bf7e5b74abd9356fa776e5eb, type: 2}

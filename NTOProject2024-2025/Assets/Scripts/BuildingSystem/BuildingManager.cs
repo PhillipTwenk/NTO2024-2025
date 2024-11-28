@@ -54,7 +54,7 @@ public class BuildingManager : MonoBehaviour
         if (IsBuildingActive)
         {
             Vector3 mousePosition = GetSelectedMapPosition();
-            MouseIndicator.transform.position = new Vector3(mousePosition.x, mousePosition.y + 0.5f, mousePosition.z);
+            MouseIndicator.transform.position = new Vector3(mousePosition.x, mousePosition.y + 0.2f, mousePosition.z);
             
             if (Input.GetMouseButtonDown(0) && CanBuilding)
             {
@@ -73,7 +73,7 @@ public class BuildingManager : MonoBehaviour
         mousePos.z = MainCamera.nearClipPlane;
         Ray ray = MainCamera.ScreenPointToRay(mousePos);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100, placementLayerMask))
+        if (Physics.Raycast(ray, out hit, 2000, placementLayerMask))
         {
             lastPosition = hit.point;
         }
@@ -150,6 +150,13 @@ public class BuildingManager : MonoBehaviour
                         WorkersContolSaveData worlersSaveData = new WorkersContolSaveData(thisBuildingWorkersControl);
                         pLayerSaveData.BuildingWorkersInformationList.Add(worlersSaveData);
 
+                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                    }
+                    else
+                    {
+                        ThisBuildingWorkersControl thisBuildingWorkersControl = null;
+                        
+                        pLayerSaveData.BuildingWorkersInformationList.Add(null);
                         WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
                     }
                     ProcessWorkerBuildingActive = false;

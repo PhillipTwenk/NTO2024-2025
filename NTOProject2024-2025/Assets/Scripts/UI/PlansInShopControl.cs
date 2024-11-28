@@ -49,7 +49,7 @@ public class PlansInShopControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            BaseLevel += 1;
+            BaseLevel += 1; 
             Debug.Log(BaseLevel);
         }
     }

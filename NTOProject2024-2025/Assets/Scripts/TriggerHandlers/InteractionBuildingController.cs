@@ -36,19 +36,17 @@ public class InteractionBuildingController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (PossiblityPutEInThisBuilding)
+        if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                CanPutE = true;
-                Texthint.SetActive(true);
-            }else if(other.gameObject.CompareTag("Worker")){
-                if (BuildingManager.Instance.ProcessWorkerBuildingActive)
-                {
-                    Debug.Log("Рабочий добрался, начинает строить здание");
-                    WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
-                }
+            CanPutE = true;
+            Texthint.SetActive(true);
         }
+        if(other.gameObject.CompareTag("Worker")){
+            if (BuildingManager.Instance.ProcessWorkerBuildingActive)
+            {
+                Debug.Log("Рабочий добрался, начинает строить здание");
+                WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+            }
         }
     }
     

@@ -87,6 +87,10 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
 
                     WorkersInterBuildingControl.Instance.AddNewBuilding(workers);
                 }
+                else
+                {
+                    WorkersInterBuildingControl.Instance.AddNewBuilding(null);
+                }
                 i++;
             }
         }
@@ -153,7 +157,7 @@ public class BuildingSaveData
 {
     public int Level;
     public int Durability;
-    public int Storage;
+    public List<int> Storage;
     public int SaveListIndex;
 
     public BuildingSaveData(BuildingData buildingData)

@@ -15,8 +15,12 @@ MonoBehaviour:
   levelListLevel: 01000000
   durabilityListLevel: 96000000
   energyHoneyConsumptionListLevel: 0a000000
-  resourceProductionListLevel: 00000000
-  storageListLevel: 02000000
+  resourceProductionListLevel:
+  - resources: 
+    SpriteAssetsUsingIndex: 
+  storageListLevel:
+  - resources: 02000000
+    SpriteAssetsUsingIndex: 05000000
   priceBuilding: 50
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3

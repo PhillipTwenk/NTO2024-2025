@@ -34,16 +34,30 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
     public void AddNewBuilding(ThisBuildingWorkersControl newBuilding)
     {
-        listOfActiveBuildingWithWorkers.Add(newBuilding);
-        MaxValueOfWorkers += newBuilding.MaxValueOfWorkersInThisBuilding;
-        CurrentValueOfWorkers += newBuilding.CurrentNumberWorkersInThisBuilding;
+        if (newBuilding != null) 
+        {
+            listOfActiveBuildingWithWorkers.Add(newBuilding);
+            MaxValueOfWorkers += newBuilding.MaxValueOfWorkersInThisBuilding;
+            CurrentValueOfWorkers += newBuilding.CurrentNumberWorkersInThisBuilding;
+        }
+        else
+        {
+            listOfActiveBuildingWithWorkers.Add(newBuilding);
+        }
     }
 
     public void RemoveNewBuilding(ThisBuildingWorkersControl newBuilding)
     {
-        listOfActiveBuildingWithWorkers.Remove(newBuilding);
-        MaxValueOfWorkers -= newBuilding.MaxValueOfWorkersInThisBuilding;
-        CurrentValueOfWorkers -= newBuilding.CurrentNumberWorkersInThisBuilding;
+        if (newBuilding != null)
+        {
+            listOfActiveBuildingWithWorkers.Remove(newBuilding);
+            MaxValueOfWorkers -= newBuilding.MaxValueOfWorkersInThisBuilding;
+            CurrentValueOfWorkers -= newBuilding.CurrentNumberWorkersInThisBuilding;
+        }
+        else
+        {
+            listOfActiveBuildingWithWorkers.Remove(newBuilding);
+        }
     }
 
     ///<summary> 

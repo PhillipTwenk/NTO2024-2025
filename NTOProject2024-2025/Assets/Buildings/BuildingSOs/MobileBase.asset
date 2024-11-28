@@ -15,10 +15,22 @@ MonoBehaviour:
   levelListLevel: 010000000200000003000000
   durabilityListLevel: af000000c8000000fa000000
   energyHoneyConsumptionListLevel: 140000001e00000028000000
-  resourceProductionListLevel: 000000000000000000000000
-  storageListLevel: 000000000000000000000000
+  resourceProductionListLevel:
+  - resources: 
+    SpriteAssetsUsingIndex: 
+  - resources: 
+    SpriteAssetsUsingIndex: 
+  - resources: 
+    SpriteAssetsUsingIndex: 
+  storageListLevel:
+  - resources: dc050000dc0500000a000000
+    SpriteAssetsUsingIndex: 020000000100000003000000
+  - resources: dc050000dc0500000a000000
+    SpriteAssetsUsingIndex: 020000000100000003000000
+  - resources: dc050000dc0500000a000000
+    SpriteAssetsUsingIndex: 020000000100000003000000
   priceBuilding: 0
   MBLevelForBuidlingthisIron: 0
   TimeAwaitBuildingThis: 3
-  prefabBuilding: {fileID: 7359515488963141187, guid: 92be245eb4a8afa4fb4711ade305d210, type: 3}
-  prefabBeforeBuilding: {fileID: 7359515488963141187, guid: fc1d449b4691da8429b269f1d25f748f, type: 3}
+  prefabBuilding: {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
+  prefabBeforeBuilding: {fileID: 8717978868957030702, guid: 734fc5d110e28b045a3a9af226b130ac, type: 3}

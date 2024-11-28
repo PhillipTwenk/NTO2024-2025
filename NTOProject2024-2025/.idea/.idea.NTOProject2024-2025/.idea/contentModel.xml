@@ -81,6 +81,9 @@
             <e p="EntryPoint.cs" t="Include" />
             <e p="EntryPointMainMenu.cs" t="Include" />
           </e>
+          <e p="HelperClasses" t="Include">
+            <e p="ResourceData.cs" t="Include" />
+          </e>
           <e p="Interscene Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="SceneTransitionManager.cs" t="Include" />

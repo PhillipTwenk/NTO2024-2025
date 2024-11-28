@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuildingPrefabsPath: 
   playerBuildings:
-  - {fileID: 7359515488963141187, guid: 92be245eb4a8afa4fb4711ade305d210, type: 3}
+  - {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
   buildingsTransform:
-  - position: {x: 5.229767, y: 3.99, z: -91.0889}
+  - position: {x: -59.4209, y: 3.99, z: -126.0275}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    scale: {x: 12, y: 12, z: 12}
+    scale: {x: 1, y: 1, z: 1}
   BuildingDatas:
   - Level: 1
-    Durability: 75
-    Storage: 0
+    Durability: 175
+    Storage: 83030000e7030000e4030000
     SaveListIndex: 0
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1

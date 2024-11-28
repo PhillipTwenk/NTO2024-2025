@@ -12,8 +12,15 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HoneyConsumption;
     [SerializeField] private TextMeshProUGUI Storage;
 
+    [SerializeField] private TextMeshProUGUI HintPanel;
+    [TextArea] [SerializeField] private string TextNotEnoughtResources;
+    [TextArea] [SerializeField] private string TextNotEnoughtBaseLevel;
+    [TextArea] [SerializeField] private string UpgradeLevelBuildingInformation;
+    [SerializeField] private float TimeHint;
+
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject point;
+    [SerializeField] private GameObject ButtonUpgrade;
 
     public static BuildingData buildingData;
     public static Transform buildingTransform;
@@ -31,6 +38,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     {
         panel.SetActive(false);
         point.SetActive(false);
+        ButtonUpgrade.SetActive(false);
         IsPanelActive = false; 
     }
 
@@ -54,6 +62,15 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         
             point.SetActive(true);
             panel.SetActive(true);
+
+            if (buildingSO.priceUpgrade > 0)
+            {
+                ButtonUpgrade.SetActive(true);
+            }
+            else
+            {
+                ButtonUpgrade.SetActive(false);
+            }
 
             // Центр экрана
             float centerX = Screen.width / 2;
@@ -104,47 +121,61 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             //Формирование строки о текущей прочности здания
             Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)} / {buildingSO.Durability(buildingData.Level)}";
 
-            //Формирование строки после "Производит:" на панели
-            string productionTextOutput = "Производит:";
-            int iP = 0;
-            List<int> listIndexSAProduction = buildingSO.Production(buildingData.Level).SpriteAssetsUsingIndex;
-            List<int> resourcesValuesProduction = buildingSO.Production(buildingData.Level).resources;
-            foreach (var resource in resourcesValuesProduction)
+            if (buildingSO.Production(buildingData.Level).resources.Count != 0)
             {
-                if (iP > 1)
+                //Формирование строки после "Производит:" на панели
+                string productionTextOutput = "Производит:";
+                int iP = 0;
+                List<int> listIndexSAProduction = buildingSO.Production(buildingData.Level).SpriteAssetsUsingIndex;
+                List<int> resourcesValuesProduction = buildingSO.Production(buildingData.Level).resources;
+                foreach (var resource in resourcesValuesProduction)
                 {
-                    productionTextOutput += $"+ {resource} <sprite={listIndexSAProduction[iP]}>";
+                    if (iP >= 1)
+                    {
+                        productionTextOutput += $"+ {resource}   <sprite={listIndexSAProduction[iP]}>";
+                    }
+                    else
+                    {
+                        productionTextOutput += $" {resource}   <sprite={listIndexSAProduction[iP]}>";
+                    }
+                    iP++;
                 }
-                else
-                {
-                    productionTextOutput += $" {resource} <sprite={listIndexSAProduction[iP]}>";
-                }
-                iP++;
+                Production.text = productionTextOutput;
             }
-            Production.text = productionTextOutput;
-
-            //Формирование строки о трате энергомеда
-            HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))}";
-
-            //Формирование строки после "Количество ресурсов:" на панели
-            string storageTextOutput = "Количество ресурсов:";
-            int iS = 0;
-            List<int> listIndexSAStorage = buildingSO.StorageLimit(buildingData.Level).SpriteAssetsUsingIndex;
-            List<int> resourcesValuesStorage = buildingSO.StorageLimit(buildingData.Level).resources;
-            foreach (var resource in resourcesValuesStorage)
+            else
             {
-                if (iS > 1)
-                {
-                    productionTextOutput += $"+ {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
-                }
-                else
-                {
-                    productionTextOutput += $" {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
-                }
-                iS++;
+                Production.gameObject.SetActive(false);
             }
-            Storage.text = storageTextOutput;
             
+            //Формирование строки о трате энергомеда
+            HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))} <sprite=0>";
+
+            if (buildingSO.StorageLimit(buildingData.Level).resources.Count != 0)
+            {
+                //Формирование строки после "Количество ресурсов:" на панели
+                string storageTextOutput = "Количество ресурсов:";
+                int iS = 0;
+                List<int> listIndexSAStorage = buildingSO.StorageLimit(buildingData.Level).SpriteAssetsUsingIndex;
+                List<int> resourcesValuesStorage = buildingSO.StorageLimit(buildingData.Level).resources;
+                foreach (var resource in resourcesValuesStorage)
+                {
+                    if (iS >= 1)
+                    {
+                        storageTextOutput += $"+ {buildingData.Storage[iS]} / {resource}   <sprite={listIndexSAStorage[iS]}>";
+                    }
+                    else
+                    {
+                        storageTextOutput += $" {buildingData.Storage[iS]} / {resource}   <sprite={listIndexSAStorage[iS]}>"; 
+                    }
+                    iS++;
+                }
+                Storage.text = storageTextOutput;
+            }
+            else
+            {
+                Storage.gameObject.SetActive(false);
+            }
+
             //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
             //DescriptionCanvas.worldCamera = mainCamera;
         }
@@ -188,6 +219,62 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         playerSaveData.DeleteBuilding(building);
         
         UpdateResourcesEvent.TriggerEvent();
+
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+    }
+
+    /// <summary>
+    /// Улучшение здания
+    /// </summary>
+    public async void UpgradeBuilding()
+    {
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
+
+        string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+
+        int priceUpgrade = buildingSO.priceUpgrade;
+        int BaseLevel = PlansInShopControl.BaseLevel;
+
+        if (playerResources.Iron >= priceUpgrade)
+        {
+            if (BaseLevel >= buildingSO.MBLevelForUpgradethisIron)
+            {
+                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                    playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+
+                buildingData.Level += 1;
+                buildingData.Durability = buildingSO.Durability(BaseLevel);
+                buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
+
+                if (buildingData.Production.Count > 0)
+                {
+                    buildingData.Production = buildingSO.Production(BaseLevel).resources;
+                }
+
+                PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+                
+                BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
+                playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
+                
+                HintPanel.gameObject.SetActive(true);
+                Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
+                HintPanel.text = UpgradeLevelBuildingInformation;
+            }
+            else
+            {
+                HintPanel.gameObject.SetActive(true);
+                Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
+                HintPanel.text = TextNotEnoughtBaseLevel;
+            }
+        }
+        else
+        {
+            HintPanel.gameObject.SetActive(true);
+            Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
+            HintPanel.text = TextNotEnoughtResources;
+        }
+
 
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
