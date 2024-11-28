@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -96,11 +97,53 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             }
             
             Title.text = buildingData.Title;
+
+            //Формирование строки об уровне здания
             Level.text = $"Уровень: {Convert.ToString(buildingData.Level)}";
+
+            //Формирование строки о текущей прочности здания
             Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)} / {buildingSO.Durability(buildingData.Level)}";
-            Production.text = $"Производит: {Convert.ToString(buildingSO.Production(buildingData.Level))}";
+
+            //Формирование строки после "Производит:" на панели
+            string productionTextOutput = "Производит:";
+            int iP = 0;
+            List<int> listIndexSAProduction = buildingSO.Production(buildingData.Level).SpriteAssetsUsingIndex;
+            List<int> resourcesValuesProduction = buildingSO.Production(buildingData.Level).resources;
+            foreach (var resource in resourcesValuesProduction)
+            {
+                if (iP > 1)
+                {
+                    productionTextOutput += $"+ {resource} <sprite={listIndexSAProduction[iP]}>";
+                }
+                else
+                {
+                    productionTextOutput += $" {resource} <sprite={listIndexSAProduction[iP]}>";
+                }
+                iP++;
+            }
+            Production.text = productionTextOutput;
+
+            //Формирование строки о трате энергомеда
             HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))}";
-            Storage.text = $"Количество ресурсов: {Convert.ToString(buildingData.Storage)} / {buildingSO.StorageLimit(buildingData.Level)}";
+
+            //Формирование строки после "Количество ресурсов:" на панели
+            string storageTextOutput = "Количество ресурсов:";
+            int iS = 0;
+            List<int> listIndexSAStorage = buildingSO.StorageLimit(buildingData.Level).SpriteAssetsUsingIndex;
+            List<int> resourcesValuesStorage = buildingSO.StorageLimit(buildingData.Level).resources;
+            foreach (var resource in resourcesValuesStorage)
+            {
+                if (iS > 1)
+                {
+                    productionTextOutput += $"+ {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
+                }
+                else
+                {
+                    productionTextOutput += $" {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
+                }
+                iS++;
+            }
+            Storage.text = storageTextOutput;
             
             //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
             //DescriptionCanvas.worldCamera = mainCamera;

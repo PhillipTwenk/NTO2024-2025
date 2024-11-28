@@ -10,9 +10,9 @@ public class Building : ScriptableObject
     
     [SerializeField] private List<int> energyHoneyConsumptionListLevel;
 
-    [SerializeField] private List<int> resourceProductionListLevel;
+    [SerializeField] private List<ResourceData> resourceProductionListLevel;
     
-    [SerializeField] private List<int> storageListLevel;
+    [SerializeField] private List<ResourceData> storageListLevel;
     
     public int priceBuilding; // Стоимость здания ( металл )
     //public int priceBuildingCC; //Стоимость здания ( кристаллы )
@@ -45,7 +45,7 @@ public class Building : ScriptableObject
     /// </summary>
     /// <param name="levelMobileBase"></param>
     /// <returns></returns>
-    public int StorageLimit(int levelMobileBase)
+    public ResourceData StorageLimit(int levelMobileBase)
     {
         
         foreach (var level in levelListLevel)
@@ -101,7 +101,7 @@ public class Building : ScriptableObject
     /// </summary>
     /// <param name="levelMobileBase"></param>
     /// <returns></returns>
-    public int Production(int levelMobileBase)
+    public ResourceData Production(int levelMobileBase)
     {
         
         foreach (var level in levelListLevel)

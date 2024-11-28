@@ -125,7 +125,6 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             {
                 WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
             }
-
             Destroy(building.transform.parent.gameObject);
 
             IsDeleteBuidlingProcessActive = false;
