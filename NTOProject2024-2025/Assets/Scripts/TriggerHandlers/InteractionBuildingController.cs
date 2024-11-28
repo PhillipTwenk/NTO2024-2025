@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class InteractionBuildingController : MonoBehaviour
 {
     private bool CanPutE;
+    [SerializeField] private bool PossiblityPutEInThisBuilding;
     [SerializeField] private GameEvent OpenDescriptionPanel;
     private BuildingData _buildingData;
 
@@ -35,11 +36,19 @@ public class InteractionBuildingController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (PossiblityPutEInThisBuilding)
         {
-            CanPutE = true;
-            Texthint.SetActive(true);
-            
+            if (other.gameObject.CompareTag("Player"))
+            {
+                CanPutE = true;
+                Texthint.SetActive(true);
+            }else if(other.gameObject.CompareTag("Worker")){
+                if (BuildingManager.Instance.ProcessWorkerBuildingActive)
+                {
+                    Debug.Log("Рабочий добрался, начинает строить здание");
+                    WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+                }
+        }
         }
     }
     

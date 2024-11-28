@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -47,61 +48,107 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        IsPanelActive = true;
+        if (!BuildingManager.Instance.ProcessWorkerBuildingActive)
+        {
+            IsPanelActive = true;
         
-        point.SetActive(true);
-        panel.SetActive(true);
+            point.SetActive(true);
+            panel.SetActive(true);
 
-        // Центр экрана
-        float centerX = Screen.width / 2;
-        float centerY = Screen.height / 2;
+            // Центр экрана
+            float centerX = Screen.width / 2;
+            float centerY = Screen.height / 2;
 
-        // Экранные координаты объекта
-        Vector3 screenPosition = Camera.main.WorldToScreenPoint(buildingTransform.position);
+            // Экранные координаты объекта
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(buildingTransform.position);
+                
+            float offsetX = Screen.width * 0.15f; // 10% от ширины экрана
+            float offsetY = Screen.height * 0.1f; // 5% от высоты экрана
             
-        float offsetX = Screen.width * 0.15f; // 10% от ширины экрана
-        float offsetY = Screen.height * 0.1f; // 5% от высоты экрана
-        
-        point.transform.position = screenPosition;
-        
-        // Определяем четверть
-        if (screenPosition.x > centerX && screenPosition.y > centerY)
-        {
-            Debug.Log("Объект находится в первой четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(-offsetX, -offsetY, 0);
+            point.transform.position = screenPosition;
             
-            panel.transform.position = panelPosition;
-        }
-        else if (screenPosition.x < centerX && screenPosition.y > centerY)
-        {
-            Debug.Log("Объект находится во второй четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(offsetX, -offsetY, 0);
-            panel.transform.position = panelPosition;
-        }
-        else if (screenPosition.x < centerX && screenPosition.y < centerY)
-        {
-            Debug.Log("Объект находится в третьей четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(offsetX, offsetY, 0);
-            panel.transform.position = panelPosition;
+            // Определяем четверть
+            if (screenPosition.x > centerX && screenPosition.y > centerY)
+            {
+                //Debug.Log("Объект находится в первой четверти.");
+                Vector3 panelPosition = screenPosition + new Vector3(-offsetX, -offsetY, 0);
+                
+                panel.transform.position = panelPosition;
+            }
+            else if (screenPosition.x < centerX && screenPosition.y > centerY)
+            {
+                //Debug.Log("Объект находится во второй четверти.");
+                Vector3 panelPosition = screenPosition + new Vector3(offsetX, -offsetY, 0);
+                panel.transform.position = panelPosition;
+            }
+            else if (screenPosition.x < centerX && screenPosition.y < centerY)
+            {
+                //Debug.Log("Объект находится в третьей четверти.");
+                Vector3 panelPosition = screenPosition + new Vector3(offsetX, offsetY, 0);
+                panel.transform.position = panelPosition;
+                
+            }
+            else if (screenPosition.x > centerX && screenPosition.y < centerY)
+            {
+                //Debug.Log("Объект находится в четвёртой четверти.");
+                Vector3 panelPosition = screenPosition + new Vector3(-offsetX, offsetY, 0);
+                panel.transform.position = panelPosition;
+                
+            }
             
-        }
-        else if (screenPosition.x > centerX && screenPosition.y < centerY)
-        {
-            Debug.Log("Объект находится в четвёртой четверти.");
-            Vector3 panelPosition = screenPosition + new Vector3(-offsetX, offsetY, 0);
-            panel.transform.position = panelPosition;
+            Title.text = buildingData.Title;
+
+            //Формирование строки об уровне здания
+            Level.text = $"Уровень: {Convert.ToString(buildingData.Level)}";
+
+            //Формирование строки о текущей прочности здания
+            Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)} / {buildingSO.Durability(buildingData.Level)}";
+
+            //Формирование строки после "Производит:" на панели
+            string productionTextOutput = "Производит:";
+            int iP = 0;
+            List<int> listIndexSAProduction = buildingSO.Production(buildingData.Level).SpriteAssetsUsingIndex;
+            List<int> resourcesValuesProduction = buildingSO.Production(buildingData.Level).resources;
+            foreach (var resource in resourcesValuesProduction)
+            {
+                if (iP > 1)
+                {
+                    productionTextOutput += $"+ {resource} <sprite={listIndexSAProduction[iP]}>";
+                }
+                else
+                {
+                    productionTextOutput += $" {resource} <sprite={listIndexSAProduction[iP]}>";
+                }
+                iP++;
+            }
+            Production.text = productionTextOutput;
+
+            //Формирование строки о трате энергомеда
+            HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))}";
+
+            //Формирование строки после "Количество ресурсов:" на панели
+            string storageTextOutput = "Количество ресурсов:";
+            int iS = 0;
+            List<int> listIndexSAStorage = buildingSO.StorageLimit(buildingData.Level).SpriteAssetsUsingIndex;
+            List<int> resourcesValuesStorage = buildingSO.StorageLimit(buildingData.Level).resources;
+            foreach (var resource in resourcesValuesStorage)
+            {
+                if (iS > 1)
+                {
+                    productionTextOutput += $"+ {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
+                }
+                else
+                {
+                    productionTextOutput += $" {buildingData.Storage} / {resource} <sprite={listIndexSAStorage[iS]}>";
+                }
+                iS++;
+            }
+            Storage.text = storageTextOutput;
             
+            //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
+            //DescriptionCanvas.worldCamera = mainCamera;
         }
         
-        Title.text = buildingData.Title;
-        Level.text = $"Уровень: {Convert.ToString(buildingData.Level)}";
-        Durability.text = $"Прочность: {Convert.ToString(buildingData.Durability)} / {buildingSO.Durability(buildingData.Level)}";
-        Production.text = $"Производит: {Convert.ToString(buildingSO.Production(buildingData.Level))}";
-        HoneyConsumption.text = $"Тратит: {Convert.ToString(buildingSO.EnergyHoneyConsumpiton(buildingData.Level))}";
-        Storage.text = $"Количество ресурсов: {Convert.ToString(buildingData.Storage)} / {buildingSO.StorageLimit(buildingData.Level)}";
-        
-        //DescriptionCanvas.renderMode = RenderMode.WorldSpace;
-        //DescriptionCanvas.worldCamera = mainCamera;
     }
 
     /// <summary>

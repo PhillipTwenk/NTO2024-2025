@@ -19,5 +19,6 @@ MonoBehaviour:
   storageListLevel: bc020000
   priceBuilding: 50
   MBLevelForBuidlingthisIron: 2
+  TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: ba6a3bc021d9e8440b6d23318755befa, type: 3}
   prefabBeforeBuilding: {fileID: 7359515488963141187, guid: 32e13c9f1f9fe7b47afbb8aeb824b0eb, type: 3}
