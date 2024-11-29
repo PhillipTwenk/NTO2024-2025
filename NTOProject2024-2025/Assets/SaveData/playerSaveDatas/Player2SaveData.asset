@@ -22,7 +22,7 @@ MonoBehaviour:
   BuildingDatas:
   - Level: 1
     Durability: 175
-    Storage: 83030000e7030000e4030000
+    Storage: 01030000e7030000e7030000
     SaveListIndex: 0
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1

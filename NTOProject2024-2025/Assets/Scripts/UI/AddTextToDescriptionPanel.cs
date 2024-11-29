@@ -276,9 +276,6 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             {
                 OnHintPanel(TextNotEnoughtResources);
             }
-
-
-            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
         }
         else
         {
@@ -312,6 +309,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                 OnHintPanel(TextNotCompleteConditionUpgradeMB + UnsuccessfullReportText);
             }
         }
+        
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
     private void OnHintPanel(string Text)

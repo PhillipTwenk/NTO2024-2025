@@ -14,7 +14,7 @@ public class Tablet : MonoBehaviour
             isCollected = true;
 
             //Отмечаем в скрипте контроля уровня базы
-            BaseUpgradeConditionManager.FindNote[int.Parse(TabletInfo.tablet_id)] = true;
+            BaseUpgradeConditionManager.Instance.FindNote[int.Parse(TabletInfo.tablet_id)] = true;
 
             UIManager.currentTablet = TabletInfo;
             OpenTabletMenuEvent.TriggerEvent();

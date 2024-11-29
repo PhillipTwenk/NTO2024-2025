@@ -13,7 +13,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     public static bool IsMinimumOneMainBuildingOnLevel3;
     public static bool IsMinimumOneOtherBuildingOnLevel3;
 
-    public static List<bool> FindNote;
+    public List<bool> FindNote;
     
     public List<int> NumberOfWorkersForDifferentLevels;
 

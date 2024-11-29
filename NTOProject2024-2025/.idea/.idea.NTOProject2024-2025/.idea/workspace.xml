@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +127,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
       </list>
     </option>
   </component>
