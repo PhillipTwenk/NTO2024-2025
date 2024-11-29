@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pier
   m_EditorClassIdentifier: 
   levelListLevel: 01000000
+  MaxLevelThisBuilding: 1
   durabilityListLevel: 41000000
   energyHoneyConsumptionListLevel: 00000000
   resourceProductionListLevel:
@@ -22,6 +23,8 @@ MonoBehaviour:
   - resources: 
     SpriteAssetsUsingIndex: 
   priceBuilding: 70
+  priceUpgrade: 0
+  MBLevelForUpgradethisIron: 0
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: d823ba3abe8e64c43a6a018c71def383, type: 3}

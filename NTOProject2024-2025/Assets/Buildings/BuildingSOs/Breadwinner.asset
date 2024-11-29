@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Breadwinner
   m_EditorClassIdentifier: 
   levelListLevel: 01000000
+  MaxLevelThisBuilding: 1
   durabilityListLevel: 64000000
   energyHoneyConsumptionListLevel: 0a000000
   resourceProductionListLevel:
@@ -22,6 +23,8 @@ MonoBehaviour:
   - resources: bc02000014000000
     SpriteAssetsUsingIndex: 0200000003000000
   priceBuilding: 50
+  priceUpgrade: 0
+  MBLevelForUpgradethisIron: 0
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: ba6a3bc021d9e8440b6d23318755befa, type: 3}

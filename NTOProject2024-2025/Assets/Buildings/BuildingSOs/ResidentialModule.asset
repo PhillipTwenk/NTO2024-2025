@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ResidentialModule
   m_EditorClassIdentifier: 
   levelListLevel: 01000000
+  MaxLevelThisBuilding: 1
   durabilityListLevel: 96000000
   energyHoneyConsumptionListLevel: 0a000000
   resourceProductionListLevel:
@@ -22,6 +23,8 @@ MonoBehaviour:
   - resources: 02000000
     SpriteAssetsUsingIndex: 05000000
   priceBuilding: 50
+  priceUpgrade: 0
+  MBLevelForUpgradethisIron: 0
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: e19066c4dbaa3be42bf6af8c10c9b804, type: 3}

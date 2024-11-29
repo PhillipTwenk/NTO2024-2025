@@ -13,9 +13,14 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Storage;
 
     [SerializeField] private TextMeshProUGUI HintPanel;
+    [SerializeField] private TextMeshProUGUI ButtonUpgradeTextPanel;
     [TextArea] [SerializeField] private string TextNotEnoughtResources;
     [TextArea] [SerializeField] private string TextNotEnoughtBaseLevel;
     [TextArea] [SerializeField] private string UpgradeLevelBuildingInformation;
+    [TextArea] [SerializeField] private string TextNotCompleteConditionUpgradeMB;
+    [TextArea] [SerializeField] private string TextCompleteUpgradeMobileBaseLevel;
+
+
     [SerializeField] private float TimeHint;
 
     [SerializeField] private GameObject panel;
@@ -63,9 +68,10 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             point.SetActive(true);
             panel.SetActive(true);
 
-            if (buildingSO.priceUpgrade > 0)
+            if (buildingSO.priceUpgrade > 0 && buildingSO.Level(BaseUpgradeConditionManager.CurrentBaseLevel) <= buildingSO.MaxLevelThisBuilding)
             {
                 ButtonUpgrade.SetActive(true);
+                ButtonUpgradeTextPanel.text = buildingSO.priceUpgrade.ToString();
             }
             else
             {
@@ -234,48 +240,84 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
 
         int priceUpgrade = buildingSO.priceUpgrade;
-        int BaseLevel = PlansInShopControl.BaseLevel;
+        int BaseLevel = BaseUpgradeConditionManager.CurrentBaseLevel;
 
-        if (playerResources.Iron >= priceUpgrade)
+        if (buildingSO.Name != "Мобильная база")
         {
-            if (BaseLevel >= buildingSO.MBLevelForUpgradethisIron)
+            if (playerResources.Iron >= priceUpgrade)
+            {
+                if (BaseLevel >= buildingSO.MBLevelForUpgradethisIron)
+                {
+                    await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                        playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+
+                    buildingData.Level += 1;
+                    buildingData.Durability = buildingSO.Durability(BaseLevel);
+                    buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
+
+                    if (buildingData.Production.Count > 0)
+                    {
+                        buildingData.Production = buildingSO.Production(BaseLevel).resources;
+                    }
+
+                    PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+                    
+                    BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
+                    playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
+                    
+                    OnHintPanel(UpgradeLevelBuildingInformation);
+                }
+                else
+                {
+                    OnHintPanel(TextNotEnoughtBaseLevel);
+                }
+            }
+            else
+            {
+                OnHintPanel(TextNotEnoughtResources);
+            }
+
+
+            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+        }
+        else
+        {
+            List<string> ImprovementReport = BaseUpgradeConditionManager.Instance.CanUpgradeMobileBase();
+            if (ImprovementReport[0] == BaseUpgradeConditionManager.Instance.SuccesUpgradeText)
             {
                 await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
-                    playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
-
+                        playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                 buildingData.Level += 1;
                 buildingData.Durability = buildingSO.Durability(BaseLevel);
                 buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
 
-                if (buildingData.Production.Count > 0)
-                {
-                    buildingData.Production = buildingSO.Production(BaseLevel).resources;
-                }
+                BaseUpgradeConditionManager.CurrentBaseLevel = buildingData.Level;
 
                 PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
-                
+                    
                 BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
                 playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
-                
-                HintPanel.gameObject.SetActive(true);
-                Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
-                HintPanel.text = UpgradeLevelBuildingInformation;
+
+
+                OnHintPanel(TextCompleteUpgradeMobileBaseLevel);
             }
             else
             {
-                HintPanel.gameObject.SetActive(true);
-                Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
-                HintPanel.text = TextNotEnoughtBaseLevel;
+                string UnsuccessfullReportText = $"";
+                foreach (var report in ImprovementReport)
+                {
+                    UnsuccessfullReportText += $"\n- {report} ";
+                }
+                
+                OnHintPanel(TextNotCompleteConditionUpgradeMB + UnsuccessfullReportText);
             }
         }
-        else
-        {
-            HintPanel.gameObject.SetActive(true);
-            Utility.Invoke(this, () => HintPanel.gameObject.SetActive(false), TimeHint);
-            HintPanel.text = TextNotEnoughtResources;
-        }
+    }
 
-
-        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+    private void OnHintPanel(string Text)
+    {
+        HintPanel.transform.parent.gameObject.SetActive(true);
+        Utility.Invoke(this, () => HintPanel.transform.parent.gameObject.SetActive(false), TimeHint);
+        HintPanel.text = Text;
     }
 }

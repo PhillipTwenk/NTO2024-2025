@@ -5,6 +5,8 @@ using UnityEngine;
 public class Building : ScriptableObject
 {
     [SerializeField] private List<int> levelListLevel;
+
+    public int MaxLevelThisBuilding;
     
     [SerializeField] private List<int> durabilityListLevel;
     

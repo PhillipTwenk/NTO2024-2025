@@ -76,7 +76,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 buildingData.SaveListIndex = BuildingDatas[i].SaveListIndex;
                 if (i == 0)
                 {
-                    PlansInShopControl.BaseLevel = buildingData.Level;
+                    BaseUpgradeConditionManager.CurrentBaseLevel = buildingData.Level;
                 }
 
                 if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())

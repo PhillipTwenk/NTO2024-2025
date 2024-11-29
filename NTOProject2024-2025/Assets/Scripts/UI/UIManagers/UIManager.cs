@@ -159,6 +159,9 @@ public class UIManager : MonoBehaviour
         CloseHiringWorkersPanelEvent.TriggerEvent();
     }
     
+    /// <summary>
+    /// ОТКРЫЛ ОКОШКО ДУШНО СТАЛО ЫЫЫЫ юный колонизатор 
+    /// </summary>
     public void FunctionOpenTabletMenu()
     {
         Debug.Log(TitleTabletPanel);

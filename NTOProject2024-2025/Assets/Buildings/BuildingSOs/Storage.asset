@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Storage
   m_EditorClassIdentifier: 
   levelListLevel: 0100000002000000
+  MaxLevelThisBuilding: 1
   durabilityListLevel: 6400000096000000
   energyHoneyConsumptionListLevel: 0000000000000000
   resourceProductionListLevel:
@@ -26,6 +27,8 @@ MonoBehaviour:
   - resources: b80b0000b80b00001e000000
     SpriteAssetsUsingIndex: 020000000100000003000000
   priceBuilding: 70
+  priceUpgrade: 30
+  MBLevelForUpgradethisIron: 3
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: 8ab9cfced93a80d419763d710a75c8b6, type: 3}

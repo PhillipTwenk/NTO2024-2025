@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HoneyGun
   m_EditorClassIdentifier: 
   levelListLevel: 0100000002000000
+  MaxLevelThisBuilding: 2
   durabilityListLevel: 4b00000096000000
   energyHoneyConsumptionListLevel: 0a00000014000000
   resourceProductionListLevel:
@@ -26,6 +27,8 @@ MonoBehaviour:
   - resources: 
     SpriteAssetsUsingIndex: 
   priceBuilding: 50
+  priceUpgrade: 30
+  MBLevelForUpgradethisIron: 3
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: 1a1b90b38ac395b47806af7a74d3052d, type: 3}

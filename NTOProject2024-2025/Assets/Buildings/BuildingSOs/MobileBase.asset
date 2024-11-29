@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MobileBase
   m_EditorClassIdentifier: 
   levelListLevel: 010000000200000003000000
+  MaxLevelThisBuilding: 3
   durabilityListLevel: af000000c8000000fa000000
   energyHoneyConsumptionListLevel: 140000001e00000028000000
   resourceProductionListLevel:
@@ -30,6 +31,8 @@ MonoBehaviour:
   - resources: dc050000dc0500000a000000
     SpriteAssetsUsingIndex: 020000000100000003000000
   priceBuilding: 0
+  priceUpgrade: 100
+  MBLevelForUpgradethisIron: 1
   MBLevelForBuidlingthisIron: 0
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}

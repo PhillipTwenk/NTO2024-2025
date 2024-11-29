@@ -98,7 +98,7 @@ public class BuildingManager : MonoBehaviour
             await APIManager.Instance.GetPlayerResources(playerName);
         if (playerResources.Iron >= priceBuilding)
         {
-            if(PlansInShopControl.BaseLevel >= buildingPrefabSO.MBLevelForBuidlingthisIron)
+            if(BaseUpgradeConditionManager.CurrentBaseLevel >= buildingPrefabSO.MBLevelForBuidlingthisIron)
             {
                 int CNoW = WorkersInterBuildingControl.Instance.CurrentValueOfWorkers;
                 int MVoW = WorkersInterBuildingControl.Instance.MaxValueOfWorkers;

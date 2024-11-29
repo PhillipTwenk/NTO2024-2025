@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class PlansInShopControl : MonoBehaviour
 {
-    public static int BaseLevel;
-    
     [SerializeField] private GameObject PanelHoneyGun;
     [SerializeField] private GameObject PanelStorage;
     [SerializeField] private GameObject PanelPier;
@@ -39,20 +37,6 @@ public class PlansInShopControl : MonoBehaviour
 
     private string WhichPanelActive;
 
-
-    private void Awake()
-    {
-        BaseLevel = 1;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            BaseLevel += 1; 
-            Debug.Log(BaseLevel);
-        }
-    }
     /// <summary>
     /// При включении панели бартера в зависимости от уровня базы дает разные предложения
     /// </summary>
@@ -62,7 +46,7 @@ public class PlansInShopControl : MonoBehaviour
         PanelHoneyGunBought.SetActive(false);
         PanelStorageBought.SetActive(false);
         PanelPierBought.SetActive(false);
-        switch (BaseLevel)
+        switch (BaseUpgradeConditionManager.CurrentBaseLevel)
         {
             case 1:
                 PanelHoneyGun.SetActive(true);

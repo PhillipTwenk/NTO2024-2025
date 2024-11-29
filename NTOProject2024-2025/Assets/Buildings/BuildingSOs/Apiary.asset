@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Apiary
   m_EditorClassIdentifier: 
   levelListLevel: 0100000002000000
+  MaxLevelThisBuilding: 2
   durabilityListLevel: 320000004b000000
   energyHoneyConsumptionListLevel: 0000000000000000
   resourceProductionListLevel:
@@ -26,6 +27,8 @@ MonoBehaviour:
   - resources: 
     SpriteAssetsUsingIndex: 
   priceBuilding: 50
+  priceUpgrade: 30
+  MBLevelForUpgradethisIron: 2
   MBLevelForBuidlingthisIron: 1
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 7359515488963141187, guid: baa2e5d9955876445843e1e00005119c, type: 3}
