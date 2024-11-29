@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Tablet : MonoBehaviour
@@ -13,7 +14,7 @@ public class Tablet : MonoBehaviour
             isCollected = true;
 
             //Отмечаем в скрипте контроля уровня базы
-            BaseUpgradeConditionManager.FindNote[TabletInfo.tablet_id] = true;
+            BaseUpgradeConditionManager.FindNote[int.Parse(TabletInfo.tablet_id)] = true;
 
             UIManager.currentTablet = TabletInfo;
             OpenTabletMenuEvent.TriggerEvent();

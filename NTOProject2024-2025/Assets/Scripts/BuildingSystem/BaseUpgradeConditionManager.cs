@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseUpgradeConditionManager : MonoBehaviour
@@ -5,17 +6,15 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     public static BaseUpgradeConditionManager Instance {get; set;}
 
     public static int CurrentBaseLevel;
+    public static BuildingData buildingDataMB;
 
     public static bool IsMinimumOneBuildingOnLevel2;
 
     public static bool IsMinimumOneMainBuildingOnLevel3;
     public static bool IsMinimumOneOtherBuildingOnLevel3;
 
-    private BuildingData buildingDataMB;
-
     public static List<bool> FindNote;
-
-    [TextArea]
+    
     public List<int> NumberOfWorkersForDifferentLevels;
 
     public static bool EventNatureAtack1Complete;
@@ -34,13 +33,6 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     {
         Instance = this;
     }
-    private void Start()
-    {
-        PLayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
-
-        buildingDataMB = playerSaveData.BuildingDatas[0];
-        CurrentBaseLevel = buildingDataMB.Level;
-    }
 
     private void Update()
     {
@@ -52,15 +44,13 @@ public class BaseUpgradeConditionManager : MonoBehaviour
         }
     }
 
-    public async List<string> CanUpgradeMobileBase()
+    public List<string> CanUpgradeMobileBase(PlayerResources playerResources)
     {
-        int WorkersCount = WorkersInterBuildingControl.MaxValueOfWorkers;
-        int IronCountPlayer = await APIManager.Instance.GetPlayerResources(UIManagerLocation.WhichPlayerCreate.Name).Iron;
+        int WorkersCount = WorkersInterBuildingControl.Instance.MaxValueOfWorkers;
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
-        int NumberOfWorkers = WorkersInterBuildingControl.Instance.CurrentValueOfWorkers;
+        int IronCountPlayer = playerResources.Iron;
 
-        List<string> resultReport;
+        List<string> resultReport = new List<string>();
         bool IsThisReportUnsuccess = false;
 
         
@@ -81,10 +71,10 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtResourcesTextError}: {playerResources.Iron} / {buildingDataMB.buildingTypeSO.priceUpgrade}";
                     resultReport.Add(report);
                 }
-                if (NumberOfWorkers < NumberOfWorkersForDifferentLevels[0])
+                if (WorkersCount < NumberOfWorkersForDifferentLevels[0])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtWorkers}: {NumberOfWorkers} / {NumberOfWorkersForDifferentLevels[0]}";
+                    string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[0]}";
                     resultReport.Add(report);
                 }
                 
@@ -124,10 +114,10 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtResourcesTextError}: {playerResources.Iron} / {buildingDataMB.buildingTypeSO.priceUpgrade}";
                     resultReport.Add(report);
                 }
-                if (NumberOfWorkers < NumberOfWorkersForDifferentLevels[1])
+                if (WorkersCount < NumberOfWorkersForDifferentLevels[1])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtWorkers}: {NumberOfWorkers} / {NumberOfWorkersForDifferentLevels[1]}";
+                    string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[1]}";
                     resultReport.Add(report);
                 }
                 if (!IsMinimumOneBuildingOnLevel2)
@@ -164,10 +154,10 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotCompleteEventAtackNature} № 2";
                     resultReport.Add(report);
                 }
-                if (NumberOfWorkers < NumberOfWorkersForDifferentLevels[2])
+                if (WorkersCount < NumberOfWorkersForDifferentLevels[2])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtWorkers}: {NumberOfWorkers} / {NumberOfWorkersForDifferentLevels[2]}";
+                    string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[2]}";
                     resultReport.Add(report);
                 }
                 if (!IsMinimumOneMainBuildingOnLevel3)
@@ -195,8 +185,10 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     resultReport.Add(SuccesUpgradeText);
                     return resultReport;
                 }
+
                 break;
-            default:
         }
+
+        return null;
     }
 }

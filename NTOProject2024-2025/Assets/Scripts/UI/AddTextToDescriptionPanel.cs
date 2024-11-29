@@ -242,7 +242,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         int priceUpgrade = buildingSO.priceUpgrade;
         int BaseLevel = BaseUpgradeConditionManager.CurrentBaseLevel;
 
-        if (buildingSO.Name != "Мобильная база")
+        if (buildingData.Title != "Мобильная база")
         {
             if (playerResources.Iron >= priceUpgrade)
             {
@@ -282,7 +282,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         }
         else
         {
-            List<string> ImprovementReport = BaseUpgradeConditionManager.Instance.CanUpgradeMobileBase();
+            List<string> ImprovementReport = BaseUpgradeConditionManager.Instance.CanUpgradeMobileBase(playerResources);
             if (ImprovementReport[0] == BaseUpgradeConditionManager.Instance.SuccesUpgradeText)
             {
                 await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,

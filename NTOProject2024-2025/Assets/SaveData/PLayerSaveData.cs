@@ -76,6 +76,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 buildingData.SaveListIndex = BuildingDatas[i].SaveListIndex;
                 if (i == 0)
                 {
+                    BaseUpgradeConditionManager.buildingDataMB = buildingData;
                     BaseUpgradeConditionManager.CurrentBaseLevel = buildingData.Level;
                 }
 
