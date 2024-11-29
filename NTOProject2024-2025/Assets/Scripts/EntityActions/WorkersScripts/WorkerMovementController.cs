@@ -14,8 +14,6 @@ public class WorkerMovementController : MonoBehaviour
     {
         if (WorkerPointOfDestination) {
             agent.destination = new Vector3(WorkerPointOfDestination.position.x, WorkerPointOfDestination.position.y, WorkerPointOfDestination.position.z);
-        } else {
-
         }
     }
 

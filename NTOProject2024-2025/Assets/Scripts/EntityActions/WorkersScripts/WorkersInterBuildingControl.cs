@@ -144,6 +144,26 @@ public class WorkersInterBuildingControl : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Находит свободного рабочего к постройке здания
+    /// </summary>
+    public void SendFreeWorkerToBuilding()
+    {
+        foreach (var buildingControl in listOfActiveBuildingWithWorkers)
+        {
+            if (buildingControl != null)
+            {
+                if (buildingControl.CurrentNumberWorkersInThisBuilding > 0)
+                {
+                    Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
+
+                    GameObject newWorker = Instantiate(buildingControl.WorkerPrefab);
+                    newWorker.transform.position = buildingSpawnWorkerPointTransform.position;
+                }
+            }
+        }
+        
+    }
     ///<summary> 
     /// Открытие / закрытие панели с подсказкой
     ///</summary>

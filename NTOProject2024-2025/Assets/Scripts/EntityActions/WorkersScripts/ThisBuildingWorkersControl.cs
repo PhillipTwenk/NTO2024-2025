@@ -1,20 +1,16 @@
 using UnityEngine;
-using TMPro;
 
-//Test for github mobile
+
+
 public class ThisBuildingWorkersControl : MonoBehaviour
 {
     public int CurrentNumberWorkersInThisBuilding;
     public int MaxValueOfWorkersInThisBuilding;
     public int NumberOfActiveWorkersInThisBuilding;
 
-    public TextMeshPro AwaitBuildingThisTMPro;
+    public Transform buildingSpawnWorkerPointTransform;
 
-    [TextArea] public string TextAwaitArriveWorker;
-    [TextArea] public string TextAwaitBuildingThis;
-
-    public string AwaitWorkerActionText;
-    public string AwaitBuildingActionText;
+    public GameObject WorkerPrefab;
 
 
     public void AddWorkersInThisBuilding(int number, bool IsAdd)

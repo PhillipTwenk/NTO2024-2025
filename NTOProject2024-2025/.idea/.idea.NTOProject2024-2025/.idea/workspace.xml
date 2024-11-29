@@ -20,15 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlanPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/TEst/TESTResidentalModule/TESTResidentalModule.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test5.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/EntityID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SaveData/Json/ISerializableSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,8 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ProductChangesShopLog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedPlayerLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerDataList.cs" />
@@ -118,11 +121,8 @@
         <option value="$PROJECT_DIR$/Assets/SaveData/Json/ISerializableSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HelperClasses/ResourceData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
@@ -131,6 +131,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test5.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
       </list>
     </option>
   </component>

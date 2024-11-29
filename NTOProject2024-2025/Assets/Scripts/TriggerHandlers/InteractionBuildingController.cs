@@ -52,7 +52,7 @@ public class InteractionBuildingController : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
             CanPutE = false;
             Texthint.SetActive(false);

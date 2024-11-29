@@ -72,8 +72,15 @@
             <e p="YouCantBuildHereTrigger.cs" t="Include" />
           </e>
           <e p="EntityActions" t="Include">
+            <e p="EnemiesScripts" t="Include">
+              <e p="EnemyMovementController.cs" t="Include" />
+            </e>
+            <e p="NavMeshScripts" t="Include">
+              <e p="NavMeshUpdater.cs" t="Include" />
+            </e>
             <e p="WorkersScripts" t="Include">
               <e p="ThisBuildingWorkersControl.cs" t="Include" />
+              <e p="WorkerMovementController.cs" t="Include" />
               <e p="WorkersInterBuildingControl.cs" t="Include" />
             </e>
           </e>
@@ -123,6 +130,7 @@
             <e p="Utility.cs" t="Include" />
           </e>
         </e>
+        <e p="Test5.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -1288,6 +1296,71 @@
             <e p="Tests" t="Include">
               <e p="Editor" t="Include">
                 <e p="Unity.2D.Tilemap.Extras.EditorTests.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="com.unity.ai.navigation" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="ConversionSystem" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="converter_editor.uss" t="Include" />
+                <e p="converter_editor.uxml" t="Include" />
+                <e p="converter_widget.uss" t="Include" />
+                <e p="converter_widget.uxml" t="Include" />
+                <e p="converter_widget_item.uxml" t="Include" />
+                <e p="ConverterItemDescriptor.cs" t="Include" />
+                <e p="ConverterItemInfo.cs" t="Include" />
+                <e p="EditorStyles.cs" t="Include" />
+                <e p="InitializeConverterContext.cs" t="Include" />
+                <e p="RunItemContext.cs" t="Include" />
+                <e p="SystemConverter.cs" t="Include" />
+                <e p="SystemConverterContainer.cs" t="Include" />
+                <e p="SystemConvertersEditor.cs" t="Include" />
+                <e p="Unity.AI.Navigation.Editor.ConversionSystem.asmdef" t="Include" />
+              </e>
+              <e p="NavigationOverlay.cs" t="Include" />
+              <e p="NavigationPreferences.cs" t="Include" />
+              <e p="NavigationWindow.cs" t="Include" />
+              <e p="NavMeshAssetManager.cs" t="Include" />
+              <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+              <e p="NavMeshLinkEditor.cs" t="Include" />
+              <e p="NavMeshModifierEditor.cs" t="Include" />
+              <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+              <e p="NavMeshSurfaceEditor.cs" t="Include" />
+              <e p="Unity.AI.Navigation.Editor.asmdef" t="Include" />
+              <e p="Updater" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="BuiltInToNavMeshSurfaceConverterContainer.cs" t="Include" />
+                <e p="NavMeshSceneConverter.cs" t="Include" />
+                <e p="NavMeshUpdaterEditor.cs" t="Include" />
+                <e p="NavMeshUpdaterUtility.cs" t="Include" />
+                <e p="Unity.AI.Navigation.Updater.asmdef" t="Include" />
+              </e>
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Runtime" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="HelpUrls.cs" t="Include" />
+              <e p="NavMeshLink.cs" t="Include" />
+              <e p="NavMeshLink.deprecated.cs" t="Include" />
+              <e p="NavMeshModifier.cs" t="Include" />
+              <e p="NavMeshModifierVolume.cs" t="Include" />
+              <e p="NavMeshSurface.cs" t="Include" />
+              <e p="Unity.AI.Navigation.asmdef" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Unity.AI.Navigation.Editor.Tests.asmdef" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="OffMeshLinkTests" t="Include">
+                  <e p="Unity.AI.Navigation.LegacyOffMeshLink.Tests.asmdef" t="Include" />
+                </e>
+                <e p="Unity.AI.Navigation.Tests.asmdef" t="Include" />
+              </e>
+              <e p="VerifyEditorInPlaymode" t="Include">
+                <e p="Unity.AI.Navigation.Tests.EditorInPlaymode.asmdef" t="Include" />
               </e>
             </e>
           </e>
@@ -9428,6 +9501,14 @@
       <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.2D.Tilemap.Package.EditorTests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.ConversionSystem.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Editor.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.LegacyOffMeshLink.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Tests.EditorInPlaymode.csproj" t="IncludeRecursive" />
+      <e p="Unity.AI.Navigation.Updater.csproj" t="IncludeRecursive" />
       <e p="Unity.Burst.CodeGen.csproj" t="IncludeRecursive" />
       <e p="Unity.Burst.csproj" t="IncludeRecursive" />
       <e p="Unity.Burst.Editor.csproj" t="IncludeRecursive" />
