@@ -18,13 +18,13 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private int StartValueFood;
     [SerializeField] private int StartValueCrioCrystal;
     
-    [SerializeField] private int StartValueApiaryShop;
-    [SerializeField] private int StartValueHoneyGunShop;
-    [SerializeField] private int StartValueMobileBaseShop;
-    [SerializeField] private int StartValueStorageShop;
-    [SerializeField] private int StartValueResidentialModuleShop;
-    [SerializeField] private int StartValueBreadwinnerShop;
-    [SerializeField] private int StartValuePierShop;
+    [SerializeField] private PriceShopProduct StartValueApiaryShop;
+    [SerializeField] private PriceShopProduct StartValueHoneyGunShop;
+    [SerializeField] private PriceShopProduct StartValueMobileBaseShop;
+    [SerializeField] private PriceShopProduct StartValueStorageShop;
+    [SerializeField] private PriceShopProduct StartValueResidentialModuleShop;
+    [SerializeField] private PriceShopProduct StartValueBreadwinnerShop;
+    [SerializeField] private PriceShopProduct StartValuePierShop;
 
     public static EntityID WhichPlayerCreate;
     //[SerializeField] private EntityID player1;

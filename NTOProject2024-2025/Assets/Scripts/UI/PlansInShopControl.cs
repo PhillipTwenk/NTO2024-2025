@@ -18,14 +18,7 @@ public class PlansInShopControl : MonoBehaviour
     [SerializeField] private Button _buttonHG;
     [SerializeField] private Button _buttonS;
     [SerializeField] private Button _buttonP;
-
-    public bool IsHoneyGunBought;
-    public bool IsStorageBought;
-    public bool IsPierBought;
-
-    [SerializeField] private int PriceIronValue;
-    [SerializeField] private int PriceCryoCrystalValue;
-
+    
     [SerializeField] private string HoneyGunName;
     [SerializeField] private string StorageName;
     [SerializeField] private string PierName;
@@ -40,18 +33,22 @@ public class PlansInShopControl : MonoBehaviour
     /// <summary>
     /// При включении панели бартера в зависимости от уровня базы дает разные предложения
     /// </summary>
-    private void OnEnable()
+    private async void OnEnable()
     {
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
         NotEnoughtResourcesTextPanel.SetActive(false);
         PanelHoneyGunBought.SetActive(false);
         PanelStorageBought.SetActive(false);
         PanelPierBought.SetActive(false);
+        string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        string shopName = $"{playerName}'sShop";
+        ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
         switch (BaseUpgradeConditionManager.CurrentBaseLevel)
         {
             case 1:
                 PanelHoneyGun.SetActive(true);
                 WhichPanelActive = HoneyGunName;
-                if (IsHoneyGunBought)
+                if (shopResources.HoneyGun.IsPurchased)
                 {
                     PanelHoneyGunBought.SetActive(true);
                     _buttonHG.enabled = false;
@@ -60,7 +57,7 @@ public class PlansInShopControl : MonoBehaviour
             case 2:
                 PanelStorage.SetActive(true);
                 WhichPanelActive = StorageName;
-                if (IsStorageBought)
+                if (shopResources.Storage.IsPurchased)
                 {
                     PanelStorageBought.SetActive(true);
                     _buttonS.enabled = false;
@@ -69,13 +66,15 @@ public class PlansInShopControl : MonoBehaviour
             case 3:
                 PanelPier.SetActive(true);
                 WhichPanelActive = PierName;
-                if (IsPierBought)
+                if (shopResources.Pier.IsPurchased)
                 {
                     PanelPierBought.SetActive(true);
                     _buttonP.enabled = false;
                 }
                 break;
         }
+        
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
     /// <summary>
@@ -86,56 +85,104 @@ public class PlansInShopControl : MonoBehaviour
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
-        
+
+        string shopName = $"{playerName}'sShop";
+        ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
+
         int playerIron = playerResources.Iron;
         int playerCryoCrystal = playerResources.CryoCrystal;
         int playerEnergy = playerResources.Energy;
         int playerFood = playerResources.Food;
 
-        if (playerIron >= PriceIronValue && playerCryoCrystal >= PriceCryoCrystalValue)
-        {
-            NotEnoughtResourcesTextPanel.SetActive(false);
-            
-            await APIManager.Instance.PutPlayerResources(playerName, playerIron - PriceIronValue, playerEnergy, playerFood, playerCryoCrystal-PriceCryoCrystalValue);
+        NotEnoughtResourcesTextPanel.SetActive(false);
 
-            string shopName = $"{playerName}'sShop";
-            ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
-                
-            if (WhichPanelActive == HoneyGunName && !IsHoneyGunBought)
+        if (WhichPanelActive == HoneyGunName)
+        {
+            if (!shopResources.HoneyGun.IsPurchased)
             {
-                shopResources.HoneyGunShop = 0;
-                await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.ApiaryShop, shopResources.HoneyGunShop, shopResources.MobileBaseShop, shopResources.StorageShop, shopResources.ResidentialModuleShop, shopResources.BreadwinnerShop, shopResources.PierShop);
-                IsHoneyGunBought = true;
+                if (playerIron >= shopResources.HoneyGun.IronPrice &&
+                    playerCryoCrystal >= shopResources.HoneyGun.CryoCrystalPrice)
+                {
+                    shopResources.HoneyGun.IsPurchased = true;
+                    await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
+                        shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
+                        shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
+                    await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.HoneyGun.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.HoneyGun.CryoCrystalPrice);
+                    PanelHoneyGunBought.SetActive(true);
+                    _buttonHG.enabled = false;
+                    UIManager.Instance.AddNewPlanInPanel(HGPlan);
+                }
+                else
+                {
+                    NotEnoughtResourcesTextPanel.SetActive(true);
+                }
+            }
+            else
+            {
                 PanelHoneyGunBought.SetActive(true);
                 _buttonHG.enabled = false;
-                UIManager.Instance.AddNewPlanInPanel(HGPlan);
-            }
-            if (WhichPanelActive == StorageName && !IsStorageBought)
-            {
-                shopResources.StorageShop = 0;
-                await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.ApiaryShop, shopResources.HoneyGunShop, shopResources.MobileBaseShop, shopResources.StorageShop, shopResources.ResidentialModuleShop, shopResources.BreadwinnerShop, shopResources.PierShop);
-                IsStorageBought = true;
-                PanelStorageBought.SetActive(true);
-                _buttonS.enabled = false;
-                UIManager.Instance.AddNewPlanInPanel(SPlan);
-            }
-            if (WhichPanelActive == PierName && !IsPierBought)
-            {
-                shopResources.PierShop = 0;
-                await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.ApiaryShop, shopResources.HoneyGunShop, shopResources.MobileBaseShop, shopResources.StorageShop, shopResources.ResidentialModuleShop, shopResources.BreadwinnerShop, shopResources.PierShop);
-                IsPierBought = true;
-                PanelPierBought.SetActive(true);
-                _buttonP.enabled = false;
-                UIManager.Instance.AddNewPlanInPanel(PPlan);
             }
         }
-        else
+
+        if (WhichPanelActive == StorageName)
         {
-            NotEnoughtResourcesTextPanel.SetActive(true);
+            if (!shopResources.Storage.IsPurchased)
+            {
+                if (playerIron >= shopResources.Storage.IronPrice &&
+                    playerCryoCrystal >= shopResources.Storage.CryoCrystalPrice)
+                {
+                    shopResources.Storage.IsPurchased = true;
+                    await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
+                        shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
+                        shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
+                    await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.Storage.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.Storage.CryoCrystalPrice);
+                    PanelStorageBought.SetActive(true);
+                    _buttonS.enabled = false;
+                    UIManager.Instance.AddNewPlanInPanel(SPlan);
+                }
+                else
+                {
+                    NotEnoughtResourcesTextPanel.SetActive(true);
+                }
+            }
+            else
+            {
+                PanelHoneyGunBought.SetActive(true);
+                _buttonHG.enabled = false;
+            }
         }
-        
+
+        if (WhichPanelActive == PierName)
+        {
+            if (!shopResources.Pier.IsPurchased)
+            {
+                if (playerIron >= shopResources.Pier.IronPrice &&
+                    playerCryoCrystal >= shopResources.Pier.CryoCrystalPrice)
+                {
+                    shopResources.Pier.IsPurchased = true;
+                    await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
+                        shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
+                        shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
+                    await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.Pier.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.Pier.CryoCrystalPrice);
+                    PanelPierBought.SetActive(true);
+                    _buttonP.enabled = false;
+                    UIManager.Instance.AddNewPlanInPanel(PPlan);
+                }
+                else
+                {
+                    NotEnoughtResourcesTextPanel.SetActive(true);
+                }
+            }
+            else
+            {
+                PanelHoneyGunBought.SetActive(true);
+                _buttonHG.enabled = false;
+            }
+        }
+
         UpdateResourcesEvent.TriggerEvent();
-        
+
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 }
+

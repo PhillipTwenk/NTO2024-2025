@@ -96,19 +96,19 @@ public class UIManager : MonoBehaviour
         string shopName = $"{playerName}'sShop";
         ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
 
-        if (shopResources.ApiaryShop == 0)
+        if (shopResources.Apiary.IsPurchased)
             AddNewPlanInPanel(plansArray[0]);
-        if (shopResources.HoneyGunShop == 0)
+        if (shopResources.HoneyGun.IsPurchased)
             AddNewPlanInPanel(plansArray[1]);
-        if (shopResources.MobileBaseShop == 0)
+        if (shopResources.MobileBase.IsPurchased)
             AddNewPlanInPanel(plansArray[2]);
-        if (shopResources.StorageShop == 0)
+        if (shopResources.Storage.IsPurchased)
             AddNewPlanInPanel(plansArray[3]);
-        if (shopResources.ResidentialModuleShop == 0)
+        if (shopResources.ResidentialModule.IsPurchased)
             AddNewPlanInPanel(plansArray[4]);
-        if (shopResources.BreadwinnerShop == 0)
+        if (shopResources.Minner.IsPurchased)
             AddNewPlanInPanel(plansArray[5]);
-        if (shopResources.PierShop == 0)
+        if (shopResources.Pier.IsPurchased)
             AddNewPlanInPanel(plansArray[6]);
 
         LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);

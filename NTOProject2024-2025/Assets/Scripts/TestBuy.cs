@@ -17,31 +17,73 @@ public class TestBuy : MonoBehaviour
         switch (gameObject.name)
         {
             case "ApiaryShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop - 1 , res.HoneyGunShop,res.MobileBaseShop,res.StorageShop,res.ResidentialModuleShop,res.BreadwinnerShop,res.PierShop);
+                PriceShopProduct ApiaryPrice = new PriceShopProduct()
+                {
+                    IronPrice = res.Apiary.IronPrice,
+                    CryoCrystalPrice = res.Apiary.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", ApiaryPrice , res.HoneyGun,res.MobileBase,res.Storage,res.ResidentialModule,res.Minner,res.Pier);
                 ApiaryShopEvent.TriggerEvent();
                 break;
             case "HoneyGunShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop -1,res.MobileBaseShop,res.StorageShop,res.ResidentialModuleShop,res.BreadwinnerShop,res.PierShop);
+                PriceShopProduct HoneyGunPrice = new PriceShopProduct()
+                {
+                    IronPrice = res.HoneyGun.IronPrice,
+                    CryoCrystalPrice = res.HoneyGun.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, HoneyGunPrice,res.MobileBase,res.Storage,res.ResidentialModule,res.Minner,res.Pier);
                 HoneyGunShopEvent.TriggerEvent();
                 break;
             case "MobileBaseShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop,res.MobileBaseShop -1,res.StorageShop,res.ResidentialModuleShop,res.BreadwinnerShop,res.PierShop);
+                PriceShopProduct MobileBasePrice = new PriceShopProduct()
+                {
+                    IronPrice = res.MobileBase.IronPrice,
+                    CryoCrystalPrice = res.MobileBase.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, res.HoneyGun,MobileBasePrice,res.Storage,res.ResidentialModule,res.Minner,res.Pier);
                 MobileBaseShopEvent.TriggerEvent();
                 break;
             case "StorageShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop,res.MobileBaseShop,res.StorageShop -1,res.ResidentialModuleShop,res.BreadwinnerShop,res.PierShop);
+                PriceShopProduct StoragePrice = new PriceShopProduct()
+                {
+                    IronPrice = res.Storage.IronPrice,
+                    CryoCrystalPrice = res.Storage.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, res.HoneyGun,res.MobileBase,StoragePrice,res.ResidentialModule,res.Minner,res.Pier);
                 StorageShopEvent.TriggerEvent();
                 break;
             case "ResidentialModuleShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop,res.MobileBaseShop,res.StorageShop,res.ResidentialModuleShop -1,res.BreadwinnerShop,res.PierShop);
+                PriceShopProduct RM = new PriceShopProduct()
+                {
+                    IronPrice = res.ResidentialModule.IronPrice,
+                    CryoCrystalPrice = res.ResidentialModule.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, res.HoneyGun,res.MobileBase,res.Storage,RM,res.Minner,res.Pier);
                 ResidentialModuleShopEvent.TriggerEvent();
                 break;
             case "BreadwinnerShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop,res.MobileBaseShop,res.StorageShop,res.ResidentialModuleShop,res.BreadwinnerShop -1,res.PierShop);
+                PriceShopProduct Br = new PriceShopProduct()
+                {
+                    IronPrice = res.Minner.IronPrice,
+                    CryoCrystalPrice = res.Minner.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, res.HoneyGun,res.MobileBase,res.Storage,res.ResidentialModule,Br,res.Pier);
                 BreadwinnerShopEvent.TriggerEvent();
                 break;
             case "PierShop":
-                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.ApiaryShop, res.HoneyGunShop,res.MobileBaseShop,res.StorageShop,res.ResidentialModuleShop,res.BreadwinnerShop,res.PierShop -1);
+                PriceShopProduct pier = new PriceShopProduct()
+                {
+                    IronPrice = res.Pier.IronPrice,
+                    CryoCrystalPrice = res.Pier.CryoCrystalPrice,
+                    IsPurchased = true
+                };
+                await APIManager.Instance.PutShopResources(UIManagerLocation.WhichPlayerCreate.Name, $"{UIManagerLocation.WhichPlayerCreate.Name}'sShop", res.Apiary, res.HoneyGun,res.MobileBase,res.Storage,res.ResidentialModule,res.Minner,pier);
                 PierShopEvent.TriggerEvent();
                 break;
         }

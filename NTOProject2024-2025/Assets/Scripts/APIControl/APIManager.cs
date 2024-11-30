@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using Newtonsoft.Json;
 
 /// <summary>
 /// Класс для получения нужных ссылок в зависимости от задачи
@@ -38,6 +39,24 @@ public class Requests
 
     public static string GetLogGameURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/logs/";
 }
+
+/// <summary>
+/// Класс для получения сообщений в логи
+/// </summary>
+public class LogComment
+{
+    public static string ChangedIronNaming = "Changed_Iron";
+    public static string ChangedCryoCrystalNaming = "Changed_CryoCrystal";
+    public static string ChangedEnergyNaming = "Changed_Energy";
+    public static string ChangedFoodNaming = "Changed_Food";
+    public static string BuildingIsBuilt(string buildingName) => $"Здание {buildingName} было построено";
+    public static string DestroyBuilding(string buildingName) => $"Здание {buildingName} было разрушено";
+    public static string NewPlanHasBeenPurchased(string buildingName) => $"Чертеж здания {buildingName} был куплен";
+    public static string UpgradeBuilding(string buildingName) => $"Здание {buildingName} было улучшено";
+    public static string NewWorkerArrive = "Новый рабочий пришел на помощь";
+    public static string WorkerLeave = "Рабочий покинул базу";
+}
+
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance { get; private set; }
@@ -258,9 +277,43 @@ public class APIManager : MonoBehaviour
     }
 
 
-    public void CreatePlayerLog(string comment, string playerName, string changedIron, string changedEnergy, string changedFood, string changedCrioCrystal)
+    /// <summary>
+    /// Создание логов персонажа
+    /// </summary>
+    /// <param name="comment"> Комментарий лога</param>
+    /// <param name="playerName"> Имя персонажа </param>
+    /// <param name="ChangedResources"> Словарь изменённых ресурсов </param>
+    public async void CreatePlayerLog(string comment, string playerName, Dictionary<string, string> ChangedResources)
     {
-        
+        // Создаем объект для логов
+        PlayerLog playerLog = new PlayerLog()
+        {
+            comment = comment,
+            player_name = playerName,
+            resources_changed = ChangedResources
+        };
+    
+        // Сериализуем объект в JSON
+        string json = JsonConvert.SerializeObject(playerLog, Formatting.Indented);
+
+        // Создаем TaskCompletionSource для ожидания ответа
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+    
+        // Выполняем POST-запрос
+        HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+            onSuccess: response =>
+            {
+                Debug.Log("Логи были отправлены");
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+            },
+            onError: error =>
+            {
+                Debug.LogError($"Ошибка при создании логов: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+            });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
 
     public PlayerLog GetPlayerLogs()
@@ -282,7 +335,7 @@ public class APIManager : MonoBehaviour
     /// <param name="breadwinnerShop"> чертеж добытчика</param>
     /// <param name="pierShop"> чертеж пристани </param>
     /// <returns></returns>
-    public async Task CreateShop(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
+    public async Task CreateShop(string playerName, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
     {
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
@@ -290,13 +343,13 @@ public class APIManager : MonoBehaviour
             name = shopName,
             resources = new ShopResources()
             {
-                ApiaryShop = apiaryShop,
-                HoneyGunShop = honeyGunShop,
-                MobileBaseShop = mobileBaseShop,
-                StorageShop = storageShop,
-                ResidentialModuleShop = residentialModuleShop,
-                BreadwinnerShop = breadwinnerShop,
-                PierShop = pierShop
+                Apiary = apiaryShop,
+                HoneyGun = honeyGunShop,
+                MobileBase = mobileBaseShop,
+                Storage = storageShop,
+                ResidentialModule = residentialModuleShop,
+                Minner = breadwinnerShop,
+                Pier = pierShop
             }
         };
 
@@ -416,7 +469,7 @@ public class APIManager : MonoBehaviour
     /// <param name="breadwinnerShop"> чертеж добытчика</param>
     /// <param name="pierShop"> чертеж пристани </param>
     /// <returns></returns>
-    public async Task PutShopResources(string playerName, string shopName, int apiaryShop, int honeyGunShop, int mobileBaseShop, int storageShop, int residentialModuleShop, int breadwinnerShop, int pierShop)
+    public async Task PutShopResources(string playerName, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
     {
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
@@ -424,13 +477,13 @@ public class APIManager : MonoBehaviour
             name = shopName,
             resources = new ShopResources()
             {
-                ApiaryShop = apiaryShop,
-                HoneyGunShop = honeyGunShop,
-                MobileBaseShop = mobileBaseShop,
-                StorageShop = storageShop,
-                ResidentialModuleShop = residentialModuleShop,
-                BreadwinnerShop = breadwinnerShop,
-                PierShop = pierShop
+                Apiary = apiaryShop,
+                HoneyGun = honeyGunShop,
+                MobileBase = mobileBaseShop,
+                Storage = storageShop,
+                ResidentialModule = residentialModuleShop,
+                Minner = breadwinnerShop,
+                Pier = pierShop
             }
         };
 
@@ -488,9 +541,43 @@ public class APIManager : MonoBehaviour
         await taskCompletionSource.Task;
     }
     
-    public void CreateShopLog(string comment, string playerName, string shopName, string ChangedApiaryShop, string ChangedHoneyGunShop, string ChangedMobileBaseShop, string ChangedStorageShop, string ChangedResidentialModuleShop, string ChangedBreadwinnerShop)
+    /// <summary>
+    /// Cоздает логи магазина 
+    /// </summary>
+    /// <param name="comment"> комментарий лога </param>
+    /// <param name="playerName"> имя игрока </param>
+    /// <param name="shopName"> имя его магазина </param>
+    public async void CreateShopLog(string comment, string playerName, string shopName, Dictionary<string, string> ChangedResources)
     {
+        ShopLog shopLog = new ShopLog()
+        {
+            comment = comment,
+            player_name = playerName,
+            shop_Name = shopName,
+            resources_changed = ChangedResources
+        };
         
+        // Сериализуем объект в JSON
+        string json = JsonConvert.SerializeObject(shopLog, Formatting.Indented);
+
+        // Создаем TaskCompletionSource для ожидания ответа
+        var taskCompletionSource = new TaskCompletionSource<bool>();
+    
+        // Выполняем POST-запрос
+        HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+            onSuccess: response =>
+            {
+                Debug.Log("Логи были отправлены");
+                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+            },
+            onError: error =>
+            {
+                Debug.LogError($"Ошибка при создании логов: {error}");
+                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+            });
+
+        // Ждем завершения Task
+        await taskCompletionSource.Task;
     }
 
     public ShopLog GetShopLog(string shopName)

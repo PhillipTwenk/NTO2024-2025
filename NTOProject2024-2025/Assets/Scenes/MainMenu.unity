@@ -1817,13 +1817,34 @@ MonoBehaviour:
   StartValueEnergy: 999
   StartValueFood: 999
   StartValueCrioCrystal: 999
-  StartValueApiaryShop: 1
-  StartValueHoneyGunShop: 1
-  StartValueMobileBaseShop: 1
-  StartValueStorageShop: 1
-  StartValueResidentialModuleShop: 1
-  StartValueBreadwinnerShop: 1
-  StartValuePierShop: 1
+  StartValueApiaryShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValueHoneyGunShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValueMobileBaseShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValueStorageShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValueResidentialModuleShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValueBreadwinnerShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
+  StartValuePierShop:
+    IronPrice: 50
+    CryoCrystalPrice: 3
+    IsPurchased: 0
 --- !u!1 &582827661
 GameObject:
   m_ObjectHideFlags: 0

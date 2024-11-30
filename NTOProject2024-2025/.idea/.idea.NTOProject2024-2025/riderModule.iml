@@ -16,6 +16,11 @@
     <content url="file://$MODULE_DIR$/../../../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.searcher@4.9.2" />
     <content url="file://$MODULE_DIR$/../../../../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4" />
     <content url="file://$MODULE_DIR$/../.." />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.collab-proxy@2.5.2" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.ide.visualstudio@2.0.22" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.nuget.newtonsoft-json@3.2.1" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.searcher@4.9.2" />
+    <content url="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
