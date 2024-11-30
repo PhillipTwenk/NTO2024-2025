@@ -147,7 +147,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     /// <summary>
     /// Находит свободного рабочего к постройке здания
     /// </summary>
-    public void SendFreeWorkerToBuilding()
+    public void SendFreeWorkerToBuilding(Transform building)
     {
         foreach (var buildingControl in listOfActiveBuildingWithWorkers)
         {
@@ -159,6 +159,12 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
                     GameObject newWorker = Instantiate(buildingControl.WorkerPrefab);
                     newWorker.transform.position = buildingSpawnWorkerPointTransform.position;
+                    ThisBuildingWorkersControl thisBuildingWorkersControl =
+                        newWorker.GetComponent<ThisBuildingWorkersControl>();
+                    WorkerMovementController workerMovementController =
+                        newWorker.GetComponent<WorkerMovementController>();
+                    Animator animator = newWorker.GetComponent<Animator>();
+                    thisBuildingWorkersControl.StartMovementWorkerToBuilding(building, workerMovementController, animator);
                 }
             }
         }

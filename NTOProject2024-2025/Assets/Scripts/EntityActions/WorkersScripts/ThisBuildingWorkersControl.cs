@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -12,6 +13,13 @@ public class ThisBuildingWorkersControl : MonoBehaviour
 
     public GameObject WorkerPrefab;
 
+    private Animator _animator;
+
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     public void AddWorkersInThisBuilding(int number, bool IsAdd)
     {
@@ -27,6 +35,11 @@ public class ThisBuildingWorkersControl : MonoBehaviour
                 CurrentNumberWorkersInThisBuilding -= number;
             }
         }
+    }
+
+    public void StartMovementWorkerToBuilding(Transform buildingTransform, WorkerMovementController movementController, Animator animator)
+    {
+        movementController.SetWorkerDestination(buildingTransform);
     }
 
     
