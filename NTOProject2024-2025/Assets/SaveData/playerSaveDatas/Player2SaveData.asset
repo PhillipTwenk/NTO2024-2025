@@ -16,13 +16,13 @@ MonoBehaviour:
   playerBuildings:
   - {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
   buildingsTransform:
-  - position: {x: -59.4209, y: 3.99, z: -126.0275}
+  - position: {x: -39.186188, y: 3.99, z: -171.84363}
     rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: {x: 1, y: 1, z: 1}
   BuildingDatas:
   - Level: 1
     Durability: 175
-    Storage: 89020000e7030000e7030000
+    Storage: dc050000dc0500000a000000
     SaveListIndex: 0
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1

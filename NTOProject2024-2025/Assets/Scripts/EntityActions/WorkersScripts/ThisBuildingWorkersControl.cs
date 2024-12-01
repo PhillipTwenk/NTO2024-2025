@@ -13,14 +13,6 @@ public class ThisBuildingWorkersControl : MonoBehaviour
 
     public GameObject WorkerPrefab;
 
-    private Animator _animator;
-
-
-    private void Start()
-    {
-        _animator = GetComponent<Animator>();
-    }
-
     public void AddWorkersInThisBuilding(int number, bool IsAdd)
     {
         if (IsAdd)
@@ -40,6 +32,13 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     public void StartMovementWorkerToBuilding(Transform buildingTransform, WorkerMovementController movementController, Animator animator)
     {
         movementController.SetWorkerDestination(buildingTransform);
+        
+        //Animator action
+    }
+
+    public void WorkerArrive()
+    {
+        
     }
 
     

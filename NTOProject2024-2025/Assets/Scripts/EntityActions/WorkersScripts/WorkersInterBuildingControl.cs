@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 using TMPro;
 using System.Threading.Tasks;
 
@@ -17,6 +18,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
     public int MaxValueOfWorkers;
     public int NumberOfActiveWorkers;
 
+    public static BuildingData CurrentBuilding;
+
     public List<ThisBuildingWorkersControl> listOfActiveBuildingWithWorkers;
 
     // public GameObject TextHintGameObject;
@@ -30,6 +33,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        CurrentBuilding = null;
     }
 
     public void AddNewBuilding(ThisBuildingWorkersControl newBuilding)
@@ -63,15 +67,19 @@ public class WorkersInterBuildingControl : MonoBehaviour
     ///<summary> 
     /// Отправляет рабочих на строительство / возвращает их обратно
     ///</summary>
-    public async Task SendWorkerToBuilding(bool IsSend, BuildingData buildingData)
+    public async Task SendWorkerToBuilding(bool IsSend, BuildingData buildingData, Transform buildingTransform)
     {
         if(NumberOfActiveWorkers < CurrentValueOfWorkers && IsSend) // Ержана дернули с кровати и отправили строить крымский мост
         {
+            CurrentBuilding = buildingData;
+            
             Debug.Log("Рабочий отправился строить здание, ожидаем его прибытия");
             NumberOfActiveWorkers += 1;
             CurrentValueOfWorkers -= 1;
-            
+
             buildingData.TextPanelBuildingControl(true, buildingData.AwaitWorkerActionText);
+
+            SendWorkerToBuildingAnimationControl(buildingTransform);
             
             //Ожидаем прибытия рабочего
             await WaitForWorkerArrival();
@@ -80,6 +88,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
         {
             NumberOfActiveWorkers -= 1;
             CurrentValueOfWorkers += 1;
+            CurrentBuilding = null;
         }else
         {
             //ShowHint(HintTextNotEnoughtWorkers);
@@ -120,17 +129,14 @@ public class WorkersInterBuildingControl : MonoBehaviour
     ///<summary> 
     /// Ожидание завершения строительства
     ///</summary>
-    public async Task WorkerEndWork(BuildingData buildingData)
+    public async Task WorkerEndWork(BuildingData buildingData, Transform buildingTransform)
     {
         buildingData.TextPanelBuildingControl(true, buildingData.AwaitBuildingActionText);
 
         await AwaitEndWorking(buildingData);
 
-        Debug.Log("Рабочий достроил, идет обратно");
+        //Debug.Log("Рабочий достроил, идет обратно");
         
-        //Отправляем рабочего обратно на базу
-        SendWorkerToBuilding(false, buildingData);
-
         buildingData.TextPanelBuildingControl(false, buildingData.AwaitBuildingActionText);
     }
 
@@ -147,7 +153,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     /// <summary>
     /// Находит свободного рабочего к постройке здания
     /// </summary>
-    public void SendFreeWorkerToBuilding(Transform building)
+    public void SendWorkerToBuildingAnimationControl(Transform building)
     {
         foreach (var buildingControl in listOfActiveBuildingWithWorkers)
         {
@@ -155,21 +161,76 @@ public class WorkersInterBuildingControl : MonoBehaviour
             {
                 if (buildingControl.CurrentNumberWorkersInThisBuilding > 0)
                 {
+                    buildingControl.NumberOfActiveWorkersInThisBuilding += 1;
+                    buildingControl.CurrentNumberWorkersInThisBuilding -= 1;
+                    
                     Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
 
                     GameObject newWorker = Instantiate(buildingControl.WorkerPrefab);
                     newWorker.transform.position = buildingSpawnWorkerPointTransform.position;
-                    ThisBuildingWorkersControl thisBuildingWorkersControl =
-                        newWorker.GetComponent<ThisBuildingWorkersControl>();
+               
                     WorkerMovementController workerMovementController =
                         newWorker.GetComponent<WorkerMovementController>();
                     Animator animator = newWorker.GetComponent<Animator>();
-                    thisBuildingWorkersControl.StartMovementWorkerToBuilding(building, workerMovementController, animator);
+                    buildingControl.StartMovementWorkerToBuilding(building, workerMovementController, animator);
                 }
             }
         }
-        
     }
+
+    /// <summary>
+    /// Начинает анимацию строительства
+    /// </summary>
+    public async void StartAnimationBuilding(Transform workerTransform, Animator animator, WorkerMovementController movementController, List<Transform> pointsOfBuildings, BuildingData buildingData)
+    {
+        Transform pointForBuild = null;
+        float distanceToPoint = 10000;
+        int i = 0;
+        foreach (var point in pointsOfBuildings)
+        {
+            if (Vector3.Distance(workerTransform.position, point.position) < distanceToPoint)
+            {
+                pointForBuild = point;
+                distanceToPoint = Vector3.Distance(workerTransform.position, point.position);
+                i++;
+            }
+        }
+        
+        movementController.SetWorkerDestination(pointForBuild);
+        
+        //Animator action
+
+        Debug.Log(123);
+        
+        await AwaitEndWorking(buildingData);
+        
+        Debug.Log(456);
+        
+        movementController.ReadyForWork = false;
+
+        EndWorkingAnimationControl(movementController, animator);
+    }
+
+    public void EndWorkingAnimationControl(WorkerMovementController movementController, Animator animator)
+    {
+        foreach (var buildingControl in listOfActiveBuildingWithWorkers)
+        {
+            if (buildingControl != null)
+            {
+                if (buildingControl.CurrentNumberWorkersInThisBuilding < buildingControl.MaxValueOfWorkersInThisBuilding)
+                {
+                    Debug.Log(789);
+
+                    CurrentBuilding = buildingControl.gameObject.GetComponent<BuildingData>();
+                    Debug.Log(CurrentBuilding.Title);
+                    Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
+                    
+                    buildingControl.StartMovementWorkerToBuilding(buildingSpawnWorkerPointTransform, movementController, animator);
+                }
+            }
+        }
+    }
+    
     ///<summary> 
     /// Открытие / закрытие панели с подсказкой
     ///</summary>

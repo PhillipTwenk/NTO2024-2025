@@ -4,8 +4,11 @@ public class WorkerMovementController : MonoBehaviour
 {
     public Transform WorkerPointOfDestination;
     private NavMeshAgent agent;
+
+    public bool ReadyForWork;
     void Start()
     {
+        ReadyForWork = true;
         agent = GetComponent<NavMeshAgent>();
         Debug.Log(agent);
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,8 @@ public class InteractionBuildingController : MonoBehaviour
     public GameEvent CloseBarterMenuEvent;
 
     public GameObject Texthint;
+
+    [SerializeField] private List<Transform> PointsOfBuildings;
 
     private void Start()
     {
@@ -41,11 +44,32 @@ public class InteractionBuildingController : MonoBehaviour
             CanPutE = true;
             Texthint.SetActive(true);
         }
-        if(other.gameObject.CompareTag("Worker")){
+        if(other.gameObject.CompareTag("Worker") && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title){
             if (BuildingManager.Instance.ProcessWorkerBuildingActive)
             {
-                Debug.Log("Рабочий добрался, начинает строить здание");
-                WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+                if (!other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+                {
+                    Debug.Log(1);
+                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
+                        .CurrentNumberWorkersInThisBuilding += 1;
+                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
+                        .NumberOfActiveWorkersInThisBuilding -= 1;
+                    WorkersInterBuildingControl.Instance.CurrentValueOfWorkers += 1;
+                    WorkersInterBuildingControl.Instance.NumberOfActiveWorkers -= 1;
+
+                    BuildingManager.Instance.ProcessWorkerBuildingActive = false;
+
+                    Destroy(other.gameObject);
+                }
+                else
+                {
+                    Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
+                    Debug.Log("Рабочий добрался, начинает строить здание");
+                    WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+
+                    GameObject worker = other.gameObject;
+                    WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.transform, worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), PointsOfBuildings, GetComponent<BuildingData>());
+                }
             }
         }
     }

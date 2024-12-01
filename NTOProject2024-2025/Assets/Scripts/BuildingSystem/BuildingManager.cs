@@ -125,10 +125,10 @@ public class BuildingManager : MonoBehaviour
                     LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
                     
                     //Ожидаем прибытия рабочего 
-                    await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData);
+                    await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData, newBuildingObject.transform);
                     
                     //Ожидаем завершения его строительства
-                    await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData);
+                    await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData, newBuildingObject.transform);
 
 
                     LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
@@ -157,9 +157,8 @@ public class BuildingManager : MonoBehaviour
                         ThisBuildingWorkersControl thisBuildingWorkersControl = null;
                         
                         pLayerSaveData.BuildingWorkersInformationList.Add(null);
-                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl); 
                     }
-                    ProcessWorkerBuildingActive = false;
                 }
                 else
                 {
