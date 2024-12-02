@@ -699,8 +699,9 @@ GameObject:
   - component: {fileID: 560846074966824880}
   - component: {fileID: 3795655621766683401}
   - component: {fileID: 4801172987281920727}
-  - component: {fileID: 4600970688372567255}
   - component: {fileID: 6530356733986579137}
+  - component: {fileID: -1663472317470448978}
+  - component: {fileID: -51185073709068649}
   m_Layer: 3
   m_Name: TriggerMiner
   m_TagString: Untagged
@@ -778,19 +779,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.2437, y: 45.16978, z: 41.769405}
   m_Center: {x: 0.76951885, y: 22.08489, z: -3.8498182}
---- !u!114 &4600970688372567255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6429348155066786507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5736c7cb4a4427e46922168cd04cf980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: c08c0a90668b16c489f7f39147a78a30, type: 2}
 --- !u!114 &6530356733986579137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,7 +791,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66884e9cfbc7ad54cad500d662bb4755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoneyProduction: 10
+  HoneyConsumption: 10
+  NumberOfWorkers: 0
+--- !u!114 &-1663472317470448978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6429348155066786507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e8c2c0ba2e54a249b88660a83ba526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: c08c0a90668b16c489f7f39147a78a30, type: 2}
+--- !u!54 &-51185073709068649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6429348155066786507}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6769494503193350047
 GameObject:
   m_ObjectHideFlags: 0

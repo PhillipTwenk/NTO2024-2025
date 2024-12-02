@@ -28,6 +28,8 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     [TextArea] public string NotEnoughtLevelSomeBuildings;
     [TextArea] public string SuccesUpgradeText;
 
+    [SerializeField] private GameEvent ResourceMinerRestored;
+
 
     private void Awake()
     {
@@ -40,6 +42,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             CurrentBaseLevel += 1; 
+            ResourceMinerRestored.TriggerEvent();
             Debug.Log(CurrentBaseLevel);
         }
     }
@@ -90,6 +93,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 {
                     resultReport.Clear();
                     resultReport.Add(SuccesUpgradeText);
+                    ResourceMinerRestored.TriggerEvent();
                     return resultReport;
                 }
 
@@ -136,6 +140,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 {
                     resultReport.Clear();
                     resultReport.Add(SuccesUpgradeText);
+                    ResourceMinerRestored.TriggerEvent();
                     return resultReport;
                 }
 
@@ -183,6 +188,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 {
                     resultReport.Clear();
                     resultReport.Add(SuccesUpgradeText);
+                    ResourceMinerRestored.TriggerEvent();
                     return resultReport;
                 }
 
