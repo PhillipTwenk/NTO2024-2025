@@ -73,6 +73,8 @@
             <e p="BaseUpgradeConditionManager.cs" t="Include" />
             <e p="BuildingData.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
+            <e p="EnergyProduction.cs" t="Include" />
+            <e p="PreviouslyBuidlingTriggerDataStorage.cs" t="Include" />
             <e p="YouCantBuildHereTrigger.cs" t="Include" />
           </e>
           <e p="EntityActions" t="Include">
@@ -116,6 +118,7 @@
           <e p="TestBuy.cs" t="Include" />
           <e p="TestMovementCharacter.cs" t="Include" />
           <e p="TriggerHandlers" t="Include">
+            <e p="BulletControl.cs" t="Include" />
             <e p="HoneyGunHandler.cs" t="Include" />
             <e p="InteractionBuildingController.cs" t="Include" />
           </e>

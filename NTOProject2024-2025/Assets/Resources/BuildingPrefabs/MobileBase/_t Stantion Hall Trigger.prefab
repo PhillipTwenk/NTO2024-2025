@@ -2763,6 +2763,7 @@ GameObject:
   - component: {fileID: 3128964773128919883}
   - component: {fileID: 2576820335654240919}
   - component: {fileID: 3722978227652315378}
+  - component: {fileID: 5578494560669966411}
   m_Layer: 3
   m_Name: _t Stantion Hall Trigger
   m_TagString: Untagged
@@ -2853,6 +2854,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 89845d6bbf50be54dbb3d7f2ebcc009b, type: 2}
+--- !u!114 &5578494560669966411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717978868957030702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66884e9cfbc7ad54cad500d662bb4755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoneyConsumption: 0
+  NumberOfWorkers: 1
 --- !u!1 &8740356966427635173
 GameObject:
   m_ObjectHideFlags: 0

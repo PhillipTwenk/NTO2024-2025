@@ -1,6 +1,6 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 
 public class ThisBuildingWorkersControl : MonoBehaviour
@@ -29,17 +29,46 @@ public class ThisBuildingWorkersControl : MonoBehaviour
         }
     }
 
-    public void StartMovementWorkerToBuilding(Transform buildingTransform, WorkerMovementController movementController, Animator animator)
+    public void StartMovementWorkerToBuilding(bool End, Transform buildingTransform, WorkerMovementController movementController, Animator animator)
     {
-        movementController.SetWorkerDestination(buildingTransform);
+        if (!End)
+        {
+            Transform workerTransform = movementController.transform;
+            List<Transform> pointsOfBuildings = buildingTransform.gameObject.transform.GetChild(0).GetComponent<InteractionBuildingController>()
+                .PointsOfBuildings;
         
-        //Animator action
+            Transform pointForBuild = null;
+            float distanceToPoint = 0;
+            int i = 0;
+            foreach (var point in pointsOfBuildings)
+            {
+                if (i == 0)
+                {
+                    pointForBuild = point;
+                    distanceToPoint = Vector3.Distance(workerTransform.position, point.position);
+                    i++;
+                    continue;
+                }
+                if (Vector3.Distance(workerTransform.position, point.position) < distanceToPoint)
+                {
+                    pointForBuild = point;
+                    distanceToPoint = Vector3.Distance(workerTransform.position, point.position);
+                    i++;
+                }
+            }
+            
+            movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
+            movementController.SetWorkerDestination(pointForBuild);
+        }
+        else
+        {
+            movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
+            movementController.SetWorkerDestination(buildingTransform);
+        }
+
+        animator.SetBool("Running", true);
+        animator.SetBool("Building", false);
+        animator.SetBool("Idle", false);
     }
 
-    public void WorkerArrive()
-    {
-        
-    }
-
-    
 }

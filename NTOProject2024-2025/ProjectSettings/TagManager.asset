@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - Worker
+  - Enemy
   layers:
   - Default
   - TransparentFX

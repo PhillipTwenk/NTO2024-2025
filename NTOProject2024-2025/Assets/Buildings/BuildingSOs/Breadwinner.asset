@@ -27,5 +27,5 @@ MonoBehaviour:
   MBLevelForUpgradethisIron: 0
   MBLevelForBuidlingthisIron: 2
   TimeAwaitBuildingThis: 3
-  prefabBuilding: {fileID: 7359515488963141187, guid: ba6a3bc021d9e8440b6d23318755befa, type: 3}
-  prefabBeforeBuilding: {fileID: 7359515488963141187, guid: 32e13c9f1f9fe7b47afbb8aeb824b0eb, type: 3}
+  prefabBuilding: {fileID: 1775260311085803478, guid: 2dec256020064de4d8bf328577983ef4, type: 3}
+  prefabBeforeBuilding: {fileID: 6429348155066786507, guid: 94879d4285609734a831d0659cf8590b, type: 3}

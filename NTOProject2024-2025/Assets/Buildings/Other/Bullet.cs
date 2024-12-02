@@ -5,4 +5,5 @@ public class Bullet : ScriptableObject
 {
     public int Damage;
     public int Speed;
+    public GameObject BulletPrefab;
 }

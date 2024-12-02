@@ -1,16 +1,17 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using TMPro;
+using Unity.AI.Navigation;
 
 public class BuildingManager : MonoBehaviour
 {
     
     public static BuildingManager Instance { get; private set; }
-    
+
     [TextArea] [SerializeField] private string HintNotEnoughtResourcesText;
     [TextArea] [SerializeField] private string HintNotEnoughtLevelBaseText;
     [TextArea] [SerializeField] private string HintNotFreeWorkersText;
+    [TextArea] [SerializeField] private string HintNoEnergyText;
+    [TextArea] [SerializeField] private string HintNoFoodText;
     [SerializeField] private float TimeHint;
     [SerializeField] private GameObject TextNotEnoughResource;
     [SerializeField] private TextMeshProUGUI TextHintTMPRoUGUI;
@@ -32,6 +33,8 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private float awaitValueBuild;
 
     [SerializeField] private GameEvent UpdateResourcesEvent;
+
+    public NavMeshSurface _navMeshSurface;
 
     public void StartPlacingBuild() => IsBuildingActive = true;
     public void EndPlacingBuild() => IsBuildingActive = false;
@@ -96,6 +99,12 @@ public class BuildingManager : MonoBehaviour
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources =
             await APIManager.Instance.GetPlayerResources(playerName);
+
+        int HoneyConsumptionBuilding =
+            MouseIndicator.GetComponent<PreviouslyBuidlingTriggerDataStorage>().HoneyConsumption;
+        int FoodConsumptionBuilding =
+            MouseIndicator.GetComponent<PreviouslyBuidlingTriggerDataStorage>().NumberOfWorkers;
+        
         if (playerResources.Iron >= priceBuilding)
         {
             if(BaseUpgradeConditionManager.CurrentBaseLevel >= buildingPrefabSO.MBLevelForBuidlingthisIron)
@@ -105,59 +114,82 @@ public class BuildingManager : MonoBehaviour
                 int AW = WorkersInterBuildingControl.Instance.NumberOfActiveWorkers;
                 if(CNoW <= MVoW && AW < CNoW)
                 {
-                    await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
-                playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
-            
-                    //Создаем новое здание, устанавливаем его позицию и удаляем триггер для строительства
-                    MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
-                    GameObject newBuildingObject = Instantiate(CurrentBuilding);
-                    newBuildingObject.transform.position = MouseIndicator.transform.position;
-                    Destroy(MouseIndicator);
-        
-                    IsBuildingActive = false;
-                    CurrentBuilding = null;
-                    CanBuilding = true;
-
-                    //Получение некорых данных о здании
-                    GameObject ComponentContainingBuilding = newBuildingObject.transform.GetChild(0).gameObject;
-                    BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
-
-                    LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
-                    
-                    //Ожидаем прибытия рабочего 
-                    await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData, newBuildingObject.transform);
-                    
-                    //Ожидаем завершения его строительства
-                    await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData, newBuildingObject.transform);
-
-
-                    LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
-                    //Сохранение данных здания в SO сохранения
-                    PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
-                    pLayerSaveData.playerBuildings.Add(buildingData.buildingTypeSO.PrefabBuilding);
-        
-                    TransformData transformData = new TransformData(newBuildingObject.transform);
-                    pLayerSaveData.buildingsTransform.Add(transformData);
-        
-                    BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
-                    pLayerSaveData.BuildingDatas.Add(buildingSaveData);
-
-                    buildingData.SaveListIndex = pLayerSaveData.BuildingDatas.IndexOf(buildingSaveData);
-
-                    if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
+                    if ((playerResources.Energy - HoneyConsumptionBuilding) >= 0)
                     {
-                        ThisBuildingWorkersControl thisBuildingWorkersControl = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
-                        WorkersContolSaveData worlersSaveData = new WorkersContolSaveData(thisBuildingWorkersControl);
-                        pLayerSaveData.BuildingWorkersInformationList.Add(worlersSaveData);
+                        if ((playerResources.Food - FoodConsumptionBuilding * 20) >= 0)
+                        {
+                            playerResources.Energy -= HoneyConsumptionBuilding;
+                            playerResources.Food -= FoodConsumptionBuilding * 20;
+                        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
+                            playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+            
+                            //Создаем новое здание, устанавливаем его позицию и удаляем триггер для строительства
+                            MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
+                            GameObject newBuildingObject = Instantiate(CurrentBuilding);
+                            newBuildingObject.transform.position = MouseIndicator.transform.position;
+                            Destroy(MouseIndicator);
+                            
+                            IsBuildingActive = false;
+                            CurrentBuilding = null;
+                            CanBuilding = true;
 
-                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                            //Получение некорых данных о здании
+                            GameObject ComponentContainingBuilding = newBuildingObject.transform.GetChild(0).gameObject;
+                            BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
+
+                            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+                            
+                            await _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
+                            Debug.Log("NavMesh updated");
+
+                            //Ожидаем прибытия рабочего 
+                            await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData, newBuildingObject.transform);
+                            
+                            //Ожидаем завершения его строительства
+                            await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData, newBuildingObject.transform);
+
+
+                            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
+                            //Сохранение данных здания в SO сохранения
+                            PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+                            pLayerSaveData.playerBuildings.Add(buildingData.buildingTypeSO.PrefabBuilding);
+                
+                            TransformData transformData = new TransformData(newBuildingObject.transform);
+                            pLayerSaveData.buildingsTransform.Add(transformData);
+
+                            BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
+                            pLayerSaveData.BuildingDatas.Add(buildingSaveData);
+                            buildingData.SaveListIndex = pLayerSaveData.BuildingDatas.IndexOf(buildingSaveData);
+                            pLayerSaveData.BuildingDatas[buildingData.SaveListIndex].SaveListIndex = buildingData.SaveListIndex;
+
+                            if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
+                            {
+                                ThisBuildingWorkersControl thisBuildingWorkersControl = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
+                                WorkersContolSaveData worlersSaveData = new WorkersContolSaveData(thisBuildingWorkersControl);
+                                pLayerSaveData.BuildingWorkersInformationList.Add(worlersSaveData);
+
+                                WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl);
+                            }
+                            else
+                            {
+                                ThisBuildingWorkersControl thisBuildingWorkersControl = null;
+                                
+                                pLayerSaveData.BuildingWorkersInformationList.Add(null);
+                                WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl); 
+                            }
+                        }
+                        else
+                        {
+                            TextNotEnoughResource.SetActive(true);
+                            Utility.Invoke(this, () => TextNotEnoughResource.SetActive(false), TimeHint);
+                            TextHintTMPRoUGUI.text = HintNoFoodText;
+                        }
                     }
                     else
                     {
-                        ThisBuildingWorkersControl thisBuildingWorkersControl = null;
-                        
-                        pLayerSaveData.BuildingWorkersInformationList.Add(null);
-                        WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl); 
+                        TextNotEnoughResource.SetActive(true);
+                        Utility.Invoke(this, () => TextNotEnoughResource.SetActive(false), TimeHint);
+                        TextHintTMPRoUGUI.text = HintNoEnergyText;
                     }
                 }
                 else

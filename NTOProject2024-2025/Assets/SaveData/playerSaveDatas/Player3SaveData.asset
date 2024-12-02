@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b1747875eeec945aaf7034e37a0e2d, type: 3}
   m_Name: Player3SaveData
   m_EditorClassIdentifier: 
+  BuildingPrefabsPath: 
+  UpdateResourcesEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
   playerBuildings: []
+  buildingsTransform: []
+  BuildingDatas: []
+  BuildingWorkersInformationList: []

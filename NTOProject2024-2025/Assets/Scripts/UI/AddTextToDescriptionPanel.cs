@@ -61,8 +61,10 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
+        Debug.Log(9012);
         if (!BuildingManager.Instance.ProcessWorkerBuildingActive)
         {
+            Debug.Log(0987654321);
             IsPanelActive = true;
         
             point.SetActive(true);

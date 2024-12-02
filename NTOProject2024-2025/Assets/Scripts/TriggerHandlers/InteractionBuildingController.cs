@@ -17,7 +17,7 @@ public class InteractionBuildingController : MonoBehaviour
 
     public GameObject Texthint;
 
-    [SerializeField] private List<Transform> PointsOfBuildings;
+    public List<Transform> PointsOfBuildings;
 
     private void Start()
     {
@@ -63,12 +63,22 @@ public class InteractionBuildingController : MonoBehaviour
                 }
                 else
                 {
+                    WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
+                    movementController.WorkerPointOfDestination = null;
+                    
+                    other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
+                    
+                    Animator animator = other.gameObject.GetComponent<Animator>();
+                    animator.SetBool("Running", false);
+                    animator.SetBool("Building", true);
+                    animator.SetBool("Idle", false);
+                    
                     Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
                     Debug.Log("Рабочий добрался, начинает строить здание");
                     WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
 
                     GameObject worker = other.gameObject;
-                    WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.transform, worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), PointsOfBuildings, GetComponent<BuildingData>());
+                    WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
                 }
             }
         }
@@ -86,8 +96,9 @@ public class InteractionBuildingController : MonoBehaviour
     /// <summary>
     /// Нажатие на здание
     /// </summary>
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
+        Debug.Log(01874380492);
         AddTextToDescriptionPanel.buildingData = _buildingData;
         AddTextToDescriptionPanel.buildingTransform = gameObject.transform;
         AddTextToDescriptionPanel.buildingSO = _buildingData.buildingTypeSO;

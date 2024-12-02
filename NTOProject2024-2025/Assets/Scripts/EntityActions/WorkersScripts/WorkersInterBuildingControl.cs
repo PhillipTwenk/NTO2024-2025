@@ -172,7 +172,9 @@ public class WorkersInterBuildingControl : MonoBehaviour
                     WorkerMovementController workerMovementController =
                         newWorker.GetComponent<WorkerMovementController>();
                     Animator animator = newWorker.GetComponent<Animator>();
-                    buildingControl.StartMovementWorkerToBuilding(building, workerMovementController, animator);
+                    buildingControl.StartMovementWorkerToBuilding(false, building, workerMovementController, animator);
+
+                    return;
                 }
             }
         }
@@ -181,25 +183,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
     /// <summary>
     /// Начинает анимацию строительства
     /// </summary>
-    public async void StartAnimationBuilding(Transform workerTransform, Animator animator, WorkerMovementController movementController, List<Transform> pointsOfBuildings, BuildingData buildingData)
+    public async void StartAnimationBuilding(Animator animator, WorkerMovementController movementController, BuildingData buildingData)
     {
-        Transform pointForBuild = null;
-        float distanceToPoint = 10000;
-        int i = 0;
-        foreach (var point in pointsOfBuildings)
-        {
-            if (Vector3.Distance(workerTransform.position, point.position) < distanceToPoint)
-            {
-                pointForBuild = point;
-                distanceToPoint = Vector3.Distance(workerTransform.position, point.position);
-                i++;
-            }
-        }
-        
-        movementController.SetWorkerDestination(pointForBuild);
-        
-        //Animator action
-
         Debug.Log(123);
         
         await AwaitEndWorking(buildingData);
@@ -225,7 +210,9 @@ public class WorkersInterBuildingControl : MonoBehaviour
                     Debug.Log(CurrentBuilding.Title);
                     Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
                     
-                    buildingControl.StartMovementWorkerToBuilding(buildingSpawnWorkerPointTransform, movementController, animator);
+                    buildingControl.StartMovementWorkerToBuilding(true, buildingSpawnWorkerPointTransform, movementController, animator);
+
+                    return;
                 }
             }
         }

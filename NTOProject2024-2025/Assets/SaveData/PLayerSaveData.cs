@@ -7,7 +7,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SaveData/PLayerSaveData")]
 public class PlayerSaveData : ScriptableObject, ISerializableSO
 {
-    [SerializeField] private string BuildingPrefabsPath;  
+    [SerializeField] private string BuildingPrefabsPath;
+
+    [SerializeField] private GameEvent UpdateResourcesEvent;
+    
     // Реализация ISerializableSO   
     public string SerializeToJson()
     {
@@ -54,7 +57,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
     /// <summary>
     /// Инициализирует все построеные здания в игре
     /// </summary>
-    public void InitializeBuildings()
+    public async void InitializeBuildings()
     {
         IsDeleteBuidlingProcessActive = false;
         if (playerBuildings is not null)
@@ -95,6 +98,8 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 i++;
             }
         }
+        
+        await BuildingManager.Instance._navMeshSurface.UpdateNavMesh(BuildingManager.Instance._navMeshSurface.navMeshData);
     }
 
     /// <summary>
@@ -112,7 +117,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
     /// Удаляет конкретное здание
     /// </summary>
     /// <param name="building"> GameObject конкретного здания </param>
-    public void DeleteBuilding(GameObject building)
+    public async void DeleteBuilding(GameObject building)
     {
         if (playerBuildings is not null && !IsDeleteBuidlingProcessActive)
         {
@@ -130,6 +135,18 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             {
                 WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
             }
+
+            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+            PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+            playerResources.Energy += buildingData.HoneyConsumption;
+            if (building.GetComponent<ThisBuildingWorkersControl>())
+            {
+                playerResources.Food += building.GetComponent<ThisBuildingWorkersControl>()
+                    .CurrentNumberWorkersInThisBuilding * 20;
+            }
+            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
+                playerResources.Food, playerResources.CryoCrystal);
+            UpdateResourcesEvent.TriggerEvent();
             Destroy(building.transform.parent.gameObject);
 
             IsDeleteBuidlingProcessActive = false;

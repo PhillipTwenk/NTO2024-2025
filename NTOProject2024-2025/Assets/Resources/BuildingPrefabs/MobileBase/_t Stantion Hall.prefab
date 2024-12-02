@@ -369,7 +369,7 @@ Transform:
   m_GameObject: {fileID: 1412646028462814507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0, z: -25.2}
+  m_LocalPosition: {x: -0.7, y: 0, z: -34.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 1857305897235706302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 0, z: -1.5}
+  m_LocalPosition: {x: -38.7, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1286,7 +1286,7 @@ Transform:
   m_GameObject: {fileID: 3811765869606708073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.7, y: 0, z: 11.8}
+  m_LocalPosition: {x: -28.4, y: 0, z: 29.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1575,7 +1575,7 @@ Transform:
   m_GameObject: {fileID: 4074949112421101958}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23, y: 0, z: -2.6}
+  m_LocalPosition: {x: 30.7, y: 0, z: -2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2117,7 +2117,7 @@ Transform:
   m_GameObject: {fileID: 4981636057674628090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 24.7}
+  m_LocalPosition: {x: 0, y: 0, z: 36.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2224,6 +2224,7 @@ GameObject:
   - component: {fileID: 7397327128136730623}
   - component: {fileID: 7764499367831402566}
   - component: {fileID: 6084861644597935267}
+  - component: {fileID: 8281539622866198797}
   m_Layer: 0
   m_Name: TechTriggerScripts
   m_TagString: Building
@@ -2371,8 +2372,8 @@ MonoBehaviour:
   textHintBuilding: {fileID: 6489670596414684063}
   Level: 1
   Durability: 175
-  Storage: 000000000000000000000000
-  Production: 
+  Storage: dc050000dc0500000a000000
+  Production: 0000000014000000
   HoneyConsumption: 0
   SaveListIndex: 0
   AwaitBuildingThisTMPro: {fileID: 6489670596414684063}
@@ -2435,6 +2436,18 @@ MonoBehaviour:
   NumberOfActiveWorkersInThisBuilding: 0
   buildingSpawnWorkerPointTransform: {fileID: 8905097784749352164}
   WorkerPrefab: {fileID: 67134279220973632, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
+--- !u!114 &8281539622866198797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097370011884464057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4f08976bcd784dbbd231cecc47e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5136938154985716010
 GameObject:
   m_ObjectHideFlags: 0

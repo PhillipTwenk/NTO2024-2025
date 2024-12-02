@@ -1814,8 +1814,8 @@ MonoBehaviour:
   StartGameAfterCreatingCharacter: {fileID: 11400000, guid: eb18c4a5b3023c04fb7feeeff90fe2a1, type: 2}
   inputFieldNewName: {fileID: 1893696308}
   StartValueIron: 999
-  StartValueEnergy: 999
-  StartValueFood: 999
+  StartValueEnergy: 0
+  StartValueFood: 0
   StartValueCrioCrystal: 999
   StartValueApiaryShop:
     IronPrice: 50

@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 2822201514296764134}
   - component: {fileID: 6769536562329725268}
   - component: {fileID: 2895624624425943533}
+  - component: {fileID: 2284472248777018787}
   m_Layer: 3
   m_Name: TriggerApiary
   m_TagString: Untagged
@@ -422,6 +423,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 13d0b4dd4bbb0764b896ce78c58f0d8f, type: 2}
+--- !u!114 &2284472248777018787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768061882059058941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66884e9cfbc7ad54cad500d662bb4755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HoneyConsumption: 0
+  NumberOfWorkers: 0
 --- !u!1 &2259816621739172153
 GameObject:
   m_ObjectHideFlags: 0
