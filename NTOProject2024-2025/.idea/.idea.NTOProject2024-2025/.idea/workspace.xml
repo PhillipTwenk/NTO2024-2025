@@ -22,47 +22,10 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/Boer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/Boer.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Stantion Hall/Stantion Hall Trigger.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Stantion Hall/Stantion Hall Trigger.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Background.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Background.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Main Menu Post.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Main Menu Post.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Stars background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites Menu/Stars background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Breadwinner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/HoneyGun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Pier.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/ResidentialModule.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Storage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/TriggerHome.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/TriggerHome.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/TriggerHGPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/TriggerHGPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/turret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/turret.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Boer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Boer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/_t Stantion Hall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
@@ -183,6 +145,7 @@
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
       </list>
     </option>
   </component>
@@ -265,6 +228,7 @@
       <workItem from="1733050002403" duration="37224000" />
       <workItem from="1733130333939" duration="1408000" />
       <workItem from="1733135789340" duration="39046000" />
+      <workItem from="1733242123933" duration="2034000" />
     </task>
     <servers />
   </component>

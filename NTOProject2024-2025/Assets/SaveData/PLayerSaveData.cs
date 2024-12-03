@@ -73,10 +73,12 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 GameObject ComponentContainingBuilding = newBuilding.transform.GetChild(0).gameObject;
 
                 BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
-                buildingData.Level = BuildingDatas[i].Level;
+                buildingData.Level = BuildingDatas[i].Level; 
                 buildingData.Durability = BuildingDatas[i].Durability;
                 buildingData.Storage = BuildingDatas[i].Storage;
                 buildingData.SaveListIndex = BuildingDatas[i].SaveListIndex;
+                buildingData.HoneyConsumption = BuildingDatas[i].HoneyConsumption;
+                buildingData.Production = BuildingDatas[i].Production;
                 buildingData.IsThisBuilt = true;
                 if (i == 0)
                 {
@@ -183,6 +185,8 @@ public class BuildingSaveData
     public int Durability;
     public List<int> Storage;
     public int SaveListIndex;
+    public int HoneyConsumption;
+    public List<int> Production;
 
     public BuildingSaveData(BuildingData buildingData)
     {
@@ -190,6 +194,8 @@ public class BuildingSaveData
         Durability = buildingData.Durability;
         Storage = buildingData.Storage;
         SaveListIndex = buildingData.SaveListIndex;
+        HoneyConsumption = buildingData.HoneyConsumption;
+        Production = buildingData.Production;
     }
 }
 
