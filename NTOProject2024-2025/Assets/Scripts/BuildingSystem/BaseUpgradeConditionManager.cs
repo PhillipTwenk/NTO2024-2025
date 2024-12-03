@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,6 +45,14 @@ public class BaseUpgradeConditionManager : MonoBehaviour
             CurrentBaseLevel += 1; 
             ResourceMinerRestored.TriggerEvent();
             Debug.Log(CurrentBaseLevel);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Dictionary<string, string> testDictionary = new Dictionary<string, string>();
+            testDictionary.Add("Шкебедедопдодп", "+1488 писек");
+            testDictionary.Add("ДАбулум нипнип", "- 997 deadinside");
+            APIManager.Instance.CreatePlayerLog("Тестовые логи шкебеде допдоп", UIManagerLocation.WhichPlayerCreate.Name, testDictionary);
         }
     }
 

@@ -139,18 +139,6 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 WorkersInterBuildingControl.Instance.RemoveNewBuilding(buildingData.gameObject.GetComponent<ThisBuildingWorkersControl>());
             }
 
-            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
-            playerResources.Energy += buildingData.HoneyConsumption;
-            if (building.GetComponent<ThisBuildingWorkersControl>())
-            {
-                playerResources.Food += building.GetComponent<ThisBuildingWorkersControl>()
-                    .CurrentNumberWorkersInThisBuilding * 20;
-            }
-            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
-                playerResources.Food, playerResources.CryoCrystal);
-            UpdateResourcesEvent.TriggerEvent();
-
             foreach (var buildingDataCycle in BuildingDatas)
             {
                 buildingDataCycle.SaveListIndex = BuildingDatas.IndexOf(buildingDataCycle);

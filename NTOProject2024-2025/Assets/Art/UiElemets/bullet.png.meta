@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fccf1e305440ab649a2e87b8b98872bb
+guid: ec43a89055681ab438b2c049712868a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,45 +97,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection_0
+      name: bullet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 4077
-        height: 807
+        y: 12
+        width: 111
+        height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327d6df6f6192ae49affb3726d2c6444
-      internalID: -1032563589
+      spriteID: a0600ba9d7e7bda43b91109acbeb3cd8
+      internalID: -1951906180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Selection_1
+      name: bullet_1
       rect:
         serializedVersion: 2
-        x: 9898
-        y: 0
-        width: 4077
-        height: 848
+        x: 146
+        y: 20
+        width: 136
+        height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262c02875fe48fd4f948f6090583eb92
-      internalID: -2006092932
+      spriteID: f0445f9286e249b4cacdc6bad295ee63
+      internalID: -130863478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 40
+        width: 134
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baab0cc65c42bd41ac6323fd91863cc
+      internalID: 261230450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_3
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 9
+        width: 70
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ebfde2c2c46a54ab88b60e8f182fe3
+      internalID: 1440615123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_4
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 6
+        width: 89
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ba4b853de3b2f41bba438234992906
+      internalID: 1548383758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_6
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 0
+        width: 162
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc64a1d1653e2c545b82e818ae87aff2
+      internalID: -74643039
       vertices: []
       indices: 
       edges: []
@@ -144,7 +232,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2e410431443bc2343bb2ef78cf2c0df1
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +242,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Selection_0: -1032563589
-      Selection_1: -2006092932
+      bullet_0: -1951906180
+      bullet_1: -130863478
+      bullet_2: 261230450
+      bullet_3: 1440615123
+      bullet_4: 1548383758
+      bullet_5: 1933949525
+      bullet_6: -74643039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

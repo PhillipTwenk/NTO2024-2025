@@ -25,12 +25,12 @@ MonoBehaviour:
   - resources: 
     SpriteAssetsUsingIndex: 
   storageListLevel:
-  - resources: dc050000dc0500000a000000
-    SpriteAssetsUsingIndex: 020000000100000003000000
-  - resources: dc050000dc0500000a000000
-    SpriteAssetsUsingIndex: 020000000100000003000000
-  - resources: dc050000dc0500000a000000
-    SpriteAssetsUsingIndex: 020000000100000003000000
+  - resources: dc0500000a000000
+    SpriteAssetsUsingIndex: 0200000003000000
+  - resources: dc0500000a000000
+    SpriteAssetsUsingIndex: 0200000003000000
+  - resources: dc0500000a000000
+    SpriteAssetsUsingIndex: 0200000003000000
   priceBuilding: 0
   priceUpgrade: 100
   MBLevelForUpgradethisIron: 1

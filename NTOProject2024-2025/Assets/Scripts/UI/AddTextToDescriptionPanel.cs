@@ -161,7 +161,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             if (buildingSO.StorageLimit(buildingData.Level).resources.Count != 0)
             {
                 //Формирование строки после "Количество ресурсов:" на панели
-                string storageTextOutput = "Количество ресурсов:";
+                string storageTextOutput = "Лимиты ресурсов:";
                 int iS = 0;
                 List<int> listIndexSAStorage = buildingSO.StorageLimit(buildingData.Level).SpriteAssetsUsingIndex;
                 List<int> resourcesValuesStorage = buildingSO.StorageLimit(buildingData.Level).resources;
@@ -169,11 +169,11 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                 {
                     if (iS >= 1)
                     {
-                        storageTextOutput += $"+ {buildingData.Storage[iS]} / {resource}   <sprite={listIndexSAStorage[iS]}>";
+                        storageTextOutput += $" + {buildingData.Storage[iS]}   <sprite={listIndexSAStorage[iS]}>";
                     }
                     else
                     {
-                        storageTextOutput += $" {buildingData.Storage[iS]} / {resource}   <sprite={listIndexSAStorage[iS]}>"; 
+                        storageTextOutput += $" {buildingData.Storage[iS]}   <sprite={listIndexSAStorage[iS]}>"; 
                     }
                     iS++;
                 }
@@ -219,6 +219,19 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         Building buildingSO = buildingData.buildingTypeSO;
 
         int NewIron = buildingSO.priceBuilding / 2;
+        int OldEnergyValue = playerResources.Energy;
+        int OldFoodValue = playerResources.Food;
+        playerResources.Energy += buildingData.HoneyConsumption;
+        if (building.GetComponent<ThisBuildingWorkersControl>())
+        {
+            playerResources.Food += building.GetComponent<ThisBuildingWorkersControl>()
+                .CurrentNumberWorkersInThisBuilding * 20;
+        }
+        Dictionary<string,string> buildingDictionary = new Dictionary<string, string>();
+        buildingDictionary.Add("EnergyValueUpdate", $"{playerResources.Energy - OldEnergyValue}");
+        buildingDictionary.Add("FoodValueUpdate", $"{playerResources.Food - OldFoodValue}");
+        buildingDictionary.Add("IronValueUpdate", $"{(playerResources.Iron + NewIron) - playerResources.Iron}");
+        APIManager.Instance.CreatePlayerLog("Здание деконструировано, игрок получает энергию, металл и еду ( если здание обладает рабочими) ", playerName, buildingDictionary);
 
         await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
             playerResources.CryoCrystal);
@@ -257,6 +270,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                     buildingData.Level += 1;
                     buildingData.Durability = buildingSO.Durability(BaseLevel);
                     buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
+                    buildingData.Production = buildingSO.Production(BaseLevel).resources;
+                    buildingData.Storage = buildingSO.StorageLimit(BaseLevel).resources;
 
                     if (buildingData.Production.Count > 0)
                     {
@@ -267,6 +282,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                     
                     BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
                     playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
+                    
+                    UpdateResourcesEvent.TriggerEvent();
                     
                     OnHintPanel(UpgradeLevelBuildingInformation);
                 }

@@ -2372,7 +2372,7 @@ MonoBehaviour:
   textHintBuilding: {fileID: 6489670596414684063}
   Level: 1
   Durability: 175
-  Storage: dc050000dc0500000a000000
+  Storage: dc0500000a000000
   Production: 0000000014000000
   HoneyConsumption: 0
   SaveListIndex: 0

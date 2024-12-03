@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.AI.Navigation;
@@ -118,9 +119,17 @@ public class BuildingManager : MonoBehaviour
                     {
                         if ((playerResources.Food - FoodConsumptionBuilding * 20) >= 0)
                         {
+                            int OldEnergyValue = playerResources.Energy;
+                            int OldFoodValue = playerResources.Food;
                             playerResources.Energy -= HoneyConsumptionBuilding;
                             playerResources.Food -= FoodConsumptionBuilding * 20; 
                             
+                            Dictionary<string,string> buildingDictionary = new Dictionary<string, string>();
+                            buildingDictionary.Add("EnergyValueUpdate", $"{playerResources.Energy - OldEnergyValue}");
+                            buildingDictionary.Add("FoodValueUpdate", $"{playerResources.Food - OldFoodValue}");
+                            buildingDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceBuilding) - playerResources.Iron}");
+                            APIManager.Instance.CreatePlayerLog("Начата стройка нового здания, потрачен металл, энергия, и еда, если здание обладает рабочими", playerName, buildingDictionary);
+
                             await SyncManager.Semaphore.WaitAsync();
                             try
                             {

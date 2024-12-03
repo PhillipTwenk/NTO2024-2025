@@ -3,6 +3,9 @@ using UnityEngine;
 public class TestMovementCharacter : MonoBehaviour
 {
     public EntityID playerID;
+    public int Speed;
+    public int SprintSpeed;
+    public int NormalSpeed;
     private Rigidbody _rb;
     private PlayerAnimationController _animationController;
     
@@ -44,11 +47,11 @@ public class TestMovementCharacter : MonoBehaviour
         _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (Input.GetButton("Sprint")) 
         {
-            playerID.playerStats.Speed = playerID.playerStats.SprintSpeed;
+            Speed = SprintSpeed;
         }
         else
         {
-            playerID.playerStats.Speed = playerID.playerStats.NormalSpeed;
+            Speed = NormalSpeed;
         }
 
     }
@@ -72,11 +75,11 @@ public class TestMovementCharacter : MonoBehaviour
 
             var rot = Quaternion.LookRotation(relative, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.playerStats.SpeedTurn * Time.deltaTime);
-            _animationController.Run(playerID.playerStats.Speed, true); // включаем анимации 
+            _animationController.Run(Speed, true); // включаем анимации 
         }
         else
         {
-            _animationController.Run(playerID.playerStats.Speed, false);
+            _animationController.Run(Speed, false);
         }
     }
     

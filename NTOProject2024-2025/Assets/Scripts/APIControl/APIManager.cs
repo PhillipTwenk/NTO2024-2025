@@ -49,12 +49,6 @@ public class LogComment
     public static string ChangedCryoCrystalNaming = "Changed_CryoCrystal";
     public static string ChangedEnergyNaming = "Changed_Energy";
     public static string ChangedFoodNaming = "Changed_Food";
-    public static string BuildingIsBuilt(string buildingName) => $"Здание {buildingName} было построено";
-    public static string DestroyBuilding(string buildingName) => $"Здание {buildingName} было разрушено";
-    public static string NewPlanHasBeenPurchased(string buildingName) => $"Чертеж здания {buildingName} был куплен";
-    public static string UpgradeBuilding(string buildingName) => $"Здание {buildingName} было улучшено";
-    public static string NewWorkerArrive = "Новый рабочий пришел на помощь";
-    public static string WorkerLeave = "Рабочий покинул базу";
 }
 
 public class APIManager : MonoBehaviour

@@ -37,6 +37,32 @@
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
         </e>
+        <e p="nTools" t="Include">
+          <e p="PrefabPainter" t="Include">
+            <e p="Docs" t="Include">
+              <e p="changelog.txt" t="Include" />
+            </e>
+            <e p="Presets" t="Include">
+              <e p="Decal Along Stroke.json" t="Include" />
+              <e p="Decal Footsteps.json" t="Include" />
+              <e p="Decal.json" t="Include" />
+              <e p="Random.json" t="Include" />
+              <e p="Stones.json" t="Include" />
+              <e p="Tree.json" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PrafabPainterGUI.cs" t="Include" />
+                <e p="PrefabPainter.cs" t="Include" />
+              </e>
+              <e p="PrefabPainterSceneSettings.cs" t="Include" />
+              <e p="PrefabPainterSettings.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="GUITextureClipLevels.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Quests" t="Include">
           <e p="Objective.cs" t="Include" />
           <e p="Quest.cs" t="Include" />
@@ -132,6 +158,7 @@
             <e p="AddTextToDescriptionPanel.cs" t="Include" />
             <e p="OutlineControl.cs" t="Include" />
             <e p="PlansInShopControl.cs" t="Include" />
+            <e p="SelectThisButtonMainMenu.cs" t="Include" />
             <e p="UIManagers" t="Include">
               <e p="PauseUIManager.cs" t="Include" />
               <e p="UIManager.cs" t="Include" />
@@ -148,6 +175,16 @@
         <e p="Test5.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
+            <e p="Currents" t="Include">
+              <e p="Exo_2" t="Include">
+                <e p="OFL.txt" t="Include" />
+                <e p="README.txt" t="Include" />
+              </e>
+              <e p="OFL.txt" t="Include" />
+              <e p="Press_Start_2P" t="Include">
+                <e p="OFL.txt" t="Include" />
+              </e>
+            </e>
             <e p="LiberationSans - OFL.txt" t="Include" />
           </e>
           <e p="Resources" t="Include">
