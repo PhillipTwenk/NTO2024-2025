@@ -19,6 +19,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     [TextArea] [SerializeField] private string UpgradeLevelBuildingInformation;
     [TextArea] [SerializeField] private string TextNotCompleteConditionUpgradeMB;
     [TextArea] [SerializeField] private string TextCompleteUpgradeMobileBaseLevel;
+    [TextArea] [SerializeField] private string TextLimitResourcesIron;
+    [TextArea] [SerializeField] private string TextLimitResourcesCC;
 
 
     [SerializeField] private float TimeHint;
@@ -61,10 +63,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        Debug.Log(9012);
-        if (!BuildingManager.Instance.ProcessWorkerBuildingActive)
+        if (buildingData.IsThisBuilt)
         {
-            Debug.Log(0987654321);
             IsPanelActive = true;
         
             point.SetActive(true);
@@ -215,7 +215,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
         
         GameObject building = buildingTransform.gameObject;
-        Building buildingSO = building.GetComponent<BuildingData>().buildingTypeSO;
+        BuildingData buildingData = building.GetComponent<BuildingData>();
+        Building buildingSO = buildingData.buildingTypeSO;
 
         int NewIron = buildingSO.priceBuilding / 2;
 
@@ -321,4 +322,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         Utility.Invoke(this, () => HintPanel.transform.parent.gameObject.SetActive(false), TimeHint);
         HintPanel.text = Text;
     }
+
+    public void ResourceIronLimit() => OnHintPanel(TextLimitResourcesIron);
+
+    public void ResourceCCLimit() => OnHintPanel(TextLimitResourcesCC);
 }

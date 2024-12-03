@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: Pier
   m_EditorClassIdentifier: 
+  IDoB: 4
   levelListLevel: 01000000
   MaxLevelThisBuilding: 1
   durabilityListLevel: 41000000

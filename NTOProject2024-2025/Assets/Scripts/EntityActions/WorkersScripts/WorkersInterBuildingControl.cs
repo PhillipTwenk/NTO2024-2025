@@ -189,6 +189,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
         
         await AwaitEndWorking(buildingData);
         
+        buildingData.StartBuildingFunctionEvent?.Invoke();
+        
         Debug.Log(456);
         
         movementController.ReadyForWork = false;

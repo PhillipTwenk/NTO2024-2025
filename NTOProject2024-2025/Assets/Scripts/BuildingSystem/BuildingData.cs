@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class BuildingData : MonoBehaviour
 {
@@ -24,16 +25,20 @@ public class BuildingData : MonoBehaviour
     public string AwaitWorkerActionText;
     public string AwaitBuildingActionText;
 
+    public bool IsThisBuilt;
+
+    public UnityEvent StartBuildingFunctionEvent;
+
     private async void Start()
     {
-        if (Title == "Мобильная база")
-        {
-            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
-            Storage[0] = playerResources.Iron;
-            Storage[1] = playerResources.Food;
-            Storage[2] = playerResources.CryoCrystal; 
-        }
+        // if (Title == "Мобильная база")
+        // {
+        //     string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        //     PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+        //     Storage[0] = playerResources.Iron;
+        //     Storage[1] = playerResources.Food;
+        //     Storage[2] = playerResources.CryoCrystal; 
+        // }
     }
 
     public void TextPanelBuildingControl(bool IsOpen, string WhichAction)

@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Building")]
 public class Building : ScriptableObject
 {
+    public int IDoB;
+    
     [SerializeField] private List<int> levelListLevel;
 
     public int MaxLevelThisBuilding;

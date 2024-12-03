@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: HoneyGun
   m_EditorClassIdentifier: 
+  IDoB: 2
   levelListLevel: 0100000002000000
   MaxLevelThisBuilding: 2
   durabilityListLevel: 4b00000096000000
@@ -28,8 +29,8 @@ MonoBehaviour:
     SpriteAssetsUsingIndex: 
   priceBuilding: 50
   priceUpgrade: 30
-  MBLevelForUpgradethisIron: 3
-  MBLevelForBuidlingthisIron: 2
+  MBLevelForUpgradethisIron: 2
+  MBLevelForBuidlingthisIron: 1
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 2154747995066439706, guid: 16944ef1dd7e0ce4bb1c37cbc68eae16, type: 3}
   prefabBeforeBuilding: {fileID: 409677796162444323, guid: e6ec6d4bf64cc7c4ab054c966b1389ef, type: 3}

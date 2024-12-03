@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ae3d7a2c70f8e45a7c5fd09cbe68af, type: 3}
-  m_Name: Player2
+  m_Script: {fileID: 11500000, guid: 4f9168cf067106c40836d917dc3df619, type: 3}
+  m_Name: PauseOffEvent
   m_EditorClassIdentifier: 
-  Name: 2w
-  DefaultName: None
-  index: 2
-  playerStats: {fileID: 11400000, guid: a9be5365bf7e5b74abd9356fa776e5eb, type: 2}
-  currentQuest: {fileID: 0}
-  openQuests: []
+  Description: "\u0412\u044B\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043F\u0430\u043D\u0435\u043B\u0438
+    \u043F\u0430\u0443\u0437\u044B"

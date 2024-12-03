@@ -119,10 +119,19 @@ public class BuildingManager : MonoBehaviour
                         if ((playerResources.Food - FoodConsumptionBuilding * 20) >= 0)
                         {
                             playerResources.Energy -= HoneyConsumptionBuilding;
-                            playerResources.Food -= FoodConsumptionBuilding * 20;
-                        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
-                            playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
-            
+                            playerResources.Food -= FoodConsumptionBuilding * 20; 
+                            
+                            await SyncManager.Semaphore.WaitAsync();
+                            try
+                            {
+                                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
+                                    playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+                            }
+                            finally
+                            {
+                                SyncManager.Semaphore.Release();
+                            }
+
                             //Создаем новое здание, устанавливаем его позицию и удаляем триггер для строительства
                             MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
                             GameObject newBuildingObject = Instantiate(CurrentBuilding);
@@ -137,6 +146,8 @@ public class BuildingManager : MonoBehaviour
                             GameObject ComponentContainingBuilding = newBuildingObject.transform.GetChild(0).gameObject;
                             BuildingData buildingData = ComponentContainingBuilding.GetComponent<BuildingData>();
 
+                            buildingData.IsThisBuilt = false;
+
                             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
                             
                             await _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
@@ -150,6 +161,7 @@ public class BuildingManager : MonoBehaviour
 
 
                             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
+                            
                             //Сохранение данных здания в SO сохранения
                             PlayerSaveData pLayerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
                             pLayerSaveData.playerBuildings.Add(buildingData.buildingTypeSO.PrefabBuilding);
@@ -177,6 +189,8 @@ public class BuildingManager : MonoBehaviour
                                 pLayerSaveData.BuildingWorkersInformationList.Add(null);
                                 WorkersInterBuildingControl.Instance.AddNewBuilding(thisBuildingWorkersControl); 
                             }
+                            
+                            buildingData.IsThisBuilt = true;
                         }
                         else
                         {

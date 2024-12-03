@@ -15,7 +15,7 @@ public class HoneyGunHandler : MonoBehaviour
     private void Update()
     {
         // Если есть цель
-        if (currentTarget != null)
+        if (currentTarget != null &&  _buildingData.IsThisBuilt)
         {
             // Поворот башни к цели (только по горизонтали)
             Vector3 direction = (new Vector3(currentTarget.position.x, CannonTower.position.y, currentTarget.position.z) - CannonTower.position).normalized;

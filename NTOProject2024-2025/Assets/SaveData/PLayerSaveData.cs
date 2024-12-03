@@ -77,6 +77,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 buildingData.Durability = BuildingDatas[i].Durability;
                 buildingData.Storage = BuildingDatas[i].Storage;
                 buildingData.SaveListIndex = BuildingDatas[i].SaveListIndex;
+                buildingData.IsThisBuilt = true;
                 if (i == 0)
                 {
                     BaseUpgradeConditionManager.buildingDataMB = buildingData;
@@ -147,6 +148,11 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
                 playerResources.Food, playerResources.CryoCrystal);
             UpdateResourcesEvent.TriggerEvent();
+
+            foreach (var buildingDataCycle in BuildingDatas)
+            {
+                buildingDataCycle.SaveListIndex = BuildingDatas.IndexOf(buildingDataCycle);
+            }
             Destroy(building.transform.parent.gameObject);
 
             IsDeleteBuidlingProcessActive = false;

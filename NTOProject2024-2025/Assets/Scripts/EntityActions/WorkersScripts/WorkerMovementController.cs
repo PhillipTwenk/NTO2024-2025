@@ -16,7 +16,7 @@ public class WorkerMovementController : MonoBehaviour
     void Update()
     {
         if (WorkerPointOfDestination) {
-            Debug.Log($"Moving to: {WorkerPointOfDestination.position}");
+            //Debug.Log($"Moving to: {WorkerPointOfDestination.position}");
             agent.destination = new Vector3(WorkerPointOfDestination.position.x, WorkerPointOfDestination.position.y, WorkerPointOfDestination.position.z);
         }
     }

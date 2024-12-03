@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: Storage
   m_EditorClassIdentifier: 
+  IDoB: 6
   levelListLevel: 0100000002000000
   MaxLevelThisBuilding: 1
   durabilityListLevel: 6400000096000000

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550f0ad369dc0d469db62ae18b2aa50, type: 3}
   m_Name: Breadwinner
   m_EditorClassIdentifier: 
+  IDoB: 1
   levelListLevel: 01000000
   MaxLevelThisBuilding: 1
   durabilityListLevel: 64000000
@@ -20,12 +21,12 @@ MonoBehaviour:
   - resources: 2800000001000000
     SpriteAssetsUsingIndex: 0200000003000000
   storageListLevel:
-  - resources: bc02000014000000
-    SpriteAssetsUsingIndex: 0200000003000000
+  - resources: 
+    SpriteAssetsUsingIndex: 
   priceBuilding: 50
   priceUpgrade: 0
   MBLevelForUpgradethisIron: 0
-  MBLevelForBuidlingthisIron: 2
+  MBLevelForBuidlingthisIron: 1
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 1775260311085803478, guid: 2dec256020064de4d8bf328577983ef4, type: 3}
   prefabBeforeBuilding: {fileID: 6429348155066786507, guid: 94879d4285609734a831d0659cf8590b, type: 3}

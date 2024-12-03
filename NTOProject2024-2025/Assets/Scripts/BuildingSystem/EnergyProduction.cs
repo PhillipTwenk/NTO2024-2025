@@ -5,8 +5,18 @@ using UnityEngine;
 public class EnergyProduction : MonoBehaviour
 {
     private BuildingData _buildingData;
-    
-    private async void OnEnable()
+    [SerializeField] private GameEvent ResourceUpdateEvent;
+
+    // private void OnEnable()
+    // {
+    //     _buildingData = GetComponent<BuildingData>();
+    //     if (_buildingData.Title == "Мобильная база")
+    //     {
+    //         _buildingData.StartBuildingFunctionEvent?.Invoke();
+    //     }
+    // }
+
+    public async void OnAddEnergy()
     {
         _buildingData = GetComponent<BuildingData>();
         
@@ -14,6 +24,8 @@ public class EnergyProduction : MonoBehaviour
         
         int honeyProduction = _buildingData.Production[0];
         int foodProduction = _buildingData.Production[1];
+        
+        Debug.Log($"Производство меда: {honeyProduction}");
 
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources =
@@ -24,6 +36,7 @@ public class EnergyProduction : MonoBehaviour
         await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
             playerResources.Food, playerResources.CryoCrystal);
         
+        ResourceUpdateEvent.TriggerEvent();
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
@@ -31,7 +44,7 @@ public class EnergyProduction : MonoBehaviour
     {
         _buildingData = GetComponent<BuildingData>();
         
-        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);    
         
         int honeyProduction = _buildingData.Production[0];
         int foodProduction = _buildingData.Production[1];
@@ -44,7 +57,7 @@ public class EnergyProduction : MonoBehaviour
 
         await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
             playerResources.Food, playerResources.CryoCrystal);
-        
+        ResourceUpdateEvent.TriggerEvent();
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 }
