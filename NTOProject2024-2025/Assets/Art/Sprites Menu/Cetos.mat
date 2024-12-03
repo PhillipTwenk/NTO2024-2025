@@ -73,8 +73,8 @@ Material:
     - _Roughness_1: 0
     - _fresnel_power: 1.74
     m_Colors:
-    - _Clouds_Color: {r: 2, g: 2, b: 2, a: 0}
-    - _Fresnel_color: {r: 0.36009255, g: 0.5822637, b: 0.6415094, a: 0}
+    - _Clouds_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Fresnel_color: {r: 0.28595588, g: 0.4611154, b: 0.509434, a: 0}
     - _Ocean: {r: 1.1127135, g: 3.0606635, b: 6.6415095, a: 0}
     - _clouds_tiling: {r: 2, g: 2, b: 0, a: 0}
     - _white: {r: 2.4573061, g: 3.6441357, b: 15.786329, a: 0}
