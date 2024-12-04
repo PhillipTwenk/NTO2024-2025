@@ -26,6 +26,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     // public TextMeshProUGUI HintTextTMPro;
 
     public event Action IsWorkerHereEvent; // Игрок прибыл
+    public static GameObject SelectedWorker;
 
     private bool IsWorkersHere;
 

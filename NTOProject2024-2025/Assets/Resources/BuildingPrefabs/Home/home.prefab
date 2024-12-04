@@ -177,6 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2569788523526923750}
   - {fileID: 492737070837660271}
   - {fileID: 6149116483158351243}
   - {fileID: 7719095776925128416}
@@ -1273,6 +1274,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5322552669626126647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2569788523526923750}
+  m_Layer: 0
+  m_Name: EndPointWalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2569788523526923750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322552669626126647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.9995907, z: -0, w: -0.028609635}
+  m_LocalPosition: {x: 0, y: 0.104871035, z: 22.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53077826904575096}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5616704859193939494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1591,10 @@ MonoBehaviour:
   TextAwaitBuildingThis: "\u0421\u0442\u0440\u043E\u0438\u043C. . . "
   AwaitWorkerActionText: AwaitWorker
   AwaitBuildingActionText: AwaitBuilding
+  IsThisBuilt: 0
+  StartBuildingFunctionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2468893000708977087
 MonoBehaviour:
   m_ObjectHideFlags: 0
