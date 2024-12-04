@@ -141,7 +141,7 @@ Material:
     - _foamCull: 11.65
     - _foamSpeed: 1
     - _foamscale: 20
-    - _smoothness: 1
+    - _smoothness: 0.4
     - _uvSpeed: -0.1
     - _uvSpeed2: 0.1
     - _waterStrength: 2
