@@ -20,18 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/TriggerMiner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/TriggerMiner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +225,7 @@
       <workItem from="1733130333939" duration="1408000" />
       <workItem from="1733135789340" duration="39046000" />
       <workItem from="1733242123933" duration="12608000" />
-      <workItem from="1733315933932" duration="6409000" />
+      <workItem from="1733315933932" duration="6542000" />
     </task>
     <servers />
   </component>

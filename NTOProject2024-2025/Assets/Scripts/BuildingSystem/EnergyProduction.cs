@@ -21,7 +21,7 @@ public class EnergyProduction : MonoBehaviour
     private void OnMouseDown()
     {
         _buildingData = GetComponent<BuildingData>();
-        if (_buildingData.Storage[0] < 2)
+        if (_buildingData.Storage[0] < 1)
         {
             WorkerGoToThisBuilding.TriggerEvent();
         }
