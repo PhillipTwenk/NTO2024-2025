@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnergyProduction : MonoBehaviour
 {
     private BuildingData _buildingData;
     [SerializeField] private GameEvent ResourceUpdateEvent;
+    [SerializeField] private GameEvent WorkerGoToThisBuilding;
 
     // private void OnEnable()
     // {
@@ -15,6 +17,23 @@ public class EnergyProduction : MonoBehaviour
     //         _buildingData.StartBuildingFunctionEvent?.Invoke();
     //     }
     // }
+
+    private void OnMouseDown()
+    {
+        _buildingData = GetComponent<BuildingData>();
+        if (_buildingData.Storage[0] < 2)
+        {
+            WorkerGoToThisBuilding.TriggerEvent();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Worker") && other.gameObject.GetComponent<WorkerMovementController>().isSelected && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+        {
+            _buildingData.Storage[0] += 1;
+        }
+    }
 
     public async void OnAddEnergy()
     {

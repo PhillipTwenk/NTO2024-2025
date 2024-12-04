@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,6 +97,9 @@ public class PlansInShopControl : MonoBehaviour
 
         NotEnoughtResourcesTextPanel.SetActive(false);
 
+        Dictionary<string,string> shopDictionary = new Dictionary<string, string>();
+        Dictionary<string,string> playerResourcesDictionary = new Dictionary<string, string>();
+        
         if (WhichPanelActive == HoneyGunName)
         {
             if (!shopResources.HoneyGun.IsPurchased)
@@ -104,6 +108,13 @@ public class PlansInShopControl : MonoBehaviour
                     playerCryoCrystal >= shopResources.HoneyGun.CryoCrystalPrice)
                 {
                     shopResources.HoneyGun.IsPurchased = true;
+                    
+                    shopDictionary.Add("HoneyGunShopValueUpdate", "true");
+                    APIManager.Instance.CreateShopLog("Куплен чертеж медовой пушки (товары в единичном экземпляре)", playerName, shopName, shopDictionary);
+                    
+                    playerResourcesDictionary.Add("IronValueUpdate", $"{(playerIron - shopResources.HoneyGun.IronPrice) - playerIron}");
+                    playerResourcesDictionary.Add("CrytoCrystalValueUpdate", $"{(playerCryoCrystal - shopResources.HoneyGun.CryoCrystalPrice) - playerCryoCrystal}");
+                    APIManager.Instance.CreatePlayerLog("Куплен чертеж медовой пушки в магазине, потрачены металл и кристаллы", playerName, playerResourcesDictionary);
                     await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
                         shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                         shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
@@ -132,6 +143,14 @@ public class PlansInShopControl : MonoBehaviour
                     playerCryoCrystal >= shopResources.Storage.CryoCrystalPrice)
                 {
                     shopResources.Storage.IsPurchased = true;
+                    
+                    shopDictionary.Add("StorageShopValueUpdate", "true");
+                    APIManager.Instance.CreateShopLog("Куплен чертеж хранилища ресурсов (товары в единичном экземпляре)", playerName, shopName, shopDictionary);
+                    
+                    playerResourcesDictionary.Add("IronValueUpdate", $"{(playerIron - shopResources.Storage.IronPrice) - playerIron}");
+                    playerResourcesDictionary.Add("CrytoCrystalValueUpdate", $"{(playerCryoCrystal - shopResources.Storage.CryoCrystalPrice) - playerCryoCrystal}");
+                    APIManager.Instance.CreatePlayerLog("Куплен чертеж хранилища в магазине, потрачены металл и кристаллы", playerName, playerResourcesDictionary);
+                    
                     await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
                         shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                         shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
@@ -160,6 +179,14 @@ public class PlansInShopControl : MonoBehaviour
                     playerCryoCrystal >= shopResources.Pier.CryoCrystalPrice)
                 {
                     shopResources.Pier.IsPurchased = true;
+                    
+                    shopDictionary.Add("PierShopValueUpdate", "true");
+                    APIManager.Instance.CreateShopLog("Куплен чертеж пристани (товары в единичном экземпляре)", playerName, shopName, shopDictionary);
+                    
+                    playerResourcesDictionary.Add("IronValueUpdate", $"{(playerIron - shopResources.Pier.IronPrice) - playerIron}");
+                    playerResourcesDictionary.Add("CrytoCrystalValueUpdate", $"{(playerCryoCrystal - shopResources.Pier.CryoCrystalPrice) - playerCryoCrystal}");
+                    APIManager.Instance.CreatePlayerLog("Куплен чертеж пристани в магазине, потрачены металл и кристаллы", playerName, playerResourcesDictionary);
+                    
                     await APIManager.Instance.PutShopResources(playerName, shopName, shopResources.Apiary,
                         shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                         shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);

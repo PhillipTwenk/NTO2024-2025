@@ -1136,7 +1136,7 @@ MonoBehaviour:
   textHintBuilding: {fileID: 7901257772715885846}
   Level: 1
   Durability: 50
-  Storage: 0000000000000000
+  Storage: 02000000
   Production: 2800000028000000
   HoneyConsumption: 0
   SaveListIndex: 0
@@ -1221,6 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResourceUpdateEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
+  WorkerGoToThisBuilding: {fileID: 0}
 --- !u!1 &6461373108980604029
 GameObject:
   m_ObjectHideFlags: 0

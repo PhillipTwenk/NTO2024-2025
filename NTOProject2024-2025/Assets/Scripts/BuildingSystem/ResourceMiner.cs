@@ -29,6 +29,7 @@ public class ResourceMiner : MonoBehaviour
     private void OnEnable()
     {
         _animator = GetComponent<Animator>();
+        _animator.SetBool("StopMining",true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,10 +72,10 @@ public class ResourceMiner : MonoBehaviour
             if (MinerType == IronMinerType)
             {
                 await MinerIronAsync(playerName, playerSaveData, buildingData);
-            } //else if (MinerType == CCMinerType)
-            // {
-            //     await MinerCCAsync(playerName, playerSaveData, buildingData);
-            // }
+            } else if (MinerType == CCMinerType)
+            {
+                 await MinerCCAsync(playerName, playerSaveData, buildingData);
+            }
         }
     }
 
@@ -138,17 +139,32 @@ public class ResourceMiner : MonoBehaviour
     /// <param name="CCLimit"></param>
     /// <param name="buildingData"></param>
     /// <returns></returns>
-    private async Task MinerCCAsync(string playerName, int CCLimit, BuildingData buildingData)
+    private async Task MinerCCAsync(string playerName, PlayerSaveData playerSaveData, BuildingData buildingData)
     {
         while (gameObject.activeSelf)
         {
             PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+            BuildingSaveData MobileBaseBD = playerSaveData.BuildingDatas[0];
+
+            int StorageAdd = 0;
+            foreach (var building in playerSaveData.playerBuildings)
+            {
+                if (building.transform.GetChild(0).GetComponent<BuildingData>().buildingTypeSO.IDoB == ThisSOIDOB)
+                {
+                    StorageAdd += building.transform.GetChild(0).GetComponent<BuildingData>().Storage[1];
+                }
+            }
+            int CCLimit = MobileBaseBD.Storage[1] + StorageAdd;
+
+            Debug.Log($"Лимит по КриоКристаллам: {CCLimit}");
 
             if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit)
             {
-                Debug.Log($"Старое количество металла: {playerResources.Iron}");
-                playerResources.Iron += buildingData.Production[1];
-                Debug.Log($"Новое количество металла: {playerResources.Iron}");
+                _animator.SetBool("StopMining",false);
+                CanSendMessageToHint = true;
+                Debug.Log($"Старое количество КриоКристаллов: {playerResources.Iron}");
+                playerResources.CryoCrystal += buildingData.Production[1];
+                Debug.Log($"Новое количество КриоКристаллов: {playerResources.Iron}");
                 await UpdateResources(playerResources, playerName);
                 await Task.Delay(TimeProduction);
             } else if ((playerResources.CryoCrystal + buildingData.Production[1]) > CCLimit)
@@ -156,7 +172,11 @@ public class ResourceMiner : MonoBehaviour
                 IsWorkStop = true;
                 OneCycle = false;
                 _animator.SetBool("StopMining",true);
-                ResourceIronLimitEvent.TriggerEvent();
+                if (CanSendMessageToHint)
+                {
+                    ResourceCCLimitEvent.TriggerEvent();
+                    CanSendMessageToHint = false;
+                }
                 break;
             }
         }
