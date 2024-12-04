@@ -26,7 +26,7 @@ MonoBehaviour:
   priceBuilding: 50
   priceUpgrade: 0
   MBLevelForUpgradethisIron: 0
-  MBLevelForBuidlingthisIron: 2
+  MBLevelForBuidlingthisIron: 1
   TimeAwaitBuildingThis: 3
   prefabBuilding: {fileID: 940788167187936215, guid: de10e14235f5c3d43a5508d2fbb39101, type: 3}
   prefabBeforeBuilding: {fileID: 5785703705006380657, guid: 44e238fb91ed2c34bbbb5b0cea6d8282, type: 3}
