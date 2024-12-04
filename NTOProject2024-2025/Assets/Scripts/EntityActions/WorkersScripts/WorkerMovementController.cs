@@ -4,12 +4,16 @@ public class WorkerMovementController : MonoBehaviour
 {
     public Transform WorkerPointOfDestination;
     private NavMeshAgent agent;
-
     public bool ReadyForWork;
+    public bool isSelected;
+    [SerializeField] private Outline outlineMode;
     void Start()
     {
         ReadyForWork = true;
         agent = GetComponent<NavMeshAgent>();
+        outlineMode = GetComponent<Outline>();
+        outlineMode.enabled = false;
+        isSelected = false;
         Debug.Log(agent);
     }
 
@@ -28,5 +32,22 @@ public class WorkerMovementController : MonoBehaviour
 
     public void ResetWorkerDestination(){
         WorkerPointOfDestination = null;
+    }
+
+    private void OnMouseDown() {
+        outlineMode.enabled = true;
+        outlineMode.OutlineWidth = 5f;
+        isSelected = true;
+    }
+
+    private void OnMouseEnter() {
+        outlineMode.enabled = true;
+        outlineMode.OutlineWidth = 2f;
+    }
+
+    private void OnMouseExit() {
+        if(!isSelected){
+            outlineMode.enabled = false;
+        }
     }
 }
