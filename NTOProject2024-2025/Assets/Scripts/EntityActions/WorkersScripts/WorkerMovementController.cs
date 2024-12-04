@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class WorkerMovementController : MonoBehaviour
@@ -6,7 +8,14 @@ public class WorkerMovementController : MonoBehaviour
     private NavMeshAgent agent;
     public bool ReadyForWork;
     public bool isSelected;
+    public bool isSelecting;
+    private Animator anim;
+    public GameObject SelectedBuilding;
     [SerializeField] private Outline outlineMode;
+    [SerializeField] private LayerMask placementLayerMask;
+    [SerializeField] private Camera MainCamera;
+    [SerializeField] public LineRenderer line;
+    [SerializeField] private Transform currentWalkingPoint;
     void Start()
     {
         ReadyForWork = true;
@@ -14,14 +23,36 @@ public class WorkerMovementController : MonoBehaviour
         outlineMode = GetComponent<Outline>();
         outlineMode.enabled = false;
         isSelected = false;
+        isSelecting = false;
+        anim = GetComponent<Animator>();
         Debug.Log(agent);
     }
 
     void Update()
     {
+        if(isSelected){
+            if (Input.GetMouseButtonDown(0) && !isSelecting)
+            {
+                Vector3 point = GetSelectedMapPosition();
+                currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
+                SetWorkerDestination(currentWalkingPoint.transform);
+            }
+        }
+
         if (WorkerPointOfDestination) {
             //Debug.Log($"Moving to: {WorkerPointOfDestination.position}");
+            anim.SetBool("Idle", false);
+            anim.SetBool("Running", true);
             agent.destination = new Vector3(WorkerPointOfDestination.position.x, WorkerPointOfDestination.position.y, WorkerPointOfDestination.position.z);
+            if (agent.path.status == NavMeshPathStatus.PathComplete) {
+                line.enabled = true;
+                line.SetPosition(0, transform.position);
+                currentWalkingPoint.gameObject.SetActive(true);
+                DrawPath(agent.path);
+            }
+        } else {
+            anim.SetBool("Running", false);
+            anim.SetBool("Idle", true);
         }
     }
 
@@ -35,19 +66,68 @@ public class WorkerMovementController : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        outlineMode.enabled = true;
-        outlineMode.OutlineWidth = 5f;
-        isSelected = true;
+        if (!isSelected) {
+            outlineMode.enabled = true;
+            outlineMode.OutlineWidth = 5f;
+            isSelected = true;
+        } else {
+            outlineMode.enabled = false;
+            isSelected = false;
+        }
     }
 
     private void OnMouseEnter() {
-        outlineMode.enabled = true;
-        outlineMode.OutlineWidth = 2f;
+        isSelecting = true;
+        if(!isSelected){
+            outlineMode.enabled = true;
+            outlineMode.OutlineWidth = 2f;
+        }
     }
 
     private void OnMouseExit() {
+        isSelecting = false;
         if(!isSelected){
             outlineMode.enabled = false;
+        }
+    }
+
+    public Vector3 GetSelectedMapPosition()
+    {
+        Vector3 lastPosition = Vector3.zero;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = MainCamera.nearClipPlane;
+        Ray ray = MainCamera.ScreenPointToRay(mousePos);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 2000, placementLayerMask))
+        {
+            lastPosition = hit.point; // SELECTED WALKING POINT
+            if(hit.collider.tag == "Building"){
+                Debug.Log("Selected building");
+                SelectedBuilding = hit.collider.gameObject; // SELECTED BUILDING FOR PHILTWE!!!!!!!!!
+            }
+        }
+        return lastPosition;
+    }
+
+    public void DrawPath(NavMeshPath path){
+        if(path.corners.Length < 2) return;
+
+        line.SetVertexCount(path.corners.Length); 
+        for(var i = 1; i < path.corners.Length; i++){
+            line.SetPosition(i, path.corners[i]); 
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log("1");
+        if(other.collider.tag == "WalkingPoint"){
+            Debug.Log("2");
+            line.enabled = false;
+            WorkerPointOfDestination = null;
+            anim.SetBool("Running", false);
+            anim.SetBool("Idle", true);
+        } else if (other.collider.tag == "Building"){
+            // PHILTWE IS WORKING HERE!!!!!!!!!!!!!!!!!!!!
         }
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - IronMinerPlace
   - CCminerPlace
   - PierPlace
+  - WalkingPoint
   layers:
   - Default
   - TransparentFX
