@@ -14,7 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuildingPrefabsPath: 
   UpdateResourcesEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
-  playerBuildings: []
-  buildingsTransform: []
-  BuildingDatas: []
-  BuildingWorkersInformationList: []
+  playerBuildings:
+  - {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
+  buildingsTransform:
+  - position: {x: 94, y: 4, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    scale: {x: 1, y: 1, z: 1}
+  BuildingDatas:
+  - Level: 1
+    Durability: 175
+    Storage: dc0500000a000000
+    SaveListIndex: 0
+    HoneyConsumption: 0
+    Production: 
+  BuildingWorkersInformationList:
+  - CurrentNumberOfWorkersInThisBuilding: 1
+    MaxValueOfWorkersInThisBuilding: 1

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -49,8 +50,11 @@ public class EnergyProduction : MonoBehaviour
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources =
             await APIManager.Instance.GetPlayerResources(playerName);
+        int OldEnergyValue = playerResources.Energy;
+        int OldFoodValue = playerResources.Food;
         playerResources.Energy += honeyProduction;
         playerResources.Food += foodProduction;
+        LogSender(playerName, "Пасека начала производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue);
 
         await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
             playerResources.Food, playerResources.CryoCrystal);
@@ -71,12 +75,22 @@ public class EnergyProduction : MonoBehaviour
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources =
             await APIManager.Instance.GetPlayerResources(playerName);
+        int OldEnergyValue = playerResources.Energy;
+        int OldFoodValue = playerResources.Food;
         playerResources.Energy -= honeyProduction;
         playerResources.Food -= foodProduction;
-
+        LogSender(playerName, "Пасека прекратила производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue );
         await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
             playerResources.Food, playerResources.CryoCrystal);
         ResourceUpdateEvent.TriggerEvent();
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+    }
+
+    private void LogSender(string playerName, string comment, int ChangeEnergy, int ChangeFood)
+    {
+        Dictionary<string,string> playerDictionary = new Dictionary<string, string>();
+        playerDictionary.Add("EnergyValueUpdate", $"{ChangeEnergy}");
+        playerDictionary.Add("FoodValueUpdate", $"{ChangeFood}");
+        APIManager.Instance.CreatePlayerLog(comment, playerName, playerDictionary);
     }
 }

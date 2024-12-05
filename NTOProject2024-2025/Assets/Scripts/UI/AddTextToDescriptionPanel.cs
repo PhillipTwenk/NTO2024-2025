@@ -264,6 +264,10 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             {
                 if (BaseLevel >= buildingSO.MBLevelForUpgradethisIron)
                 {
+                    Dictionary<string, string> playerDictionary = new Dictionary<string, string>();
+                    playerDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceUpgrade) - playerResources.Iron}");
+                    APIManager.Instance.CreatePlayerLog($"Улучшение здания {buildingData.Title}", playerName, playerDictionary);
+                    
                     await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
                         playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
 

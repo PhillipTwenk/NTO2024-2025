@@ -130,17 +130,12 @@ public class BuildingManager : MonoBehaviour
                             buildingDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceBuilding) - playerResources.Iron}");
                             APIManager.Instance.CreatePlayerLog("Начата стройка нового здания, потрачен металл, энергия, и еда, если здание обладает рабочими", playerName, buildingDictionary);
 
-                            await SyncManager.Semaphore.WaitAsync();
-                            try
+                            await SyncManager.Enqueue(async () =>
                             {
                                 await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
                                     playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
-                            }
-                            finally
-                            {
-                                SyncManager.Semaphore.Release();
-                            }
-
+                            });
+                            UpdateResourcesEvent.TriggerEvent();
                             //Создаем новое здание, устанавливаем его позицию и удаляем триггер для строительства
                             MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
                             GameObject newBuildingObject = Instantiate(CurrentBuilding);

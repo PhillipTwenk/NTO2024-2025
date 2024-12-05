@@ -16,21 +16,9 @@ MonoBehaviour:
   UpdateResourcesEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
   playerBuildings:
   - {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
-  - {fileID: 4944107340488167607, guid: cf8206de50c7ed844b19d4d1325e5ca3, type: 3}
-  - {fileID: 1775260311085803478, guid: 2dec256020064de4d8bf328577983ef4, type: 3}
-  - {fileID: 1775260311085803478, guid: 2dec256020064de4d8bf328577983ef4, type: 3}
   buildingsTransform:
   - position: {x: 94, y: 4, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 1, y: 1, z: 1}
-  - position: {x: 84.22343, y: 3.99, z: -57.542065}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-    scale: {x: 1, y: 1, z: 1}
-  - position: {x: -79.35942, y: 3.99, z: -135.48059}
-    rotation: {x: -0, y: -0.7071056, z: -0, w: 0.7071081}
-    scale: {x: 1, y: 1, z: 1}
-  - position: {x: -56.10493, y: 3.99, z: -174.24187}
-    rotation: {x: -0, y: -0.7071056, z: -0, w: 0.7071081}
     scale: {x: 1, y: 1, z: 1}
   BuildingDatas:
   - Level: 1
@@ -39,30 +27,6 @@ MonoBehaviour:
     SaveListIndex: 0
     HoneyConsumption: 0
     Production: 
-  - Level: 1
-    Durability: 50
-    Storage: 0000000000000000
-    SaveListIndex: 1
-    HoneyConsumption: 0
-    Production: 2800000028000000
-  - Level: 1
-    Durability: 100
-    Storage: 
-    SaveListIndex: 2
-    HoneyConsumption: 0
-    Production: 2800000001000000
-  - Level: 1
-    Durability: 100
-    Storage: 
-    SaveListIndex: 3
-    HoneyConsumption: 0
-    Production: 2800000001000000
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1
     MaxValueOfWorkersInThisBuilding: 1
-  - CurrentNumberOfWorkersInThisBuilding: 0
-    MaxValueOfWorkersInThisBuilding: 0
-  - CurrentNumberOfWorkersInThisBuilding: 0
-    MaxValueOfWorkersInThisBuilding: 0
-  - CurrentNumberOfWorkersInThisBuilding: 0
-    MaxValueOfWorkersInThisBuilding: 0

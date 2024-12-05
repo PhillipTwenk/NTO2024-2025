@@ -23,8 +23,10 @@ MonoBehaviour:
   BuildingDatas:
   - Level: 1
     Durability: 175
-    Storage: dc050000dc0500000a000000
+    Storage: dc0500000a000000
     SaveListIndex: 0
+    HoneyConsumption: 0
+    Production: 
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1
     MaxValueOfWorkersInThisBuilding: 1

@@ -120,13 +120,13 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
     /// Удаляет конкретное здание
     /// </summary>
     /// <param name="building"> GameObject конкретного здания </param>
-    public async void DeleteBuilding(GameObject building)
+    public void DeleteBuilding(GameObject building)
     {
         if (playerBuildings is not null && !IsDeleteBuidlingProcessActive)
         {
             IsDeleteBuidlingProcessActive = true;
 
-            BuildingData buildingData = building.GetComponent<BuildingData>();
+            BuildingData buildingData = building.GetComponent<BuildingData>(); 
             int indexBuilding = buildingData.SaveListIndex;
 
             playerBuildings.Remove(buildingData.buildingTypeSO.PrefabBuilding);
