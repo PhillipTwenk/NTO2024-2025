@@ -58,12 +58,12 @@ public class ThisBuildingWorkersControl : MonoBehaviour
             }
             
             movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
-            movementController.SetWorkerDestination(pointForBuild);
+            movementController.SetWorkerDestination(pointForBuild, true);
         }
         else
         {
             movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
-            movementController.SetWorkerDestination(buildingTransform);
+            movementController.SetWorkerDestination(buildingTransform, true);
         }
 
         animator.SetBool("Running", true);

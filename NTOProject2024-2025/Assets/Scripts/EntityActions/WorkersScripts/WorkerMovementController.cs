@@ -30,12 +30,20 @@ public class WorkerMovementController : MonoBehaviour
 
     void Update()
     {
+        // if(WorkersInterBuildingControl.SelectedWorker != gameObject && WorkersInterBuildingControl.SelectedWorker != null){
+        //     isSelected = false;
+        // }
+
         if(isSelected){
             if (Input.GetMouseButtonDown(0) && !isSelecting)
             {
                 Vector3 point = GetSelectedMapPosition();
-                currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
-                SetWorkerDestination(currentWalkingPoint.transform);
+                if(SelectedBuilding == null){
+                    currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
+                } else {
+                    currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
+                }
+                SetWorkerDestination(currentWalkingPoint.transform, false);
             }
         }
 
@@ -47,18 +55,26 @@ public class WorkerMovementController : MonoBehaviour
             if (agent.path.status == NavMeshPathStatus.PathComplete) {
                 line.enabled = true;
                 line.SetPosition(0, transform.position);
-                currentWalkingPoint.gameObject.SetActive(true);
                 DrawPath(agent.path);
             }
         } else {
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
+            if (SelectedBuilding){
+                SelectedBuilding = null;
+            }
         }
     }
 
-    public void SetWorkerDestination(Transform point){
-        Debug.Log($"Setting destination to: {point.position}");
-        WorkerPointOfDestination = point;
+    public void SetWorkerDestination(Transform point, bool isAutomatic){
+        if(isAutomatic && SelectedBuilding != null){
+            currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
+            WorkerPointOfDestination = currentWalkingPoint.transform;
+            Debug.Log($"Setting destination to: {currentWalkingPoint.transform.position}");
+        } else {
+            WorkerPointOfDestination = point;
+            Debug.Log($"Setting destination to: {point.position}");
+        }
     }
 
     public void ResetWorkerDestination(){
@@ -104,6 +120,7 @@ public class WorkerMovementController : MonoBehaviour
             if(hit.collider.tag == "Building"){
                 Debug.Log("Selected building");
                 SelectedBuilding = hit.collider.gameObject; // SELECTED BUILDING FOR PHILTWE!!!!!!!!!
+                Debug.Log(SelectedBuilding);
             }
         }
         return lastPosition;
