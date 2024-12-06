@@ -327,7 +327,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Mushroom 2
@@ -665,8 +665,8 @@ MonoBehaviour:
         randomizeOrientationZ: 0
         scaleTransformMode: 0
         scaleMode: 0
-        scaleUniformMin: 1
-        scaleUniformMax: 1
+        scaleUniformMin: 1.36
+        scaleUniformMax: 2.5
         scalePerAxisMin: {x: 1, y: 1, z: 1}
         scalePerAxisMax: {x: 1, y: 1, z: 1}
         pinFixedRotation: 0
@@ -4454,7 +4454,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1
+        placeScale: 1.8000001
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -5059,8 +5059,8 @@ MonoBehaviour:
       settings:
         brushRadius: 1
         brushSpacing: 0.5
-        brushOverlapCheckMode: 0
-        brushOverlapDistance: 0.5
+        brushOverlapCheckMode: 1
+        brushOverlapDistance: 14.06
         brushOverlapCheckObjects: 1
         brushOverlapCheckLayers:
           serializedVersion: 2
@@ -5076,7 +5076,7 @@ MonoBehaviour:
         scaleTransformMode: 0
         scaleMode: 0
         scaleUniformMin: 1
-        scaleUniformMax: 3
+        scaleUniformMax: 1.5
         scalePerAxisMin: {x: 1, y: 1, z: 1}
         scalePerAxisMax: {x: 1, y: 1, z: 1}
         pinFixedRotation: 0
@@ -5682,7 +5682,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Grass 4
@@ -6659,7 +6659,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: 0, z: 0}
-        placeScale: 1.8000001
+        placeScale: 0.90000004
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -15469,6 +15469,4108 @@ MonoBehaviour:
     levelsInWhite: 255
     levelsOutBlack: 0
     levelsOutWhite: 255
+  - name: Wind
+    brushes:
+    - name: Column 1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: -15}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 8237047624787384874, guid: eff9f7bfb0ce3564bbf0a0467757489b, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Column 2
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: -15, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 2988922381837081545, guid: 3b954f9e921e5e0429162f43581bdc12, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Ice 1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 8955211478334821017, guid: 69a722b740c5c234c8a123ecc2f5644a, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Ice 2
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.8
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 1239190891850391888, guid: 8cd89419fe85b5a44be9d4142b7be1e6, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Ice 3
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 2279227761856643169, guid: 1d753384c28cab74a9126ffbe71b3ed7, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Rock ice 1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.8
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 3860272210829243833, guid: ad2bc79c726b9af42b34c00d48d420fc, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Rock ice 2
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 6109664683896885531, guid: 87ddcae07aa761049b7f4e00b4bc0a69, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Rock ice 3
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 2679923360488860017, guid: f36e0bca4ee66b1439d1d6c0fc744a39, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Stone m1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.8
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 7629227014703221133, guid: 0177135f9df68954690b52ba8bc79ed1, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Stone m2
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.90000004
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 4794031727787150592, guid: 2cd3d47f155555c4fbe55189b281c2ce, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Tree desert 1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.8
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 7328125646992911098, guid: 411db27caec6a6743a8865223b280c99, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 1
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Tree desert 2
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.8
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 3243485827888905040, guid: 4a0b5072a3228204b8b64820148d6463, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    - name: Tree desert 3
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.5
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 0
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 1
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 0.90000004
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 0
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 8703288606725383139, guid: 719250bb23d37ca42a8c9cdc493bb07c, type: 3}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      - gameObject: {fileID: 0}
+      selectedSlot: 0
+      selected: 0
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    levelsGamma: 1
+    levelsInBlack: 0
+    levelsInWhite: 255
+    levelsOutBlack: 0
+    levelsOutWhite: 255
   - name: VFX
     brushes:
     - name: BLue Butterfly Emtter
@@ -16106,7 +20208,7 @@ MonoBehaviour:
     levelsInWhite: 255
     levelsOutBlack: 0
     levelsOutWhite: 255
-  activeTab: 2
+  activeTab: 3
   paintOnSelected: 0
   paintLayers:
     serializedVersion: 2
