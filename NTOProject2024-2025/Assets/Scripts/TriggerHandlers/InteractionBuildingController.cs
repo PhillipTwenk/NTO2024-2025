@@ -45,9 +45,13 @@ public class InteractionBuildingController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
-            CanPutE = true;
-            TextOnEvent?.Invoke();
-            Texthint.SetActive(true);
+            Debug.Log(1092857);
+            if (GetComponent<BuildingData>().IsThisBuilt)
+            {
+                CanPutE = true;
+                TextOnEvent?.Invoke();
+                Texthint.SetActive(true);
+            }
         }
         if(other.gameObject.CompareTag("Worker"))
         {
@@ -95,17 +99,26 @@ public class InteractionBuildingController : MonoBehaviour
                 {
                     ThisBuildingWorkersControl thisBuildingWorkersControl = GetComponent<ThisBuildingWorkersControl>();
                     TextMeshPro text = Texthint.GetComponent<TextMeshPro>();
-                    thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding += 1;
-                    text.text = $"Нажмите E чтобы выгрузить одного рабочего ({thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding}/2)";
-                    Destroy(other.gameObject.transform.parent.gameObject);
-                    return;
-                }else if (GetComponent<EnergyProduction>())
-                {
-                    EnergyProduction energyProduction = GetComponent<EnergyProduction>();
-                    if (GetComponent<BuildingData>().Storage[0] == 0)
+                    if (thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding < thisBuildingWorkersControl.MaxValueOfWorkersInThisBuilding)
                     {
-                        GetComponent<BuildingData>().Storage[0] += 1;
-                        energyProduction.OnAddEnergy();
+                        thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding += 1;
+                        if (GetComponent<EnergyProduction>())
+                        {
+                            EnergyProduction energyProduction = GetComponent<EnergyProduction>();
+                            energyProduction.OnAddEnergy();
+                            text.text = $"{_buildingData.Title} запущена ({thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding}/1) \n Нажмите E чтобы выгрузить рабочего";
+                        }
+                        else
+                        {
+                            text.text = $"Нажмите E чтобы выгрузить одного рабочего ({thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding}/2)";
+                        }
+
+                        PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
+                        playerSaveData.BuildingWorkersInformationList[_buildingData.SaveListIndex]
+                                .CurrentNumberOfWorkersInThisBuilding =
+                            thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding;
+                        Destroy(other.gameObject.transform.parent.gameObject);
+                        return;
                     }
                 }
             }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class HoneyGunHandler : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class HoneyGunHandler : MonoBehaviour
 
     private Transform currentTarget; // Текущая цель
     private Coroutine shootingCoroutine; // Ссылка на корутину стрельбы
+
+    public VisualEffect shootEffect;
+
+    private void Awake()
+    {
+        shootEffect.Stop();
+    }
 
     private void Update()
     {
@@ -62,6 +71,7 @@ public class HoneyGunHandler : MonoBehaviour
             // Создание снаряда
             GameObject newBullet = Instantiate(bulletSO.BulletPrefab, PointOfShoot.position, PointOfShoot.rotation);
 
+            shootEffect.Play();
             // Установка скорости снаряда
             Rigidbody rb = newBullet.GetComponent<Rigidbody>();
             if (rb != null)
