@@ -55,15 +55,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha_Clip: 0
-    - _Apha_intensity: 0.7
-    - _Fresnel_Power: 1.78
-    - _Noise_Scale: 180.23
-    - _Noise_speed: 0.07
+    - _Alpha_Clip: 0.04
+    - _Apha_intensity: 0.4
+    - _Emissiojn_Fresnel_Power: 0
+    - _Emission_Fresnel_Power: 8.1
+    - _Fresnel_Power: 1.29
+    - _Noise_Scale: 139.98
+    - _Noise_speed: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Sota_Color: {r: 17.155643, g: 19.33881, b: 52.71009, a: 0}
-    - _Sota_Second_Color: {r: 0, g: 8.132704, b: 9.066865, a: 0}
+    - _Emission_Color: {r: 4.030425, g: 1.6670347, b: 0, a: 0}
+    - _Sota_Color: {r: 1.1353016, g: 1.3623617, b: 4.5412064, a: 0}
+    - _Sota_Second_Color: {r: 0.14265566, g: 1.0757581, b: 2.2706025, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

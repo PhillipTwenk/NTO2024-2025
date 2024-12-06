@@ -11706,7 +11706,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: -15, z: 0}
-        placeScale: 1.3000001
+        placeScale: 0.90000004
         throwRadius: 1
         throwSpacing: 1
         throwHeight: 3
@@ -11989,7 +11989,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Grass R1
@@ -12934,7 +12934,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: 2Small Plant Red 2
@@ -14516,7 +14516,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Crystal 2
@@ -14831,7 +14831,7 @@ MonoBehaviour:
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Crystal 3
@@ -16106,7 +16106,7 @@ MonoBehaviour:
     levelsInWhite: 255
     levelsOutBlack: 0
     levelsOutWhite: 255
-  activeTab: 0
+  activeTab: 2
   paintOnSelected: 0
   paintLayers:
     serializedVersion: 2
@@ -16123,7 +16123,7 @@ MonoBehaviour:
   pinSnapScale: 0
   placeAngleStep: 15
   placeScaleStep: 0.1
-  eraseBrushRadius: 5
+  eraseBrushRadius: 1
   eraseByLayer: 1
   eraseLayers:
     serializedVersion: 2
