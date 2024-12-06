@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -63,7 +64,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        if (buildingData.IsThisBuilt)
+        if (buildingData.IsThisBuilt && Time.timeScale == 1f)
         {
             IsPanelActive = true;
         
@@ -212,7 +213,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         HideDescriptionPanel();
         
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+        PlayerResources playerResources = await GetResourcesPLayer(playerName);
         
         GameObject building = buildingTransform.gameObject;
         BuildingData buildingData = building.GetComponent<BuildingData>();
@@ -231,10 +232,14 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         buildingDictionary.Add("EnergyValueUpdate", $"{playerResources.Energy - OldEnergyValue}");
         buildingDictionary.Add("FoodValueUpdate", $"{playerResources.Food - OldFoodValue}");
         buildingDictionary.Add("IronValueUpdate", $"{(playerResources.Iron + NewIron) - playerResources.Iron}");
-        APIManager.Instance.CreatePlayerLog("Здание деконструировано, игрок получает энергию, металл и еду ( если здание обладает рабочими) ", playerName, buildingDictionary);
+        APIManager.Instance.CreatePlayerLog("Здание продано, игрок получает энергию, металл и еду ( если здание обладает рабочими) ", playerName, buildingDictionary);
 
-        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
-            playerResources.CryoCrystal);
+        await SyncManager.Enqueue(async () =>
+        {
+            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
+                playerResources.CryoCrystal);
+        });
+       
         
         PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
         
@@ -253,7 +258,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
 
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+        PlayerResources playerResources = await GetResourcesPLayer(playerName);
 
         int priceUpgrade = buildingSO.priceUpgrade;
         int BaseLevel = BaseUpgradeConditionManager.CurrentBaseLevel;
@@ -268,8 +273,12 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                     playerDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceUpgrade) - playerResources.Iron}");
                     APIManager.Instance.CreatePlayerLog($"Улучшение здания {buildingData.Title}", playerName, playerDictionary);
                     
-                    await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
-                        playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+                    await SyncManager.Enqueue(async () =>
+                    {
+                        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                            playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+                    });
+                    
 
                     buildingData.Level += 1;
                     buildingData.Durability = buildingSO.Durability(BaseLevel);
@@ -306,8 +315,12 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             List<string> ImprovementReport = BaseUpgradeConditionManager.Instance.CanUpgradeMobileBase(playerResources);
             if (ImprovementReport[0] == BaseUpgradeConditionManager.Instance.SuccesUpgradeText)
             {
-                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                await SyncManager.Enqueue(async () =>
+                {
+                    await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
                         playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
+                });
+               
                 buildingData.Level += 1;
                 buildingData.Durability = buildingSO.Durability(BaseLevel);
                 buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
@@ -347,4 +360,14 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     public void ResourceIronLimit() => OnHintPanel(TextLimitResourcesIron);
 
     public void ResourceCCLimit() => OnHintPanel(TextLimitResourcesCC);
+    
+    private async Task<PlayerResources> GetResourcesPLayer(string playerName)
+    {
+        PlayerResources playerResources = null;
+        await SyncManager.Enqueue(async () =>
+        {
+            playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+        });
+        return playerResources;
+    }
 }

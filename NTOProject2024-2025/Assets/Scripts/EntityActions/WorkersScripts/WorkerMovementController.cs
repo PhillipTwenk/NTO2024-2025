@@ -13,7 +13,7 @@ public class WorkerMovementController : MonoBehaviour
     public GameObject SelectedBuilding;
     [SerializeField] private Outline outlineMode;
     [SerializeField] private LayerMask placementLayerMask;
-    [SerializeField] private Camera MainCamera;
+    public Camera MainCamera;
     [SerializeField] public LineRenderer line;
     [SerializeField] private Transform currentWalkingPoint;
     void Start()

@@ -172,11 +172,16 @@ public class BuildingManager : MonoBehaviour
                 
                             TransformData transformData = new TransformData(newBuildingObject.transform);
                             pLayerSaveData.buildingsTransform.Add(transformData);
-
+                            
+                            Debug.Log("=========================================================================");
+                            Debug.Log(transformData);
+                            
                             BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
                             pLayerSaveData.BuildingDatas.Add(buildingSaveData);
                             buildingData.SaveListIndex = pLayerSaveData.BuildingDatas.IndexOf(buildingSaveData);
                             pLayerSaveData.BuildingDatas[buildingData.SaveListIndex].SaveListIndex = buildingData.SaveListIndex;
+                            Debug.Log(buildingSaveData);
+                            Debug.Log("=========================================================================");
 
                             if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
                             {

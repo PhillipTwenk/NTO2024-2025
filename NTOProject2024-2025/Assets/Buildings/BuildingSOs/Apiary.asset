@@ -25,7 +25,7 @@ MonoBehaviour:
   storageListLevel:
   - resources: 
     SpriteAssetsUsingIndex: 
-  - resources: 0200000002000000
+  - resources: 0100000001000000
     SpriteAssetsUsingIndex: 0500000005000000
   priceBuilding: 50
   priceUpgrade: 30

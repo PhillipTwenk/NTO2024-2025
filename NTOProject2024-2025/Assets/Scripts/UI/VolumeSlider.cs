@@ -8,6 +8,7 @@ public class VolumeSlider : MonoBehaviour
     public AudioMixer AM;
     public Slider slider;
     private float _volumeValue;
+    private float StartvolumeValue = 1f;
     private const float _multiplier = 20f;
 
     private void Awake()
@@ -22,8 +23,16 @@ public class VolumeSlider : MonoBehaviour
     }
     private void Start()
     {
-        _volumeValue = PlayerPrefs.GetFloat(volumeParameter, Mathf.Log10(slider.value) * _multiplier);
-        slider.value = Mathf.Pow(10f, _volumeValue / _multiplier);
+        if (PlayerPrefs.HasKey("volumeParameter"))
+        {
+            _volumeValue = PlayerPrefs.GetFloat(volumeParameter, Mathf.Log10(slider.value) * _multiplier);
+            slider.value = Mathf.Pow(10f, _volumeValue / _multiplier);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(volumeParameter, StartvolumeValue);
+        }
+        
     }
     private void OnDisable()
     {

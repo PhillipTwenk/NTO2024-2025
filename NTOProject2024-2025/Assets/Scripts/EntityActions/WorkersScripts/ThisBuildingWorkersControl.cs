@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,21 +13,25 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     public Transform buildingSpawnWorkerPointTransform;
 
     public GameObject WorkerPrefab;
+    public Camera MainCamera;
 
-    public void AddWorkersInThisBuilding(int number, bool IsAdd)
+    public void SpawnWorkersInThisBuilding(TextMeshPro text)
     {
-        if (IsAdd)
+        if (CurrentNumberWorkersInThisBuilding > 0)
         {
-            if (!(CurrentNumberWorkersInThisBuilding <= MaxValueOfWorkersInThisBuilding))
-            {
-                CurrentNumberWorkersInThisBuilding += number;
-            }
-        }else if(!IsAdd){
-            if (!(CurrentNumberWorkersInThisBuilding > 0))
-            {
-                CurrentNumberWorkersInThisBuilding -= number;
-            }
+            CurrentNumberWorkersInThisBuilding -= 1;
+            GameObject newWorker = Instantiate(WorkerPrefab, null);
+            newWorker.transform.position = buildingSpawnWorkerPointTransform.position;
+            newWorker.transform.rotation = buildingSpawnWorkerPointTransform.rotation;
+            newWorker.transform.SetParent(null);
+            newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
+            text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
         }
+    }
+
+    public void TextChanger(TextMeshPro text)
+    {
+        text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
     }
 
     public void StartMovementWorkerToBuilding(bool End, Transform buildingTransform, WorkerMovementController movementController, Animator animator)

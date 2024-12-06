@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,13 +8,16 @@ public class InteractionBuildingController : MonoBehaviour
 {
     private bool CanPutE;
     [SerializeField] private bool PossiblityPutEInThisBuilding;
-    [SerializeField] private GameEvent OpenDescriptionPanel;
-    private BuildingData _buildingData;
-
-    [SerializeField] private UnityEvent InteractionEvent;
     
+    [SerializeField] private GameEvent OpenDescriptionPanel;
     public GameEvent OpenBarterMenuEvent;
     public GameEvent CloseBarterMenuEvent;
+    private BuildingData _buildingData;
+
+    [Header("InteractionEvents")]
+    [SerializeField] private UnityEvent InteractionEvent;
+    [SerializeField] private UnityEvent TextOnEvent;
+    
 
     public GameObject Texthint;
 
@@ -42,44 +46,68 @@ public class InteractionBuildingController : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
             CanPutE = true;
+            TextOnEvent?.Invoke();
             Texthint.SetActive(true);
         }
-        if(other.gameObject.CompareTag("Worker") && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
+        if(other.gameObject.CompareTag("Worker"))
         {
-            if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive)
+            if (WorkersInterBuildingControl.CurrentBuilding != null && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
             {
-                Debug.Log(1);
-                WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
-                    .CurrentNumberWorkersInThisBuilding += 1;
-                WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
-                    .NumberOfActiveWorkersInThisBuilding -= 1;
-                WorkersInterBuildingControl.Instance.CurrentValueOfWorkers += 1;
-                WorkersInterBuildingControl.Instance.NumberOfActiveWorkers -= 1;
+                if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive)
+                {
+                    Debug.Log(1);
+                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
+                        .CurrentNumberWorkersInThisBuilding += 1;
+                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
+                        .NumberOfActiveWorkersInThisBuilding -= 1;
+                    WorkersInterBuildingControl.Instance.CurrentValueOfWorkers += 1;
+                    WorkersInterBuildingControl.Instance.NumberOfActiveWorkers -= 1;
 
-                Destroy(other.gameObject);
+                    Destroy(other.gameObject);
 
-                BuildingManager.Instance.ProcessWorkerBuildingActive = false;
-                return;
+                    BuildingManager.Instance.ProcessWorkerBuildingActive = false;
+                    return;
+                }
+                if (!_buildingData.IsThisBuilt && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+                {
+                    WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
+                    movementController.WorkerPointOfDestination = null;
+                    
+                    other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
+                    
+                    Animator animator = other.gameObject.GetComponent<Animator>();
+                    animator.SetBool("Running", false);
+                    animator.SetBool("Building", true);
+                    animator.SetBool("Idle", false);
+                    
+                    Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
+                    Debug.Log("Рабочий добрался, начинает строить здание");
+                    WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+
+                    GameObject worker = other.gameObject;
+                    WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
+                    return;
+                }
             }
-            if (!_buildingData.IsThisBuilt && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+            if (other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
             {
-                WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
-                movementController.WorkerPointOfDestination = null;
-                
-                other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
-                
-                Animator animator = other.gameObject.GetComponent<Animator>();
-                animator.SetBool("Running", false);
-                animator.SetBool("Building", true);
-                animator.SetBool("Idle", false);
-                
-                Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
-                Debug.Log("Рабочий добрался, начинает строить здание");
-                WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
-
-                GameObject worker = other.gameObject;
-                WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
-                return;
+                if (GetComponent<ThisBuildingWorkersControl>())
+                {
+                    ThisBuildingWorkersControl thisBuildingWorkersControl = GetComponent<ThisBuildingWorkersControl>();
+                    TextMeshPro text = Texthint.GetComponent<TextMeshPro>();
+                    thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding += 1;
+                    text.text = $"Нажмите E чтобы выгрузить одного рабочего ({thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding}/2)";
+                    Destroy(other.gameObject.transform.parent.gameObject);
+                    return;
+                }else if (GetComponent<EnergyProduction>())
+                {
+                    EnergyProduction energyProduction = GetComponent<EnergyProduction>();
+                    if (GetComponent<BuildingData>().Storage[0] == 0)
+                    {
+                        GetComponent<BuildingData>().Storage[0] += 1;
+                        energyProduction.OnAddEnergy();
+                    }
+                }
             }
         }
     }

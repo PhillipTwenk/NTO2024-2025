@@ -142,9 +142,9 @@ public class ResourceMiner : MonoBehaviour
     /// <returns></returns>
     private async Task MinerCCAsync(string playerName, PlayerSaveData playerSaveData, BuildingData buildingData)
     {
-        while (gameObject.activeSelf)
+        bool isRunning = true;
+        while (gameObject.activeSelf && isRunning)
         {
-            PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
             BuildingSaveData MobileBaseBD = playerSaveData.BuildingDatas[0];
 
             int StorageAdd = 0;
@@ -159,6 +159,7 @@ public class ResourceMiner : MonoBehaviour
 
             Debug.Log($"Лимит по КриоКристаллам: {CCLimit}");
 
+            PlayerResources playerResources = await GetResources(playerName);
             if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit)
             {
                 _animator.SetBool("StopMining",false);
@@ -180,7 +181,7 @@ public class ResourceMiner : MonoBehaviour
                     ResourceCCLimitEvent.TriggerEvent();
                     CanSendMessageToHint = false;
                 }
-                break;
+                isRunning = false;
             }
         }
     }

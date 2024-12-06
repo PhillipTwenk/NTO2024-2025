@@ -27,6 +27,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
     public event Action IsWorkerHereEvent; // Игрок прибыл
     public static GameObject SelectedWorker;
+    public Camera mainCamera;
+    public static Camera MainCamera;
 
     private bool IsWorkersHere;
 
@@ -34,6 +36,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        MainCamera = mainCamera;
         CurrentBuilding = null;
     }
 

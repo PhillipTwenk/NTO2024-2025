@@ -83,7 +83,6 @@
             <e p="TutorialObjective.cs" t="Include" />
           </e>
         </e>
-        <e p="README.txt" t="Include" />
         <e p="SaveData" t="Include">
           <e p="Json" t="Include">
             <e p="ISerializableSO.cs" t="Include" />
@@ -111,6 +110,11 @@
             <e p="ShopLog.cs" t="Include" />
             <e p="ShopResources.cs" t="Include" />
             <e p="ShopsDataList.cs" t="Include" />
+          </e>
+          <e p="Audio" t="Include">
+            <e p="CharacterSoundManager.cs" t="Include" />
+            <e p="GlobalAudioManager.cs" t="Include" />
+            <e p="LocalAudioManager.cs" t="Include" />
           </e>
           <e p="BuildingSystem" t="Include">
             <e p="BaseUpgradeConditionManager.cs" t="Include" />
@@ -165,8 +169,12 @@
           <e p="TestMovementCharacter.cs" t="Include" />
           <e p="TriggerHandlers" t="Include">
             <e p="BulletControl.cs" t="Include" />
+            <e p="EntryLocationTriggerHandler.cs" t="Include" />
             <e p="HoneyGunHandler.cs" t="Include" />
             <e p="InteractionBuildingController.cs" t="Include" />
+          </e>
+          <e p="Tutorial" t="Include">
+            <e p="TutorialManager.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="AddTextToDescriptionPanel.cs" t="Include" />

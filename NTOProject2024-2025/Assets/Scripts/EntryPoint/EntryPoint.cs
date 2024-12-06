@@ -20,6 +20,8 @@ public class EntryPoint : MonoBehaviour
     
     [SerializeField] private bool IsInEditor;
     
+    [SerializeField] private GameEvent StartMainMenuSongEvent;
+    
     /// <summary>
     ///Запускает инициализацию данных и загружает две изначальные сцены, после чего выгружает Bootstrap 
     /// </summary>
@@ -62,6 +64,10 @@ public class EntryPoint : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(MainMenuName));
         
         MoveToMainMenuSceneEvent.TriggerEvent();
+        
+        StartMainMenuSongEvent.TriggerEvent();
+        
+        
         
         //Выгрузка сцены - точки входа
         SceneManager.UnloadSceneAsync(BootstrapName);

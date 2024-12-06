@@ -72,16 +72,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -35.79689, y: 44.92881, z: 156.65616}
+      - m_Value: {x: -53.857666, y: 46.072365, z: 123.85305}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -32.699852, y: 53.61881, z: 147.49202}
+      - m_Value: {x: -50.285675, y: 56.09503, z: 113.28353}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -33.75343, y: 48.878815, z: 148.54561}
+      - m_Value: {x: -51.500824, y: 50.628128, z: 114.498695}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -29.631126, y: 49.10881, z: 136.82881}
+      - m_Value: {x: -46.746338, y: 50.893394, z: 100.985054}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -698,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 1759570963271819361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: 116.9, y: 28.2656, z: -17.2}
+  m_LocalPosition: {x: 116.3, y: 28.2656, z: -18}
   m_LocalScale: {x: 5.097967, y: 5.097967, z: 5.097967}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1563,16 +1563,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -11.660244, y: 42.85881, z: 129.9807}
+      - m_Value: {x: -26.0195, y: 43.68492, z: 93.08674}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -19.757343, y: 53.61881, z: 130.82536}
+      - m_Value: {x: -35.358337, y: 56.09503, z: 94.060936}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -18.46696, y: 48.878815, z: 131.57033}
+      - m_Value: {x: -33.870087, y: 50.628128, z: 94.92015}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -35.50561, y: 61.098816, z: 128.74223}
+      - m_Value: {x: -53.521713, y: 64.722145, z: 91.65835}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -2133,16 +2133,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -9.199303, y: 70.49276, z: 132.19823}
+      - m_Value: {x: -23.181152, y: 75.55671, z: 95.64434}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -19.757343, y: 63.082756, z: 130.82536}
+      - m_Value: {x: -35.358337, y: 67.01033, z: 94.060936}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -18.46696, y: 58.342754, z: 131.57033}
+      - m_Value: {x: -33.870087, y: 61.543427, z: 94.92015}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -35.258392, y: 57.912754, z: 128.65402}
+      - m_Value: {x: -53.236572, y: 61.047478, z: 91.55661}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -2452,16 +2452,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -35.39615, y: 42.65881, z: 106.00035}
+      - m_Value: {x: -53.395462, y: 43.454247, z: 65.428856}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -30.036114, y: 53.61881, z: 114.69032}
+      - m_Value: {x: -47.213425, y: 56.09503, z: 75.45149}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -30.036121, y: 48.878815, z: 113.20032}
+      - m_Value: {x: -47.21344, y: 50.628128, z: 73.73298}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -30.036053, y: 55.72881, z: 137.93031}
+      - m_Value: {x: -47.213364, y: 58.52861, z: 102.25548}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3034,16 +3034,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -62.095924, y: 69.99275, z: 132.11613}
+      - m_Value: {x: -84.18982, y: 74.98002, z: 95.54966}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -50.895927, y: 63.082756, z: 132.08615}
+      - m_Value: {x: -71.27223, y: 67.01033, z: 95.515076}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -52.385925, y: 58.342754, z: 132.08615}
+      - m_Value: {x: -72.99072, y: 61.543427, z: 95.515076}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -30.235924, y: 47.22275, z: 132.08614}
+      - m_Value: {x: -47.44388, y: 48.718094, z: 95.51506}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3260,16 +3260,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -60.975925, y: 42.10881, z: 132.39613}
+      - m_Value: {x: -82.898056, y: 42.8199, z: 95.8726}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -50.895927, y: 53.61881, z: 132.08615}
+      - m_Value: {x: -71.27223, y: 56.09503, z: 95.515076}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -52.385925, y: 48.878815, z: 132.08615}
+      - m_Value: {x: -72.99072, y: 50.628128, z: 95.515076}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -33.315926, y: 62.758816, z: 132.08614}
+      - m_Value: {x: -50.99623, y: 66.63672, z: 95.51506}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3584,16 +3584,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -35.132187, y: 71.14276, z: 158.4805}
+      - m_Value: {x: -53.09102, y: 76.30639, z: 125.95717}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -32.699852, y: 63.082756, z: 147.49202}
+      - m_Value: {x: -50.285675, y: 67.01033, z: 113.28353}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -33.75343, y: 58.342754, z: 148.54561}
+      - m_Value: {x: -51.500824, y: 61.543427, z: 114.498695}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -29.631145, y: 50.692757, z: 133.80238}
+      - m_Value: {x: -46.746353, y: 52.720245, z: 97.49451}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3908,16 +3908,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -35.396156, y: 69.64276, z: 104.98035}
+      - m_Value: {x: -53.395462, y: 74.576355, z: 64.252426}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -30.036114, y: 63.082756, z: 114.69032}
+      - m_Value: {x: -47.213425, y: 67.01033, z: 75.45149}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -30.036121, y: 58.342754, z: 113.20032}
+      - m_Value: {x: -47.21344, y: 61.543427, z: 73.73298}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -30.036053, y: 52.212753, z: 137.77031}
+      - m_Value: {x: -47.213364, y: 54.473343, z: 102.07094}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
