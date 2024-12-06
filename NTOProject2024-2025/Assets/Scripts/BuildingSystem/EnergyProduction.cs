@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using JetBrains.Annotations;
-using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +8,7 @@ public class EnergyProduction : MonoBehaviour
 {
     private BuildingData _buildingData;
     [SerializeField] private GameEvent ResourceUpdateEvent;
+    [SerializeField] private GameEvent WorkerGoToThisBuilding;
 
     // private void OnEnable()
     // {
@@ -40,7 +39,7 @@ public class EnergyProduction : MonoBehaviour
     public async void OnAddEnergy()
     {
         _buildingData = GetComponent<BuildingData>();
-        if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= 1)
+        if (_buildingData.Storage[0] > 0)
         {
 
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
@@ -69,81 +68,25 @@ public class EnergyProduction : MonoBehaviour
 
     private async void OnDisable()
     {
-        if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= 1)
-        {
-            _buildingData = GetComponent<BuildingData>();
-        
-            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);    
-        
-            int honeyProduction = _buildingData.Production[0];
-            int foodProduction = _buildingData.Production[1];
-
-            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources =
-                await APIManager.Instance.GetPlayerResources(playerName);
-            int OldEnergyValue = playerResources.Energy;
-            int OldFoodValue = playerResources.Food;
-            playerResources.Energy -= honeyProduction;
-            playerResources.Food -= foodProduction;
-            LogSender(playerName, "Пасека прекратила производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue );
-            await SyncManager.Enqueue(async () =>
-            {
-                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
-                    playerResources.Food, playerResources.CryoCrystal);
-            });
-            ResourceUpdateEvent.TriggerEvent();
-            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
-        }
-    }
-
-    public async void OnWorkerLeave(TextMeshPro text)
-    {
-        if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= 1)
-        {
-            GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding -= 1;
-            _buildingData = GetComponent<BuildingData>();
-        
-            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);    
-        
-            int honeyProduction = _buildingData.Production[0];
-            int foodProduction = _buildingData.Production[1];
-
-            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources =
-                await APIManager.Instance.GetPlayerResources(playerName);
-            int OldEnergyValue = playerResources.Energy;
-            int OldFoodValue = playerResources.Food;
-            playerResources.Energy -= honeyProduction;
-            playerResources.Food -= foodProduction;
-            LogSender(playerName, $"{_buildingData.Title} прекратила производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue );
-            await SyncManager.Enqueue(async () =>
-            {
-                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
-                    playerResources.Food, playerResources.CryoCrystal);
-            });
-            ResourceUpdateEvent.TriggerEvent();
-            GameObject newWorker = Instantiate(GetComponent<ThisBuildingWorkersControl>().WorkerPrefab, null);
-            newWorker.transform.position = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.position;
-            newWorker.transform.rotation = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.rotation;
-            newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
-
-            TextChangerEnergy(text);
-            LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
-        }
-        
-    }
-
-    public void TextChangerEnergy(TextMeshPro text)
-    {
         _buildingData = GetComponent<BuildingData>();
-        if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding == 0)
-        {
-            text.text = $"{_buildingData.Title} прекратила работу ({GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding}/1)";
-        }
-        else
-        {
-            text.text =  $"{_buildingData.Title} работает ({GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding}/1) \n Нажмите E чтобы выгрузить рабочего";
-        }
+        
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);    
+        
+        int honeyProduction = _buildingData.Production[0];
+        int foodProduction = _buildingData.Production[1];
+
+        string playerName = UIManagerLocation.WhichPlayerCreate.Name;
+        PlayerResources playerResources =
+            await APIManager.Instance.GetPlayerResources(playerName);
+        int OldEnergyValue = playerResources.Energy;
+        int OldFoodValue = playerResources.Food;
+        playerResources.Energy -= honeyProduction;
+        playerResources.Food -= foodProduction;
+        LogSender(playerName, "Пасека прекратила производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue );
+        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
+            playerResources.Food, playerResources.CryoCrystal);
+        ResourceUpdateEvent.TriggerEvent();
+        LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
     private void LogSender(string playerName, string comment, int ChangeEnergy, int ChangeFood)

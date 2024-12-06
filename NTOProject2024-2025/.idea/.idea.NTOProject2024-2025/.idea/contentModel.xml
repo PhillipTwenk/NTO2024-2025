@@ -169,7 +169,6 @@
           <e p="TestMovementCharacter.cs" t="Include" />
           <e p="TriggerHandlers" t="Include">
             <e p="BulletControl.cs" t="Include" />
-            <e p="CameraSizeTriggerLocationChanger.cs" t="Include" />
             <e p="EntryLocationTriggerHandler.cs" t="Include" />
             <e p="HoneyGunHandler.cs" t="Include" />
             <e p="InteractionBuildingController.cs" t="Include" />
