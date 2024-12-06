@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abaf1a60fc60e8458b5b0093d962a36, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  name: Tutorial
+  active: 0
+  questDescription: "\u0422\u0443\u0442\u043E\u0440\u0438\u0430\u043B"
+  objectives:
+  - {fileID: 11400000, guid: 6829055a17f6be84d80446b7bef39380, type: 2}
+  - {fileID: 11400000, guid: 169f16dfb971dde42b7bcbebd367893e, type: 2}
+  - {fileID: 11400000, guid: bbc368b13cad6af4792a64d7bea28baa, type: 2}
+  - {fileID: 11400000, guid: 2b22ee0635c22054e9e29c69683fce94, type: 2}
+  - {fileID: 11400000, guid: a8111c32e3d23794fbebc2978261ce93, type: 2}
+  - {fileID: 11400000, guid: cd6b1bc179e0abb4c80fb88df6ae07e9, type: 2}
+  - {fileID: 11400000, guid: 3d83a824a72a0a440be149b9096d0acf, type: 2}
+  - {fileID: 11400000, guid: 00bbfe1ca0d7a744097b7bc784e2c8a0, type: 2}
+  - {fileID: 11400000, guid: a110d3fc6a76c434cb9165628d7ffe4a, type: 2}
+  - {fileID: 11400000, guid: cc97214d7c6dab841b3574d082525214, type: 2}
+  - {fileID: 11400000, guid: 3f9fe180a2b78e540bc3c540794f8262, type: 2}
+  - {fileID: 11400000, guid: 2447032533bb95a4085d5ee002451dbc, type: 2}
+  - {fileID: 11400000, guid: 95464dcdcd042c24d87dccd5b5ee1b39, type: 2}
+  - {fileID: 11400000, guid: af26ef91315e26842ab6bd07d8fd0273, type: 2}
+  - {fileID: 11400000, guid: dbab9aa05f98d2242a1ec44ce3586c17, type: 2}
+  - {fileID: 11400000, guid: 7f7f37cf07cf67d48a237d6dcdb11e57, type: 2}
+  - {fileID: 11400000, guid: 10835e182cb401e4ea5340f0f1f08ebd, type: 2}
+  - {fileID: 11400000, guid: 3d9a5b5cafb52ed4281089f5b624cb44, type: 2}
+  - {fileID: 11400000, guid: 2c25565212360cd45adfdb4a55c66c93, type: 2}
+  - {fileID: 11400000, guid: 9d45803a73edf3b4c805a78da13f12b2, type: 2}
+  - {fileID: 11400000, guid: 00b791f8884bbe947a5f0d6d4b81be31, type: 2}
+  - {fileID: 11400000, guid: e553beb06481cb94b9f6c4aa5983eac2, type: 2}
+  - {fileID: 11400000, guid: 32fa689ed374cea42af3bd93b39e1301, type: 2}
+  - {fileID: 11400000, guid: 60814fe2689306c428df9febfc500789, type: 2}
+  - {fileID: 11400000, guid: e436bc21a2418bb4588485bb935009d7, type: 2}
+  - {fileID: 11400000, guid: 5c5e1128e969af44ea2f1e73af44dd15, type: 2}
+  - {fileID: 11400000, guid: 8cecda38f9b244e42b7fbbe05c031844, type: 2}
+  - {fileID: 11400000, guid: 1edc4c6469689ad4395dac41a850fa7c, type: 2}
+  - {fileID: 11400000, guid: 02e25b756d17b724cb8b95a0979ebd12, type: 2}
+  - {fileID: 11400000, guid: 0c35a7280f32cef46aa803d6b8a8f975, type: 2}
+  - {fileID: 11400000, guid: 69a50a80625270e40b14a630d19cdc41, type: 2}
+  - {fileID: 11400000, guid: 714b09f7bd36a4747bdca244a3d427b2, type: 2}
+  currentObjective: {fileID: 11400000, guid: 6829055a17f6be84d80446b7bef39380, type: 2}
+  startQuestEvent: {fileID: 11400000, guid: f4a6964baa16dd34cb970cd624d94588, type: 2}
+  startNewObjection: {fileID: 11400000, guid: 7afe04be5a2aa2148b4fa09891729d95, type: 2}

@@ -7,6 +7,17 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AkiDevCat" t="Include">
+          <e p="MicroAVL" t="Include">
+            <e p="Editor" t="Include">
+              <e p="MicroAVL.cs" t="Include" />
+              <e p="MicroAVLShaderGUI.cs" t="Include" />
+            </e>
+            <e p="ShadersLibrary" t="Include">
+              <e p="MicroAVL.hlsl" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Art" t="Include">
           <e p="Ground" t="Include">
             <e p="Water" t="Include">
@@ -38,6 +49,12 @@
             <e p="Bullet.cs" t="Include" />
           </e>
           <e p="Plan.cs" t="Include" />
+        </e>
+        <e p="Cool Visual Effects - Part 1" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ConstantRotation.cs" t="Include" />
+            <e p="EffectManager.cs" t="Include" />
+          </e>
         </e>
         <e p="Entities" t="Include">
           <e p="EntityID.cs" t="Include" />
@@ -195,6 +212,20 @@
             <e p="Utility.cs" t="Include" />
           </e>
         </e>
+        <e p="SineVFX" t="Include">
+          <e p="TranslucentCrystals" t="Include">
+            <e p="_SRP" t="Include">
+              <e p="!!!_ReadBeforeImport_!!!.txt" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="Crystal.shader" t="Include" />
+                <e p="SkyboxProceduralDesaturated.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Test5.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
@@ -238,6 +269,16 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
             <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="VFX" t="Include">
+          <e p="Realistic Hail Set" t="Include">
+            <e p="Demo Scene" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DemoSceneController.cs" t="Include" />
+              </e>
+            </e>
+            <e p="README.txt" t="Include" />
           </e>
         </e>
       </e>

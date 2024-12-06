@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -6,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class QuestController : MonoBehaviour
 {
-    public EntityID playerID;
+    private EntityID playerID;
 
     //Установление нового активного квеста
     public void ReceiveNewQuest(Quest quest)
@@ -38,6 +40,7 @@ public class QuestController : MonoBehaviour
     //При старте игры проверка завершенных квестов и их убирание из массива
     private void OnEnable()
     {
+        playerID = UIManagerLocation.WhichPlayerCreate;
         for(int i = playerID.openQuests.Count -1; i>=0; i--)
         {
             if (playerID.openQuests[i].completed)

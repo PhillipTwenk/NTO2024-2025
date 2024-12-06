@@ -11,6 +11,7 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private GameEvent ClickCreateNewPlayerButtonEvent;
     [SerializeField] private GameEvent StartGameInChoiceCharacterPanel;
     [SerializeField] private GameEvent StartGameAfterCreatingCharacter;
+    [SerializeField] private GameEvent StartTutorialEvent;
     
     [SerializeField] private TMP_InputField inputFieldNewName;
     [SerializeField] private int StartValueIron;
@@ -137,6 +138,7 @@ public class UIManagerMainMenu : MonoBehaviour
         {
             Debug.Log("Создание нового персонажа");
             ClickCreateNewPlayerButtonEvent.TriggerEvent(); 
+            StartTutorialEvent.TriggerEvent();
         }
         else
         {

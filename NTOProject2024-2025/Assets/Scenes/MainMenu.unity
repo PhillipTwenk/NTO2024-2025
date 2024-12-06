@@ -2163,6 +2163,7 @@ MonoBehaviour:
   ClickCreateNewPlayerButtonEvent: {fileID: 11400000, guid: 11ea68b8ee0c57547b681baa29992597, type: 2}
   StartGameInChoiceCharacterPanel: {fileID: 11400000, guid: d6c89d05f72894a439c0286242fe118e, type: 2}
   StartGameAfterCreatingCharacter: {fileID: 11400000, guid: eb18c4a5b3023c04fb7feeeff90fe2a1, type: 2}
+  StartTutorialEvent: {fileID: 11400000, guid: 8e421e349be70094c9bd4b8cb43da81c, type: 2}
   inputFieldNewName: {fileID: 1893696308}
   StartValueIron: 300
   StartValueEnergy: 0

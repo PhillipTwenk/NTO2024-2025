@@ -10,6 +10,19 @@ public class TutorialObjective : ScriptableObject
     
     public Objective tutorialObjective;
     public bool IsActive;
-    public Transform MainTextPanelPosition;
-    public Transform FunctionalTextPanelPosition;
+
+    public bool IsTimeStopOnThisStep;
+    public int MainUIPositionTypeOnThisStep;
+    public int TechUIPositionTypeOnThisStep;
+
+    public bool IsTechPanelActiveOnThisStep;
+    public bool IsAutomaticalyEnterOnThisStep;
+
+    public void CheckAndUpdateTutorialState()
+    {
+        if (IsActive)
+        {
+            TutorialManager.UpdateTutorialStateEvent?.Invoke();
+        }
+    }
 }
