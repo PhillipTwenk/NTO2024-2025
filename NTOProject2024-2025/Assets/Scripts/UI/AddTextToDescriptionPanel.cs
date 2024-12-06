@@ -170,11 +170,11 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                 {
                     if (iS >= 1)
                     {
-                        storageTextOutput += $" + {buildingData.Storage[iS]}   <sprite={listIndexSAStorage[iS]}>";
+                        storageTextOutput += $" + {resource}   <sprite={listIndexSAStorage[iS]}>";
                     }
                     else
                     {
-                        storageTextOutput += $" {buildingData.Storage[iS]}   <sprite={listIndexSAStorage[iS]}>"; 
+                        storageTextOutput += $" {resource}   <sprite={listIndexSAStorage[iS]}>"; 
                     }
                     iS++;
                 }
