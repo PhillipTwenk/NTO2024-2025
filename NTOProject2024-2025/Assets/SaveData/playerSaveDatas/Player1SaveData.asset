@@ -41,7 +41,7 @@ MonoBehaviour:
     Production: 
   - Level: 1
     Durability: 50
-    Storage: 00000000
+    Storage: 
     SaveListIndex: 1
     HoneyConsumption: 0
     Production: 2800000028000000
@@ -61,7 +61,7 @@ MonoBehaviour:
   - CurrentNumberOfWorkersInThisBuilding: 1
     MaxValueOfWorkersInThisBuilding: 1
   - CurrentNumberOfWorkersInThisBuilding: 0
-    MaxValueOfWorkersInThisBuilding: 0
+    MaxValueOfWorkersInThisBuilding: 1
   - CurrentNumberOfWorkersInThisBuilding: 2
     MaxValueOfWorkersInThisBuilding: 2
   - CurrentNumberOfWorkersInThisBuilding: 0
