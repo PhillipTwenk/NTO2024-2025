@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,13 +29,14 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private PriceShopProduct StartValuePierShop;
 
     public static EntityID WhichPlayerCreate;
+
+    [SerializeField] private VolumeSlider volumeMusic;
+    [SerializeField] private VolumeSlider volumeEffect;
     //[SerializeField] private EntityID player1;
     //[SerializeField] private EntityID player2;
     //[SerializeField] private EntityID player3;
     
-        
-        
-        
+
     /// <summary>
     /// Запускает игру по нажатию на кнопку старта
     /// </summary>

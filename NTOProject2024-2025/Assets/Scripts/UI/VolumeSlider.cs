@@ -18,9 +18,18 @@ public class VolumeSlider : MonoBehaviour
 
     private void HandleSliderValueChanged(float value)
     {
-        _volumeValue = Mathf.Log10(value) * _multiplier;
+        if (value <= 0.0001f) // Проверяем на очень малое значение, чтобы избежать проблем с точностью.
+        {
+            _volumeValue = -80f; // Устанавливаем минимальное значение громкости.
+        }
+        else
+        {
+            _volumeValue = Mathf.Log10(value) * _multiplier;
+        }
+
         AM.SetFloat(volumeParameter, _volumeValue);
     }
+
     private void Start()
     {
         if (PlayerPrefs.HasKey("volumeParameter"))

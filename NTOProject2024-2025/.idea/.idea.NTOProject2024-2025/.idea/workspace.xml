@@ -20,32 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T18 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T18 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T20.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T20.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T21.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T21.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T28.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T28.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T29.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T29.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Boer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Boer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/Semaphore/SyncManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/Semaphore/SyncManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_HDRP_Patch.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_URP_Patch.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/GlobalAudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/CharacterSoundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CameraSizeTriggerLocationChanger.cs" />
@@ -168,13 +149,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/Semaphore/SyncManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +243,7 @@
       <workItem from="1733315933932" duration="31621000" />
       <workItem from="1733398253236" duration="30703000" />
       <workItem from="1733483088317" duration="26808000" />
-      <workItem from="1733562944055" duration="9026000" />
+      <workItem from="1733562944055" duration="15222000" />
     </task>
     <servers />
   </component>

@@ -57,7 +57,7 @@ AudioMixerController:
   - guid: 44dba479c87e2dc47826595d94d26101
     name: Music
   - guid: b2d2dc17d29f1794dae006df3da2148b
-    name: MyExposedParam 1
+    name: Sounds
   m_AudioMixerGroupViews:
   - guids:
     - 853d86fbbee469e43a65e2728002beb5
