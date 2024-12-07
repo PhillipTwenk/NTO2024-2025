@@ -29,6 +29,9 @@ public class TutorialManager : MonoBehaviour
     [Header("Parameters")] 
     public float charactersPerSecond;
     public List<Vector3> PositionTypes;
+
+    [Header("GameEvents")] [SerializeField]
+    private GameEvent ClosePlanMenu;
     
 
     private void Awake()
@@ -61,9 +64,10 @@ public class TutorialManager : MonoBehaviour
     {
         Debug.Log("SKIBIDIDOPDOPDOPDOPDOPDOP");
         i++;
-        if (i == 33)
+        if (i == TutorialObjectives.Count)
         {
             EndTutorial();
+            return;
         }
         if ((i - 1) >= 0)
         {
@@ -97,6 +101,8 @@ public class TutorialManager : MonoBehaviour
         TextUpdateEvent -= () => UIPanelUpdate(MainUIPanel, currentTutorialObjective);
         TextUpdateEvent -= () => UIPanelUpdate(TechnicalUIPanel, currentTutorialObjective);
         currentTutorialObjective.IsActive = false;
+        Time.timeScale = 1f;
+        FadeFone.SetActive(false);
     }
 
     private async void UIPanelUpdate(TextMeshProUGUI UIPanel, TutorialObjective currentTutorialObjective)         
@@ -118,7 +124,11 @@ public class TutorialManager : MonoBehaviour
             Time.timeScale = 1f;
             IsTutorialTimeStop = false;
         }
-        
+
+        if (currentTutorialObjective.IsClosePlanMenuOnThisStep)
+        {
+            ClosePlanMenu.TriggerEvent();
+        }
         if (UIPanel == TechnicalUIPanel)
         {
             if (currentTutorialObjective.IsTechPanelActiveOnThisStep)

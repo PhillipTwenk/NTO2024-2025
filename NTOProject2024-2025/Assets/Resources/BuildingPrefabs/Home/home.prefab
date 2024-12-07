@@ -1968,11 +1968,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33815807fd64a419d874f207d3b6f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreateNewWorkerTutorial: {fileID: 11400000, guid: 5cd184f70bd4635449d504169676b263, type: 2}
   CurrentNumberWorkersInThisBuilding: 2
   MaxValueOfWorkersInThisBuilding: 2
   NumberOfActiveWorkersInThisBuilding: 0
   buildingSpawnWorkerPointTransform: {fileID: 1551578056173623974}
   WorkerPrefab: {fileID: 845355837700331742, guid: 31fe78fb1a4b70148a0cff384810ff37, type: 3}
+  MainCamera: {fileID: 0}
 --- !u!65 &8277959642194642565
 BoxCollider:
   m_ObjectHideFlags: 0

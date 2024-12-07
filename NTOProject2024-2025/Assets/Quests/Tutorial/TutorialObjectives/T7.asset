@@ -28,3 +28,4 @@ MonoBehaviour:
   TechUIPositionTypeOnThisStep: 2
   IsTechPanelActiveOnThisStep: 1
   IsAutomaticalyEnterOnThisStep: 0
+  IsClosePlanMenuOnThisStep: 0

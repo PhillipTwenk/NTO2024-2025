@@ -18,6 +18,8 @@ public class TutorialObjective : ScriptableObject
     public bool IsTechPanelActiveOnThisStep;
     public bool IsAutomaticalyEnterOnThisStep;
 
+    public bool IsClosePlanMenuOnThisStep;
+
     public void CheckAndUpdateTutorialState()
     {
         if (IsActive && TutorialManager.IsTutorialActive)

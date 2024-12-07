@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SyncManager : MonoBehaviour
 {
-    private static readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+    private static readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 10);
     private static readonly Queue<Func<Task>> _taskQueue = new Queue<Func<Task>>();
     private static readonly object _lock = new object();
     private static bool _isProcessing = false;

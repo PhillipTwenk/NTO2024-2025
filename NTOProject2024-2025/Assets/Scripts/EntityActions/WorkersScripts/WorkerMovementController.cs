@@ -47,17 +47,17 @@ public class WorkerMovementController : MonoBehaviour
                 Vector3 point = GetSelectedMapPosition();
                 if(SelectedBuilding == null){
                     currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
-                    if (IsWorkerMove)
+                    if (!IsWorkerMove)
                     {
                         MovementWorkerTutorial.CheckAndUpdateTutorialState();
-                        IsWorkerMove = false;
+                        IsWorkerMove = true;
                     }
                 } else {
                     currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
-                    if (IsWorkerMovetoApiary)
+                    if (!IsWorkerMovetoApiary)
                     {
                         WorkerStartMovementToApiaryTutorial.CheckAndUpdateTutorialState();
-                        IsWorkerMovetoApiary = false;
+                        IsWorkerMovetoApiary = true;
                     }
                 }
                 SetWorkerDestination(currentWalkingPoint.transform, false);

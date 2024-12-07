@@ -171,16 +171,15 @@ public class PlansInShopControl : MonoBehaviour
                             shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                             shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
                         await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.Apiary.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.Apiary.CryoCrystalPrice);
+                        plansBuyCounter++;
+                        if (plansBuyCounter == 3)
+                        {
+                            BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                        }
                     });
                     PanelA.SetActive(true);
                     _buttonApiary.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(APlan);
-                    
-                    plansBuyCounter++;
-                    if (plansBuyCounter == 3)
-                    {
-                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
-                    }
                 }
                 else
                 {
@@ -216,16 +215,15 @@ public class PlansInShopControl : MonoBehaviour
                             shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                             shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
                         await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.ResidentialModule.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.ResidentialModule.CryoCrystalPrice);
+                        plansBuyCounter++;
+                        if (plansBuyCounter == 3)
+                        {
+                            BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                        }
                     });
                     PanelRHBought.SetActive(true);
                     _buttonHome.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(HPlan);
-                    
-                    plansBuyCounter++;
-                    if (plansBuyCounter == 3)
-                    {
-                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
-                    }
                 }
                 else
                 {
@@ -261,16 +259,15 @@ public class PlansInShopControl : MonoBehaviour
                             shopResources.HoneyGun, shopResources.MobileBase, shopResources.Storage,
                             shopResources.ResidentialModule, shopResources.Minner, shopResources.Pier);
                         await APIManager.Instance.PutPlayerResources(playerName, playerIron - shopResources.Minner.IronPrice, playerEnergy, playerFood, playerCryoCrystal - shopResources.Minner.CryoCrystalPrice);
+                        plansBuyCounter++;
+                        if (plansBuyCounter == 3)
+                        {
+                            BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                        }
                     });
                     PanelMBought.SetActive(true);
                     _buttonMiner.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(MPlan);
-                    
-                    plansBuyCounter++;
-                    if (plansBuyCounter == 3)
-                    {
-                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
-                    }
                 }
                 else
                 {

@@ -668,7 +668,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5463867566922479842, guid: 105e03b4134cfe54ca2d4f55af9198b8, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -712,8 +712,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 105e03b4134cfe54ca2d4f55af9198b8, type: 2}
-  m_sharedMaterial: {fileID: 5463867566922479842, guid: 105e03b4134cfe54ca2d4f55af9198b8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1556,8 +1556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b4f08976bcd784dbbd231cecc47e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WorkerStartWorkingOnApiaryTutorial: {fileID: 11400000, guid: 87baf16e6f8a89c4f92f5da2742a5c08, type: 2}
   ResourceUpdateEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
-  WorkerGoToThisBuilding: {fileID: 0}
 --- !u!114 &1649829646258614135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,6 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33815807fd64a419d874f207d3b6f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreateNewWorkerTutorial: {fileID: 11400000, guid: 5cd184f70bd4635449d504169676b263, type: 2}
   CurrentNumberWorkersInThisBuilding: 0
   MaxValueOfWorkersInThisBuilding: 1
   NumberOfActiveWorkersInThisBuilding: 0

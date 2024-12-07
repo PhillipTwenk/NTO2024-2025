@@ -162,9 +162,7 @@ public class UIManagerMainMenu : MonoBehaviour
 
          string shopName = $"{newName}'sShop";
          await APIManager.Instance.CreateShop(newName, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
-         StartGameAfterCreatingCharacter.TriggerEvent(); 
-         
-         LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);
+         StartGameAfterCreatingCharacter.TriggerEvent();
      }
      
      
