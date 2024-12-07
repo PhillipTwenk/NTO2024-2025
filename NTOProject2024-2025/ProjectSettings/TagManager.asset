@@ -11,6 +11,8 @@ TagManager:
   - CCminerPlace
   - PierPlace
   - WalkingPoint
+  - MainBuilding
+  - Bullet
   layers:
   - Default
   - TransparentFX

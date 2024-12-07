@@ -178,13 +178,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 492737070837660271}
-  - {fileID: 2569788523526923750}
   - {fileID: 6149116483158351243}
   - {fileID: 7719095776925128416}
   - {fileID: 1551578056173623974}
   - {fileID: 2960218052384502028}
   - {fileID: 2414807667470238583}
   - {fileID: 1438359831114724244}
+  - {fileID: 2569788523526923750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 183.279, z: 0}
 --- !u!1 &1283320391402301222

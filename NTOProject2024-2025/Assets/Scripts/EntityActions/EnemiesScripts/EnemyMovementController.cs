@@ -1,23 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class EnemyMovementController : MonoBehaviour
 {
     public Transform EnemyPointOfDestination;
     public Transform MainBuildingPosition;
-    private NavMeshAgent Agent;
-    private string[] priorityList = {"MainBuilding", "Building", "Worker", "Player"}; // Лист приоритетов для врага 
+    public GameObject SelectedBuilding;
+    private NavMeshAgent agent;
     void Start()
     {
-        Agent = GetComponent<NavMeshAgent>();
-        Debug.Log(Agent);
+        agent = GetComponent<NavMeshAgent>();
+        MainBuildingPosition = GameObject.FindWithTag("MainBuilding").transform.Find("EndPointWalk").transform;
+        EnemyPointOfDestination = MainBuildingPosition;
+        Debug.Log(agent);
     }
 
     void Update()
     {
         if (EnemyPointOfDestination) {
-            Agent.destination = new Vector3(EnemyPointOfDestination.position.x, EnemyPointOfDestination.position.y, EnemyPointOfDestination.position.z);
+            agent.destination = new Vector3(EnemyPointOfDestination.position.x, EnemyPointOfDestination.position.y, EnemyPointOfDestination.position.z);
         } else {
-            Agent.destination = new Vector3(MainBuildingPosition.position.x, MainBuildingPosition.position.y, MainBuildingPosition.position.z);
+            agent.destination = new Vector3(MainBuildingPosition.Find("EndPointWalk").transform.position.x, MainBuildingPosition.Find("EndPointWalk").transform.position.y, MainBuildingPosition.Find("EndPointWalk").transform.position.z);
         }
     }
 
@@ -27,13 +31,5 @@ public class EnemyMovementController : MonoBehaviour
 
     public void ResetEnemyDestination(){
         EnemyPointOfDestination = null;
-    }
-
-    private void OnCollisionEnter(Collision other) {
-        foreach (var priority in priorityList){
-            if (priority == other.gameObject.tag){
-                EnemyPointOfDestination = other.transform;
-            }
-        }
     }
 }
