@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,13 +29,14 @@ public class UIManagerMainMenu : MonoBehaviour
     [SerializeField] private PriceShopProduct StartValuePierShop;
 
     public static EntityID WhichPlayerCreate;
+
+    [SerializeField] private VolumeSlider volumeMusic;
+    [SerializeField] private VolumeSlider volumeEffect;
     //[SerializeField] private EntityID player1;
     //[SerializeField] private EntityID player2;
     //[SerializeField] private EntityID player3;
     
-        
-        
-        
+
     /// <summary>
     /// Запускает игру по нажатию на кнопку старта
     /// </summary>
@@ -162,9 +164,7 @@ public class UIManagerMainMenu : MonoBehaviour
 
          string shopName = $"{newName}'sShop";
          await APIManager.Instance.CreateShop(newName, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
-         StartGameAfterCreatingCharacter.TriggerEvent(); 
-         
-         LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(false);
+         StartGameAfterCreatingCharacter.TriggerEvent();
      }
      
      

@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 public class WorkerMovementController : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective MovementWorkerTutorial;
+    [SerializeField] private TutorialObjective WorkerStartMovementToApiaryTutorial;
+    private bool IsWorkerMove;
+    private bool IsWorkerMovetoApiary;
+    
+    
     public Transform WorkerPointOfDestination;
     private NavMeshAgent agent;
     public bool ReadyForWork;
@@ -40,8 +47,18 @@ public class WorkerMovementController : MonoBehaviour
                 Vector3 point = GetSelectedMapPosition();
                 if(SelectedBuilding == null){
                     currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
+                    if (!IsWorkerMove)
+                    {
+                        MovementWorkerTutorial.CheckAndUpdateTutorialState();
+                        IsWorkerMove = true;
+                    }
                 } else {
                     currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
+                    if (!IsWorkerMovetoApiary)
+                    {
+                        WorkerStartMovementToApiaryTutorial.CheckAndUpdateTutorialState();
+                        IsWorkerMovetoApiary = true;
+                    }
                 }
                 SetWorkerDestination(currentWalkingPoint.transform, false);
             }

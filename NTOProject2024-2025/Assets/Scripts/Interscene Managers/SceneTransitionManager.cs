@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
     [SerializeField] private GameEvent EndMoveToSceneLocationEvent;
+    [SerializeField] private GameEvent StartTutorial;
     [SerializeField] private string LocationSceneName;
     [SerializeField] private string MainMenuSceneName;
     [SerializeField] private string UISceneName;
+    private bool IsNewPlayer;
 
 
-
+    public void NewPlayer() => IsNewPlayer = true;
+    
     /// <summary>
     /// Метод перехода на основную сцену
     /// </summary>
@@ -35,6 +38,7 @@ public class SceneTransitionManager : MonoBehaviour
             SceneManager.LoadSceneAsync(LocationSceneName, LoadSceneMode.Additive);
         yield return new WaitUntil(()=>LoadingSceneLocation.isDone);
 
+        Debug.Log(1111111111111111111);
         UIManagerLocation.WhichPlayerCreate = ActivePlayer;
 
         //Установка уровня как основной сцены
@@ -59,5 +63,10 @@ public class SceneTransitionManager : MonoBehaviour
         
         //LoadingCanvas.SetActive(false);
         EndMoveToSceneLocationEvent.TriggerEvent();
+        
+        if (IsNewPlayer)
+        {
+            StartTutorial.TriggerEvent();
+        }
     }
 }

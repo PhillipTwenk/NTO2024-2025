@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective PlansPanelOpenTutorial;
+    [SerializeField] private TutorialObjective ApiaryStartBuildingTutorial;
+    [SerializeField] private TutorialObjective HomeStartBuildingTutorial;
+
     public GameEvent OpenBuildingPanelEvent;
     public GameEvent CloseBuildingPanelEvent;
     public GameEvent StartPlacingBuildEvent;
@@ -45,6 +50,7 @@ public class UIManager : MonoBehaviour
         if (Input.GetButtonDown("OpenBuildingPanel") && IsOpenBuildingPanel)
         {
             Debug.Log("Открыта панель строительства");
+            PlansPanelOpenTutorial.CheckAndUpdateTutorialState();
             OpenBuildingPanelEvent.TriggerEvent();
             IsOpenBuildingPanel = false;
             return;
@@ -125,6 +131,14 @@ public class UIManager : MonoBehaviour
         BuildingManager.Instance.MouseIndicator = PlaceNewBuildingTrigger;
         BuildingManager.Instance.CurrentBuilding = plan.buildingSO.PrefabBuilding;
         StartPlacingBuildEvent.TriggerEvent();
+        if (plan.buildingSO.PrefabBuilding.transform.GetChild(0).GetComponent<BuildingData>().Title == "Пасека")
+        {
+            ApiaryStartBuildingTutorial.CheckAndUpdateTutorialState();
+        }
+        if (plan.buildingSO.PrefabBuilding.transform.GetChild(0).GetComponent<BuildingData>().Title == "Жилой модуль")
+        {
+            HomeStartBuildingTutorial.CheckAndUpdateTutorialState();
+        }
     }
 
     /// <summary>

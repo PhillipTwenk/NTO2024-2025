@@ -72,16 +72,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -53.857666, y: 46.072365, z: 123.85305}
+      - m_Value: {x: -217.44232, y: 58.355125, z: -118.8551}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -50.285675, y: 56.09503, z: 113.28353}
+      - m_Value: {x: -212.79059, y: 71.40747, z: -132.6196}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -51.500824, y: 50.628128, z: 114.498695}
+      - m_Value: {x: -214.37305, y: 64.28802, z: -131.03711}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -46.746338, y: 50.893394, z: 100.985054}
+      - m_Value: {x: -208.18137, y: 64.63347, z: -148.63571}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -915,6 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8927273536425710366}
   - component: {fileID: 7690992117460924695}
+  - component: {fileID: 6414665736315048926}
   m_Layer: 0
   m_Name: Field Generator
   m_TagString: Untagged
@@ -972,6 +973,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &6414665736315048926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274131964391625737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 39.798306, y: 45.399014, z: 45.48077}
+  m_Center: {x: 117.30462, y: 22.34952, z: -17.424995}
 --- !u!1 &2295165117701136187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,16 +1585,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -26.0195, y: 43.68492, z: 93.08674}
+      - m_Value: {x: -181.18918, y: 55.245995, z: -158.92154}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -35.358337, y: 56.09503, z: 94.060936}
+      - m_Value: {x: -193.35098, y: 71.40747, z: -157.65286}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -33.870087, y: 50.628128, z: 94.92015}
+      - m_Value: {x: -191.41284, y: 64.28802, z: -156.53394}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -53.521713, y: 64.722145, z: 91.65835}
+      - m_Value: {x: -217.00482, y: 82.64241, z: -160.78171}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -2133,16 +2155,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -23.181152, y: 75.55671, z: 95.64434}
+      - m_Value: {x: -177.49284, y: 96.752075, z: -155.59082}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -35.358337, y: 67.01033, z: 94.060936}
+      - m_Value: {x: -193.35098, y: 85.62228, z: -157.65286}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -33.870087, y: 61.543427, z: 94.92015}
+      - m_Value: {x: -191.41284, y: 78.502815, z: -156.53394}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -53.236572, y: 61.047478, z: 91.55661}
+      - m_Value: {x: -216.6335, y: 77.85696, z: -160.91422}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -2452,16 +2474,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -53.395462, y: 43.454247, z: 65.428856}
+      - m_Value: {x: -216.84041, y: 54.945595, z: -194.93994}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -47.213425, y: 56.09503, z: 75.45149}
+      - m_Value: {x: -208.78966, y: 71.40747, z: -181.88763}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -47.21344, y: 50.628128, z: 73.73298}
+      - m_Value: {x: -208.78967, y: 64.28802, z: -184.12561}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -47.213364, y: 58.52861, z: 102.25548}
+      - m_Value: {x: -208.78957, y: 74.57668, z: -146.98126}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3034,16 +3056,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -84.18982, y: 74.98002, z: 95.54966}
+      - m_Value: {x: -256.94336, y: 96.00107, z: -155.71414}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -71.27223, y: 67.01033, z: 95.515076}
+      - m_Value: {x: -240.12102, y: 85.62228, z: -155.75916}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -72.99072, y: 61.543427, z: 95.515076}
+      - m_Value: {x: -242.35898, y: 78.502815, z: -155.75916}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -47.44388, y: 48.718094, z: 95.51506}
+      - m_Value: {x: -209.08977, y: 61.800613, z: -155.75919}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3260,16 +3282,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -82.898056, y: 42.8199, z: 95.8726}
+      - m_Value: {x: -255.26114, y: 54.11949, z: -155.29358}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -71.27223, y: 56.09503, z: 95.515076}
+      - m_Value: {x: -240.12102, y: 71.40747, z: -155.75916}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -72.99072, y: 50.628128, z: 95.515076}
+      - m_Value: {x: -242.35898, y: 64.28802, z: -155.75916}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -50.99623, y: 66.63672, z: 95.51506}
+      - m_Value: {x: -213.71593, y: 85.13572, z: -155.75919}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3584,16 +3606,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -53.09102, y: 76.30639, z: 125.95717}
+      - m_Value: {x: -216.44394, y: 97.72838, z: -116.11496}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -50.285675, y: 67.01033, z: 113.28353}
+      - m_Value: {x: -212.79059, y: 85.62228, z: -132.6196}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -51.500824, y: 61.543427, z: 114.498695}
+      - m_Value: {x: -214.37305, y: 78.502815, z: -131.03711}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -46.746353, y: 52.720245, z: 97.49451}
+      - m_Value: {x: -208.1814, y: 67.01255, z: -153.1814}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:
@@ -3908,16 +3930,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -53.395462, y: 74.576355, z: 64.252426}
+      - m_Value: {x: -216.84042, y: 95.47538, z: -196.47198}
         m_Name: Pos 1
         m_Overridden: 1
-      - m_Value: {x: -47.213425, y: 67.01033, z: 75.45149}
+      - m_Value: {x: -208.78966, y: 85.62228, z: -181.88763}
         m_Name: Pos 2
         m_Overridden: 1
-      - m_Value: {x: -47.21344, y: 61.543427, z: 73.73298}
+      - m_Value: {x: -208.78967, y: 78.502815, z: -184.12561}
         m_Name: Pos 3
         m_Overridden: 1
-      - m_Value: {x: -47.213364, y: 54.473343, z: 102.07094}
+      - m_Value: {x: -208.78957, y: 69.29558, z: -147.22159}
         m_Name: Pos 4
         m_Overridden: 1
     m_Vector4f:

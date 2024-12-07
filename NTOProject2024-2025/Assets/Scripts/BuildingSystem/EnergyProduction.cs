@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class EnergyProduction : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective WorkerStartWorkingOnApiaryTutorial;
+    
     private BuildingData _buildingData;
     [SerializeField] private GameEvent ResourceUpdateEvent;
 
@@ -51,23 +54,30 @@ public class EnergyProduction : MonoBehaviour
             Debug.Log($"Производство меда: {honeyProduction}");
 
             string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources =
-                await APIManager.Instance.GetPlayerResources(playerName);
+            PlayerResources playerResources = null;
+            await SyncManager.Enqueue(async () =>
+            {
+                playerResources =
+                    await APIManager.Instance.GetPlayerResources(playerName);
+            });
             int OldEnergyValue = playerResources.Energy;
             int OldFoodValue = playerResources.Food;
             playerResources.Energy += honeyProduction;
             playerResources.Food += foodProduction;
             LogSender(playerName, "Пасека начала производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue);
 
-            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
-                playerResources.Food, playerResources.CryoCrystal);
-        
-            ResourceUpdateEvent.TriggerEvent();
+            await SyncManager.Enqueue(async () =>
+            {
+                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
+                    playerResources.Food, playerResources.CryoCrystal);
+                ResourceUpdateEvent.TriggerEvent();
+                WorkerStartWorkingOnApiaryTutorial.CheckAndUpdateTutorialState();
+            });
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
         }
     }
 
-    private async void OnDisable()
+    public PlayerResources OnDestroyThis(PlayerResources playerResources)
     {
         if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= 1)
         {
@@ -79,20 +89,23 @@ public class EnergyProduction : MonoBehaviour
             int foodProduction = _buildingData.Production[1];
 
             string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-            PlayerResources playerResources =
-                await APIManager.Instance.GetPlayerResources(playerName);
             int OldEnergyValue = playerResources.Energy;
             int OldFoodValue = playerResources.Food;
             playerResources.Energy -= honeyProduction;
             playerResources.Food -= foodProduction;
             LogSender(playerName, "Пасека прекратила производство энергии и мёда", playerResources.Energy - OldEnergyValue, playerResources.Food - OldFoodValue );
-            await SyncManager.Enqueue(async () =>
-            {
-                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
-                    playerResources.Food, playerResources.CryoCrystal);
-            });
+            // await SyncManager.Enqueue(async () =>
+            // {
+            //     await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
+            //         playerResources.Food, playerResources.CryoCrystal);
+            // });
             ResourceUpdateEvent.TriggerEvent();
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+            return playerResources;
+        }
+        else
+        {
+            return playerResources;
         }
     }
 

@@ -5,6 +5,13 @@ using Unity.AI.Navigation;
 
 public class BuildingManager : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective ApiaryPlacementTutorial;
+    [SerializeField] private TutorialObjective WaitWorkerApiaryTutorial;
+    [SerializeField] private TutorialObjective HomePlacementTutorial;
+    [SerializeField] private TutorialObjective WaitWorkerHomeTutorial;
+    [SerializeField] private TutorialObjective MinerPlacementTutorial;
+    [SerializeField] private TutorialObjective WaitWorkerMinerTutorial;
     
     public static BuildingManager Instance { get; private set; }
 
@@ -157,13 +164,16 @@ public class BuildingManager : MonoBehaviour
                             await _navMeshSurface.UpdateNavMesh(_navMeshSurface.navMeshData);
                             Debug.Log("NavMesh updated");
 
+                            TutorialPLacementBuildingsCheck(buildingData);
+                            
                             //Ожидаем прибытия рабочего 
                             await WorkersInterBuildingControl.Instance.SendWorkerToBuilding(true, buildingData, newBuildingObject.transform);
                             
                             //Ожидаем завершения его строительства
                             await WorkersInterBuildingControl.Instance.WorkerEndWork(buildingData, newBuildingObject.transform);
 
-
+                            TutorialWaitWorkersCheck(buildingData);
+                            
                             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
                             
                             //Сохранение данных здания в SO сохранения
@@ -238,6 +248,40 @@ public class BuildingManager : MonoBehaviour
         
         UpdateResourcesEvent.TriggerEvent();
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
+    }
+
+    private void TutorialPLacementBuildingsCheck(BuildingData buildingData)
+    {
+        string BuildingName = buildingData.Title;
+        switch (BuildingName)
+        {
+            case "Пасека":
+                ApiaryPlacementTutorial.CheckAndUpdateTutorialState();
+                break;
+            case "Жилой модуль":
+                HomePlacementTutorial.CheckAndUpdateTutorialState();
+                break;
+            case "Добытчик":
+                MinerPlacementTutorial.CheckAndUpdateTutorialState();
+                break;
+        }
+    }
+    
+    private void TutorialWaitWorkersCheck(BuildingData buildingData)
+    {
+        string BuildingName = buildingData.Title;
+        switch (BuildingName)
+        {
+            case "Пасека":
+                WaitWorkerApiaryTutorial.CheckAndUpdateTutorialState();
+                break;
+            case "Жилой модуль":
+                WaitWorkerHomeTutorial.CheckAndUpdateTutorialState();
+                break;
+            case "Добытчик":
+                WaitWorkerMinerTutorial.CheckAndUpdateTutorialState();
+                break;
+        }
     }
 }
 

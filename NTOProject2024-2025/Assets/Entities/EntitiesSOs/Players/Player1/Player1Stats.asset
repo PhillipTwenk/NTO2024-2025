@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40732d7da4beaba42b124e84dde30f6d, type: 3}
   m_Name: Player1Stats
   m_EditorClassIdentifier: 
-  speed: 50
-  sprintSpeed: 80
-  normalSpeed: 20
+  speed: 40
+  sprintSpeed: 60
+  normalSpeed: 40
   speedTurn: 360
   jumpForce: 3

@@ -64,7 +64,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        if (buildingData.IsThisBuilt && Time.timeScale == 1f)
+        if (buildingData.IsThisBuilt && Time.timeScale == 1f && !TutorialManager.IsTutorialActive)
         {
             IsPanelActive = true;
         
@@ -227,6 +227,11 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         {
             playerResources.Food += building.GetComponent<ThisBuildingWorkersControl>()
                 .CurrentNumberWorkersInThisBuilding * 20;
+        }
+
+        if (building.GetComponent<EnergyProduction>())
+        {
+            playerResources = building.GetComponent<EnergyProduction>().OnDestroyThis(playerResources);
         }
         Dictionary<string,string> buildingDictionary = new Dictionary<string, string>();
         buildingDictionary.Add("EnergyValueUpdate", $"{playerResources.Energy - OldEnergyValue}");

@@ -1767,7 +1767,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.5, y: 3.5952148, z: -30.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8770141329945838586}
@@ -2612,6 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33815807fd64a419d874f207d3b6f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreateNewWorkerTutorial: {fileID: 0}
   CurrentNumberWorkersInThisBuilding: 1
   MaxValueOfWorkersInThisBuilding: 1
   NumberOfActiveWorkersInThisBuilding: 0
@@ -2630,6 +2631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b4f08976bcd784dbbd231cecc47e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WorkerStartWorkingOnApiaryTutorial: {fileID: 0}
   ResourceUpdateEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
 --- !u!1 &5136938154985716010
 GameObject:

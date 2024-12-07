@@ -38,8 +38,9 @@ public class QuestController : MonoBehaviour
     }
 
     //При старте игры проверка завершенных квестов и их убирание из массива
-    private void OnEnable()
+    public void QuestInitialize()
     {
+        Debug.Log(0000000000000000000000000);
         playerID = UIManagerLocation.WhichPlayerCreate;
         for(int i = playerID.openQuests.Count -1; i>=0; i--)
         {

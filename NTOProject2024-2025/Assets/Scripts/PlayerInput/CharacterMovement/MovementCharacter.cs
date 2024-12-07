@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class MovementCharacter : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective WASDTutorial;
+    private bool IsBearMove;
+    
+    
     private EntityID playerID;
     private Rigidbody _rb;
     private PlayerAnimationController _animationController;
@@ -14,7 +19,7 @@ public class MovementCharacter : MonoBehaviour
     private bool IsInAir;
 
     private bool IsSceneLoaded;
-    
+
     private void Start()
     {
         _animationController = GetComponent<PlayerAnimationController>();
@@ -59,7 +64,12 @@ public class MovementCharacter : MonoBehaviour
     }
     void Move()
     {
-        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.playerStats.Speed * Time.deltaTime); 
+        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.playerStats.Speed * Time.deltaTime);
+        if (!IsBearMove)
+        {
+            Utility.Invoke(this, () => WASDTutorial.CheckAndUpdateTutorialState(), 2f);
+            IsBearMove = true;
+        }
     }
 
     void Look()
