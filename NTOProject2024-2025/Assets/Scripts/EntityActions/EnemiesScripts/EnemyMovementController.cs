@@ -11,7 +11,7 @@ public class EnemyMovementController : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        MainBuildingPosition = GameObject.FindWithTag("MainBuilding").transform;
+        MainBuildingPosition = GameObject.FindWithTag("MainBuilding").transform.Find("EndPointWalk").transform;
         EnemyPointOfDestination = MainBuildingPosition;
         Debug.Log(agent);
     }

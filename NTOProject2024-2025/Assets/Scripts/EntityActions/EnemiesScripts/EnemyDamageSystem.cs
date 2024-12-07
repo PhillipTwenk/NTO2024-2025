@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class EnemyDamageSystem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int damage;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerStay(Collider other) {
+        if(other.name == "Bear"){
+            // смерть персонажа
+        } else if (other.transform.tag == "Building"){
+            // нанесение урона зданию
+        } else if (other.transform.tag == "Worker"){
+            // смерть рабочего
+        }
     }
+
 }

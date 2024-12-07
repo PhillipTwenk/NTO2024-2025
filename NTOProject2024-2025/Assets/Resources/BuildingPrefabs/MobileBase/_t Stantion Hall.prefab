@@ -793,6 +793,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8668825873607246535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1858607121437976956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2761683648751522195}
+  m_Layer: 0
+  m_Name: EndPointWalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2761683648751522195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858607121437976956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.9995907, z: -0, w: -0.028609635}
+  m_LocalPosition: {x: 17.1, y: 0.104871035, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5894361588510789822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988126420224907161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1777,7 @@ Transform:
   - {fileID: 8668825873607246535}
   - {fileID: 8905097784749352164}
   - {fileID: 275200073803173820}
+  - {fileID: 2761683648751522195}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4235555856182636373
@@ -2542,6 +2574,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PossiblityPutEInThisBuilding: 1
   OpenDescriptionPanel: {fileID: 11400000, guid: 0d9b22dcf1857b944bdeffd19b8f09ee, type: 2}
+  OpenBarterMenuEvent: {fileID: 11400000, guid: 4921662764b76d143bb3b89a8e370e58, type: 2}
+  CloseBarterMenuEvent: {fileID: 11400000, guid: a6af6a147a616a34c801f8a2bd09b3b2, type: 2}
   InteractionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2557,8 +2591,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OpenBarterMenuEvent: {fileID: 11400000, guid: 4921662764b76d143bb3b89a8e370e58, type: 2}
-  CloseBarterMenuEvent: {fileID: 11400000, guid: a6af6a147a616a34c801f8a2bd09b3b2, type: 2}
+  TextOnEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Texthint: {fileID: 4235555856182636373}
   PointsOfBuildings:
   - {fileID: 5303162940219184309}
@@ -2582,6 +2617,7 @@ MonoBehaviour:
   NumberOfActiveWorkersInThisBuilding: 0
   buildingSpawnWorkerPointTransform: {fileID: 8905097784749352164}
   WorkerPrefab: {fileID: 67134279220973632, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
+  MainCamera: {fileID: 0}
 --- !u!114 &8281539622866198797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2595,7 +2631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResourceUpdateEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
-  WorkerGoToThisBuilding: {fileID: 0}
 --- !u!1 &5136938154985716010
 GameObject:
   m_ObjectHideFlags: 0
