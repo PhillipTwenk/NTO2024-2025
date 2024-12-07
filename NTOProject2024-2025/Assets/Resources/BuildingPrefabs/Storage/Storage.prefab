@@ -778,7 +778,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.698358, z: -0, w: 0.7157487}
   m_LocalPosition: {x: -37.825397, y: 3.655159, z: -67.91023}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8538514924523355512}
@@ -1298,11 +1298,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PossiblityPutEInThisBuilding: 0
   OpenDescriptionPanel: {fileID: 11400000, guid: 0d9b22dcf1857b944bdeffd19b8f09ee, type: 2}
+  OpenBarterMenuEvent: {fileID: 0}
+  CloseBarterMenuEvent: {fileID: 0}
   InteractionEvent:
     m_PersistentCalls:
       m_Calls: []
-  OpenBarterMenuEvent: {fileID: 0}
-  CloseBarterMenuEvent: {fileID: 0}
+  TextOnEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Texthint: {fileID: 0}
   PointsOfBuildings:
   - {fileID: 427550019803902708}

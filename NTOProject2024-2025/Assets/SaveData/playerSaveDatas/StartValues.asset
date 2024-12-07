@@ -17,9 +17,9 @@ MonoBehaviour:
   playerBuildings:
   - {fileID: 4160612270241140356, guid: e0cefe3937c31a643b0e3960e02b8f5b, type: 3}
   buildingsTransform:
-  - position: {x: 94, y: 4, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -278.8537, y: 2.262222, z: -1.092743}
+    rotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+    scale: {x: 2.585373, y: 2.585373, z: 2.585403}
   BuildingDatas:
   - Level: 1
     Durability: 175

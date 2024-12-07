@@ -493,7 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndMoveToSceneLocationEvent: {fileID: 11400000, guid: a9b84c69e3adf7d479b6c7ff086bc6a8, type: 2}
   StartTutorial: {fileID: 11400000, guid: 8e421e349be70094c9bd4b8cb43da81c, type: 2}
-  LocationSceneName: Location
+  LocationSceneName: Main Location
   MainMenuSceneName: MainMenu
   UISceneName: UI
 --- !u!114 &419695269

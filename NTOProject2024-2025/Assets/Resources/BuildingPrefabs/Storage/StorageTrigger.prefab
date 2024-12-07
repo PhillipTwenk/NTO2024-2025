@@ -373,7 +373,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.698358, z: -0, w: 0.7157487}
   m_LocalPosition: {x: -7.1, y: 3.655159, z: -68.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 506651589882170986}
@@ -433,7 +433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66884e9cfbc7ad54cad500d662bb4755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoneyProduction: 0
+  HoneyConsumption: 0
+  NumberOfWorkers: 0
 --- !u!1 &4654203089771753797
 GameObject:
   m_ObjectHideFlags: 0
