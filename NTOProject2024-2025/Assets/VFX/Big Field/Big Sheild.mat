@@ -58,14 +58,16 @@ Material:
     - _Alpha_Clip: 0.04
     - _Apha_intensity: 0.4
     - _Emissiojn_Fresnel_Power: 0
-    - _Emission_Fresnel_Power: 8.1
+    - _Emission_Fresnel_Power: 6.91
     - _Fresnel_Power: 1.29
+    - _Height: 10.03
     - _Noise_Scale: 139.98
     - _Noise_speed: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Size_height: -15.31
     m_Colors:
-    - _Emission_Color: {r: 4.030425, g: 1.6670347, b: 0, a: 0}
+    - _Emission_Color: {r: 8.102048, g: 3.3384006, b: 0.3439547, a: 1}
     - _Sota_Color: {r: 1.1353016, g: 1.3623617, b: 4.5412064, a: 0}
     - _Sota_Second_Color: {r: 0.14265566, g: 1.0757581, b: 2.2706025, a: 0}
   m_BuildTextureStacks: []

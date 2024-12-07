@@ -63,18 +63,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ClampM: 0
+    - _ClampMax: 0.04
     - _Clouds_Speed: 0.38
     - _Emission_Strenght: 0
     - _Float: 0
-    - _Ocean_Speed: 0.008
+    - _Ocean_Speed: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Rough: 0.13
+    - _Rough: 0
     - _Roughness_1: 0
-    - _fresnel_power: 1.74
+    - _fresnel_power: 2.44
     m_Colors:
     - _Clouds_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Fresnel_color: {r: 0.28595588, g: 0.4611154, b: 0.509434, a: 0}
+    - _Fresnel_color: {r: 0.48905307, g: 0.62430906, b: 0.6603774, a: 0}
     - _Ocean: {r: 1.1127135, g: 3.0606635, b: 6.6415095, a: 0}
     - _clouds_tiling: {r: 2, g: 2, b: 0, a: 0}
     - _white: {r: 2.4573061, g: 3.6441357, b: 15.786329, a: 0}
