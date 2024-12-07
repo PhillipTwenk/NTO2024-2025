@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3379743434024046391}
   m_Layer: 0
-  m_Name: Boer
+  m_Name: Miner
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

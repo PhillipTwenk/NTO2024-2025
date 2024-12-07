@@ -75,6 +75,6 @@ public class EntryPoint : MonoBehaviour
     
     private void InitializeData()
     {
-        
+        JSONSerializeManager.Instance.AwakeJSONLoad();
     }
 }

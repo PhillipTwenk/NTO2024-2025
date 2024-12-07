@@ -32,7 +32,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
         playerBuildings = new List<GameObject>();
         foreach (var buildingName in serializableData.buildingNames)
         {
-            GameObject prefab = Resources.Load<GameObject>($"Buildings/BuildingPrefabs/{buildingName}");
+            GameObject prefab = Resources.Load<GameObject>($"BuildingPrefabs/{buildingName}/{buildingName}");
             if (prefab != null)
             {
                 playerBuildings.Add(prefab);

@@ -2344,7 +2344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4312338188139212254}
   m_Layer: 0
-  m_Name: wharf
+  m_Name: Pier
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
