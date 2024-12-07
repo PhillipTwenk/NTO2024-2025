@@ -6,6 +6,9 @@ using UnityEngine.AI;
 
 public class ThisBuildingWorkersControl : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective CreateNewWorkerTutorial;
+    
     public int CurrentNumberWorkersInThisBuilding;
     public int MaxValueOfWorkersInThisBuilding;
     public int NumberOfActiveWorkersInThisBuilding;
@@ -26,6 +29,7 @@ public class ThisBuildingWorkersControl : MonoBehaviour
             newWorker.transform.SetParent(null);
             newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
             text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
+            CreateNewWorkerTutorial.CheckAndUpdateTutorialState();
         }
     }
 

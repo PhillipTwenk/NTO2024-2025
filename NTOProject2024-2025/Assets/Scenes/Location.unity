@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &285227407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1413,58 +1413,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!1 &553628871
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553628872}
-  - component: {fileID: 553628873}
-  m_Layer: 0
-  m_Name: TutorialManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &553628872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553628871}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1444096220}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &553628873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553628871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9072a4cf05643374080159632447da40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TutorialObjectives: []
-  BearQC: {fileID: 0}
-  MainUIPanel: {fileID: 0}
-  TechnicalUIPanel: {fileID: 0}
-  TitleText: {fileID: 0}
-  FadeFone: {fileID: 0}
-  charactersPerSecond: 0
-  PositionTypes: []
 --- !u!1 &567572272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +1954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &710603334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3488,7 +3436,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1164631857
 GameObject:
@@ -4603,7 +4551,6 @@ Transform:
   - {fileID: 1967124127}
   - {fileID: 1758617708}
   - {fileID: 1617946107}
-  - {fileID: 553628872}
   - {fileID: 567572273}
   - {fileID: 1477698909}
   m_Father: {fileID: 0}
@@ -4727,7 +4674,7 @@ MonoBehaviour:
   TechnicalUIPanel: {fileID: 1346207734}
   TitleText: {fileID: 368303858}
   FadeFone: {fileID: 2134554447}
-  charactersPerSecond: 5
+  charactersPerSecond: 30
   PositionTypes:
   - {x: 270.2, y: -7.7664, z: 0}
   - {x: 1.8, y: -7.7664, z: 0}
@@ -5122,6 +5069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b8fde9ef851dd4680ce13c9f2d8e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WASDTutorial: {fileID: 0}
   matrix: 1
 --- !u!136 &1543541983
 CapsuleCollider:
@@ -8066,6 +8014,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9190f026611d86940a4dbb4c4dd469a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ApiaryPlacementTutorial: {fileID: 11400000, guid: be4627e97fe3f6943aca0a17a4517b8a, type: 2}
+  WaitWorkerApiaryTutorial: {fileID: 11400000, guid: 91af34f56539df647b88b8e0c0d85169, type: 2}
+  HomePlacementTutorial: {fileID: 11400000, guid: 0509a0f97989e5e48a25cc1918e7f5b3, type: 2}
+  WaitWorkerHomeTutorial: {fileID: 11400000, guid: 6e6f7f3acf0a46b479d8df31647a1813, type: 2}
+  MinerPlacementTutorial: {fileID: 11400000, guid: 2f91ddec39038e344a50c8bd20d2766d, type: 2}
+  WaitWorkerMinerTutorial: {fileID: 11400000, guid: 22b0f481a009afb49a5b39b54978d385, type: 2}
   HintNotEnoughtResourcesText: "\u041D\u0435\u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E
     \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432 \u0434\u043B\u044F \u043F\u043E\u0441\u0442\u0440\u043E\u0439\u043A\u0438
     \u0437\u0434\u0430\u043D\u0438\u044F"
@@ -8171,7 +8125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2134554448
 RectTransform:
   m_ObjectHideFlags: 0

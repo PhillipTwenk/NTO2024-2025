@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class EnergyProduction : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective WorkerStartWorkingOnApiaryTutorial;
+    
     private BuildingData _buildingData;
     [SerializeField] private GameEvent ResourceUpdateEvent;
 
@@ -63,6 +66,7 @@ public class EnergyProduction : MonoBehaviour
                 playerResources.Food, playerResources.CryoCrystal);
         
             ResourceUpdateEvent.TriggerEvent();
+            WorkerStartWorkingOnApiaryTutorial.CheckAndUpdateTutorialState();
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
         }
     }

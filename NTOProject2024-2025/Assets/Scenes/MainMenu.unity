@@ -2166,7 +2166,7 @@ MonoBehaviour:
   StartTutorialEvent: {fileID: 11400000, guid: 8e421e349be70094c9bd4b8cb43da81c, type: 2}
   inputFieldNewName: {fileID: 1893696308}
   StartValueIron: 300
-  StartValueEnergy: 0
+  StartValueEnergy: 10
   StartValueFood: 20
   StartValueCrioCrystal: 10
   StartValueApiaryShop:

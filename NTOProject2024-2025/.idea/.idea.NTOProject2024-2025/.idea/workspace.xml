@@ -20,51 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllyUnits/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AllyUnits/Worker.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quests/QuestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/QuestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T10.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T10.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T11.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T11.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T12.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T12.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T13.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T13.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T14.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T14.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T15.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T15.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T7.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T7.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T8.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T8.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T9.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Objectives/T9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/Tutorial.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/Tutorial.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T12.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjectives/T8.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_HDRP_Patch.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_URP_Patch.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationCondensed SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/GamestationDisplay SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,8 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/LoadingCanvasController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/Json/ISerializableSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HelperClasses/ResourceData.cs" />
@@ -153,7 +133,6 @@
         <option value="$PROJECT_DIR$/Assets/Test5.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedPlayerLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" />
@@ -164,7 +143,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PierCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/MinerCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SelectThisButtonMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
@@ -173,8 +151,6 @@
         <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/Semaphore/SyncManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/LocalAudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/EntryLocationTriggerHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
@@ -184,17 +160,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/CharacterSoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CameraSizeTriggerLocationChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/QuestController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -210,7 +192,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -309,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="707" y="361" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1032@0.0.1920.1032" timestamp="1731582389475" />
-    <state x="461" y="161" key="SettingsEditor" timestamp="1731582516706">
+    <state x="461" y="161" key="SettingsEditor" timestamp="1733531530214">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1731582516706" />
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1733531530214" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1733441792767">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class PlansInShopControl : MonoBehaviour
 {
+    [Header("Tutorial")]
+    [SerializeField] private TutorialObjective OpenShopTutorial;
+    [SerializeField] private TutorialObjective BuyAllPlansTutorial;
+    [SerializeField] private TutorialObjective CloseShopTutorialTutorial;
+    private int plansBuyCounter;
+    
     [SerializeField] private GameObject PanelHoneyGun;
     [SerializeField] private GameObject PanelStorage;
     [SerializeField] private GameObject PanelPier;
@@ -50,6 +56,8 @@ public class PlansInShopControl : MonoBehaviour
     /// </summary>
     private async void OnEnable()
     {
+        OpenShopTutorial.CheckAndUpdateTutorialState();
+        
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
         NotEnoughtResourcesTextPanel.SetActive(false);
         PanelHoneyGunBought.SetActive(false);
@@ -114,6 +122,11 @@ public class PlansInShopControl : MonoBehaviour
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
+    private void OnDisable()
+    {
+        CloseShopTutorialTutorial.CheckAndUpdateTutorialState();
+    }
+
     /// <summary>
     /// Нажатие на кнопку покупки чертежа
     /// </summary>
@@ -162,6 +175,12 @@ public class PlansInShopControl : MonoBehaviour
                     PanelA.SetActive(true);
                     _buttonApiary.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(APlan);
+                    
+                    plansBuyCounter++;
+                    if (plansBuyCounter == 3)
+                    {
+                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                    }
                 }
                 else
                 {
@@ -201,6 +220,12 @@ public class PlansInShopControl : MonoBehaviour
                     PanelRHBought.SetActive(true);
                     _buttonHome.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(HPlan);
+                    
+                    plansBuyCounter++;
+                    if (plansBuyCounter == 3)
+                    {
+                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                    }
                 }
                 else
                 {
@@ -240,6 +265,12 @@ public class PlansInShopControl : MonoBehaviour
                     PanelMBought.SetActive(true);
                     _buttonMiner.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(MPlan);
+                    
+                    plansBuyCounter++;
+                    if (plansBuyCounter == 3)
+                    {
+                        BuyAllPlansTutorial.CheckAndUpdateTutorialState();
+                    }
                 }
                 else
                 {

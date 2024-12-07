@@ -45,7 +45,6 @@ public class InteractionBuildingController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
-            Debug.Log(1092857);
             if (GetComponent<BuildingData>().IsThisBuilt)
             {
                 CanPutE = true;
@@ -139,7 +138,6 @@ public class InteractionBuildingController : MonoBehaviour
     /// </summary>
     public void OnMouseDown()
     {
-        Debug.Log(01874380492);
         AddTextToDescriptionPanel.buildingData = _buildingData;
         AddTextToDescriptionPanel.buildingTransform = gameObject.transform;
         AddTextToDescriptionPanel.buildingSO = _buildingData.buildingTypeSO;

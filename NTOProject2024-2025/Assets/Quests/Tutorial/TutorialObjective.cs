@@ -8,7 +8,7 @@ public class TutorialObjective : ScriptableObject
     [TextArea] public string TextOnThisObjective;
     [TextArea] public string TechnicalTExtOnThisObjective;
     
-    public Objective tutorialObjective;
+    //public Objective tutorialObjective;
     public bool IsActive;
 
     public bool IsTimeStopOnThisStep;
@@ -20,7 +20,7 @@ public class TutorialObjective : ScriptableObject
 
     public void CheckAndUpdateTutorialState()
     {
-        if (IsActive)
+        if (IsActive && TutorialManager.IsTutorialActive)
         {
             TutorialManager.UpdateTutorialStateEvent?.Invoke();
         }

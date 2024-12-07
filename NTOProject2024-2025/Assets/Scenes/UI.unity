@@ -4386,6 +4386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ba2ad27ea9277499e7c76dec7bc497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlansPanelOpenTutorial: {fileID: 11400000, guid: 67ff6a3dcde978c419111bbfd4371d9e, type: 2}
+  ApiaryStartBuildingTutorial: {fileID: 11400000, guid: 798176130f4d6ef4b86d2a3ba28d320d, type: 2}
+  HomeStartBuildingTutorial: {fileID: 11400000, guid: 6caafd19212f45d4ebdbab0d5e5c02b1, type: 2}
   OpenBuildingPanelEvent: {fileID: 11400000, guid: 6f8015b47bb3ade41b8941819990014d, type: 2}
   CloseBuildingPanelEvent: {fileID: 11400000, guid: afaada27fd6279f4daae787068f3a3e1, type: 2}
   StartPlacingBuildEvent: {fileID: 11400000, guid: 8ad91f56fb0a52f41acb08be77bec77d, type: 2}
@@ -5367,6 +5370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cf1da077a19ed4098f2f448ed2a3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpenShopTutorial: {fileID: 11400000, guid: 10d65038160b0e6498fedbe7efdee585, type: 2}
+  BuyAllPlansTutorial: {fileID: 11400000, guid: e9ca5e9bed4f8f840b411bc7ecd0183f, type: 2}
+  CloseShopTutorialTutorial: {fileID: 11400000, guid: 32f1f9dd0cf8638469a64d3699d5cd5d, type: 2}
   PanelHoneyGun: {fileID: 237994215}
   PanelStorage: {fileID: 651906072}
   PanelPier: {fileID: 1510653819}
@@ -7823,7 +7829,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &914031939
 RectTransform:

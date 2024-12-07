@@ -22,7 +22,6 @@ MonoBehaviour:
     \u043F\u043E \u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044E
     \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0439 \u0431\u0430\u0437\u044B..."
   TechnicalTExtOnThisObjective: 
-  tutorialObjective: {fileID: 11400000, guid: 169f16dfb971dde42b7bcbebd367893e, type: 2}
   IsActive: 0
   IsTimeStopOnThisStep: 1
   MainUIPositionTypeOnThisStep: 1
