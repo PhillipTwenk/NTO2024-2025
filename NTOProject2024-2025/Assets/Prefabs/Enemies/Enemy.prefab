@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8018860943559533330}
   - component: {fileID: 4513683145463458343}
+  - component: {fileID: 5670440256276032013}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -148,6 +149,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5670440256276032013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7814261901864389807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fa2e9043fc1434c816ad58f89771bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
 --- !u!1 &8580948686920637911
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,8 +192,8 @@ Transform:
   m_GameObject: {fileID: 8580948686920637911}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.5, y: 14, z: 0}
-  m_LocalScale: {x: 9.7228, y: 9.7228, z: 9.7228}
+  m_LocalPosition: {x: -61.0389, y: 5.248, z: -3.5889}
+  m_LocalScale: {x: 30.80086, y: 0.9703354, z: 16.901144}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6518921076846869143}
@@ -218,7 +232,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 921d0ba38b60d8e40aecb063c3ba7090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
