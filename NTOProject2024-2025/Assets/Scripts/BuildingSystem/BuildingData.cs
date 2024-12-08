@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class BuildingData : MonoBehaviour
 {
@@ -29,16 +30,14 @@ public class BuildingData : MonoBehaviour
 
     public UnityEvent StartBuildingFunctionEvent;
 
-    private async void Start()
+    public VisualEffect BuildingVE;
+
+    private void Start()
     {
-        // if (Title == "Мобильная база")
-        // {
-        //     string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        //     PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(playerName);
-        //     Storage[0] = playerResources.Iron;
-        //     Storage[1] = playerResources.Food;
-        //     Storage[2] = playerResources.CryoCrystal; 
-        // }
+        if (IsThisBuilt)
+        {
+            BuildingVE.Stop();
+        }
     }
 
     public void TextPanelBuildingControl(bool IsOpen, string WhichAction)

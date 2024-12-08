@@ -93,7 +93,7 @@ public class TutorialManager : MonoBehaviour
         currentTutorialObjective.IsActive = true;
     }
 
-    public void EndTutorial()
+    public void EndTutorial() 
     {
         IsTutorialActive = false;
         MainUIPanel.transform.parent.gameObject.SetActive(false);
@@ -102,6 +102,7 @@ public class TutorialManager : MonoBehaviour
         TextUpdateEvent -= () => UIPanelUpdate(TechnicalUIPanel, currentTutorialObjective);
         currentTutorialObjective.IsActive = false;
         Time.timeScale = 1f;
+        IsTutorialTimeStop = false;
         FadeFone.SetActive(false);
     }
 

@@ -236,7 +236,10 @@
           </e>
           <e p="EntityActions" t="Include">
             <e p="EnemiesScripts" t="Include">
+              <e p="EnemyDamageSystem.cs" t="Include" />
+              <e p="EnemyHealthSystem.cs" t="Include" />
               <e p="EnemyMovementController.cs" t="Include" />
+              <e p="EnemySeekerSystem.cs" t="Include" />
             </e>
             <e p="NavMeshScripts" t="Include">
               <e p="NavMeshUpdater.cs" t="Include" />

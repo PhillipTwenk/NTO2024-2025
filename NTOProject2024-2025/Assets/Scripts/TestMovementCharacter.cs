@@ -57,7 +57,7 @@ public class TestMovementCharacter : MonoBehaviour
     }
     void Move()
     {
-        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.playerStats.Speed * Time.deltaTime); 
+        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.speed * Time.deltaTime); 
     }
 
     void Look()
@@ -74,7 +74,7 @@ public class TestMovementCharacter : MonoBehaviour
             }
 
             var rot = Quaternion.LookRotation(relative, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.playerStats.SpeedTurn * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.speedTurn * Time.deltaTime);
             _animationController.Run(Speed, true); // включаем анимации 
         }
         else
@@ -114,7 +114,7 @@ public class TestMovementCharacter : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
         {
             _animationController.JumpAnim("start", IsInAir);
-            _rb.AddForce(Vector3.up * playerID.playerStats.JumpForce, ForceMode.Impulse);
+            _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
         }
     }
 }

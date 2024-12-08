@@ -23,13 +23,17 @@ public class EntityID : ScriptableObject, ISerializableSO
     
     
     [TextArea] public string Name;
+    
+    [Header("Stats")]
+    public float speed;
+    public float sprintSpeed;
+    public float normalSpeed;
+    public float speedTurn;
+    public int jumpForce;
+    
     public string DefaultName;
     public int index;
-    
-    
-    public Stats playerStats;
     public Quest currentQuest;
-
     public List<Quest> openQuests;
 
     public void DefaultRevert()
