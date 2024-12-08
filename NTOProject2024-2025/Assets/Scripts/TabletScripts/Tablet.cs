@@ -9,7 +9,7 @@ public class Tablet : MonoBehaviour
     public GameEvent OpenTabletMenuEvent;
 
     public void OnMouseDown() {
-        if(isCollected){
+        if(!isCollected){
             Debug.Log("Получена заметка");
             isCollected = true;
 
