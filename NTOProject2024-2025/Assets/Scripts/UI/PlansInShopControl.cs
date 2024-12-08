@@ -177,7 +177,7 @@ public class PlansInShopControl : MonoBehaviour
                             BuyAllPlansTutorial.CheckAndUpdateTutorialState();
                         }
                     });
-                    PanelA.SetActive(true);
+                    PanelABought.SetActive(true);
                     _buttonApiary.enabled = false;
                     UIManager.Instance.AddNewPlanInPanel(APlan);
                 }

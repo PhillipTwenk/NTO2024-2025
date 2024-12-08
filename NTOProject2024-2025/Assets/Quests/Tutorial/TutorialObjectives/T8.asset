@@ -21,7 +21,8 @@ MonoBehaviour:
   TechnicalTExtOnThisObjective: 
   IsActive: 0
   IsTimeStopOnThisStep: 1
-  MainUIPositionTypeOnThisStep: 1
+  MainUIPositionTypeOnThisStep: 0
   TechUIPositionTypeOnThisStep: 0
   IsTechPanelActiveOnThisStep: 0
   IsAutomaticalyEnterOnThisStep: 1
+  IsClosePlanMenuOnThisStep: 0

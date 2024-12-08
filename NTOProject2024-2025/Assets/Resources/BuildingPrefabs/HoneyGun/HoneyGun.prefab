@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 23966556404222068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 43.60307, y: 43.60307, z: 43.60307}
+  m_LocalScale: {x: -40.448387, y: 43.60307, z: 43.60307}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8389100963388528525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.5, y: 95.3}
+  m_AnchoredPosition: {x: -14.4, y: 128.4}
   m_SizeDelta: {x: 6.4021, y: 0.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &9049780170555577840
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5463867566922479842, guid: 105e03b4134cfe54ca2d4f55af9198b8, type: 2}
+  - {fileID: -6251262882907199531, guid: 036d1620178df0740abc024233708885, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_text: "\u042B\u0410\u0410\u0410\u042B\u042B . . ."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 036d1620178df0740abc024233708885, type: 2}
-  m_sharedMaterial: {fileID: 5463867566922479842, guid: 105e03b4134cfe54ca2d4f55af9198b8, type: 2}
+  m_sharedMaterial: {fileID: -6251262882907199531, guid: 036d1620178df0740abc024233708885, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

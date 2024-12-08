@@ -61,6 +61,7 @@ public class PauseUIManager : MonoBehaviour
     
     public void QuitGame()
     {
+        JSONSerializeManager.Instance.OnApplicationQuit();
         Application.Quit();
         Debug.Log("Quit");
     }
