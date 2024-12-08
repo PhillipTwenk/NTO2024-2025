@@ -15,6 +15,7 @@ public class JSONSerializeManager : MonoBehaviour
     {
         Instance = this;
         savePath = Application.persistentDataPath;
+        Debug.Log($"Куда сохранять JSON {savePath}");
     
         if (!Directory.Exists(savePath))
         {
@@ -28,9 +29,12 @@ public class JSONSerializeManager : MonoBehaviour
         {
             if (so is ISerializableSO serializableSO)
             {
+                Debug.Log("1) SO реализует");
                 string filePath = Path.Combine(savePath, $"{so.name}.json");
+                Debug.Log(filePath);
                 if (File.Exists(filePath))
                 {
+                    Debug.Log("Существует");
                     try
                     {
                         string json = File.ReadAllText(filePath);
@@ -40,6 +44,20 @@ public class JSONSerializeManager : MonoBehaviour
                     catch (Exception ex)
                     {
                         Debug.LogError($"Ошибка загрузки {so.name}: {ex.Message}");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Файл не найден: {filePath}. Создаём новый файл с текущими данными.");
+                    try
+                    {
+                        string json = serializableSO.SerializeToJson();
+                        File.WriteAllText(filePath, json);
+                        Debug.Log($"Создан файл: {filePath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.LogError($"Ошибка создания файла {so.name}: {ex.Message}");
                     }
                 }
             }

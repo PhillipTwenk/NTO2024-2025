@@ -110,6 +110,7 @@ public class UIManagerMainMenu : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
+        JSONSerializeManager.Instance.OnApplicationQuit();
         Application.Quit();
     }
     

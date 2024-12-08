@@ -4,8 +4,19 @@ using UnityEngine;
 /// Описание статистических свойств сущности
 /// </summary>
 [CreateAssetMenu(menuName = "ForEntities/Stats")]
-public class Stats : ScriptableObject
+public class Stats : ScriptableObject, ISerializableSO
 {
+    // Реализация ISerializableSO
+    public string SerializeToJson()
+    {
+        return JsonUtility.ToJson(this, true);
+    }
+
+    public void DeserializeFromJson(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, this);
+    }
+    
     [SerializeField] private float speed;
     [SerializeField] private float sprintSpeed;
     [SerializeField] private float normalSpeed;

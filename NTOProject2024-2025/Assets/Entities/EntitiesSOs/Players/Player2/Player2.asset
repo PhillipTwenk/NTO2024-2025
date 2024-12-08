@@ -13,33 +13,37 @@ MonoBehaviour:
   m_Name: Player2
   m_EditorClassIdentifier: 
   Name: None
+  speed: 40
+  sprintSpeed: 60
+  normalSpeed: 40
+  speedTurn: 360
+  jumpForce: 0
   DefaultName: None
   index: 2
-  playerStats: {fileID: 11400000, guid: a9be5365bf7e5b74abd9356fa776e5eb, type: 2}
-  currentQuest: {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
+  currentQuest: {fileID: 0}
   openQuests:
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

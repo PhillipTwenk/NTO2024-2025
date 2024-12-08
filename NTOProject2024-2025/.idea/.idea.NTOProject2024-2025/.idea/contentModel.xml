@@ -236,7 +236,10 @@
           </e>
           <e p="EntityActions" t="Include">
             <e p="EnemiesScripts" t="Include">
+              <e p="EnemyDamageSystem.cs" t="Include" />
+              <e p="EnemyHealthSystem.cs" t="Include" />
               <e p="EnemyMovementController.cs" t="Include" />
+              <e p="EnemySeekerSystem.cs" t="Include" />
             </e>
             <e p="NavMeshScripts" t="Include">
               <e p="NavMeshUpdater.cs" t="Include" />
@@ -251,6 +254,9 @@
             <e p="EntryLocationControl.cs" t="Include" />
             <e p="EntryPoint.cs" t="Include" />
             <e p="EntryPointMainMenu.cs" t="Include" />
+          </e>
+          <e p="ExtremeConditionsScripts" t="Include">
+            <e p="ExtremeConditionsControl.cs" t="Include" />
           </e>
           <e p="HelperClasses" t="Include">
             <e p="ResourceData.cs" t="Include" />

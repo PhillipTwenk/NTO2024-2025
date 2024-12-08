@@ -54,17 +54,17 @@ public class MovementCharacter : MonoBehaviour
         _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (Input.GetButton("Sprint")) 
         {
-            playerID.playerStats.Speed = playerID.playerStats.SprintSpeed;
+            playerID.speed = playerID.sprintSpeed;
         }
         else
         {
-            playerID.playerStats.Speed = playerID.playerStats.NormalSpeed;
+            playerID.speed = playerID.normalSpeed;
         }
 
     }
     void Move()
     {
-        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.playerStats.Speed * Time.deltaTime);
+        _rb.MovePosition(transform.position + (transform.forward *_input.magnitude)*playerID.speed * Time.deltaTime);
         if (!IsBearMove)
         {
             Utility.Invoke(this, () => WASDTutorial.CheckAndUpdateTutorialState(), 2f);
@@ -86,12 +86,12 @@ public class MovementCharacter : MonoBehaviour
             }
 
             var rot = Quaternion.LookRotation(relative, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.playerStats.SpeedTurn * Time.deltaTime);
-            _animationController.Run(playerID.playerStats.Speed, true); // включаем анимации 
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, playerID.speedTurn * Time.deltaTime);
+            _animationController.Run(playerID.speed, true); // включаем анимации 
         }
         else
         {
-            _animationController.Run(playerID.playerStats.Speed, false);
+            _animationController.Run(playerID.speed, false);
         }
     }
     
@@ -126,7 +126,7 @@ public class MovementCharacter : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
         {
             _animationController.JumpAnim("start", IsInAir);
-            _rb.AddForce(Vector3.up * playerID.playerStats.JumpForce, ForceMode.Impulse);
+            _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
         }
     }
 }

@@ -17,7 +17,7 @@ public class PauseUIManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Pause") && !TutorialManager.IsTutorialTimeStop)
+        if (Input.GetButtonDown("Pause"))
         {
             PauseResume();
         }
@@ -34,7 +34,14 @@ public class PauseUIManager : MonoBehaviour
         else
         {
             Debug.Log("Продолжаем");
-            Time.timeScale = 1f;
+            if (TutorialManager.IsTutorialTimeStop)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
             PauseOff();
         }
     }
@@ -54,6 +61,7 @@ public class PauseUIManager : MonoBehaviour
     
     public void QuitGame()
     {
+        JSONSerializeManager.Instance.OnApplicationQuit();
         Application.Quit();
         Debug.Log("Quit");
     }

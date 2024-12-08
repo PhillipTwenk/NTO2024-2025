@@ -210,6 +210,8 @@ public class BuildingManager : MonoBehaviour
                             }
                             
                             buildingData.IsThisBuilt = true;
+                            
+                            buildingData.BuildingVE.Stop();
                         }
                         else
                         {

@@ -45,6 +45,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worker
       objectReference: {fileID: 0}
+    - target: {fileID: 4964045910102140477, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
+      propertyPath: m_Height
+      value: 14.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964045910102140477, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
+      propertyPath: m_Radius
+      value: 3.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5123681624481053577, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
       propertyPath: currentWalkingPoint
       value: 
@@ -113,15 +121,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271729741303131932, guid: 267ce52e6e387ac48b66d61ffcf5e20b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.72
       objectReference: {fileID: 0}
     - target: {fileID: 7271729741303131932, guid: 267ce52e6e387ac48b66d61ffcf5e20b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -42.4
       objectReference: {fileID: 0}
     - target: {fileID: 7271729741303131932, guid: 267ce52e6e387ac48b66d61ffcf5e20b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 21.04
       objectReference: {fileID: 0}
     - target: {fileID: 7271729741303131932, guid: 267ce52e6e387ac48b66d61ffcf5e20b, type: 3}
       propertyPath: m_LocalRotation.w
