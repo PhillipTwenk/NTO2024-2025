@@ -11,6 +11,18 @@ public class Tablet : MonoBehaviour
     public void OnMouseDown() {
         if(!isCollected && Time.timeScale != 0f){
             Debug.Log("Получена заметка");
+            if (TabletInfo.tablet_id == "001")
+            {
+                BaseUpgradeConditionManager.Instance.FindNote[0] = true;
+            }
+            else if (TabletInfo.tablet_id == "002")
+            {
+                BaseUpgradeConditionManager.Instance.FindNote[1] = true;
+            }
+            else if(TabletInfo.tablet_id == "003")
+            {
+                BaseUpgradeConditionManager.Instance.FindNote[2] = true;
+            }
             isCollected = true;
 
             //Отмечаем в скрипте контроля уровня базы

@@ -305,6 +305,7 @@
             <e p="VolumeSlider.cs" t="Include" />
           </e>
           <e p="Unitilities" t="Include">
+            <e p="LogController.cs" t="Include" />
             <e p="Utility.cs" t="Include" />
           </e>
         </e>
@@ -322,6 +323,7 @@
             </e>
           </e>
         </e>
+        <e p="SpawnerScript.cs" t="Include" />
         <e p="Test5.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

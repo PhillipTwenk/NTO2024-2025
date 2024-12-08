@@ -28,6 +28,8 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     [TextArea] public string NotEnoughtWorkers;
     [TextArea] public string NotEnoughtLevelSomeBuildings;
     [TextArea] public string SuccesUpgradeText;
+    
+    [TextArea] public string ENDGAME;
 
     [SerializeField] private GameEvent ResourceMinerRestored;
 
@@ -50,7 +52,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             Dictionary<string, string> testDictionary = new Dictionary<string, string>();
-            testDictionary.Add("Шкебедедопдодп", "+1488 писек");
+            testDictionary.Add("Шкебедедопдодп", "+1488 ");
             testDictionary.Add("ДАбулум нипнип", "- 997 deadinside");
             APIManager.Instance.CreatePlayerLog("Тестовые логи шкебеде допдоп", UIManagerLocation.WhichPlayerCreate.Name, testDictionary);
         }
@@ -115,12 +117,12 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotFoundNoteTextError} № 2";
                     resultReport.Add(report);
                 }
-                if (EventNatureAtack1Complete)
-                {
-                    IsThisReportUnsuccess = true;
-                    string report = $"{NotCompleteEventAtackNature} № 1";
-                    resultReport.Add(report);
-                }
+                // if (EventNatureAtack1Complete)
+                // {
+                //     IsThisReportUnsuccess = true;
+                //     string report = $"{NotCompleteEventAtackNature} № 1";
+                //     resultReport.Add(report);
+                // }
                 if (playerResources.Iron < buildingDataMB.buildingTypeSO.priceUpgrade)
                 {
                     IsThisReportUnsuccess = true;
@@ -133,12 +135,12 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[1]}";
                     resultReport.Add(report);
                 }
-                if (!IsMinimumOneBuildingOnLevel2)
-                {
-                    IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно здание должно быть 2 уровня";
-                    resultReport.Add(report);
-                }
+                // if (!IsMinimumOneBuildingOnLevel2)
+                // {
+                //     IsThisReportUnsuccess = true;
+                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно здание должно быть 2 уровня";
+                //     resultReport.Add(report);
+                // }
                 
                 //Отравка ответа
                 if (IsThisReportUnsuccess)
@@ -162,30 +164,36 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotFoundNoteTextError} № 3";
                     resultReport.Add(report);
                 }
-                if (EventNatureAtack2Complete)
+                if (playerResources.Iron < buildingDataMB.buildingTypeSO.priceUpgrade)
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotCompleteEventAtackNature} № 2";
+                    string report = $"{NotEnoughtResourcesTextError}: {playerResources.Iron} / {buildingDataMB.buildingTypeSO.priceUpgrade}";
                     resultReport.Add(report);
                 }
+                // if (EventNatureAtack2Complete)
+                // {
+                //     IsThisReportUnsuccess = true;
+                //     string report = $"{NotCompleteEventAtackNature} № 2";
+                //     resultReport.Add(report);
+                // }
                 if (WorkersCount < NumberOfWorkersForDifferentLevels[2])
                 {
                     IsThisReportUnsuccess = true;
                     string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[2]}";
                     resultReport.Add(report);
                 }
-                if (!IsMinimumOneMainBuildingOnLevel3)
-                {
-                    IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно основное здание должно быть 2 уровня";
-                    resultReport.Add(report);
-                }
-                if (!IsMinimumOneOtherBuildingOnLevel3)
-                {
-                    IsThisReportUnsuccess = true;
-                    string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно дополнительное здание должно быть 2 уровня";
-                    resultReport.Add(report);
-                }
+                // if (!IsMinimumOneMainBuildingOnLevel3)
+                // {
+                //     IsThisReportUnsuccess = true;
+                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно основное здание должно быть 2 уровня";
+                //     resultReport.Add(report);
+                // }
+                // if (!IsMinimumOneOtherBuildingOnLevel3)
+                // {
+                //     IsThisReportUnsuccess = true;
+                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно дополнительное здание должно быть 2 уровня";
+                //     resultReport.Add(report);
+                // }
 
 
                 //Отравка ответа
@@ -196,7 +204,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 else
                 {
                     resultReport.Clear();
-                    resultReport.Add(SuccesUpgradeText);
+                    resultReport.Add(ENDGAME);
                     ResourceMinerRestored.TriggerEvent();
                     return resultReport;
                 }

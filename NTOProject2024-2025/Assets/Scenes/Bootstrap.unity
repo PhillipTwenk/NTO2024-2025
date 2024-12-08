@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42942750}
   - component: {fileID: 42942751}
+  - component: {fileID: 42942752}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -186,6 +187,19 @@ MonoBehaviour:
   IsInEditor: 0
   IsInEditorJSON: 0
   StartMainMenuSongEvent: {fileID: 11400000, guid: 5624fbb5878727c49942ccc05818fb93, type: 2}
+--- !u!114 &42942752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42942749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d2824b5d739f44a8c17410b4f903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enabledLog: 0
 --- !u!1 &655885244
 GameObject:
   m_ObjectHideFlags: 0
