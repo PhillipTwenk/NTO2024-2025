@@ -9,7 +9,7 @@ public class Tablet : MonoBehaviour
     public GameEvent OpenTabletMenuEvent;
 
     public void OnMouseDown() {
-        if(!isCollected){
+        if(!isCollected && Time.timeScale == 0f){
             Debug.Log("Получена заметка");
             isCollected = true;
 
@@ -22,7 +22,9 @@ public class Tablet : MonoBehaviour
     }
 
     private void OnMouseEnter() {
-        outline.enabled = true;
+        if(Time.timeScale == 0f && !isCollected){
+            outline.enabled = true;
+        }
     }
     private void OnMouseExit() {
         outline.enabled = false;
