@@ -89,7 +89,7 @@ public class TutorialManager : MonoBehaviour
         Debug.Log("Туториал начат");
         i = 0;
         IsTutorialActive = true;
-        questOwner.GiveQuest(BearQC);
+        //questOwner.GiveQuest(BearQC);
         MainUIPanel.transform.parent.gameObject.SetActive(true);
         currentTutorialObjective = TutorialObjectives[i];
         TextUpdateEvent += () => UIPanelUpdate(MainUIPanel, currentTutorialObjective);

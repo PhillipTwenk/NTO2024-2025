@@ -20,8 +20,5 @@ MonoBehaviour:
   jumpForce: 0
   DefaultName: None
   index: 1
-  currentQuest: {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  openQuests:
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
-  - {fileID: 11400000, guid: 4f5ef9f59c46695488ff5221d1e372b8, type: 2}
+  currentQuest: {fileID: 0}
+  openQuests: []

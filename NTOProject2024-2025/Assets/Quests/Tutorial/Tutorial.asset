@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   name: Tutorial
-  active: 1
+  active: 0
   questDescription: "\u0422\u0443\u0442\u043E\u0440\u0438\u0430\u043B"
   objectives: []
   currentObjective: {fileID: 11400000, guid: 6829055a17f6be84d80446b7bef39380, type: 2}

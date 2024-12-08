@@ -44,11 +44,15 @@ public class SceneTransitionManager : MonoBehaviour
         //Установка уровня как основной сцены
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(LocationSceneName));
         
+        Debug.Log(IsNewPlayer);
+
         //Проверка на активность нужных сцен, и их выгрузка
         bool isSceneMainMenuActive = SceneManager.GetSceneByName(MainMenuSceneName).isLoaded;
         if (isSceneMainMenuActive)
         {
+            Debug.Log("Выгрузка сцены главного меню");
             AsyncOperation UnloadingMainMenu = SceneManager.UnloadSceneAsync(MainMenuSceneName);
+            Debug.Log("закончена");
             //yield return new WaitUntil(()=>UnloadingMainMenu.isDone);
         }
         
@@ -57,15 +61,18 @@ public class SceneTransitionManager : MonoBehaviour
         bool isSceneUIActive = SceneManager.GetSceneByName(UISceneName).isLoaded;
         if (!isSceneUIActive)
         {
+            Debug.Log("Выгрузка сцены UI");
             AsyncOperation UILoadingScene = SceneManager.LoadSceneAsync(UISceneName, LoadSceneMode.Additive);
             yield return new WaitUntil(()=>UILoadingScene.isDone);
+            Debug.Log("закончена");
         }
         
         //LoadingCanvas.SetActive(false);
         EndMoveToSceneLocationEvent.TriggerEvent();
-        
+
         if (IsNewPlayer)
         {
+            Debug.Log("Старт туториала");
             StartTutorial.TriggerEvent();
         }
     }

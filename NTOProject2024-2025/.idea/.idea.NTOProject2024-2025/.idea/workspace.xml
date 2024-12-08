@@ -20,16 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/CryoMontainsEvent.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/CryoMontainsEvent.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/ForestSongEvent.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/ForestSongEvent.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/RedRoadSongEvent.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/RedRoadSongEvent.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Apiary.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Apiary.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/HoneyGun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/HoneyGun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/MobileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/MobileBase.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Pier/Pier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Pier/Pier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Storage/Storage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Storage/Storage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +143,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/HoneyGunHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CameraSizeTriggerLocationChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/QuestController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
@@ -159,6 +166,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
       </list>
     </option>
   </component>
@@ -245,7 +253,7 @@
       <workItem from="1733315933932" duration="31621000" />
       <workItem from="1733398253236" duration="30703000" />
       <workItem from="1733483088317" duration="26808000" />
-      <workItem from="1733562944055" duration="42736000" />
+      <workItem from="1733562944055" duration="50146000" />
     </task>
     <servers />
   </component>

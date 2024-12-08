@@ -818,7 +818,7 @@ Transform:
   m_GameObject: {fileID: 1858607121437976956}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.9995907, z: -0, w: -0.028609635}
-  m_LocalPosition: {x: 17.1, y: 0.104871035, z: 2}
+  m_LocalPosition: {x: -29.7, y: 0.104871035, z: 23.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   MaxValueOfWorkersInThisBuilding: 1
   NumberOfActiveWorkersInThisBuilding: 0
   buildingSpawnWorkerPointTransform: {fileID: 8905097784749352164}
-  WorkerPrefab: {fileID: 67134279220973632, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
+  WorkerPrefab: {fileID: 845355837700331742, guid: 31fe78fb1a4b70148a0cff384810ff37, type: 3}
   MainCamera: {fileID: 0}
 --- !u!114 &8281539622866198797
 MonoBehaviour:
