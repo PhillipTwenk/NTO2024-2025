@@ -55,8 +55,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha_Clip: 0.04
-    - _Apha_intensity: 0.4
+    - _Alpha_Clip: -2.54
+    - _Apha_intensity: 0.91
     - _Emissiojn_Fresnel_Power: 0
     - _Emission_Fresnel_Power: 6.91
     - _Fresnel_Power: 1.29
