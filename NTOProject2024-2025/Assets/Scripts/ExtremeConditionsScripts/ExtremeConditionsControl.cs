@@ -8,9 +8,7 @@ public class ExtremeConditionsManager : MonoBehaviour
     }
 
     void Update(){
-        if(IsSafe){
-            
-        } else {
+        if(!IsSafe){
 
         } 
     }

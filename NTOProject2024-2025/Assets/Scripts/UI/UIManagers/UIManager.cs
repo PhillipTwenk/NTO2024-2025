@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text TitleTabletPanel;
     [SerializeField] private TMP_Text DescriptionTabletPanel;
     [SerializeField] private GameObject ImageTabletPanel;
+    [SerializeField] private GameObject Resources_Icons;  
     
 
     [SerializeField] private List<Plan> plansArray;
@@ -178,7 +179,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void FunctionOpenTabletMenu()
     {
-        Debug.Log(TitleTabletPanel);
+        Resources_Icons.SetActive(false);
         TitleTabletPanel.text = "Юный колонизатор\n" + $"#{currentTablet.tablet_id} - " + currentTablet.title;
         DescriptionTabletPanel.text = currentTablet.description;
         ImageTabletPanel.GetComponent<Image>().sprite = currentTablet.picture;
@@ -191,6 +192,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void FunctionCloseTabletMenu()
     {
+        Resources_Icons.SetActive(true);
         TabletPanel.SetActive(false);
     }
 }
