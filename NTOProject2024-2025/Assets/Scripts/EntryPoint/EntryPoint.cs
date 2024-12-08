@@ -19,6 +19,7 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private List<PlayerSaveData> playerSaveDatas;
     
     [SerializeField] private bool IsInEditor;
+    [SerializeField] private bool IsInEditorJSON;
     
     [SerializeField] private GameEvent StartMainMenuSongEvent;
     
@@ -75,6 +76,9 @@ public class EntryPoint : MonoBehaviour
     
     private void InitializeData()
     {
-        JSONSerializeManager.Instance.AwakeJSONLoad();
+        if (!IsInEditorJSON)
+        {
+            JSONSerializeManager.Instance.AwakeJSONLoad();
+        }
     }
 }

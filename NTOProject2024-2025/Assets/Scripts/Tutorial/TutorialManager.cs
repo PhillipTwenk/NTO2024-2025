@@ -32,6 +32,11 @@ public class TutorialManager : MonoBehaviour
 
     [Header("GameEvents")] [SerializeField]
     private GameEvent ClosePlanMenu;
+
+    [Header("Audio")] 
+    [SerializeField] private GameEvent StartTutorialSong;
+    [SerializeField] private GameEvent StartGameSong;
+    
     
 
     private void Awake()
@@ -91,9 +96,10 @@ public class TutorialManager : MonoBehaviour
         TextUpdateEvent += () => UIPanelUpdate(TechnicalUIPanel, currentTutorialObjective);
         TextUpdateEvent?.Invoke();
         currentTutorialObjective.IsActive = true;
+        StartTutorialSong.TriggerEvent();
     }
 
-    public void EndTutorial()
+    public void EndTutorial() 
     {
         IsTutorialActive = false;
         MainUIPanel.transform.parent.gameObject.SetActive(false);
@@ -102,7 +108,9 @@ public class TutorialManager : MonoBehaviour
         TextUpdateEvent -= () => UIPanelUpdate(TechnicalUIPanel, currentTutorialObjective);
         currentTutorialObjective.IsActive = false;
         Time.timeScale = 1f;
+        IsTutorialTimeStop = false;
         FadeFone.SetActive(false);
+        StartGameSong.TriggerEvent();
     }
 
     private async void UIPanelUpdate(TextMeshProUGUI UIPanel, TutorialObjective currentTutorialObjective)         

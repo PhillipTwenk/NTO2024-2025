@@ -54,7 +54,7 @@ public class InteractionBuildingController : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Worker"))
         {
-            if (WorkersInterBuildingControl.CurrentBuilding != null && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
+            if (WorkersInterBuildingControl.CurrentBuilding == gameObject.GetComponent<BuildingData>() && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
             {
                 if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive)
                 {
@@ -112,11 +112,12 @@ public class InteractionBuildingController : MonoBehaviour
                             text.text = $"Нажмите E чтобы выгрузить одного рабочего ({thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding}/2)";
                         }
 
+                        Destroy(other.gameObject.transform.parent.gameObject);
+                        
                         PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
                         playerSaveData.BuildingWorkersInformationList[_buildingData.SaveListIndex]
                                 .CurrentNumberOfWorkersInThisBuilding =
                             thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding;
-                        Destroy(other.gameObject.transform.parent.gameObject);
                         return;
                     }
                 }

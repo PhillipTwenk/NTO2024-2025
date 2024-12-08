@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70832cd75e7eb8642918827c39cad79a, type: 2}
   - {fileID: 11400000, guid: 7a32648b7e2733242b500ac38a3c4a14, type: 2}
   IsInEditor: 0
+  IsInEditorJSON: 0
   StartMainMenuSongEvent: {fileID: 11400000, guid: 5624fbb5878727c49942ccc05818fb93, type: 2}
 --- !u!1 &655885244
 GameObject:
