@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 842778951413168999}
   - component: {fileID: 6113928530980303110}
   m_Layer: 0
-  m_Name: tablet
+  m_Name: Tablet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 6.2, y: 3.1, z: 10.3}
-  m_LocalScale: {x: 381.66663, y: 381.66663, z: 381.66663}
+  m_LocalScale: {x: 553.22577, y: 553.22577, z: 553.22577}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
