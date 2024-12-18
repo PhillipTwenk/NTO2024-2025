@@ -72,8 +72,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hazard Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59e759f05eb954d4aafa3145907c3594, type: 3}
+      propertyPath: m_TagString
+      value: BaseHemisphere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59e759f05eb954d4aafa3145907c3594, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1810097803619391669}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59e759f05eb954d4aafa3145907c3594, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3277375797994406278}
   m_SourcePrefab: {fileID: 100100000, guid: 59e759f05eb954d4aafa3145907c3594, type: 3}
+--- !u!1 &787135124094090612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59e759f05eb954d4aafa3145907c3594, type: 3}
+  m_PrefabInstance: {fileID: 445045921870331941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1810097803619391669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787135124094090612}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!135 &3277375797994406278
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787135124094090612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.99788946
+  m_Center: {x: 0, y: 0, z: 0}

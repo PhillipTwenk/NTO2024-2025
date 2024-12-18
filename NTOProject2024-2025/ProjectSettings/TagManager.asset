@@ -13,6 +13,7 @@ TagManager:
   - WalkingPoint
   - MainBuilding
   - Bullet
+  - BaseHemisphere
   layers:
   - Default
   - TransparentFX

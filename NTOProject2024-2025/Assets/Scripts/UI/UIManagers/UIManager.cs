@@ -28,12 +28,16 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text TitleTabletPanel;
     [SerializeField] private TMP_Text DescriptionTabletPanel;
     [SerializeField] private GameObject ImageTabletPanel;
-    [SerializeField] private GameObject Resources_Icons;  
+    [SerializeField] private GameObject Resources_Icons;
+    [SerializeField] private GameObject ExtremeCondImage;
     
 
     [SerializeField] private List<Plan> plansArray;
 
     private bool IsOpenBuildingPanel;
+    private float timer;
+    private Color tempColor;
+    public bool IsExtremeActivated;
     
     public static UIManager Instance { get; set; }
 
@@ -64,6 +68,23 @@ public class UIManager : MonoBehaviour
             Destroy(BuildingManager.Instance.MouseIndicator);
             IsOpenBuildingPanel = true;
             return;
+        }
+        if (IsExtremeActivated) 
+        {
+            Debug.Log("SHEEEEESH");
+            timer += Time.deltaTime;
+            if (timer >= 120f){
+                timer = 120f;
+            } else {
+                tempColor = ExtremeCondImage.GetComponent<Image>().color;
+                tempColor.a = timer/120f;
+                ExtremeCondImage.GetComponent<Image>().color = new Color(tempColor.r, tempColor.g, tempColor.b, tempColor.a);
+            }
+        } else {
+            timer = 0f;
+            tempColor = ExtremeCondImage.GetComponent<Image>().color;
+            tempColor.a = 0f;
+            ExtremeCondImage.GetComponent<Image>().color = tempColor;
         }
     }
 
@@ -194,5 +215,13 @@ public class UIManager : MonoBehaviour
     {
         Resources_Icons.SetActive(true);
         TabletPanel.SetActive(false);
+    }
+
+    public void FunctionStartExtremeConditions(){
+        IsExtremeActivated = true;
+    }
+
+    public void FunctionEndExtremeConditions(){
+        IsExtremeActivated = false;
     }
 }
