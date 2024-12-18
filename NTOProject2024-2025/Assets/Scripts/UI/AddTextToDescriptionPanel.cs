@@ -252,6 +252,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         
         UpdateResourcesEvent.TriggerEvent();
 
+        JSONSerializeManager.Instance.OnApplicationQuit();
+        
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
@@ -351,6 +353,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                 OnHintPanel(TextNotCompleteConditionUpgradeMB + UnsuccessfullReportText);
             }
         }
+        
+        JSONSerializeManager.Instance.OnApplicationQuit();
         
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }

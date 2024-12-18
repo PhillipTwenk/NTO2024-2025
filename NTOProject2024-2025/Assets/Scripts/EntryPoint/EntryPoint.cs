@@ -72,6 +72,7 @@ public class EntryPoint : MonoBehaviour
         
         //Выгрузка сцены - точки входа
         SceneManager.UnloadSceneAsync(BootstrapName);
+        
     }
     
     private void InitializeData()

@@ -4736,6 +4736,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4ef5a709cc2871c4985e0d06b2cb9f9a, type: 2}
   - {fileID: 11400000, guid: 01dc186f96c3eb6478c07f9029a93438, type: 2}
   - {fileID: 11400000, guid: 44954120eec618e45a5e0a1455692762, type: 2}
+  _volumeSliderMusic: {fileID: 359772282}
+  _volumeSliderEffects: {fileID: 694802461}
   IsExtremeActivated: 0
 --- !u!114 &462131445
 MonoBehaviour:

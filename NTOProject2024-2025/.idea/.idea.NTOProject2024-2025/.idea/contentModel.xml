@@ -196,6 +196,9 @@
             <e p="JSONSerializeManager.cs" t="Include" />
           </e>
           <e p="PLayerSaveData.cs" t="Include" />
+          <e p="SettingsSave" t="Include">
+            <e p="SettingsSaveConfiguration.cs" t="Include" />
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="APIControl" t="Include">

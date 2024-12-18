@@ -33,6 +33,9 @@ public class UIManager : MonoBehaviour
     
 
     [SerializeField] private List<Plan> plansArray;
+    
+    [SerializeField] private VolumeSlider _volumeSliderMusic;
+    [SerializeField] private VolumeSlider _volumeSliderEffects;
 
     private bool IsOpenBuildingPanel;
     private float timer;
@@ -41,6 +44,12 @@ public class UIManager : MonoBehaviour
     
     public static UIManager Instance { get; set; }
 
+    private void InitializeData()
+    {
+        _volumeSliderMusic.Initialization();
+        _volumeSliderEffects.Initialization();
+    }
+    
     public void Awake()
     {
         Instance = this;
@@ -48,6 +57,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         IsOpenBuildingPanel = true;
+        InitializeData();
     }
 
     private void Update()

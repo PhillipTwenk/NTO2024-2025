@@ -212,6 +212,8 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 break;
         }
 
+        JSONSerializeManager.Instance.OnApplicationQuit();
+        
         return null;
     }
 }

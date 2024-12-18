@@ -212,6 +212,8 @@ public class BuildingManager : MonoBehaviour
                             buildingData.IsThisBuilt = true;
                             
                             buildingData.BuildingVE.Stop();
+                            
+                            JSONSerializeManager.Instance.OnApplicationQuit();
                         }
                         else
                         {

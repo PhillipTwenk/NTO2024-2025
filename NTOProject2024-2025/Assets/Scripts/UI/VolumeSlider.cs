@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -11,9 +12,21 @@ public class VolumeSlider : MonoBehaviour
     private float StartvolumeValue = 1f;
     private const float _multiplier = 20f;
 
-    private void Awake()
+    // [SerializeField] private SettingsSaveConfiguration settings;
+    // private float VolumeParamSettings;
+
+    public void Initialization()
     {
         slider.onValueChanged.AddListener(HandleSliderValueChanged);
+        if (PlayerPrefs.HasKey(volumeParameter))
+        {
+            _volumeValue = PlayerPrefs.GetFloat(volumeParameter, Mathf.Log10(slider.value) * _multiplier);
+            slider.value = Mathf.Pow(10f, _volumeValue / _multiplier);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(volumeParameter, StartvolumeValue);
+        }
     }
 
     private void HandleSliderValueChanged(float value)
@@ -32,16 +45,7 @@ public class VolumeSlider : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("volumeParameter"))
-        {
-            _volumeValue = PlayerPrefs.GetFloat(volumeParameter, Mathf.Log10(slider.value) * _multiplier);
-            slider.value = Mathf.Pow(10f, _volumeValue / _multiplier);
-        }
-        else
-        {
-            PlayerPrefs.SetFloat(volumeParameter, StartvolumeValue);
-        }
-        
+        Initialization();
     }
     private void OnDisable()
     {
