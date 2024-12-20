@@ -109,6 +109,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &4504318831156958989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3437415107810771138}
+  - component: {fileID: 2650330326195484681}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3437415107810771138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504318831156958989}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000002654269, y: 0.3563064, z: 0.000000029802319, w: 0.93436915}
+  m_LocalPosition: {x: -27.4, y: 2.1786385, z: -2.4}
+  m_LocalScale: {x: 6.716934, y: 11.897694, z: 2.635109}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6936849878815090030}
+  m_LocalEulerAnglesHint: {x: 0, y: 41.747, z: 0}
+--- !u!65 &2650330326195484681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504318831156958989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.9890554, y: 6.845415, z: 8.966604}
+  m_Center: {x: 2.4223304, y: 3.1524465, z: 7.667288}
 --- !u!1 &8237047624787384874
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,5 +192,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6663613666555424999}
+  - {fileID: 3437415107810771138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -31,6 +31,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2527236727392688250}
   m_LocalEulerAnglesHint: {x: 11.425, y: -11.263, z: 3.416}
+--- !u!1 &817961808796681157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2707747055089554327}
+  - component: {fileID: 8429340979503139332}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2707747055089554327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817961808796681157}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000026542692, y: 0.35630643, z: 0.00000002980232, w: 0.9343692}
+  m_LocalPosition: {x: -42.3, y: 1.7161281, z: 0.5}
+  m_LocalScale: {x: 6.7169347, y: 11.897693, z: 2.635108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2527236727392688250}
+  m_LocalEulerAnglesHint: {x: 0, y: 41.747, z: 0}
+--- !u!65 &8429340979503139332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817961808796681157}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.31453, y: 4.942224, z: 5.304332}
+  m_Center: {x: 4.1395435, y: 2.343793, z: 10.480845}
 --- !u!1 &2198254350215497068
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +586,7 @@ Transform:
   - {fileID: 1220318805089058479}
   - {fileID: 6509374028092267364}
   - {fileID: 9040968235210790143}
+  - {fileID: 2707747055089554327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725649145893154389
