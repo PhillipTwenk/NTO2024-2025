@@ -49,13 +49,13 @@ public class PauseUIManager : MonoBehaviour
     public void WindowScreen()
     {
         Screen.SetResolution(Screen.width, Screen.height, false);
-        PlayerPrefs.SetString("ScreenMode", "Оконный");
+        PlayerPrefs.SetInt("ScreenMode", 0);
         Debug.Log("Оконный");
     }
     public void FullScreen()
     {
         Screen.SetResolution(Screen.width, Screen.height, true, 60);
-        PlayerPrefs.SetString("ScreenMode", "Полноэкранный");
+        PlayerPrefs.SetInt("ScreenMode", 1);
         Debug.Log("Полноэкранный");
     }
     

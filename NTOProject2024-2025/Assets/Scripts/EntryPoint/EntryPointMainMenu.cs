@@ -6,6 +6,8 @@ public class EntryPointMainMenu : MonoBehaviour
     [SerializeField] private VolumeSlider _volumeSliderMusic;
     [SerializeField] private VolumeSlider _volumeSliderEffects;
 
+    [SerializeField] private ScreenResolutionControl _screenResolutionControl;
+
     private void Start()
     {
         InitializeData();
@@ -15,5 +17,7 @@ public class EntryPointMainMenu : MonoBehaviour
     {
         _volumeSliderMusic.Initialization();
         _volumeSliderEffects.Initialization();
+        
+        _screenResolutionControl.Initialization();
     }
 }

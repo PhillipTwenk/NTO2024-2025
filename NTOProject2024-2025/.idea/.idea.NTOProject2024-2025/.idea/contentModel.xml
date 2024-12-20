@@ -297,6 +297,7 @@
             <e p="AddTextToDescriptionPanel.cs" t="Include" />
             <e p="OutlineControl.cs" t="Include" />
             <e p="PlansInShopControl.cs" t="Include" />
+            <e p="ScreenResolutionControl.cs" t="Include" />
             <e p="SelectThisButtonMainMenu.cs" t="Include" />
             <e p="UIManagers" t="Include">
               <e p="PauseUIManager.cs" t="Include" />

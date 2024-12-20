@@ -64,22 +64,24 @@ public class UIManagerMainMenu : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("ScreenMode"))
         {
-            if (PlayerPrefs.GetString("ScreenMode") == "Полноэкранный")
+            if (Convert.ToBoolean(PlayerPrefs.GetInt("ScreenMode")))
             {
                 Debug.Log("Установлен полноэкранный режим");
-                Screen.SetResolution(Screen.width, Screen.height, false);
+                Screen.SetResolution(Screen.width, Screen.height, true, 60);
+                PlayerPrefs.SetInt("ScreenMode", 1);
             }
-            
-            if (PlayerPrefs.GetString("ScreenMode") == "Оконный")
+            else
             {
                 Debug.Log("Установлен оконный режим");
-                Screen.SetResolution(Screen.width, Screen.height, true, 60);
+                Screen.SetResolution(Screen.width, Screen.height, false, 60);
+                PlayerPrefs.SetInt("ScreenMode", 0);
             }
         }
         else
         {
             Debug.Log("Установлен полноэкранный режим");
-            Screen.SetResolution(Screen.width, Screen.height, false);
+            Screen.SetResolution(Screen.width, Screen.height, true);
+            PlayerPrefs.SetInt("ScreenMode", 1);
         }
     }
     
@@ -88,8 +90,8 @@ public class UIManagerMainMenu : MonoBehaviour
     /// </summary>
     public void WindowScreen()
     {
-        Screen.SetResolution(Screen.width, Screen.height, true, 60);
-        PlayerPrefs.SetString("ScreenMode", "Оконный");
+        Screen.SetResolution(Screen.width, Screen.height, false);
+        PlayerPrefs.SetInt("ScreenMode", 0);
         Debug.Log("Оконный");
     }
     
@@ -99,8 +101,8 @@ public class UIManagerMainMenu : MonoBehaviour
     /// </summary>
     public void FullScreen()
     {
-        Screen.SetResolution(Screen.width, Screen.height, false);
-        PlayerPrefs.SetString("ScreenMode", "Полноэкранный");
+        Screen.SetResolution(Screen.width, Screen.height, true, 60);
+        PlayerPrefs.SetInt("ScreenMode", 1);
         Debug.Log("Полноэкранный");
     }
     
