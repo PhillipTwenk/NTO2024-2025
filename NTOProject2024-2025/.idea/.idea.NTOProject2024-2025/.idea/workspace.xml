@@ -22,38 +22,9 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Drown Flower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Drown Flower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flowers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flowers.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type A.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type B.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type B.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +89,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/PriceShopProduct.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Events/GameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedPlayerLog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,8 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/PlayerLog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ResourcesChangedPlayerLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Other/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/BulletControl.cs" />
@@ -183,8 +153,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScreenResolutionControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" />
       </list>
     </option>
   </component>
@@ -273,7 +245,7 @@
       <workItem from="1733483088317" duration="26808000" />
       <workItem from="1733562944055" duration="53992000" />
       <workItem from="1734550272996" duration="3930000" />
-      <workItem from="1734706346295" duration="11253000" />
+      <workItem from="1734706346295" duration="14533000" />
     </task>
     <servers />
   </component>

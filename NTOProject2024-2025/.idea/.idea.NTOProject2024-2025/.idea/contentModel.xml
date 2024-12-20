@@ -295,6 +295,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="AddTextToDescriptionPanel.cs" t="Include" />
+            <e p="DeletePlayer.cs" t="Include" />
             <e p="OutlineControl.cs" t="Include" />
             <e p="PlansInShopControl.cs" t="Include" />
             <e p="ScreenResolutionControl.cs" t="Include" />

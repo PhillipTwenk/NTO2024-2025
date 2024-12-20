@@ -9,6 +9,7 @@ public class APIRsControlInChoicePlayerPanel : MonoBehaviour
     [SerializeField] private EntityID player;
     [SerializeField] private TextMeshProUGUI textNewCharacter;
     [SerializeField] private TextMeshProUGUI textPlayerName;
+    [SerializeField] private GameObject DeletePlayerPanel;
 
     /// <summary>
     /// Изменение текста при включении
@@ -20,12 +21,14 @@ public class APIRsControlInChoicePlayerPanel : MonoBehaviour
             textNewCharacter.gameObject.SetActive(true);
             textNewCharacter.text = DefaultPlayername;
             textPlayerName.gameObject.SetActive(false);
+            DeletePlayerPanel.SetActive(false);
         }
         else
         {
             textPlayerName.gameObject.SetActive(true);
             textPlayerName.text = player.Name;
             textNewCharacter.gameObject.SetActive(false);
+            DeletePlayerPanel.SetActive(true);
         }
     }
 }
