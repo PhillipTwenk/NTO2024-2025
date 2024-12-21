@@ -132,7 +132,7 @@ public class UIManager : MonoBehaviour
     {
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         string shopName = $"{playerName}'sShop";
-        ShopResources shopResources = await APIManager.Instance.GetShopResources(playerName, shopName);
+        ShopResources shopResources = await APIManager.Instance.GetShopResources(UIManagerLocation.WhichPlayerCreate, shopName);
 
         if (shopResources.Apiary.IsPurchased)
             AddNewPlanInPanel(plansArray[0]);

@@ -59,6 +59,30 @@ public class APIManager : MonoBehaviour
     {
         Instance = this;
     }
+    
+    private void OnEnable()
+    {
+        InternetMonitor.OnInternetConnected += HandleInternetConnected;
+    }
+
+    private void OnDisable()
+    {
+        InternetMonitor.OnInternetConnected -= HandleInternetConnected;
+    }
+
+    private async void HandleInternetConnected()
+    {
+        Debug.Log("Интернет снова доступен! Выполняю нужные действия...");
+
+        EntityID playerID = UIManagerLocation.WhichPlayerCreate;
+        await SyncManager.Enqueue(async () =>
+        {
+            await PutPlayerResources(playerID, playerID.playerResources.Iron, playerID.playerResources.Energy, playerID.playerResources.Food, playerID.playerResources.CryoCrystal);
+            
+            PlayerResources playerResources = await GetPlayerResources(UIManagerMainMenu.WhichPlayerCreate);
+            await PutPlayerResources(UIManagerMainMenu.WhichPlayerCreate, playerResources.Iron, playerResources.Energy, playerResources.Food, playerResources.CryoCrystal); 
+        });
+    }
 
     /// <summary>
     /// Создание персонажа
@@ -68,12 +92,12 @@ public class APIManager : MonoBehaviour
     /// <param name="playerEnergy"> Количество энергии </param>
     /// <param name="playerFood"> Количество пищи </param>
     /// <param name="playerCrioCrystal"> Количество Криокристаллов </param>
-    public async Task CreatePlayer(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
+    public async Task CreatePlayer(EntityID playerID, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
-            name = playerName,
+            name = playerID.Name,
             resources = new PlayerResources()
             {
                 Iron = playerIron,
@@ -82,6 +106,9 @@ public class APIManager : MonoBehaviour
                 CryoCrystal = playerCrioCrystal
             }
         };
+        
+        //Для оффлайн
+        playerID.playerResources = playerData.resources;
 
         // Преобразуем в JSON
         string json = JsonUtility.ToJson(playerData, true);
@@ -99,13 +126,13 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при создании персонажа: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task 
             });
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
     }
-
+    
     
     /// <summary>
     /// Возвращает Dictionary cо всеми игроками
@@ -149,7 +176,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 // Завершаем Task с ошибкой при проблемах с запросом
-                Debug.LogError($"Ошибка запроса: {error}");
+                Debug.LogError($"Ошибка запроса: {error}"); 
                 taskCompletionSource.SetException(new Exception(error));
             });
 
@@ -163,12 +190,18 @@ public class APIManager : MonoBehaviour
     /// </summary>
     /// <param name="playerName"> Имя игрока </param>
     /// <returns></returns>
-    public async Task<PlayerResources> GetPlayerResources(string playerName)   
+    public async Task<PlayerResources> GetPlayerResources(EntityID playerID)          
     {
-        string URL = Requests.GetPlayerURL(playerName);
+        string URL = Requests.GetPlayerURL(playerID.Name);
 
         // Создаем TaskCompletionSource для ожидания результата запроса
         var taskCompletionSource = new TaskCompletionSource<PlayerResources>();
+        
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.LogError("Нет подключения к интернету");
+            taskCompletionSource.SetResult(playerID.playerResources); // Устанавливаем результат
+        }
 
         HTTPRequests.Instance.Get(URL, 
             onSuccess: response =>
@@ -180,7 +213,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError("Возникла ошибка при получении данных о персонаже: " + error);
-                taskCompletionSource.SetException(new Exception(error)); // Устанавливаем исключение
+                taskCompletionSource.SetResult(playerID.playerResources);
             });
 
         // Ждем завершения Task и возвращаем результат
@@ -196,12 +229,12 @@ public class APIManager : MonoBehaviour
     /// <param name="playerEnergy"> Энергомед </param>
     /// <param name="playerFood"> Еда </param>
     /// <param name="playerCrioCrystal"> Криосталы </param>
-    public async Task PutPlayerResources(string playerName, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
+    public async Task PutPlayerResources(EntityID playerID, int playerIron, int playerEnergy, int playerFood, int playerCrioCrystal)
     {
         // Создаем объект PlayerData
         PlayerData playerData = new PlayerData()
         {
-            name = playerName,
+            name = playerID.Name,
             resources = new PlayerResources()
             {
                 Iron = playerIron,
@@ -211,13 +244,16 @@ public class APIManager : MonoBehaviour
             }
         };
 
+        //Для оффлайн
+        playerID.playerResources = playerData.resources;
+        
         // Преобразуем объект в JSON
         string json = JsonUtility.ToJson(playerData, true);
         
         Debug.Log(json);
 
         // Формируем URL для PUT-запроса
-        string URL = Requests.PutPlayerURL(playerName);
+        string URL = Requests.PutPlayerURL(playerID.Name);
 
         // Создаем TaskCompletionSource для ожидания завершения запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
@@ -233,7 +269,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при обновлении ресурсов персонажа: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
@@ -245,14 +281,14 @@ public class APIManager : MonoBehaviour
     /// Удаление игрока
     /// </summary>
     /// <param name="playerName"></param>
-    public async Task DeletePlayer(string playerName)
+    public async Task DeletePlayer(EntityID playerID)
     {
         // Формируем URL для удаления игрока
-        string URL = Requests.DeletePlayerURL(playerName);
+        string URL = Requests.DeletePlayerURL(playerID.Name);
 
         // Создаем TaskCompletionSource для обработки результата запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
-
+        
         // Выполняем DELETE-запрос
         HTTPRequests.Instance.Delete(URL,
             onSuccess: response =>
@@ -263,12 +299,12 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при удалении персонажа: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
-    }
+    }   
 
 
     /// <summary>
@@ -303,7 +339,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при создании логов: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
@@ -329,7 +365,7 @@ public class APIManager : MonoBehaviour
     /// <param name="breadwinnerShop"> чертеж добытчика</param>
     /// <param name="pierShop"> чертеж пристани </param>
     /// <returns></returns>
-    public async Task CreateShop(string playerName, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
+    public async Task CreateShop(EntityID playerID, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
     {
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
@@ -347,6 +383,9 @@ public class APIManager : MonoBehaviour
             }
         };
 
+        //Для оффлайн
+        playerID.shopResources= shopData.resources;
+        
         // Преобразуем в JSON
         string json = JsonUtility.ToJson(shopData, true);
 
@@ -354,7 +393,7 @@ public class APIManager : MonoBehaviour
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
         // Выполняем POST-запрос
-        HTTPRequests.Instance.Post(Requests.CreateShopURL(playerName), json, 
+        HTTPRequests.Instance.Post(Requests.CreateShopURL(playerID.Name), json, 
             onSuccess: response =>
             {
                 Debug.Log("Магазин персонажа успешно создан");
@@ -363,7 +402,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при создании Магазина персонажа: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
@@ -426,26 +465,34 @@ public class APIManager : MonoBehaviour
     /// <param name="playerName"> Имя игрока </param>
     /// <param name="shopName"> Имя магазина </param>
     /// <returns></returns>
-    public async Task<ShopResources> GetShopResources(string playerName, string shopName)
+    public async Task<ShopResources> GetShopResources(EntityID playerID, string shopName)
     {
-        string URL = Requests.GetShopURL(playerName, shopName);
+        string URL = Requests.GetShopURL(playerID.Name, shopName);
 
         // Создаем TaskCompletionSource для ожидания результата запроса
         var taskCompletionSource = new TaskCompletionSource<ShopResources>();
-
-        HTTPRequests.Instance.Get(URL, 
-            onSuccess: response =>
-            {
-                Debug.Log("Данные о ресурсах магазина успешно получены");
-                ShopData shopData = JsonUtility.FromJson<ShopData>(response);
-                taskCompletionSource.SetResult(shopData.resources); // Устанавливаем результат
-            },
-            onError: error =>
-            {
-                Debug.LogError("Возникла ошибка при получении данных о магазине: " + error);
-                taskCompletionSource.SetException(new Exception(error)); // Устанавливаем исключение
-            });
-
+        
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.LogError("Нет подключения к интернету");
+            taskCompletionSource.SetResult(playerID.shopResources); // Устанавливаем результат
+        }
+        else
+        {
+            HTTPRequests.Instance.Get(URL, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Данные о ресурсах магазина успешно получены");
+                    ShopData shopData = JsonUtility.FromJson<ShopData>(response);
+                    taskCompletionSource.SetResult(shopData.resources); // Устанавливаем результат
+                },
+                onError: error =>
+                {
+                    Debug.LogError("Возникла ошибка при получении данных о магазине: " + error);
+                    taskCompletionSource.SetResult(playerID.shopResources); // Устанавливаем результат 
+                });
+        }
+        
         // Ждем завершения Task и возвращаем результат
         return await taskCompletionSource.Task;
     }
@@ -463,7 +510,7 @@ public class APIManager : MonoBehaviour
     /// <param name="breadwinnerShop"> чертеж добытчика</param>
     /// <param name="pierShop"> чертеж пристани </param>
     /// <returns></returns>
-    public async Task PutShopResources(string playerName, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
+    public async Task PutShopResources(EntityID playerID, string shopName, PriceShopProduct apiaryShop, PriceShopProduct honeyGunShop, PriceShopProduct mobileBaseShop, PriceShopProduct storageShop, PriceShopProduct residentialModuleShop, PriceShopProduct breadwinnerShop, PriceShopProduct pierShop)
     {
         // Создаем объект ShopData
         ShopData shopData = new ShopData()
@@ -481,6 +528,9 @@ public class APIManager : MonoBehaviour
             }
         };
 
+        //Для оффлайн
+        playerID.shopResources = shopData.resources;
+        
         // Преобразуем в JSON
         string json = JsonUtility.ToJson(shopData, true);
 
@@ -488,7 +538,7 @@ public class APIManager : MonoBehaviour
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
         // Выполняем PUT-запрос
-        HTTPRequests.Instance.Put(Requests.PutShopURL(playerName, shopName), json, 
+        HTTPRequests.Instance.Put(Requests.PutShopURL(playerID.Name, shopName), json, 
             onSuccess: response =>
             {
                 Debug.Log("Магазин персонажа успешно обновлен");
@@ -497,7 +547,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при обновлении Магазина персонажа: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
@@ -510,10 +560,10 @@ public class APIManager : MonoBehaviour
     /// <param name="playerName"> имя игрока </param>
     /// <param name="shopName"> имя магазина </param>
     /// <returns></returns>
-    public async Task DeleteShop(string playerName, string shopName)
+    public async Task DeleteShop(EntityID playerID, string shopName)
     {
         // Формируем URL для удаления игрока
-        string URL = Requests.DeleteShopURL(playerName, shopName);
+        string URL = Requests.DeleteShopURL(playerID.Name, shopName);
 
         // Создаем TaskCompletionSource для обработки результата запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
@@ -528,7 +578,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при удалении магазина: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task
@@ -567,7 +617,7 @@ public class APIManager : MonoBehaviour
             onError: error =>
             {
                 Debug.LogError($"Ошибка при создании логов: {error}");
-                taskCompletionSource.SetException(new Exception(error)); // Завершаем Task с ошибкой
+                taskCompletionSource.SetResult(false); // Завершаем Task
             });
 
         // Ждем завершения Task

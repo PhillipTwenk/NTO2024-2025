@@ -96,37 +96,37 @@ public class MovementCharacter : MonoBehaviour
     }
     
     //Не используется
-    private void Jump()
-    {
-        // Проверяем, находится ли игрок на земле
-        if (Physics.Raycast(transform.position, Vector3.down, 0.5f))
-        {
-            isGrounded = true;
-            IsInAir = false;
-            _animationController.JumpAnim("end", false);
-        }
-        else
-        {
-            isGrounded = false;
-        }
-        
-        //Проверка, падает ли игрок
-        if (Physics.Raycast(transform.position, Vector3.down, 3.3f))
-        {
-            IsInAir = false;
-            _animationController.JumpAnim("end", false);
-        }
-        else
-        {
-            IsInAir = true;
-            _animationController.Falling();
-        }
-    
-        // Проверяем нажатие пробела
-        if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
-        {
-            _animationController.JumpAnim("start", IsInAir);
-            _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
-        }
-    }
+    // private void Jump()
+    // {
+    //     // Проверяем, находится ли игрок на земле
+    //     if (Physics.Raycast(transform.position, Vector3.down, 0.5f))
+    //     {
+    //         isGrounded = true;
+    //         IsInAir = false;
+    //         _animationController.JumpAnim("end", false);
+    //     }
+    //     else
+    //     {
+    //         isGrounded = false;
+    //     }
+    //     
+    //     //Проверка, падает ли игрок
+    //     if (Physics.Raycast(transform.position, Vector3.down, 3.3f))
+    //     {
+    //         IsInAir = false;
+    //         _animationController.JumpAnim("end", false);
+    //     }
+    //     else
+    //     {
+    //         IsInAir = true;
+    //         _animationController.Falling();
+    //     }
+    //
+    //     // Проверяем нажатие пробела
+    //     if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
+    //     {
+    //         _animationController.JumpAnim("start", IsInAir);
+    //         _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
+    //     }
+    // }
 }

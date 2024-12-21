@@ -11,15 +11,18 @@ public class DeletePlayer : MonoBehaviour
     /// <summary>
     /// Нажатие на кнопку удаления игрока
     /// </summary>
-    public async void ClickDeletePlayerButton()
+    public void ClickDeletePlayerButton()
     {
         textNewCharacter.gameObject.SetActive(true);
         textNewCharacter.text = DefaultPlayername;
         textPlayerName.gameObject.SetActive(false);
 
-        _ = APIManager.Instance.DeletePlayer(playerID.Name);
+        playerID.DefaultRevert();
+        
         playerID.Name = "None";
         
         gameObject.SetActive(false);
+        
+        JSONSerializeManager.Instance.OnApplicationQuit();
     }
 }

@@ -47,7 +47,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("TutorialUpdate") && IsTutorialActive && CanEnterM && currentTutorialObjective.IsAutomaticalyEnterOnThisStep)
+        if (Input.GetButtonDown("TutorialUpdate") && IsTutorialActive && CanEnterM && currentTutorialObjective.IsAutomaticalyEnterOnThisStep && Time.timeScale == 1f)
         {
             if (currentTutorialObjective.IsTechPanelActiveOnThisStep)
             {

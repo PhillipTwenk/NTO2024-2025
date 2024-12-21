@@ -106,7 +106,7 @@ public class BuildingManager : MonoBehaviour
 
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         PlayerResources playerResources =
-            await APIManager.Instance.GetPlayerResources(playerName);
+            await APIManager.Instance.GetPlayerResources(UIManagerLocation.WhichPlayerCreate);
 
         int HoneyConsumptionBuilding =
             MouseIndicator.GetComponent<PreviouslyBuidlingTriggerDataStorage>().HoneyConsumption;
@@ -139,7 +139,7 @@ public class BuildingManager : MonoBehaviour
 
                             await SyncManager.Enqueue(async () =>
                             {
-                                await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceBuilding,
+                                await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron - priceBuilding,
                                     playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                             });
                             UpdateResourcesEvent.TriggerEvent();

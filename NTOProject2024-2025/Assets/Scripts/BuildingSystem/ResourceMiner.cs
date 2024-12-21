@@ -61,7 +61,6 @@ public class ResourceMiner : MonoBehaviour
         if (!IsWorkStop && !OneCycle)
         {
             OneCycle = true;
-            string playerName = UIManagerLocation.WhichPlayerCreate.Name;
 
             BuildingData buildingData = GetComponent<BuildingData>();
         
@@ -69,10 +68,10 @@ public class ResourceMiner : MonoBehaviour
 
             if (MinerType == IronMinerType)
             {
-                await MinerIronAsync(playerName, playerSaveData, buildingData);
+                await MinerIronAsync(UIManagerLocation.WhichPlayerCreate, playerSaveData, buildingData);
             } else if (MinerType == CCMinerType)
             {
-                 await MinerCCAsync(playerName, playerSaveData, buildingData);
+                 await MinerCCAsync(UIManagerLocation.WhichPlayerCreate, playerSaveData, buildingData);
             }
         }
     }
@@ -85,7 +84,7 @@ public class ResourceMiner : MonoBehaviour
     /// <param name="IronLimit"></param>
     /// <param name="buildingData"></param>
     /// <returns></returns>
-    private async Task MinerIronAsync(string playerName, PlayerSaveData playerSaveData, BuildingData buildingData)
+    private async Task MinerIronAsync(EntityID playerID, PlayerSaveData playerSaveData, BuildingData buildingData)
     {
         bool isRunning = true;
         while (gameObject.activeSelf && isRunning)
@@ -104,7 +103,7 @@ public class ResourceMiner : MonoBehaviour
 
             Debug.Log($"Лимит по металлу: {IronLimit}");
 
-            PlayerResources playerResources = await GetResources(playerName);
+            PlayerResources playerResources = await GetResources(playerID);
             if ((playerResources.Iron + buildingData.Production[0]) <= IronLimit)
             {
                 _animator.SetBool("StopMining",false);
@@ -113,8 +112,8 @@ public class ResourceMiner : MonoBehaviour
                 int OldIronValue = playerResources.Iron;
                 playerResources.Iron += buildingData.Production[0];
                 Debug.Log($"Новое количество металла: {playerResources.Iron}");
-                LogSender(playerName, OldIronValue, playerResources.Iron, IronMinerType);
-                await UpdateResources(playerResources, playerName);
+                LogSender(playerID.Name, OldIronValue, playerResources.Iron, IronMinerType);
+                await UpdateResources(playerResources, playerID);
                 await Task.Delay(TimeProduction);
             } else if ((playerResources.Iron + buildingData.Production[0]) > IronLimit)
             {
@@ -140,7 +139,7 @@ public class ResourceMiner : MonoBehaviour
     /// <param name="CCLimit"></param>
     /// <param name="buildingData"></param>
     /// <returns></returns>
-    private async Task MinerCCAsync(string playerName, PlayerSaveData playerSaveData, BuildingData buildingData)
+    private async Task MinerCCAsync(EntityID playerID, PlayerSaveData playerSaveData, BuildingData buildingData)
     {
         bool isRunning = true;
         while (gameObject.activeSelf && isRunning)
@@ -159,7 +158,7 @@ public class ResourceMiner : MonoBehaviour
 
             Debug.Log($"Лимит по КриоКристаллам: {CCLimit}");
 
-            PlayerResources playerResources = await GetResources(playerName);
+            PlayerResources playerResources = await GetResources(playerID);
             if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit)
             {
                 _animator.SetBool("StopMining",false);
@@ -168,8 +167,8 @@ public class ResourceMiner : MonoBehaviour
                 int OldCCValue = playerResources.CryoCrystal;
                 playerResources.CryoCrystal += buildingData.Production[1];
                 Debug.Log($"Новое количество КриоКристаллов: {playerResources.CryoCrystal}");
-                LogSender(playerName, OldCCValue, playerResources.CryoCrystal, CCMinerType);
-                await UpdateResources(playerResources, playerName);
+                LogSender(playerID.Name, OldCCValue, playerResources.CryoCrystal, CCMinerType);
+                await UpdateResources(playerResources, playerID);
                 await Task.Delay(TimeProduction);
             } else if ((playerResources.CryoCrystal + buildingData.Production[1]) > CCLimit)
             {
@@ -186,22 +185,22 @@ public class ResourceMiner : MonoBehaviour
         }
     }
 
-    private async Task UpdateResources(PlayerResources playerResources, string playerName)
+    private async Task UpdateResources(PlayerResources playerResources, EntityID playerID)
     {
         await SyncManager.Enqueue(async () =>
         {
-            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron, playerResources.Energy,
+            await APIManager.Instance.PutPlayerResources(playerID, playerResources.Iron, playerResources.Energy,
                 playerResources.Food, playerResources.CryoCrystal);
             UpdateResourcesEvent.TriggerEvent();
         });
     }
 
-    private async Task<PlayerResources> GetResources(string playerName)
+    private async Task<PlayerResources> GetResources(EntityID playerID)
     {
         PlayerResources playerResources = null;
         await SyncManager.Enqueue(async () =>
         {
-           playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+           playerResources = await APIManager.Instance.GetPlayerResources(playerID);
            Debug.Log(010101010);
         });
         Debug.Log(2020202020);

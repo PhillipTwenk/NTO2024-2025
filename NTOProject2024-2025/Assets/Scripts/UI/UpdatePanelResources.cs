@@ -16,7 +16,7 @@ public class UpdatePanelResources : MonoBehaviour
 
     public async void UpdateResources()
     {
-        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(ActivePlayer.Name);
+        PlayerResources playerResources = await APIManager.Instance.GetPlayerResources(ActivePlayer);
         
         IronTextPanel.text = Convert.ToString(playerResources.Iron);
         EnergyTextPanel.text = Convert.ToString(playerResources.Energy);

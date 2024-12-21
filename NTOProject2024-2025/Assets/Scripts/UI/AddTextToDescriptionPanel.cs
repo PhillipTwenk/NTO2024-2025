@@ -213,7 +213,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         HideDescriptionPanel();
         
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        PlayerResources playerResources = await GetResourcesPLayer(playerName);
+        PlayerResources playerResources = await GetResourcesPLayer(UIManagerLocation.WhichPlayerCreate);
         
         GameObject building = buildingTransform.gameObject;
         BuildingData buildingData = building.GetComponent<BuildingData>();
@@ -241,7 +241,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
 
         await SyncManager.Enqueue(async () =>
         {
-            await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
+            await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron + NewIron, playerResources.Energy, playerResources.Food,
                 playerResources.CryoCrystal);
         });
        
@@ -265,7 +265,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);
 
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
-        PlayerResources playerResources = await GetResourcesPLayer(playerName);
+        PlayerResources playerResources = await GetResourcesPLayer(UIManagerLocation.WhichPlayerCreate);
 
         int priceUpgrade = buildingSO.priceUpgrade;
         int BaseLevel = BaseUpgradeConditionManager.CurrentBaseLevel;
@@ -282,7 +282,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                     
                     await SyncManager.Enqueue(async () =>
                     {
-                        await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                        await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron - priceUpgrade,
                             playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                     });
                     
@@ -324,7 +324,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
             {
                 await SyncManager.Enqueue(async () =>
                 {
-                    await APIManager.Instance.PutPlayerResources(playerName, playerResources.Iron - priceUpgrade,
+                    await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron - priceUpgrade,
                         playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                 });
                
@@ -370,12 +370,12 @@ public class AddTextToDescriptionPanel : MonoBehaviour
 
     public void ResourceCCLimit() => OnHintPanel(TextLimitResourcesCC);
     
-    private async Task<PlayerResources> GetResourcesPLayer(string playerName)
+    private async Task<PlayerResources> GetResourcesPLayer(EntityID playerID)
     {
         PlayerResources playerResources = null;
         await SyncManager.Enqueue(async () =>
         {
-            playerResources = await APIManager.Instance.GetPlayerResources(playerName);
+            playerResources = await APIManager.Instance.GetPlayerResources(playerID);
         });
         return playerResources;
     }

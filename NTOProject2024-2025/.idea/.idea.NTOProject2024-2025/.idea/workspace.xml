@@ -22,9 +22,29 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Apiary/TriggerApiary.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootstrap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B5BF0C89-1EA3-45FE-9368-8F835DF32FDC/a5/f2ebe925/Screen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/0/System.Threading.Tasks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SelectThisButtonMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,17 +127,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/ShopLog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Buildings/Other/Bullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/BulletControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PreviouslyBuidlingTriggerDataStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/YouCantBuildHereTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PierCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/MinerCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SelectThisButtonMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/LocalAudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/EntryLocationTriggerHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/GlobalAudioManager.cs" />
@@ -128,35 +143,41 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Tutorial/TutorialObjective.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/Semaphore/SyncManager.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Entities/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitilities/LogController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/SettingsSave/SettingsSaveConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScreenResolutionControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
       </list>
     </option>
   </component>
@@ -246,6 +267,7 @@
       <workItem from="1733562944055" duration="53992000" />
       <workItem from="1734550272996" duration="3930000" />
       <workItem from="1734706346295" duration="14533000" />
+      <workItem from="1734795622311" duration="21183000" />
     </task>
     <servers />
   </component>

@@ -162,11 +162,14 @@ public class UIManagerMainMenu : MonoBehaviour
      {
          LoadingCanvasController.Instance.LoadingCanvasNotTransparent.SetActive(true);
          string newName = inputFieldNewName.text; 
-         await APIManager.Instance.CreatePlayer(newName, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
          WhichPlayerCreate.Name = newName;
+         await APIManager.Instance.CreatePlayer(WhichPlayerCreate, StartValueIron, StartValueEnergy,StartValueFood,StartValueCrioCrystal);
 
          string shopName = $"{newName}'sShop";
-         await APIManager.Instance.CreateShop(newName, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
+         await APIManager.Instance.CreateShop(WhichPlayerCreate, shopName, StartValueApiaryShop, StartValueHoneyGunShop,StartValueMobileBaseShop,StartValueStorageShop,StartValueResidentialModuleShop,StartValueBreadwinnerShop,StartValuePierShop);
+         
+         JSONSerializeManager.Instance.OnApplicationQuit();
+         
          StartGameAfterCreatingCharacter.TriggerEvent();
      }
      

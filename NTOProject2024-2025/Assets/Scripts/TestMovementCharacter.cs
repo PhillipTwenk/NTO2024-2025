@@ -111,10 +111,10 @@ public class TestMovementCharacter : MonoBehaviour
         }
     
         // Проверяем нажатие пробела
-        if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
-        {
-            _animationController.JumpAnim("start", IsInAir);
-            _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
-        }
+        // if (Input.GetButtonDown("Jump") && isGrounded && !IsInAir)
+        // {
+        //     _animationController.JumpAnim("start", IsInAir);
+        //     _rb.AddForce(Vector3.up * playerID.jumpForce, ForceMode.Impulse);
+        // }
     }
 }

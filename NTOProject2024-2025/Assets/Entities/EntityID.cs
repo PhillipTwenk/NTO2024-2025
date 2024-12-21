@@ -21,32 +21,41 @@ public class EntityID : ScriptableObject, ISerializableSO
     
     
     
-    
+    [Header("Info")]
     [TextArea] public string Name;
+    public string DefaultName;
     
     [Header("Stats")]
     public float speed;
     public float sprintSpeed;
     public float normalSpeed;
     public float speedTurn;
-    public int jumpForce;
-    
-    public string DefaultName;
-    public int index;
+    //public int jumpForce;
+
+    [Header("Quests")]
     public Quest currentQuest;
     public List<Quest> openQuests;
+
+    [Header("OfflineData")] 
+    public PlayerResources playerResources;
+    public ShopResources shopResources;
+    public PlayerResources DefaultPlayerResources;
+    public ShopResources DefaultShopResources;
 
     public void DefaultRevert()
     {
         if (Name != DefaultName)
         {
             string shopName = $"{Name}'sShop";
-            APIManager.Instance.DeleteShop(Name, shopName);
+            APIManager.Instance.DeleteShop(this, shopName);
             
-            APIManager.Instance.DeletePlayer(Name);
+            APIManager.Instance.DeletePlayer(this);
         }
         
         Name = DefaultName;
+
+        playerResources = DefaultPlayerResources;
+        shopResources = DefaultShopResources;
     }
 }
 
