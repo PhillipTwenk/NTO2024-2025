@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AddTextToDescriptionPanel : MonoBehaviour
@@ -64,14 +65,14 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        if (buildingData.IsThisBuilt && Time.timeScale == 1f && !TutorialManager.IsTutorialActive)
+        if (buildingData.IsThisBuilt && Time.timeScale == 1f && !TutorialManager.IsTutorialActive && WorkersInterBuildingControl.NumberOfSelectedWorkers == 0)
         {
             IsPanelActive = true;
         
             point.SetActive(true);
             panel.SetActive(true);
 
-            if (buildingSO.priceUpgrade > 0 && buildingSO.Level(BaseUpgradeConditionManager.CurrentBaseLevel) <= buildingSO.MaxLevelThisBuilding)
+            if (buildingSO.priceUpgrade > 0 && buildingSO.Level(BaseUpgradeConditionManager.CurrentBaseLevel) <= buildingSO.MaxLevelThisBuilding && buildingData.Level < buildingSO.MaxLevelThisBuilding)
             {
                 ButtonUpgrade.SetActive(true);
                 ButtonUpgradeTextPanel.text = buildingSO.priceUpgrade.ToString();
@@ -270,6 +271,11 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         int priceUpgrade = buildingSO.priceUpgrade;
         int BaseLevel = BaseUpgradeConditionManager.CurrentBaseLevel;
 
+        if (buildingData.Level >= buildingSO.MaxLevelThisBuilding)
+        {
+            ButtonUpgrade.SetActive(false); 
+        }
+
         if (buildingData.Title != "Мобильная база")
         {
             if (playerResources.Iron >= priceUpgrade)
@@ -279,31 +285,36 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                     Dictionary<string, string> playerDictionary = new Dictionary<string, string>();
                     playerDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceUpgrade) - playerResources.Iron}");
                     APIManager.Instance.CreatePlayerLog($"Улучшение здания {buildingData.Title}", playerName, playerDictionary);
-                    
+
+
+                    buildingData.Level += 1;
+                    buildingData.Durability = buildingSO.Durability(buildingData.Level);
+                    buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(buildingData.Level);
+                    buildingData.Production = buildingSO.Production(buildingData.Level).resources;
+                    buildingData.Storage = buildingSO.StorageLimit(buildingData.Level).resources;
+
+                    if (buildingData.Production.Count > 0)
+                    {
+                        buildingData.Production = buildingSO.Production(buildingData.Level).resources;
+                    }
+
                     await SyncManager.Enqueue(async () =>
                     {
+                        if (buildingData.gameObject.GetComponent<EnergyProduction>())
+                        {
+                            playerResources.Energy += (buildingData.Production[0] -
+                                                       (buildingSO.Production(buildingData.Level - 1).resources[0]));
+                            playerResources.Food += (buildingData.Production[1] -
+                                                     (buildingSO.Production(buildingData.Level - 1).resources[1]));
+                        }
                         await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron - priceUpgrade,
                             playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                     });
                     
-
-                    buildingData.Level += 1;
-                    buildingData.Durability = buildingSO.Durability(BaseLevel);
-                    buildingData.HoneyConsumption = buildingSO.EnergyHoneyConsumpiton(BaseLevel);
-                    buildingData.Production = buildingSO.Production(BaseLevel).resources;
-                    buildingData.Storage = buildingSO.StorageLimit(BaseLevel).resources;
-
-                    if (buildingData.Production.Count > 0)
-                    {
-                        buildingData.Production = buildingSO.Production(BaseLevel).resources;
-                    }
-
                     PlayerSaveData playerSaveData = UIManagerLocation.Instance.WhichPlayerDataUse();
                     
                     BuildingSaveData buildingSaveData = new BuildingSaveData(buildingData);
                     playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
-                    
-                    UpdateResourcesEvent.TriggerEvent();
                     
                     OnHintPanel(UpgradeLevelBuildingInformation);
                 }
@@ -320,8 +331,12 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         else
         {
             List<string> ImprovementReport = BaseUpgradeConditionManager.Instance.CanUpgradeMobileBase(playerResources);
-            if (ImprovementReport[0] == BaseUpgradeConditionManager.Instance.SuccesUpgradeText)
+            if (ImprovementReport[0] == BaseUpgradeConditionManager.Instance.SuccesUpgradeText || ImprovementReport[0] == BaseUpgradeConditionManager.Instance.ENDGAME)
             {
+                Dictionary<string, string> playerDictionary = new Dictionary<string, string>();
+                playerDictionary.Add("IronValueUpdate", $"{(playerResources.Iron - priceUpgrade) - playerResources.Iron}");
+                APIManager.Instance.CreatePlayerLog($"Улучшение здания {buildingData.Title}", playerName, playerDictionary);
+                
                 await SyncManager.Enqueue(async () =>
                 {
                     await APIManager.Instance.PutPlayerResources(UIManagerLocation.WhichPlayerCreate, playerResources.Iron - priceUpgrade,
@@ -340,7 +355,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
                 playerSaveData.BuildingDatas[buildingData.SaveListIndex] = buildingSaveData;
 
 
-                OnHintPanel(TextCompleteUpgradeMobileBaseLevel);
+                OnHintPanel(ImprovementReport[0]);
             }
             else
             {
@@ -355,6 +370,8 @@ public class AddTextToDescriptionPanel : MonoBehaviour
         }
         
         JSONSerializeManager.Instance.OnApplicationQuit();
+        
+        UpdateResourcesEvent.TriggerEvent();
         
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }

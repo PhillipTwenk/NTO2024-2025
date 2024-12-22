@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -103,9 +104,11 @@ public class WorkerMovementController : MonoBehaviour
             outlineMode.enabled = true;
             outlineMode.OutlineWidth = 5f;
             isSelected = true;
+            WorkersInterBuildingControl.NumberOfSelectedWorkers += 1;
         } else {
             outlineMode.enabled = false;
             isSelected = false;
+            WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
         }
     }
 
@@ -121,6 +124,14 @@ public class WorkerMovementController : MonoBehaviour
         isSelecting = false;
         if(!isSelected){
             outlineMode.enabled = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (isSelected)
+        {
+            WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
         }
     }
 

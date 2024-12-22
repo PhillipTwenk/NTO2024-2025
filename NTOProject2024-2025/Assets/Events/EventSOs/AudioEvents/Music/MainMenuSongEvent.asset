@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9168cf067106c40836d917dc3df619, type: 3}
   m_Name: MainMenuSongEvent
   m_EditorClassIdentifier: 
-  Description: 
+  Description: "\u041C\u0443\u0437\u044B\u043A\u0430 \u0433\u043B\u0430\u0432\u043D\u043E\u0433\u043E
+    \u043C\u0435\u043D\u044E"

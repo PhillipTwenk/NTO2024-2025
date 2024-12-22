@@ -10,6 +10,7 @@ public class JSONSerializeManager : MonoBehaviour
     
     public List<ScriptableObject> serializableObjects;
     private string savePath;
+    private static readonly object _lock = new object();
 
     private void Awake()
     {
@@ -66,20 +67,23 @@ public class JSONSerializeManager : MonoBehaviour
 
     public void OnApplicationQuit()
     {
-        foreach (var so in serializableObjects)
+        lock (_lock)
         {
-            if (so is ISerializableSO serializableSO)
+            foreach (var so in serializableObjects)
             {
-                try
+                if (so is ISerializableSO serializableSO)
                 {
-                    string json = serializableSO.SerializeToJson();
-                    string filePath = Path.Combine(savePath, $"{so.name}.json");
-                    File.WriteAllText(filePath, json);
-                    Debug.Log($"Сохранено {so.name}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError($"Ошибка сохранения {so.name}: {ex.Message}");
+                    try
+                    {
+                        string json = serializableSO.SerializeToJson();
+                        string filePath = Path.Combine(savePath, $"{so.name}.json");
+                        File.WriteAllText(filePath, json);
+                        Debug.Log($"Сохранено {so.name}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.LogError($"Ошибка сохранения {so.name}: {ex.Message}");
+                    }
                 }
             }
         }

@@ -143,6 +143,7 @@ public class BuildingManager : MonoBehaviour
                                     playerResources.Energy, playerResources.Food, playerResources.CryoCrystal);
                             });
                             UpdateResourcesEvent.TriggerEvent();
+                            
                             //Создаем новое здание, устанавливаем его позицию и удаляем триггер для строительства
                             MouseIndicator.transform.position = new Vector3(mousePosition.x, YplaceVector, mousePosition.z);
                             GameObject newBuildingObject = Instantiate(CurrentBuilding);

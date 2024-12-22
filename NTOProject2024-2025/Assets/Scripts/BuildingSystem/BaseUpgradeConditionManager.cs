@@ -33,29 +33,33 @@ public class BaseUpgradeConditionManager : MonoBehaviour
 
     [SerializeField] private GameEvent ResourceMinerRestored;
 
-
+    [Header("Shield")]
+    [SerializeField] private Material ShieldColor;
+    [SerializeField] private MeshRenderer ShieldRenderer;
+    
     private void Awake()
     {
         Instance = this;
+        CurrentBaseLevel = buildingDataMB.Level;
     }
 
     private void Update()
     {
         //чит
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            CurrentBaseLevel += 1; 
-            ResourceMinerRestored.TriggerEvent();
-            Debug.Log(CurrentBaseLevel);
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Dictionary<string, string> testDictionary = new Dictionary<string, string>();
-            testDictionary.Add("Шкебедедопдодп", "+1488 ");
-            testDictionary.Add("ДАбулум нипнип", "- 997 deadinside");
-            APIManager.Instance.CreatePlayerLog("Тестовые логи шкебеде допдоп", UIManagerLocation.WhichPlayerCreate.Name, testDictionary);
-        }
+        // if (Input.GetKeyDown(KeyCode.Z))
+        // {
+        //     CurrentBaseLevel += 1; 
+        //     ResourceMinerRestored.TriggerEvent();
+        //     Debug.Log(CurrentBaseLevel);
+        // }
+        //
+        // if (Input.GetKeyDown(KeyCode.P))
+        // {
+        //     Dictionary<string, string> testDictionary = new Dictionary<string, string>();
+        //     testDictionary.Add("Шкебедедопдодп", "+1488 ");
+        //     testDictionary.Add("ДАбулум нипнип", "- 997 deadinside");
+        //     APIManager.Instance.CreatePlayerLog("Тестовые логи шкебеде допдоп", UIManagerLocation.WhichPlayerCreate.Name, testDictionary);
+        // }
     }
 
     public List<string> CanUpgradeMobileBase(PlayerResources playerResources)
@@ -76,7 +80,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 if (!FindNote[0])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotFoundNoteTextError} № 1";
+                    string report = $"{NotFoundNoteTextError} 1";
                     resultReport.Add(report);
                 }
                 if (playerResources.Iron < buildingDataMB.buildingTypeSO.priceUpgrade)
@@ -114,7 +118,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 if (!FindNote[1])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotFoundNoteTextError} № 2";
+                    string report = $"{NotFoundNoteTextError} 2";
                     resultReport.Add(report);
                 }
                 // if (EventNatureAtack1Complete)
@@ -161,7 +165,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                 if (!FindNote[2])
                 {
                     IsThisReportUnsuccess = true;
-                    string report = $"{NotFoundNoteTextError} № 3";
+                    string report = $"{NotFoundNoteTextError} 3";
                     resultReport.Add(report);
                 }
                 if (playerResources.Iron < buildingDataMB.buildingTypeSO.priceUpgrade)
@@ -206,6 +210,7 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     resultReport.Clear();
                     resultReport.Add(ENDGAME);
                     ResourceMinerRestored.TriggerEvent();
+                    ShieldRenderer.material = ShieldColor;
                     return resultReport;
                 }
 

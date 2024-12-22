@@ -8788,7 +8788,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10433,8 +10433,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1256324307}
   m_HandleRect: {fileID: 1256324306}
   m_Direction: 2
-  m_Value: 0.0000002589183
-  m_Size: 0.72430414
+  m_Value: -0.0000005178369
+  m_Size: 0.712546
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12332,8 +12332,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1230284641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000007138271}
-  m_AnchorMax: {x: 1, y: 0.72430414}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.712546}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15132,7 +15132,7 @@ MonoBehaviour:
     \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 036d1620178df0740abc024233708885, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -6251262882907199531, guid: 036d1620178df0740abc024233708885, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15241,7 +15241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000035507862, y: 29.466421}
+  m_AnchoredPosition: {x: 0.0000035507862, y: 29.466417}
   m_SizeDelta: {x: -9.78022, y: 106.88577}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1603286282

@@ -35,6 +35,7 @@ public class InteractionBuildingController : MonoBehaviour
 
     private void Update()
     {
+        // Если у здания можно нажать на Е, то при нажатии вызываем ивент, содержащий функционал здания
         if (Input.GetButtonDown("InteractionWithBuilding") && CanPutE)
         {
             InteractionEvent?.Invoke();
@@ -43,6 +44,7 @@ public class InteractionBuildingController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Если игрок около здания, вызываем подсказку о нажатии на Е и позволяем использование функционала
         if (other.gameObject.CompareTag("Player") && PossiblityPutEInThisBuilding)
         {
             if (GetComponent<BuildingData>().IsThisBuilt)
@@ -52,38 +54,52 @@ public class InteractionBuildingController : MonoBehaviour
                 Texthint.SetActive(true);
             }
         }
+        
+        // Если рабочий около здания
         if(other.gameObject.CompareTag("Worker"))
         {
+            // Если данное здание является текущим у данного рабочего
             if (WorkersInterBuildingControl.CurrentBuilding == gameObject.GetComponent<BuildingData>() && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
             {
-                if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive)
+                
+                // Если данное здание может содержать рабочих, и при этом рабочий не занят постройкой здания + здание вообще построено
+                if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive && _buildingData.IsThisBuilt)
                 {
-                    Debug.Log(1);
-                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
+                    // Количество рабочих в этом здании увеливается
+                    GetComponent<ThisBuildingWorkersControl>()
                         .CurrentNumberWorkersInThisBuilding += 1;
-                    WorkersInterBuildingControl.CurrentBuilding.gameObject.GetComponent<ThisBuildingWorkersControl>()
-                        .NumberOfActiveWorkersInThisBuilding -= 1;
+                    
+                    // GetComponent<ThisBuildingWorkersControl>()
+                    //     .NumberOfActiveWorkersInThisBuilding -= 1;
+                    
+                    // Общее количество рабочих в зданиях увеличивается, количество занятых рабочих уменьшается
                     WorkersInterBuildingControl.Instance.CurrentValueOfWorkers += 1;
                     WorkersInterBuildingControl.Instance.NumberOfActiveWorkers -= 1;
 
+                    // Рабочий уничтожается
                     Destroy(other.gameObject);
 
                     BuildingManager.Instance.ProcessWorkerBuildingActive = false;
                     return;
                 }
+                
+                // Если данное здание не построено, и прибежавший рабочий занят постройкой
                 if (!_buildingData.IsThisBuilt && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
                 {
+                    // у рабочего пропадает цель следования
                     WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
                     movementController.WorkerPointOfDestination = null;
                     
                     other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
                     
+                    // Установка анимаций
                     Animator animator = other.gameObject.GetComponent<Animator>();
                     animator.SetBool("Running", false);
                     animator.SetBool("Building", true);
                     animator.SetBool("Idle", false);
                     
                     Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
+                    
                     Debug.Log("Рабочий добрался, начинает строить здание");
                     WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
 

@@ -12,13 +12,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ae3d7a2c70f8e45a7c5fd09cbe68af, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  Name: Test
-  speed: 40
-  sprintSpeed: 60
-  normalSpeed: 40
-  speedTurn: 360
-  jumpForce: 0
+  Name: None
   DefaultName: None
-  index: 1
+  speed: 60
+  sprintSpeed: 80
+  normalSpeed: 60
+  speedTurn: 360
   currentQuest: {fileID: 0}
   openQuests: []
+  playerResources:
+    Iron: 0
+    Energy: 0
+    Food: 0
+    CryoCrystal: 0
+  shopResources:
+    Apiary:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    HoneyGun:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    MobileBase:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Storage:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    ResidentialModule:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Minner:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Pier:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+  DefaultPlayerResources:
+    Iron: 0
+    Energy: 0
+    Food: 0
+    CryoCrystal: 0
+  DefaultShopResources:
+    Apiary:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    HoneyGun:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    MobileBase:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Storage:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    ResidentialModule:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Minner:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+    Pier:
+      IronPrice: 0
+      CryoCrystalPrice: 0
+      IsPurchased: 0
+  _playerSaveData: {fileID: 11400000, guid: c830670e2d972f446b66a992c2da4028, type: 2}
+  DefaultPlayerSaveData: {fileID: 11400000, guid: 9093827f22e00ff4fbd12a55537b95df, type: 2}

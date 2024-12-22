@@ -10,9 +10,11 @@ public class ResourceMiner : MonoBehaviour
     [SerializeField] private string IronMinerType;
     [SerializeField] private string CCMinerType;
 
+    [Header("GameEvents")]
     [SerializeField] private GameEvent ResourceIronLimitEvent;
     [SerializeField] private GameEvent ResourceCCLimitEvent;
     [SerializeField] private GameEvent UpdateResourcesEvent;
+    [SerializeField] private GameEvent EnergySubZero;
 
     private bool IsWorkStop;
     private bool OneCycle;
@@ -104,7 +106,7 @@ public class ResourceMiner : MonoBehaviour
             Debug.Log($"Лимит по металлу: {IronLimit}");
 
             PlayerResources playerResources = await GetResources(playerID);
-            if ((playerResources.Iron + buildingData.Production[0]) <= IronLimit)
+            if ((playerResources.Iron + buildingData.Production[0]) <= IronLimit && playerResources.Energy >= 0)
             {
                 _animator.SetBool("StopMining",false);
                 CanSendMessageToHint = true;
@@ -126,8 +128,21 @@ public class ResourceMiner : MonoBehaviour
                     CanSendMessageToHint = false;
                 }
                 isRunning = false;
+            }else if (playerResources.Energy < 0)
+            {
+                IsWorkStop = true;
+                OneCycle = false;
+                _animator.SetBool("StopMining",true);
+                if (CanSendMessageToHint)
+                {
+                    EnergySubZero.TriggerEvent();
+                    CanSendMessageToHint = false;
+                }
+                isRunning = false;
             }
         }
+        
+        JSONSerializeManager.Instance.OnApplicationQuit();
     }
 
     
@@ -159,7 +174,7 @@ public class ResourceMiner : MonoBehaviour
             Debug.Log($"Лимит по КриоКристаллам: {CCLimit}");
 
             PlayerResources playerResources = await GetResources(playerID);
-            if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit)
+            if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit && playerResources.Energy >= 0)
             {
                 _animator.SetBool("StopMining",false);
                 CanSendMessageToHint = true;
@@ -181,8 +196,21 @@ public class ResourceMiner : MonoBehaviour
                     CanSendMessageToHint = false;
                 }
                 isRunning = false;
+            }else if (playerResources.Energy < 0)
+            {
+                IsWorkStop = true;
+                OneCycle = false;
+                _animator.SetBool("StopMining",true);
+                if (CanSendMessageToHint)
+                {
+                    EnergySubZero.TriggerEvent();
+                    CanSendMessageToHint = false;
+                }
+                isRunning = false;
             }
         }
+        
+        JSONSerializeManager.Instance.OnApplicationQuit();
     }
 
     private async Task UpdateResources(PlayerResources playerResources, EntityID playerID)

@@ -457,6 +457,7 @@ MonoBehaviour:
   ResourceIronLimitEvent: {fileID: 11400000, guid: b9c5f8901d3aa43c99ee2260749026b8, type: 2}
   ResourceCCLimitEvent: {fileID: 11400000, guid: adc738709f1534aa88bbe9dc34ad526c, type: 2}
   UpdateResourcesEvent: {fileID: 11400000, guid: 53fed06d4f29ac3488027e3e6e2e6638, type: 2}
+  EnergySubZero: {fileID: 11400000, guid: c56d7c535ebe61848abceec47ae1d7e8, type: 2}
   TimeProduction: 15000
 --- !u!114 &7658571048178436077
 MonoBehaviour:

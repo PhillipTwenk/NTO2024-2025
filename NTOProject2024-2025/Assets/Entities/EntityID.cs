@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 /// <summary>
 /// Общее описание свойств сущности
@@ -42,20 +43,30 @@ public class EntityID : ScriptableObject, ISerializableSO
     public PlayerResources DefaultPlayerResources;
     public ShopResources DefaultShopResources;
 
-    public void DefaultRevert()
+    [Header("Data")] 
+    public PlayerSaveData _playerSaveData;
+    public PlayerSaveData DefaultPlayerSaveData;
+
+    public async Task DefaultRevert()
     {
         if (Name != DefaultName)
         {
             string shopName = $"{Name}'sShop";
-            APIManager.Instance.DeleteShop(this, shopName);
+            await APIManager.Instance.DeleteShop(this, shopName);
             
-            APIManager.Instance.DeletePlayer(this);
+            await APIManager.Instance.DeletePlayer(this);
         }
         
         Name = DefaultName;
 
         playerResources = DefaultPlayerResources;
         shopResources = DefaultShopResources;
+        
+        _playerSaveData.playerBuildings = DefaultPlayerSaveData.playerBuildings;
+        _playerSaveData.buildingsTransform = DefaultPlayerSaveData.buildingsTransform;
+        _playerSaveData.BuildingDatas = DefaultPlayerSaveData.BuildingDatas;
+        _playerSaveData.BuildingWorkersInformationList =
+            DefaultPlayerSaveData.BuildingWorkersInformationList;
     }
 }
 

@@ -18,6 +18,19 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     public GameObject WorkerPrefab;
     public Camera MainCamera;
 
+    /// <summary>
+    /// Обновление текста панели
+    /// </summary>
+    /// <param name="text"></param>
+    public void TextChanger(TextMeshPro text)
+    {
+        text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
+    }
+    
+    /// <summary>
+    /// Спавн рабочего около здания 
+    /// </summary>
+    /// <param name="text"></param>
     public void SpawnWorkersInThisBuilding(TextMeshPro text)
     {
         if (CurrentNumberWorkersInThisBuilding > 0)
@@ -28,7 +41,7 @@ public class ThisBuildingWorkersControl : MonoBehaviour
             newWorker.transform.rotation = buildingSpawnWorkerPointTransform.rotation;
             newWorker.transform.SetParent(null);
             newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
-            text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
+            TextChanger(text);
             if (GetComponent<BuildingData>().Title == "Жилой модуль")
             {
                 CreateNewWorkerTutorial.CheckAndUpdateTutorialState();
@@ -36,19 +49,24 @@ public class ThisBuildingWorkersControl : MonoBehaviour
         }
     }
 
-    public void TextChanger(TextMeshPro text)
-    {
-        text.text = $"Нажмите E чтобы выгрузить одного рабочего ({CurrentNumberWorkersInThisBuilding}/2)";
-    }
-
+    /// <summary>
+    /// Рабочий начал движение к строению
+    /// </summary>
+    /// <param name="End"></param>
+    /// <param name="buildingTransform"></param>
+    /// <param name="movementController"></param>
+    /// <param name="animator"></param>
     public void StartMovementWorkerToBuilding(bool End, Transform buildingTransform, WorkerMovementController movementController, Animator animator)
     {
         if (!End)
         {
+            // Рабочий идет строить
+            
             Transform workerTransform = movementController.transform;
+            
+            // Выбор ближайшей точки около здания, к которой надо бежать
             List<Transform> pointsOfBuildings = buildingTransform.gameObject.transform.GetChild(0).GetComponent<InteractionBuildingController>()
                 .PointsOfBuildings;
-        
             Transform pointForBuild = null;
             float distanceToPoint = 0;
             int i = 0;
@@ -69,15 +87,19 @@ public class ThisBuildingWorkersControl : MonoBehaviour
                 }
             }
             
+            // Установка цели у NavMeshAgent 
             movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
             movementController.SetWorkerDestination(pointForBuild, true);
         }
         else
         {
+            // Рабочий идёт обратно
+            
             movementController.gameObject.GetComponent<NavMeshAgent>().CompleteOffMeshLink();
             movementController.SetWorkerDestination(buildingTransform, true);
         }
 
+        // Установка анимации бега 
         animator.SetBool("Running", true);
         animator.SetBool("Building", false);
         animator.SetBool("Idle", false);

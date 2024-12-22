@@ -32,14 +32,21 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
     private bool IsWorkersHere;
 
+    public static int NumberOfSelectedWorkers;
+
 
     private void Awake()
     {
         Instance = this;
+        NumberOfSelectedWorkers = 0;
         MainCamera = mainCamera;
         CurrentBuilding = null;
     }
 
+    /// <summary>
+    /// Обновление общего количество рабочих при постройке нового здания
+    /// </summary>
+    /// <param name="newBuilding"></param>
     public void AddNewBuilding(ThisBuildingWorkersControl newBuilding)
     {
         if (newBuilding != null) 
@@ -54,6 +61,10 @@ public class WorkersInterBuildingControl : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Обновление общего количество рабочих при разрушении здания
+    /// </summary>
+    /// <param name="newBuilding"></param>
     public void RemoveNewBuilding(ThisBuildingWorkersControl newBuilding)
     {
         if (newBuilding != null)

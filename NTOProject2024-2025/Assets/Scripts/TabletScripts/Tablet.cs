@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -8,16 +9,26 @@ public class Tablet : MonoBehaviour
     public bool isCollected;
     public GameEvent OpenTabletMenuEvent;
 
+    private void Start()
+    {
+        if (BaseUpgradeConditionManager.CurrentBaseLevel > int.Parse(TabletInfo.tablet_id))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void OnMouseDown() {
         if(!isCollected && Time.timeScale != 0f){
             Debug.Log("Получена заметка");
             isCollected = true;
 
             //Отмечаем в скрипте контроля уровня базы
-            BaseUpgradeConditionManager.Instance.FindNote[int.Parse(TabletInfo.tablet_id)] = true;
+            BaseUpgradeConditionManager.Instance.FindNote[int.Parse(TabletInfo.tablet_id) - 1] = true;
             
             UIManager.currentTablet = TabletInfo;
             OpenTabletMenuEvent.TriggerEvent();
+            
+            gameObject.SetActive(false);
         }
     }
 
