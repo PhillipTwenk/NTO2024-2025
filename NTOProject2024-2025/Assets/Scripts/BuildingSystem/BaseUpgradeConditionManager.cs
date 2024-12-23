@@ -9,25 +9,16 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     public static int CurrentBaseLevel;
     public static BuildingData buildingDataMB;
 
-    public static bool IsMinimumOneBuildingOnLevel2;
-
-    public static bool IsMinimumOneMainBuildingOnLevel3;
-    public static bool IsMinimumOneOtherBuildingOnLevel3;
-
     public List<bool> FindNote;
     
     public List<int> NumberOfWorkersForDifferentLevels;
-
-    public static bool EventNatureAtack1Complete;
-    public static bool EventNatureAtack2Complete; 
-
-    [TextArea] public string NotEnoughtBuildingsTextError;  
+    
     [TextArea] public string NotEnoughtResourcesTextError;  
-    [TextArea] public string NotFoundNoteTextError; 
-    [TextArea] public string NotCompleteEventAtackNature;   
+    [TextArea] public string NotFoundNoteTextError;
     [TextArea] public string NotEnoughtWorkers;
     [TextArea] public string NotEnoughtLevelSomeBuildings;
     [TextArea] public string SuccesUpgradeText;
+    [TextArea] public string NoGunBuidlingText;
     
     [TextArea] public string ENDGAME;
 
@@ -40,7 +31,14 @@ public class BaseUpgradeConditionManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        CurrentBaseLevel = buildingDataMB.Level;
+    }
+
+    public void Initialization()
+    {
+        if (CurrentBaseLevel > 3)
+        {
+            ShieldRenderer.material = ShieldColor;
+        }
     }
 
     private void Update()
@@ -67,6 +65,8 @@ public class BaseUpgradeConditionManager : MonoBehaviour
         int WorkersCount = WorkersInterBuildingControl.Instance.MaxValueOfWorkers;
         string playerName = UIManagerLocation.WhichPlayerCreate.Name;
         int IronCountPlayer = playerResources.Iron;
+        List<GameObject> CurrentBuidlings = UIManagerLocation.WhichPlayerCreate._playerSaveData.playerBuildings;
+        List<BuildingSaveData> buildingSDs = UIManagerLocation.WhichPlayerCreate._playerSaveData.BuildingDatas;
 
         List<string> resultReport = new List<string>();
         bool IsThisReportUnsuccess = false;
@@ -95,6 +95,20 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[0]}";
                     resultReport.Add(report);
                 }
+                int currentNumberNeededBuildingLevel1;
+                if (!BuildingNeededNumberCheck(out currentNumberNeededBuildingLevel1, CurrentBuidlings, 2, 1))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NoGunBuidlingText}: {currentNumberNeededBuildingLevel1} / {1}";
+                    resultReport.Add(report);
+                }
+                int currentNumberNeededBuildingLevelMBL1;
+                if (!BuildingNeededLevelCheck(out currentNumberNeededBuildingLevelMBL1, buildingSDs, 1, 2))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NotEnoughtLevelSomeBuildings} 1 здание {2} уровня";
+                    resultReport.Add(report);
+                }
                 
 
 
@@ -121,12 +135,6 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotFoundNoteTextError} 2";
                     resultReport.Add(report);
                 }
-                // if (EventNatureAtack1Complete)
-                // {
-                //     IsThisReportUnsuccess = true;
-                //     string report = $"{NotCompleteEventAtackNature} № 1";
-                //     resultReport.Add(report);
-                // }
                 if (playerResources.Iron < buildingDataMB.buildingTypeSO.priceUpgrade)
                 {
                     IsThisReportUnsuccess = true;
@@ -139,12 +147,22 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[1]}";
                     resultReport.Add(report);
                 }
-                // if (!IsMinimumOneBuildingOnLevel2)
-                // {
-                //     IsThisReportUnsuccess = true;
-                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно здание должно быть 2 уровня";
-                //     resultReport.Add(report);
-                // }
+
+                int currentNumberNeededBuildingLevel2;
+                if (!BuildingNeededNumberCheck(out currentNumberNeededBuildingLevel2, CurrentBuidlings, 2, 2))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NoGunBuidlingText}: {currentNumberNeededBuildingLevel2} / {2}";
+                    resultReport.Add(report);
+                }
+                int currentNumberNeededBuildingLevelMBL2;
+                if (!BuildingNeededLevelCheck(out currentNumberNeededBuildingLevelMBL2, buildingSDs, 2, 2))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NotEnoughtLevelSomeBuildings} 2 здания {2} уровня";
+                    resultReport.Add(report);
+                }
+                
                 
                 //Отравка ответа
                 if (IsThisReportUnsuccess)
@@ -174,30 +192,27 @@ public class BaseUpgradeConditionManager : MonoBehaviour
                     string report = $"{NotEnoughtResourcesTextError}: {playerResources.Iron} / {buildingDataMB.buildingTypeSO.priceUpgrade}";
                     resultReport.Add(report);
                 }
-                // if (EventNatureAtack2Complete)
-                // {
-                //     IsThisReportUnsuccess = true;
-                //     string report = $"{NotCompleteEventAtackNature} № 2";
-                //     resultReport.Add(report);
-                // }
                 if (WorkersCount < NumberOfWorkersForDifferentLevels[2])
                 {
                     IsThisReportUnsuccess = true;
                     string report = $"{NotEnoughtWorkers}: {WorkersCount} / {NumberOfWorkersForDifferentLevels[2]}";
                     resultReport.Add(report);
                 }
-                // if (!IsMinimumOneMainBuildingOnLevel3)
-                // {
-                //     IsThisReportUnsuccess = true;
-                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно основное здание должно быть 2 уровня";
-                //     resultReport.Add(report);
-                // }
-                // if (!IsMinimumOneOtherBuildingOnLevel3)
-                // {
-                //     IsThisReportUnsuccess = true;
-                //     string report = $"{NotEnoughtLevelSomeBuildings}: хотя бы одно дополнительное здание должно быть 2 уровня";
-                //     resultReport.Add(report);
-                // }
+                int currentNumberNeededBuildingLevel3;
+                if (!BuildingNeededNumberCheck(out currentNumberNeededBuildingLevel3, CurrentBuidlings, 2, 3))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NoGunBuidlingText}: {currentNumberNeededBuildingLevel3} / {3}";
+                    resultReport.Add(report);
+                }
+                int currentNumberNeededBuildingLevelMBL3;
+                if (!BuildingNeededLevelCheck(out currentNumberNeededBuildingLevelMBL3, buildingSDs, 3, 2))
+                {
+                    IsThisReportUnsuccess = true;
+                    string report = $"{NotEnoughtLevelSomeBuildings} 3 здания {2} уровня";
+                    resultReport.Add(report);
+                }
+                
 
 
                 //Отравка ответа
@@ -220,5 +235,47 @@ public class BaseUpgradeConditionManager : MonoBehaviour
         JSONSerializeManager.Instance.OnApplicationQuit();
         
         return null;
+    }
+
+    public bool BuildingNeededNumberCheck(out int currentNumberNeededBuilding, List<GameObject> currentBuildings, int IDoB, int number)
+    {
+        currentNumberNeededBuilding = 0;
+        foreach (var building in currentBuildings)
+        {
+            if (building.transform.GetChild(0).GetComponent<BuildingData>().buildingTypeSO.IDoB == IDoB)
+            {
+                currentNumberNeededBuilding += 1;
+            }
+        }
+
+        if (currentNumberNeededBuilding >= number)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public bool BuildingNeededLevelCheck(out int currentNumberNeededBuildingLevel, List<BuildingSaveData> currentBuildingSaveDatas, int number, int NeededLevel)
+    {
+        currentNumberNeededBuildingLevel = 0;
+        foreach (var buildingSD in currentBuildingSaveDatas)
+        {
+            if (buildingSD.Level == NeededLevel)
+            {
+                currentNumberNeededBuildingLevel += 1;
+            }
+        }
+
+        if (currentNumberNeededBuildingLevel >= number)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ae3d7a2c70f8e45a7c5fd09cbe68af, type: 3}
   m_Name: Player2
   m_EditorClassIdentifier: 
-  Name: gg
+  Name: None
   DefaultName: None
   speed: 60
   sprintSpeed: 80
@@ -21,9 +21,9 @@ MonoBehaviour:
   currentQuest: {fileID: 0}
   openQuests: []
   playerResources:
-    Iron: 1470
-    Energy: 30
-    Food: 60
+    Iron: 550
+    Energy: 50
+    Food: 80
     CryoCrystal: 1
   shopResources:
     Apiary:

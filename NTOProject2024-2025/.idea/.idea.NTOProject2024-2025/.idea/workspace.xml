@@ -21,38 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boer/TriggerMiner.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/_Prefabs/FieldGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/_Prefabs/FieldGenerator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/MobileBase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Boris love/Gameprefab/Bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings/BuildingSOs/Apiary.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntityID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/DefenceFieldEffectEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/DefenceFieldEffectEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/HoneyGunEffectEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/HoneyGunEffectEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/MinerEffectEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Effects/MinerEffectEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/BaseSongEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/BaseSongEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/MainMenuSongEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/MainMenuSongEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/TutorialSongStartEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Events/EventSOs/AudioEvents/Music/TutorialSongStartEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllyUnits/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AllyUnits/Worker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tablet/Tablet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tablet/Tablet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player3SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player3SaveData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/StartValues.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/StartValues.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +136,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interscene Managers/SceneTransitionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitilities/LogController.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/SettingsSave/SettingsSaveConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VolumeSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryLocationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/PauseUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPointMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScreenResolutionControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIRsControlInChoicePlayerPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestMovementCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" />
@@ -173,18 +153,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/ThisBuildingWorkersControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AddTextToDescriptionPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TabletScripts/Tablet.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveData/Json/JSONSerializeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Entities/EntityID.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntryPoint/EntryPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/BaseUpgradeConditionManager.cs" />
       </list>
     </option>
@@ -277,7 +259,8 @@
       <workItem from="1734550272996" duration="3930000" />
       <workItem from="1734706346295" duration="14533000" />
       <workItem from="1734795622311" duration="21183000" />
-      <workItem from="1734872056488" duration="22572000" />
+      <workItem from="1734872056488" duration="23170000" />
+      <workItem from="1734960107044" duration="11754000" />
     </task>
     <servers />
   </component>

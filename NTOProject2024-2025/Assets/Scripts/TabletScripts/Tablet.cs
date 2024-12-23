@@ -9,11 +9,12 @@ public class Tablet : MonoBehaviour
     public bool isCollected;
     public GameEvent OpenTabletMenuEvent;
 
-    private void Start()
+    public void InitializeTablet()
     {
         if (BaseUpgradeConditionManager.CurrentBaseLevel > int.Parse(TabletInfo.tablet_id))
         {
             gameObject.SetActive(false);
+            BaseUpgradeConditionManager.Instance.FindNote[int.Parse(TabletInfo.tablet_id) - 1] = true;
         }
     }
 

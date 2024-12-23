@@ -59,8 +59,6 @@ public class EntryPoint : MonoBehaviour
             }
         }
 
-        InitializeData();
-        
         //Установка сцены главного меню основной
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(MainMenuName));
         

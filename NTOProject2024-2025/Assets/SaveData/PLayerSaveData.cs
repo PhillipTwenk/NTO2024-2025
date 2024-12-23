@@ -10,6 +10,9 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
     [SerializeField] private string BuildingPrefabsPath;
 
     [SerializeField] private GameEvent UpdateResourcesEvent;
+
+    [SerializeField] private GameEvent TabletInitializationEvent;
+    [SerializeField] private GameEvent ShieldInitializationEvent;
     
     // Реализация ISerializableSO   
     public string SerializeToJson()
@@ -66,6 +69,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
             int i = 0;
             foreach (var building in playerBuildings)
             {
+                Debug.Log($"Здание номеееерррр {i}");
                 GameObject newBuilding = Instantiate(building);
                 newBuilding.transform.position = buildingsTransform[i].position;
                 newBuilding.transform.rotation = buildingsTransform[i].rotation;
@@ -85,10 +89,13 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
                 {
                     BaseUpgradeConditionManager.buildingDataMB = buildingData;
                     BaseUpgradeConditionManager.CurrentBaseLevel = buildingData.Level;
+                    TabletInitializationEvent.TriggerEvent();
+                    ShieldInitializationEvent.TriggerEvent();
                 }
 
                 if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
                 {
+                    Debug.Log($"ЭТО оБЩАГА Э/ТО ОБЩАГА ТУТ СТУДЕНТЫ ЖИВУТ ЫЫЫЫ");
                     ThisBuildingWorkersControl workers = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
                     workers.CurrentNumberWorkersInThisBuilding = BuildingWorkersInformationList[i].CurrentNumberOfWorkersInThisBuilding;
                     workers.MaxValueOfWorkersInThisBuilding = BuildingWorkersInformationList[i].MaxValueOfWorkersInThisBuilding;
