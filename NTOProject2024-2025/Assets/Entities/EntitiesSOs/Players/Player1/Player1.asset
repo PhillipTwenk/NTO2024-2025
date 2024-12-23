@@ -21,15 +21,15 @@ MonoBehaviour:
   currentQuest: {fileID: 0}
   openQuests: []
   playerResources:
-    Iron: 1490
-    Energy: 30
-    Food: 80
-    CryoCrystal: 5
+    Iron: 300
+    Energy: 10
+    Food: 60
+    CryoCrystal: 10
   shopResources:
     Apiary:
       IronPrice: 50
       CryoCrystalPrice: 3
-      IsPurchased: 1
+      IsPurchased: 0
     HoneyGun:
       IronPrice: 50
       CryoCrystalPrice: 3
@@ -45,11 +45,11 @@ MonoBehaviour:
     ResidentialModule:
       IronPrice: 50
       CryoCrystalPrice: 3
-      IsPurchased: 1
+      IsPurchased: 0
     Minner:
       IronPrice: 50
       CryoCrystalPrice: 3
-      IsPurchased: 1
+      IsPurchased: 0
     Pier:
       IronPrice: 50
       CryoCrystalPrice: 3

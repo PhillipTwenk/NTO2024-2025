@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private VolumeSlider _volumeSliderMusic;
     [SerializeField] private VolumeSlider _volumeSliderEffects;
+    
+    [SerializeField] private ScreenResolutionControl _screenResolutionControl;
 
     private bool IsOpenBuildingPanel;
     private float timer;
@@ -48,6 +50,8 @@ public class UIManager : MonoBehaviour
     {
         _volumeSliderMusic.Initialization();
         _volumeSliderEffects.Initialization();
+        
+        _screenResolutionControl.Initialization();
     }
     
     public void Awake()

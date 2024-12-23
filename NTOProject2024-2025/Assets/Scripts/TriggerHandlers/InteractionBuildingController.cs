@@ -108,7 +108,7 @@ public class InteractionBuildingController : MonoBehaviour
                     return;
                 }
             }
-            if (other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+            if ((other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding.GetComponent<BuildingData>().buildingTypeSO.IDoB == GetComponent<BuildingData>().buildingTypeSO.IDoB) && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
             {
                 if (GetComponent<ThisBuildingWorkersControl>())
                 {

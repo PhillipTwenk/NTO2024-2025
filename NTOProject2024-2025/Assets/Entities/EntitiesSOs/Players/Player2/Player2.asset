@@ -21,7 +21,7 @@ MonoBehaviour:
   currentQuest: {fileID: 0}
   openQuests: []
   playerResources:
-    Iron: 550
+    Iron: 850
     Energy: 50
     Food: 80
     CryoCrystal: 1

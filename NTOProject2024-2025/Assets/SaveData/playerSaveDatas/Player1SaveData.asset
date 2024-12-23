@@ -23,11 +23,11 @@ MonoBehaviour:
     rotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
     scale: {x: 2.585373, y: 2.585373, z: 2.585403}
   BuildingDatas:
-  - Level: 4
-    Durability: 250
+  - Level: 1
+    Durability: 175
     Storage: dc0500000a000000
     SaveListIndex: 0
-    HoneyConsumption: 40
+    HoneyConsumption: 0
     Production: 
   BuildingWorkersInformationList:
   - CurrentNumberOfWorkersInThisBuilding: 1

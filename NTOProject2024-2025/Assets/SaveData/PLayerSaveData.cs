@@ -22,7 +22,8 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
         {
             buildingNames = playerBuildings.ConvertAll(b => b.name),
             buildingsTransform = buildingsTransform,
-            BuildingDatas = BuildingDatas
+            BuildingDatas = BuildingDatas,
+            WorkersContolSaveDatas = BuildingWorkersInformationList
         };
         return JsonUtility.ToJson(serializableData, true);
     }
@@ -45,6 +46,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
 
         buildingsTransform = serializableData.buildingsTransform;
         BuildingDatas = serializableData.BuildingDatas;
+        BuildingWorkersInformationList = serializableData.WorkersContolSaveDatas;
     }
     
     
@@ -214,4 +216,5 @@ public class SerializableData
     public List<string> buildingNames;
     public List<TransformData> buildingsTransform;
     public List<BuildingSaveData> BuildingDatas;
+    public List<WorkersContolSaveData> WorkersContolSaveDatas;
 }

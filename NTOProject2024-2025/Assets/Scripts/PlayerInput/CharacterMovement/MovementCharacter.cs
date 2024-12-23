@@ -48,6 +48,11 @@ public class MovementCharacter : MonoBehaviour
         {
             Move();
         }
+        else
+        {
+            // Остановка движения
+            _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y, 0); // Обнуляем горизонтальную скорость
+        }
     }
     void InputGet()
     {

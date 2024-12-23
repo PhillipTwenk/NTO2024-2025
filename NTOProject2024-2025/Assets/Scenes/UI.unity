@@ -5268,6 +5268,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44954120eec618e45a5e0a1455692762, type: 2}
   _volumeSliderMusic: {fileID: 359772282}
   _volumeSliderEffects: {fileID: 694802461}
+  _screenResolutionControl: {fileID: 462131446}
   IsExtremeActivated: 0
 --- !u!114 &462131445
 MonoBehaviour:

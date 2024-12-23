@@ -89,6 +89,9 @@ public class PlansInShopControl : MonoBehaviour
         }
         else
         {
+            PanelRH.SetActive(false);
+            PanelA.SetActive(false);
+            PanelM.SetActive(false);
             switch (BaseUpgradeConditionManager.CurrentBaseLevel)
             {
                 case 1:
