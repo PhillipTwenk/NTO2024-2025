@@ -269,6 +269,9 @@
             <e p="AudioManager.cs" t="Include" />
             <e p="SceneTransitionManager.cs" t="Include" />
           </e>
+          <e p="Optimization" t="Include">
+            <e p="VisualEffectCulling.cs" t="Include" />
+          </e>
           <e p="PlayerInput" t="Include">
             <e p="CharacterMovement" t="Include">
               <e p="CameraFollowTarget.cs" t="Include" />

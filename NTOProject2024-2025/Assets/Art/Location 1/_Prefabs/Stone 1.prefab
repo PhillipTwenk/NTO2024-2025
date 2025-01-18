@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 44
+  m_StaticEditorFlags: 62
   m_IsActive: 1
 --- !u!4 &6660148601446727257
 Transform:
@@ -67,7 +67,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 44
+  m_StaticEditorFlags: 62
   m_IsActive: 1
 --- !u!4 &7908845794626180726
 Transform:
@@ -102,7 +102,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 44
+  m_StaticEditorFlags: 62
   m_IsActive: 1
 --- !u!4 &2919935234384050272
 Transform:
