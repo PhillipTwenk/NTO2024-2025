@@ -163,6 +163,10 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void StartPlacingNewBuilding(Plan plan)
     {
+        if (BuildingManager.Instance.MouseIndicator != null)
+        {
+            Destroy(BuildingManager.Instance.MouseIndicator);
+        }
         GameObject PlaceNewBuildingTrigger = Instantiate(plan.buildingSO.PrefabBeforeBuilding);
         BuildingManager.Instance.MouseIndicator = PlaceNewBuildingTrigger;
         BuildingManager.Instance.CurrentBuilding = plan.buildingSO.PrefabBuilding;

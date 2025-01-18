@@ -20,7 +20,7 @@ MonoBehaviour:
     x: -146
     y: -133
     width: 1511
-    height: 1767
+    height: 1831
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,8 +78,8 @@ MonoBehaviour:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
       m_SerializableObject: 1500
-    min: -Infinity
-    max: Infinity
+    min: 0
+    max: 6000
     enumValues: []
     descendantCount: 0
   - name: Particle Size
@@ -2281,7 +2281,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 20, y: 22}
+  m_UIPosition: {x: 8, y: 76}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:

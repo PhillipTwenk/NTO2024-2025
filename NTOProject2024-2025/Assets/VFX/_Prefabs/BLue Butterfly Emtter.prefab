@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 811323974858060882}
   - component: {fileID: 5443654972921932179}
   - component: {fileID: 3792073144731699725}
+  - component: {fileID: 6904794846378247698}
   m_Layer: 0
   m_Name: BLue Butterfly Emtter
   m_TagString: Untagged
@@ -126,3 +127,17 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6904794846378247698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272478613685817286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376b0cbf52d2fa643b780a894df8911a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualEffect: {fileID: 5443654972921932179}
+  mainCamera: {fileID: 0}

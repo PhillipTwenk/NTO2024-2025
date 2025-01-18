@@ -20,24 +20,138 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/Home/TriggerHome.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/3dObjects/_Prefabs/FieldGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3dObjects/_Prefabs/FieldGenerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Blue Flower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Blue Flower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Blue Mushroom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Blue Mushroom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Drown Flower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Drown Flower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Fern 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flower A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flower A.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flower B.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flower B.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flowers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Flowers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass one 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass one 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type A.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type B.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Grass type B.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom 6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Mushroom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Stone 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Strange Flower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Strange Flower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/_Prefabs/Tree Wood.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/canyon/canyon 1/Canyon 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/canyon/canyon 1/Canyon 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/blue mushrooms/Blue Mushroom.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/blue mushrooms/Blue Mushroom.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 1/Mushroom 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 1/Mushroom 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 2/mushroom 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 2/mushroom 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 3/Mushroom 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 3/Mushroom 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 5/Mushroom 5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 5/Mushroom 5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 6/Mushroom 6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/mushrooms/mushroom 6/Mushroom 6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/flowers/Flowers lot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/flowers/Flowers lot.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 1/Grass 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 1/Grass 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 2/Grass 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 2/Grass 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 3/Grass 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/grass 3/Grass 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/something 1/Grass type A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/something 1/Grass type A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/something 2/Grass type B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/something 2/Grass type B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/strange flower/Strange flower.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/strange flower/Strange flower.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/tuffet 1/Tuffet 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/tuffet 1/Tuffet 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/plants/tuffet 2/Tuffet 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/plants/tuffet 2/Tuffet 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 1/rock 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 1/rock 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 2/Rock 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 2/Rock 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 3/rock 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 3/rock 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 4/Stone type 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 4/Stone type 4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 5/rock 5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/stones/stone 5/rock 5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 1/Tree Platform.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 1/Tree Platform.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 1/Tree Wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 1/Tree Wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 2/Wood tree 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 2/Wood tree 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 3/Tree Wood 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 1/trees/tree 3/Tree Wood 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Grass R1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Grass R1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Grass R3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Grass R3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Red Flower 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small Plant Red 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small Plant Red 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Small plant R6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Stone 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Tree Red 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Tree Red 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Tree Red 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/_Prefab/Tree Red 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 1/Ref Flower 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 1/Ref Flower 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 2/Red Flower 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 2/Red Flower 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 3/Red Flower 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/flowers/flower 3/Red Flower 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/grass 1/Grass Red 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/grass 1/Grass Red 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/grass 3/Grass R 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/grass 3/Grass R 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 1/Smaill Plant 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 1/Smaill Plant 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 2/Smaell Red Plant 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 2/Smaell Red Plant 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 3/Smaill plant R3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 3/Smaill plant R3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 4/Small plant R4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 4/Small plant R4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 5/Small plant R5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 5/Small plant R5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 6/Small Plant 6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/small plants/small plant 6/Small Plant 6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/stones/stone 1/Red Stone 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/stones/stone 1/Red Stone 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/stones/stone 2/Red Stone 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/stones/stone 2/Red Stone 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Back Foliage Red 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Back Foliage Red 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Fron foliage Red 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Fron foliage Red 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Tree R wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Tree R wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Tree red platform.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 1/Tree red platform.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree Leaves 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree Leaves 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree back Leaves 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree back Leaves 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree wood 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 2/trees/tree 2/Red Tree wood 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Column 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Ice 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Rock ice 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Stone m2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/_Prefabs/Tree desert 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/columns/column 1/Column 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/columns/column 1/Column 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/columns/column 2/Column 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/columns/column 2/Column 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 1/Ice 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 1/Ice 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 2/Ice 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 2/Ice 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 3/Ice 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/ice pillars/ice 3/Ice 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 1/Rock 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 1/Rock 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 2/Rock ice 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 2/Rock ice 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 3/Rock ice 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/rocks/rock 3/Rock ice 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/stones/stone 1/Stone m1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/stones/stone 1/Stone m1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/stones/stone 2/stone m2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/stones/stone 2/stone m2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 1/Desert tree 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 1/Desert tree 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 2/Desert tree 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 2/Desert tree 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 3/Tree Desert 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Location 3/trees/tree 3/Tree Desert 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cool Visual Effects - Part 1/Effects/Snow/Snow.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cool Visual Effects - Part 1/Effects/Snow/Snow.vfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Apiary/Apiary.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Home/home.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/HoneyGun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/HoneyGun/HoneyGun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Miner/Miner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/MobileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/MobileBase/MobileBase.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Pier/Pier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Pier/Pier.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Storage/Storage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/BuildingPrefabs/Storage/Storage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player1SaveData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/playerSaveDatas/Player2SaveData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput/CharacterMovement/MovementCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Base Sci Fi Volume.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Base Sci Fi Volume.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +179,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/CameraSizeTriggerLocationChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildingSystem/EnergyProduction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EntityActions/WorkersScripts/WorkersInterBuildingControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Optimization/VisualEffectCulling.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Entities/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerLocation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/YouCantBuildHereTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/PierCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/MinerCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
@@ -171,6 +285,7 @@
         <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Optimization/VisualEffectCulling.cs" />
       </list>
     </option>
   </component>
@@ -264,6 +379,7 @@
       <workItem from="1734795622311" duration="21183000" />
       <workItem from="1734872056488" duration="23170000" />
       <workItem from="1734960107044" duration="18346000" />
+      <workItem from="1737194865817" duration="6006000" />
     </task>
     <servers />
   </component>
