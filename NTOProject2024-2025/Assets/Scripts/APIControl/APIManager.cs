@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 /// </summary>
 public class Requests
 {
-    private static string UUID = "989f4271-59bd-4b47-b2a1-e2d838207f6e";
+    private static string UUID = "ad9eeae2-76a0-4074-86e5-cc77b967816d";
     public static string CreatePlayerURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/";
     public static string GetPlayersURL = $"https://2025.nti-gamedev.ru/api/games/{UUID}/players/";
 

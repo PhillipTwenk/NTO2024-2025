@@ -146,6 +146,9 @@
             <e p="EffectManager.cs" t="Include" />
           </e>
         </e>
+        <e p="CustomEditorScripts" t="Include">
+          <e p="CEResetPlayersData.cs" t="Include" />
+        </e>
         <e p="Entities" t="Include">
           <e p="EntityID.cs" t="Include" />
           <e p="ResourcesSO.cs" t="Include" />
@@ -318,22 +321,6 @@
             <e p="Utility.cs" t="Include" />
           </e>
         </e>
-        <e p="SineVFX" t="Include">
-          <e p="TranslucentCrystals" t="Include">
-            <e p="_SRP" t="Include">
-              <e p="!!!_ReadBeforeImport_!!!.txt" t="Include" />
-            </e>
-            <e p="README.txt" t="Include" />
-            <e p="Resources" t="Include">
-              <e p="Shaders" t="Include">
-                <e p="Crystal.shader" t="Include" />
-                <e p="SkyboxProceduralDesaturated.shader" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
-        <e p="SpawnerScript.cs" t="Include" />
-        <e p="Test5.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="Currents" t="Include">
@@ -386,6 +373,20 @@
               </e>
             </e>
             <e p="README.txt" t="Include" />
+          </e>
+          <e p="SineVFX" t="Include">
+            <e p="TranslucentCrystals" t="Include">
+              <e p="_SRP" t="Include">
+                <e p="!!!_ReadBeforeImport_!!!.txt" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="Crystal.shader" t="Include" />
+                  <e p="SkyboxProceduralDesaturated.shader" t="Include" />
+                </e>
+              </e>
+            </e>
           </e>
         </e>
       </e>
