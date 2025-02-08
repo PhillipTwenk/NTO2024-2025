@@ -22,191 +22,11 @@
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv05.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv05.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv06.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv06.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv07.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv07.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv08.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv08.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv09.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv09.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv10.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Crystalsv10.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv05.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv05.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv06.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv06.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv07.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv07.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv08.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv08.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv09.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv09.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv10.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Prefabs/Gamma/Crystalsv10.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/GlowingSphere.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/GlowingSphere.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Albedo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGridv01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGridv01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGridv02.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGridv02.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Day.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Day.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Day_Desaturated.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Day_Desaturated.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Night.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Night.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Night_Desaturated.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/Skybox_Night_Desaturated.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv01Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv01Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv02.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv02.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv02Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv02Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv03.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv03.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv03Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv03Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv04.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv04.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv04Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv04Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv05.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv05.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv05Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv05Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv06.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv06.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv06Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv06Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv07.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv07.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv07Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv07Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv08.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv08.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv08Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv08Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv09.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv09.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv09Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv09Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv10.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv10.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv10Gamma.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Materials/TranslucentCrystalv10Gamma.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/Materials/TranslucentCrystal.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/Materials/TranslucentCrystal.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/Materials/TranslucentCrystal01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/Materials/TranslucentCrystal01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/TranslucentCrystal01.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/TranslucentCrystal01.mtl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/TranslucentCrystal01.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Meshes/TranslucentCrystal01.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Shaders/Crystal.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Shaders/Crystal.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Shaders/SkyboxProceduralDesaturated.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Shaders/SkyboxProceduralDesaturated.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Emission.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Emission.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Mask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_MetallicSmoothness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_MetallicSmoothness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp05.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp06.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp07.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp07v2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp07v2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Resources/Textures/Ramps/Ramp08.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/ReflectionProbe-1.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene/ReflectionProbe-1.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/ReflectionProbe-1.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma/ReflectionProbe-1.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/!!!_ReadBeforeImport_!!!.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/!!!_ReadBeforeImport_!!!.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpawnerScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpawnerScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test5.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test5.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fence.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fence.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/shield.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/shield.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/MinerCantBuildHere.cs" />
         <option value="$PROJECT_DIR$/Assets/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SelectThisButtonMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/LocalAudioManager.cs" />
@@ -319,7 +138,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TestBuy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdatePanelResources.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManagerMainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeletePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BuildingSystem/ResourceMiner.cs" />
@@ -339,8 +157,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Optimization/VisualEffectCulling.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/CustomEditorScripts/CEResetPlayersData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
       </list>
     </option>
   </component>
@@ -436,6 +256,7 @@
       <workItem from="1734960107044" duration="18346000" />
       <workItem from="1737194865817" duration="6603000" />
       <workItem from="1738499748201" duration="7988000" />
+      <workItem from="1739014713605" duration="10320000" />
     </task>
     <servers />
   </component>

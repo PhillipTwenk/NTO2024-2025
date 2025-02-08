@@ -116,18 +116,27 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания ответа
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
-        // Выполняем POST-запрос
-        HTTPRequests.Instance.Post(Requests.CreatePlayerURL, json, 
-            onSuccess: response =>
-            {
-                Debug.Log("Персонаж успешно создан");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при создании персонажа: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task 
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем POST-запрос
+            HTTPRequests.Instance.Post(Requests.CreatePlayerURL, json,  
+                onSuccess: response =>
+                {
+                    Debug.Log("Персонаж успешно создан");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при создании персонажа: {error}");
+                
+                    taskCompletionSource.SetResult(false); // Завершаем Task 
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - CreatePlayer");
+            taskCompletionSource.SetResult(true);
+        }
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
@@ -175,8 +184,15 @@ public class APIManager : MonoBehaviour
             },
             onError: error =>
             {
-                // Завершаем Task с ошибкой при проблемах с запросом
-                Debug.LogError($"Ошибка запроса: {error}"); 
+                if (!InternetMonitor.IsOfflineMode)
+                {
+                    Debug.LogError($"Ошибка запроса: {error}"); 
+                }
+                else
+                {
+                    Debug.Log("OfflineMode on");
+                }
+
                 taskCompletionSource.SetException(new Exception(error));
             });
 
@@ -196,25 +212,30 @@ public class APIManager : MonoBehaviour
 
         // Создаем TaskCompletionSource для ожидания результата запроса
         var taskCompletionSource = new TaskCompletionSource<PlayerResources>();
-        
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            Debug.LogError("Нет подключения к интернету");
-            taskCompletionSource.SetResult(playerID.playerResources); // Устанавливаем результат
-        }
 
-        HTTPRequests.Instance.Get(URL, 
-            onSuccess: response =>
-            {
-                Debug.Log("Данные о ресурсах персонажа успешно получены");
-                PlayerData playerData = JsonUtility.FromJson<PlayerData>(response);
-                taskCompletionSource.SetResult(playerData.resources); // Устанавливаем результат
-            },
-            onError: error =>
-            {
-                Debug.LogError("Возникла ошибка при получении данных о персонаже: " + error);
-                taskCompletionSource.SetResult(playerID.playerResources);
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            HTTPRequests.Instance.Get(URL, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Данные о ресурсах персонажа успешно получены");
+                    PlayerData playerData = JsonUtility.FromJson<PlayerData>(response);
+                    taskCompletionSource.SetResult(playerData.resources); // Устанавливаем результат
+                },
+                onError: error =>
+                {
+
+                    Debug.LogError("Возникла ошибка при получении данных о персонаже: " + error);
+                    taskCompletionSource.SetResult(playerID.playerResources);
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - GetPlayerResources");
+            taskCompletionSource.SetResult(playerID.playerResources);
+        }
+        
+        
 
         // Ждем завершения Task и возвращаем результат
         return await taskCompletionSource.Task;
@@ -258,19 +279,28 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания завершения запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
-        // Выполняем PUT-запрос
-        HTTPRequests.Instance.Put(URL, json,
-            onSuccess: response =>
-            {
-                Debug.Log("Ресурсы персонажа успешно обновлены");
-                Debug.Log(response);
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при обновлении ресурсов персонажа: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
+
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем PUT-запрос
+            HTTPRequests.Instance.Put(URL, json,
+                onSuccess: response =>
+                {
+                    Debug.Log("Ресурсы персонажа успешно обновлены");
+                    Debug.Log(response);
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при обновлении ресурсов персонажа: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - PutPlayerResources");
+            taskCompletionSource.SetResult(true);
+        }
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
@@ -289,19 +319,30 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для обработки результата запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
         
-        // Выполняем DELETE-запрос
-        HTTPRequests.Instance.Delete(URL,
-            onSuccess: response =>
-            {
-                Debug.Log("Персонаж успешно удален");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при удалении персонажа: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем DELETE-запрос
+            HTTPRequests.Instance.Delete(URL,
+                onSuccess: response =>
+                {
+                    Debug.Log("Персонаж успешно удален");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при удалении персонажа: {error}");
+                    
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
 
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - DeletePlayer");
+            taskCompletionSource.SetResult(true);
+        }
+        
+        
         // Ждем завершения Task
         await taskCompletionSource.Task;
     }   
@@ -329,18 +370,27 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания ответа
         var taskCompletionSource = new TaskCompletionSource<bool>();
     
-        // Выполняем POST-запрос
-        HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
-            onSuccess: response =>
-            {
-                Debug.Log("Логи были отправлены");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при создании логов: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем POST-запрос
+            HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Логи были отправлены");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при создании логов: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - CreatePlayerLog");
+            taskCompletionSource.SetResult(true);
+        }
+        
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
@@ -392,18 +442,28 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания ответа
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
-        // Выполняем POST-запрос
-        HTTPRequests.Instance.Post(Requests.CreateShopURL(playerID.Name), json, 
-            onSuccess: response =>
-            {
-                Debug.Log("Магазин персонажа успешно создан");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при создании Магазина персонажа: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем POST-запрос
+            HTTPRequests.Instance.Post(Requests.CreateShopURL(playerID.Name), json, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Магазин персонажа успешно создан");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при создании Магазина персонажа: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - CreateShop");
+            taskCompletionSource.SetResult(true);
+        }
+        
+        
 
         // Ждем завершения Task
         await taskCompletionSource.Task;
@@ -472,12 +532,7 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания результата запроса
         var taskCompletionSource = new TaskCompletionSource<ShopResources>();
         
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            Debug.LogError("Нет подключения к интернету");
-            taskCompletionSource.SetResult(playerID.shopResources); // Устанавливаем результат
-        }
-        else
+        if (!InternetMonitor.IsOfflineMode)
         {
             HTTPRequests.Instance.Get(URL, 
                 onSuccess: response =>
@@ -492,7 +547,12 @@ public class APIManager : MonoBehaviour
                     taskCompletionSource.SetResult(playerID.shopResources); // Устанавливаем результат 
                 });
         }
-        
+        else
+        {
+            Debug.Log("OfflineMode on - GetShopResources");
+            taskCompletionSource.SetResult(playerID.shopResources);
+        }
+
         // Ждем завершения Task и возвращаем результат
         return await taskCompletionSource.Task;
     }
@@ -537,19 +597,28 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания ответа
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
-        // Выполняем PUT-запрос
-        HTTPRequests.Instance.Put(Requests.PutShopURL(playerID.Name, shopName), json, 
-            onSuccess: response =>
-            {
-                Debug.Log("Магазин персонажа успешно обновлен");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при обновлении Магазина персонажа: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
+        if (!InternetMonitor.IsOfflineMode)
+        {
+             // Выполняем PUT-запрос
+            HTTPRequests.Instance.Put(Requests.PutShopURL(playerID.Name, shopName), json, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Магазин персонажа успешно обновлен");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при обновлении Магазина персонажа: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
 
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - PutShopResources");
+            taskCompletionSource.SetResult(true);
+        }
+       
         // Ждем завершения Task
         await taskCompletionSource.Task;
     }
@@ -568,19 +637,28 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для обработки результата запроса
         var taskCompletionSource = new TaskCompletionSource<bool>();
 
-        // Выполняем DELETE-запрос
-        HTTPRequests.Instance.Delete(URL,
-            onSuccess: response =>
-            {
-                Debug.Log("Магазин успешно удален");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при удалении магазина: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
-
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем DELETE-запрос
+            HTTPRequests.Instance.Delete(URL,
+                onSuccess: response =>
+                {
+                    Debug.Log("Магазин успешно удален");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при удалении магазина: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - DeleteShop");
+            taskCompletionSource.SetResult(true);
+        }
+        
+        
         // Ждем завершения Task
         await taskCompletionSource.Task;
     }
@@ -607,19 +685,27 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для ожидания ответа
         var taskCompletionSource = new TaskCompletionSource<bool>();
     
-        // Выполняем POST-запрос
-        HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
-            onSuccess: response =>
-            {
-                Debug.Log("Логи были отправлены");
-                taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
-            },
-            onError: error =>
-            {
-                Debug.LogError($"Ошибка при создании логов: {error}");
-                taskCompletionSource.SetResult(false); // Завершаем Task
-            });
-
+        if (!InternetMonitor.IsOfflineMode)
+        {
+            // Выполняем POST-запрос
+            HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+                onSuccess: response =>
+                {
+                    Debug.Log("Логи были отправлены");
+                    taskCompletionSource.SetResult(true); // Завершаем Task успешным результатом
+                },
+                onError: error =>
+                {
+                    Debug.LogError($"Ошибка при создании логов: {error}");
+                    taskCompletionSource.SetResult(false); // Завершаем Task
+                });
+        }
+        else
+        {
+            Debug.Log("OfflineMode on - CreateShopLog");
+            taskCompletionSource.SetResult(true);
+        }
+        
         // Ждем завершения Task
         await taskCompletionSource.Task;
     }

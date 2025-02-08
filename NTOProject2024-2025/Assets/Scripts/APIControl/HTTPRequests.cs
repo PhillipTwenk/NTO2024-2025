@@ -94,13 +94,18 @@ public class HTTPRequests: MonoBehaviour
 
             yield return request.SendWebRequest();
 
-            if (request.result == UnityWebRequest.Result.Success)
+            if (request.result == UnityWebRequest.Result.Success && !InternetMonitor.IsOfflineMode)
             {
                 onSuccess?.Invoke(request.downloadHandler.text);
             }
-            else
+            else if (!InternetMonitor.IsOfflineMode)
             {
                 Debug.LogError($"Request Error: {request.error}, URL: {url}");
+                onError?.Invoke(request.error);
+            }
+            else if (InternetMonitor.IsOfflineMode)
+            {
+                Debug.LogError($"Offline mode on");
                 onError?.Invoke(request.error);
             }
         }

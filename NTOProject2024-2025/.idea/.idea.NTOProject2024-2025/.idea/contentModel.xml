@@ -20,10 +20,12 @@
         </e>
         <e p="Art" t="Include">
           <e p="Ground" t="Include">
-            <e p="Water" t="Include">
-              <e p="URP" t="Include">
-                <e p="Functions &amp; Subgraphs" t="Include">
-                  <e p="MainLightNode.hlsl" t="Include" />
+            <e p="_arch" t="Include">
+              <e p="Water" t="Include">
+                <e p="URP" t="Include">
+                  <e p="Functions &amp; Subgraphs" t="Include">
+                    <e p="MainLightNode.hlsl" t="Include" />
+                  </e>
                 </e>
               </e>
             </e>
@@ -157,6 +159,19 @@
         <e p="Events" t="Include">
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
+        </e>
+        <e p="ForceShield" t="Include">
+          <e p="Script" t="Include">
+            <e p="LaserBullet.cs" t="Include" />
+            <e p="ShieldCollision.cs" t="Include" />
+            <e p="UserControl.cs" t="Include" />
+          </e>
+          <e p="shader" t="Include">
+            <e p="ForceShield.shader" t="Include" />
+          </e>
+        </e>
+        <e p="JTS_StoneLanterns" t="Include">
+          <e p="_ReadMe.txt" t="Include" />
         </e>
         <e p="nTools" t="Include">
           <e p="PrefabPainter" t="Include">
