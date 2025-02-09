@@ -41,6 +41,25 @@ public class Requests
 }
 
 /// <summary>
+/// Класс хранит значения максимального времени запроса для каждого вида запроса
+/// </summary>
+public class TimeoutValues
+{
+    public static float CreatePlayerTimeoutValue = 4f;
+    public static float GetPlayerResourcesTimeoutValue = 2f;
+    public static float PutPlayerResourcesTimeoutValue = 2f;
+    public static float DeletePlayerTimeoutValue = 3f;
+    public static float CreatePlayerLogTimeoutValue = 2f;
+    
+    public static float CreateShopTimeoutValue = 4f;
+    public static float GetShopResourcesTimeoutValue = 2f;
+    public static float PutShopResourcesTimeoutValue = 2f; 
+    public static float DeleteShopTimeoutValue = 3f;
+    public static float CreateShopLogTimeoutValue = 2f;
+    
+}
+
+/// <summary>
 /// Класс для получения сообщений в логи
 /// </summary>
 public class LogComment
@@ -79,8 +98,9 @@ public class APIManager : MonoBehaviour
         {
             await PutPlayerResources(playerID, playerID.playerResources.Iron, playerID.playerResources.Energy, playerID.playerResources.Food, playerID.playerResources.CryoCrystal);
             
-            PlayerResources playerResources = await GetPlayerResources(UIManagerMainMenu.WhichPlayerCreate);
-            await PutPlayerResources(UIManagerMainMenu.WhichPlayerCreate, playerResources.Iron, playerResources.Energy, playerResources.Food, playerResources.CryoCrystal); 
+            await PutShopResources(playerID, $"{playerID.Name}'sShop", playerID.shopResources.Apiary, playerID.shopResources.HoneyGun, playerID.shopResources.MobileBase, playerID.shopResources.Storage, playerID.shopResources.ResidentialModule, playerID.shopResources.Minner, playerID.shopResources.Pier);
+            // PlayerResources playerResources = await GetPlayerResources(UIManagerMainMenu.WhichPlayerCreate);
+            // await PutPlayerResources(UIManagerMainMenu.WhichPlayerCreate, playerResources.Iron, playerResources.Energy, playerResources.Food, playerResources.CryoCrystal); 
         });
     }
 
@@ -119,7 +139,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем POST-запрос
-            HTTPRequests.Instance.Post(Requests.CreatePlayerURL, json,  
+            HTTPRequests.Instance.Post(Requests.CreatePlayerURL, TimeoutValues.CreatePlayerTimeoutValue, json,  
                 onSuccess: response =>
                 {
                     Debug.Log("Персонаж успешно создан");
@@ -149,54 +169,54 @@ public class APIManager : MonoBehaviour
     /// <returns></returns>
     public async Task<Dictionary<string, PlayerData>> GetPlayersList()
     {
-        // Создаем TaskCompletionSource для обработки асинхронного ответа
+        // // Создаем TaskCompletionSource для обработки асинхронного ответа
         var taskCompletionSource = new TaskCompletionSource<Dictionary<string, PlayerData>>();
-
-        string URL = Requests.GetPlayersURL;
-        
-        HTTPRequests.Instance.Get(URL,
-            onSuccess: response =>
-            {
-                try
-                {
-                    // Парсим ответ
-                    List<PlayerData> players = JsonUtility.FromJson<PlayerDataList>($"{{\"players\":{response}}}").players;
-
-                    // Проверяем, есть ли игроки
-                    var playerDict = new Dictionary<string, PlayerData>();
-                    foreach (var player in players)
-                    {
-                        if (!playerDict.ContainsKey(player.name))
-                        {
-                            playerDict[player.name] = player;
-                        }
-                    }
-                    
-                    // Завершаем Task успешным результатом
-                    taskCompletionSource.SetResult(playerDict);
-                }
-                catch (Exception ex)
-                {
-                    // Завершаем Task с ошибкой при возникновении исключения
-                    Debug.LogError($"Ошибка при обработке данных: {ex.Message}");
-                    taskCompletionSource.SetException(ex);
-                }
-            },
-            onError: error =>
-            {
-                if (!InternetMonitor.IsOfflineMode)
-                {
-                    Debug.LogError($"Ошибка запроса: {error}"); 
-                }
-                else
-                {
-                    Debug.Log("OfflineMode on");
-                }
-
-                taskCompletionSource.SetException(new Exception(error));
-            });
-
-        // Ждем завершения Task и возвращаем результат
+        //
+        // string URL = Requests.GetPlayersURL;
+        //
+        // HTTPRequests.Instance.Get(URL,
+        //     onSuccess: response =>
+        //     {
+        //         try
+        //         {
+        //             // Парсим ответ
+        //             List<PlayerData> players = JsonUtility.FromJson<PlayerDataList>($"{{\"players\":{response}}}").players;
+        //
+        //             // Проверяем, есть ли игроки
+        //             var playerDict = new Dictionary<string, PlayerData>();
+        //             foreach (var player in players)
+        //             {
+        //                 if (!playerDict.ContainsKey(player.name))
+        //                 {
+        //                     playerDict[player.name] = player;
+        //                 }
+        //             }
+        //             
+        //             // Завершаем Task успешным результатом
+        //             taskCompletionSource.SetResult(playerDict);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             // Завершаем Task с ошибкой при возникновении исключения
+        //             Debug.LogError($"Ошибка при обработке данных: {ex.Message}");
+        //             taskCompletionSource.SetException(ex);
+        //         }
+        //     },
+        //     onError: error =>
+        //     {
+        //         if (!InternetMonitor.IsOfflineMode)
+        //         {
+        //             Debug.LogError($"Ошибка запроса: {error}"); 
+        //         }
+        //         else
+        //         {
+        //             Debug.Log("OfflineMode on");
+        //         }
+        //
+        //         taskCompletionSource.SetException(new Exception(error));
+        //     });
+        //
+        // // Ждем завершения Task и возвращаем результат
         return await taskCompletionSource.Task;
     }
 
@@ -215,7 +235,7 @@ public class APIManager : MonoBehaviour
 
         if (!InternetMonitor.IsOfflineMode)
         {
-            HTTPRequests.Instance.Get(URL, 
+            HTTPRequests.Instance.Get(URL, TimeoutValues.GetPlayerResourcesTimeoutValue, 
                 onSuccess: response =>
                 {
                     Debug.Log("Данные о ресурсах персонажа успешно получены");
@@ -283,7 +303,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем PUT-запрос
-            HTTPRequests.Instance.Put(URL, json,
+            HTTPRequests.Instance.Put(URL, TimeoutValues.PutPlayerResourcesTimeoutValue, json,
                 onSuccess: response =>
                 {
                     Debug.Log("Ресурсы персонажа успешно обновлены");
@@ -322,7 +342,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем DELETE-запрос
-            HTTPRequests.Instance.Delete(URL,
+            HTTPRequests.Instance.Delete(URL, TimeoutValues.DeletePlayerTimeoutValue,
                 onSuccess: response =>
                 {
                     Debug.Log("Персонаж успешно удален");
@@ -373,7 +393,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем POST-запрос
-            HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+            HTTPRequests.Instance.Post(Requests.CreateLogURL, TimeoutValues.CreatePlayerLogTimeoutValue,json, 
                 onSuccess: response =>
                 {
                     Debug.Log("Логи были отправлены");
@@ -445,7 +465,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем POST-запрос
-            HTTPRequests.Instance.Post(Requests.CreateShopURL(playerID.Name), json, 
+            HTTPRequests.Instance.Post(Requests.CreateShopURL(playerID.Name), TimeoutValues.CreateShopTimeoutValue,json, 
                 onSuccess: response =>
                 {
                     Debug.Log("Магазин персонажа успешно создан");
@@ -479,41 +499,41 @@ public class APIManager : MonoBehaviour
         // Создаем TaskCompletionSource для обработки асинхронного ответа
         var taskCompletionSource = new TaskCompletionSource<Dictionary<string, ShopData>>();
 
-        string URL = Requests.GetShopsURL(playerName);
-        
-        HTTPRequests.Instance.Get(URL,
-            onSuccess: response =>
-            {
-                try
-                {
-                    // Парсим ответ
-                    List<ShopData> shops = JsonUtility.FromJson<ShopsDataList>($"{{\"shops\":{response}}}").shops;
-
-                    // Проверяем, есть ли игроки
-                    var shopsDict = new Dictionary<string, ShopData>();
-                    foreach (var shop in shops)
-                    {
-                        if (!shopsDict.ContainsKey(shop.name))
-                        {
-                            shopsDict[shop.name] = shop;
-                        }
-                    }
-                    // Завершаем Task успешным результатом
-                    taskCompletionSource.SetResult(shopsDict);
-                }
-                catch (Exception ex)
-                {
-                    // Завершаем Task с ошибкой при возникновении исключения
-                    Debug.LogError($"Ошибка при обработке данных: {ex.Message}");
-                    taskCompletionSource.SetException(ex);
-                }
-            },
-            onError: error =>
-            {
-                // Завершаем Task с ошибкой при проблемах с запросом
-                Debug.LogError($"Ошибка запроса: {error}");
-                taskCompletionSource.SetException(new Exception(error));
-            });
+        // string URL = Requests.GetShopsURL(playerName);
+        //
+        // HTTPRequests.Instance.Get(URL,
+        //     onSuccess: response =>
+        //     {
+        //         try
+        //         {
+        //             // Парсим ответ
+        //             List<ShopData> shops = JsonUtility.FromJson<ShopsDataList>($"{{\"shops\":{response}}}").shops;
+        //
+        //             // Проверяем, есть ли игроки
+        //             var shopsDict = new Dictionary<string, ShopData>();
+        //             foreach (var shop in shops)
+        //             {
+        //                 if (!shopsDict.ContainsKey(shop.name))
+        //                 {
+        //                     shopsDict[shop.name] = shop;
+        //                 }
+        //             }
+        //             // Завершаем Task успешным результатом
+        //             taskCompletionSource.SetResult(shopsDict);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             // Завершаем Task с ошибкой при возникновении исключения
+        //             Debug.LogError($"Ошибка при обработке данных: {ex.Message}");
+        //             taskCompletionSource.SetException(ex);
+        //         }
+        //     },
+        //     onError: error =>
+        //     {
+        //         // Завершаем Task с ошибкой при проблемах с запросом
+        //         Debug.LogError($"Ошибка запроса: {error}");
+        //         taskCompletionSource.SetException(new Exception(error));
+        //     });
 
         // Ждем завершения Task и возвращаем результат
         return await taskCompletionSource.Task;
@@ -534,7 +554,7 @@ public class APIManager : MonoBehaviour
         
         if (!InternetMonitor.IsOfflineMode)
         {
-            HTTPRequests.Instance.Get(URL, 
+            HTTPRequests.Instance.Get(URL, TimeoutValues.GetShopResourcesTimeoutValue,
                 onSuccess: response =>
                 {
                     Debug.Log("Данные о ресурсах магазина успешно получены");
@@ -600,7 +620,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
              // Выполняем PUT-запрос
-            HTTPRequests.Instance.Put(Requests.PutShopURL(playerID.Name, shopName), json, 
+            HTTPRequests.Instance.Put(Requests.PutShopURL(playerID.Name, shopName), TimeoutValues.PutShopResourcesTimeoutValue,json, 
                 onSuccess: response =>
                 {
                     Debug.Log("Магазин персонажа успешно обновлен");
@@ -640,7 +660,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем DELETE-запрос
-            HTTPRequests.Instance.Delete(URL,
+            HTTPRequests.Instance.Delete(URL, TimeoutValues.DeleteShopTimeoutValue,
                 onSuccess: response =>
                 {
                     Debug.Log("Магазин успешно удален");
@@ -688,7 +708,7 @@ public class APIManager : MonoBehaviour
         if (!InternetMonitor.IsOfflineMode)
         {
             // Выполняем POST-запрос
-            HTTPRequests.Instance.Post(Requests.CreateLogURL, json, 
+            HTTPRequests.Instance.Post(Requests.CreateLogURL, TimeoutValues.CreateShopLogTimeoutValue,json, 
                 onSuccess: response =>
                 {
                     Debug.Log("Логи были отправлены");

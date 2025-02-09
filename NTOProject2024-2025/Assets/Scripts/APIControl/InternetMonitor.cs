@@ -7,12 +7,42 @@ using System.Collections;
 /// </summary>
 public class InternetMonitor : MonoBehaviour
 {
+    // Internet state control
     public static event Action OnInternetConnected; // Событие для подключения интернета
     private bool isInternetAvailable; // Текущее состояние интернета
+    
+    // Timeout control
+    public static int FailedRequestLimit = 7; // Если достигнуто данное количество неудачных запросов подряд, игра переводится в оффлайн режим
+    public static int CurrentNumberOfFailedRequest;
+    
+    //UI objects
     public GameObject NoInternetUI;
     public GameObject OfflineModeUI;
+    
+    // Offline mode control
     public static bool IsOfflineMode;
+    
+    private void OnEnable()
+    {
+        HTTPRequests.FailedRequestLimitExceededEvent += FailedRequestLimitExceeded;
+    }
 
+    private void OnDisable()
+    {
+        HTTPRequests.FailedRequestLimitExceededEvent -= FailedRequestLimitExceeded;
+    }
+
+
+    /// <summary>
+    /// При привышении лимита неудачных запросов
+    /// </summary>
+    public void FailedRequestLimitExceeded()
+    {
+        Debug.LogWarning("Переход в оффлайн режим, похоже что Никита сломал сервер");
+        IsOfflineMode = true;
+        OfflineModeUI.SetActive(true);
+    }
+    
     /// <summary>
     ///  Для GameEvent 
     /// </summary>
@@ -27,6 +57,7 @@ public class InternetMonitor : MonoBehaviour
         else
         {
             IsOfflineMode = false;
+            CurrentNumberOfFailedRequest = 0;
             PlayerPrefs.SetInt("OfflineMode", 0);
         }
         
@@ -68,13 +99,13 @@ public class InternetMonitor : MonoBehaviour
     {
         while (true)
         {
-            NoInternetUI.SetActive(!isInternetAvailable);
+            // Проверяем доступность интернета
+            bool currentInternetState = Application.internetReachability != NetworkReachability.NotReachable;
+            
+            NoInternetUI.SetActive(!currentInternetState);
             
             if (!IsOfflineMode)
             {
-                // Проверяем доступность интернета
-                bool currentInternetState = Application.internetReachability != NetworkReachability.NotReachable;
-
                 if (currentInternetState && !isInternetAvailable)
                 {
                     Debug.Log("Интернет подключен!");

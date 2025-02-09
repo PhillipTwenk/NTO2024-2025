@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab11041d-5c01-4718-885d-a6bebb443e8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NTOProject2024-2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Location.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,12 +157,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlansInShopControl.cs" />
         <option value="$PROJECT_DIR$/Assets/SaveData/PLayerSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerHandlers/InteractionBuildingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Optimization/VisualEffectCulling.cs" />
         <option value="$PROJECT_DIR$/Assets/CustomEditorScripts/CEResetPlayersData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/APIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/HTTPRequests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManagers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/APIControl/InternetMonitor.cs" />
       </list>
     </option>
   </component>
@@ -257,6 +259,7 @@
       <workItem from="1737194865817" duration="6603000" />
       <workItem from="1738499748201" duration="7988000" />
       <workItem from="1739014713605" duration="10320000" />
+      <workItem from="1739098047535" duration="10301000" />
     </task>
     <servers />
   </component>

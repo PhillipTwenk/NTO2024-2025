@@ -11,76 +11,55 @@ public class HTTPRequests: MonoBehaviour
  { 
      public static HTTPRequests Instance { get; private set; }
      
+     // Timeout Control
+     public static event Action FailedRequestLimitExceededEvent;
+     private const float Timeout = 5f;
+
      private void Awake()
      {
          Instance = this;
-         
-         // //Test
-         // PlayerData pd = new PlayerData()
-         // {
-         //     name = "TestPlayerFromScript",
-         //     resources = new PlayerResources()
-         //     {
-         //         Iron = 10,
-         //         Energy = 10,
-         //         Food = 10,
-         //         CrioCrystal = 10
-         //     }
-         // };
-         //
-         //
-         // string json = JsonUtility.ToJson(pd, true);
-         //
-         //
-         // HTTPRequests.Instance.Post(Requests.CreatePlayerURL, json,
-         //     onSuccess: responce =>
-         //     {
-         //         Debug.Log(responce);
-         //     },
-         //     onError: responce =>
-         //     {
-         //         Debug.Log("Error");
-         //     });
-         // //
      }
+
      
      /// <summary>
     /// Выполнить GET запрос
     /// </summary>
-    public void Get(string url, Action<string> onSuccess, Action<string> onError = null)
+    public void Get(string url, float timeoutValue, Action<string> onSuccess, Action<string> onError = null)
     {
-        StartCoroutine(SendRequest(url, UnityWebRequest.kHttpVerbGET, null, onSuccess, onError));
+        StartCoroutine(SendRequest(url, timeoutValue, UnityWebRequest.kHttpVerbGET, null, onSuccess, onError));
     }
 
     /// <summary>
     /// Выполнить POST запрос
     /// </summary>
-    public void Post(string url, string jsonData, Action<string> onSuccess, Action<string> onError = null)
+    public void Post(string url, float timeoutValue, string jsonData, Action<string> onSuccess, Action<string> onError = null)
     {
-        StartCoroutine(SendRequest(url, UnityWebRequest.kHttpVerbPOST, jsonData, onSuccess, onError));
+        StartCoroutine(SendRequest(url, timeoutValue, UnityWebRequest.kHttpVerbPOST, jsonData, onSuccess, onError));
     }
 
     /// <summary>
     /// Выполнить PUT запрос
     /// </summary>
-    public void Put(string url, string jsonData, Action<string> onSuccess, Action<string> onError = null)
+    public void Put(string url, float timeoutValue, string jsonData, Action<string> onSuccess, Action<string> onError = null)
     {
-        StartCoroutine(SendRequest(url, UnityWebRequest.kHttpVerbPUT, jsonData, onSuccess, onError));
+        StartCoroutine(SendRequest(url, timeoutValue,UnityWebRequest.kHttpVerbPUT, jsonData, onSuccess, onError));
     }
 
     /// <summary>
     /// Выполнить DELETE запрос
     /// </summary>
-    public void Delete(string url, Action<string> onSuccess, Action<string> onError = null)
+    public void Delete(string url, float timeoutValue, Action<string> onSuccess, Action<string> onError = null)
     {
-        StartCoroutine(SendRequest(url, UnityWebRequest.kHttpVerbDELETE, null, onSuccess, onError));
+        StartCoroutine(SendRequest(url, timeoutValue, UnityWebRequest.kHttpVerbDELETE, null, onSuccess, onError));
     }
 
     /// <summary>
     /// Общая корутина для выполнения запросов
     /// </summary>
-    private IEnumerator SendRequest(string url, string method, string jsonData, Action<string> onSuccess, Action<string> onError)
+    private IEnumerator SendRequest(string url, float timeoutValue, string method, string jsonData, Action<string> onSuccess, Action<string> onError)
     {
+        float startTime = Time.realtimeSinceStartup;
+        
         using (UnityWebRequest request = new UnityWebRequest(url, method))
         {
             if (!string.IsNullOrEmpty(jsonData))
@@ -92,20 +71,46 @@ public class HTTPRequests: MonoBehaviour
 
             request.downloadHandler = new DownloadHandlerBuffer();
 
-            yield return request.SendWebRequest();
+            request.SendWebRequest();
+
+            while (!request.isDone)
+            {
+                //Debug.Log($"Current request time: {Time.realtimeSinceStartup - startTime} 0.o");
+                if (Time.realtimeSinceStartup - startTime > timeoutValue)
+                {
+                    if (InternetMonitor.CurrentNumberOfFailedRequest >= InternetMonitor.FailedRequestLimit)
+                    {
+                        FailedRequestLimitExceededEvent?.Invoke();
+                    }
+                    else
+                    {
+                        InternetMonitor.CurrentNumberOfFailedRequest++;
+                        Debug.Log($"Неудачных запросов уже целых <color=red>{InternetMonitor.CurrentNumberOfFailedRequest}</color>");
+                    }
+                    
+                    request.Abort();
+                    onError?.Invoke(request.error);
+                    Debug.LogError("Request aborted due to timeout ~UwU~");
+                    yield break;
+                }
+                yield return null;
+            }
 
             if (request.result == UnityWebRequest.Result.Success && !InternetMonitor.IsOfflineMode)
             {
                 onSuccess?.Invoke(request.downloadHandler.text);
+                InternetMonitor.CurrentNumberOfFailedRequest = 0;
             }
             else if (!InternetMonitor.IsOfflineMode)
             {
-                Debug.LogError($"Request Error: {request.error}, URL: {url}");
-                onError?.Invoke(request.error);
+                string errorMessage = request.result == UnityWebRequest.Result.ConnectionError 
+                    ? "Request aborted due to timeout ~UwU~"
+                    : $"Request Error: {request.error}, URL: {url}, Execution time: {Time.realtimeSinceStartup - startTime} :3";
+                onError?.Invoke(errorMessage);
             }
             else if (InternetMonitor.IsOfflineMode)
             {
-                Debug.LogError($"Offline mode on");
+                Debug.LogError($"Offline mode on :3");
                 onError?.Invoke(request.error);
             }
         }

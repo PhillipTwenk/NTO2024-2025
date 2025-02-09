@@ -31,6 +31,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject Resources_Icons;
     [SerializeField] private GameObject ExtremeCondImage;
     
+    [SerializeField] private TMP_Text failedRequestLimitExceededUITMP_Text;
+    [TextArea] [SerializeField] private string failedRequestLimitExceededUIText;
+    
 
     [SerializeField] private List<Plan> plansArray;
     
@@ -53,7 +56,17 @@ public class UIManager : MonoBehaviour
         
         _screenResolutionControl.Initialization();
     }
-    
+
+    private void OnEnable()
+    {
+        HTTPRequests.FailedRequestLimitExceededEvent += FailedRequestLimitExceededUI;
+    }
+
+    private void OnDisable()
+    {
+        HTTPRequests.FailedRequestLimitExceededEvent -= FailedRequestLimitExceededUI;
+    }
+
     public void Awake()
     {
         Instance = this;
@@ -62,6 +75,15 @@ public class UIManager : MonoBehaviour
     {
         IsOpenBuildingPanel = true;
         InitializeData();
+    }
+
+    public void FailedRequestLimitExceededUI()
+    {
+        failedRequestLimitExceededUITMP_Text.transform.parent.gameObject.SetActive(true);
+        failedRequestLimitExceededUITMP_Text.text = failedRequestLimitExceededUIText;
+
+        Utility.Invoke(this, () => failedRequestLimitExceededUITMP_Text.transform.parent.gameObject.SetActive(true),
+            8f);
     }
 
     private void Update()
