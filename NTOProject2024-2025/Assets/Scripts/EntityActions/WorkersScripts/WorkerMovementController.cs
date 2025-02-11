@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class WorkerMovementController : MonoBehaviour
@@ -16,20 +13,20 @@ public class WorkerMovementController : MonoBehaviour
     private NavMeshAgent agent;
     public bool ReadyForWork;
     public bool isSelected;
-    public bool isSelecting;
+    public bool isSelecting; // Мышь наведена на персонажа
     private Animator anim;
     public GameObject SelectedBuilding;
-    [SerializeField] private Outline outlineMode;
     [SerializeField] private LayerMask placementLayerMask;
     public Camera MainCamera;
-    [SerializeField] public LineRenderer line;
     [SerializeField] private Transform currentWalkingPoint;
+    //[SerializeField] private Material OutlineMaterial;
+    //[SerializeField] private Color OutlineColor;
+    //[SerializeField] private Color BasedOutlineColor;
+    [SerializeField] private GameObject OutlineRotate;
     void Start()
     {
         ReadyForWork = true;
         agent = GetComponent<NavMeshAgent>();
-        outlineMode = GetComponent<Outline>();
-        outlineMode.enabled = false;
         isSelected = false;
         isSelecting = false;
         anim = GetComponent<Animator>();
@@ -71,8 +68,7 @@ public class WorkerMovementController : MonoBehaviour
             anim.SetBool("Running", true);
             agent.destination = new Vector3(WorkerPointOfDestination.position.x, WorkerPointOfDestination.position.y, WorkerPointOfDestination.position.z);
             if (agent.path.status == NavMeshPathStatus.PathComplete) {
-                line.enabled = true;
-                line.SetPosition(0, transform.position);
+                
                 DrawPath(agent.path);
             }
         } else {
@@ -101,12 +97,11 @@ public class WorkerMovementController : MonoBehaviour
 
     private void OnMouseDown() {
         if (!isSelected) {
-            outlineMode.enabled = true;
-            outlineMode.OutlineWidth = 5f;
+            OutlineRotate.SetActive(true);
             isSelected = true;
             WorkersInterBuildingControl.NumberOfSelectedWorkers += 1;
         } else {
-            outlineMode.enabled = false;
+            OutlineRotate.SetActive(false);
             isSelected = false;
             WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
         }
@@ -114,16 +109,18 @@ public class WorkerMovementController : MonoBehaviour
 
     private void OnMouseEnter() {
         isSelecting = true;
-        if(!isSelected){
-            outlineMode.enabled = true;
-            outlineMode.OutlineWidth = 2f;
+        if(!isSelected)
+        {
+            OutlineRotate.SetActive(true);
+            //OutlineMaterial.color = OutlineColor;
         }
     }
 
     private void OnMouseExit() {
         isSelecting = false;
         if(!isSelected){
-            outlineMode.enabled = false;
+            OutlineRotate.SetActive(false);
+            //OutlineMaterial.color = BasedOutlineColor;
         }
     }
 
@@ -156,10 +153,9 @@ public class WorkerMovementController : MonoBehaviour
 
     public void DrawPath(NavMeshPath path){
         if(path.corners.Length < 2) return;
-
-        line.SetVertexCount(path.corners.Length); 
+        
         for(var i = 1; i < path.corners.Length; i++){
-            line.SetPosition(i, path.corners[i]); 
+            
         }
     }
 
@@ -167,7 +163,6 @@ public class WorkerMovementController : MonoBehaviour
         Debug.Log("1");
         if(other.collider.tag == "WalkingPoint"){
             Debug.Log("2");
-            line.enabled = false;
             WorkerPointOfDestination = null;
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
