@@ -258,7 +258,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &5123681624481053577
 MonoBehaviour:
@@ -285,6 +285,7 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   currentWalkingPoint: {fileID: 0}
   OutlineRotate: {fileID: 4887249124086083444}
+  OutlinePOD: {fileID: 0}
 --- !u!195 &4964045910102140477
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -299,14 +300,14 @@ NavMeshAgent:
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 360
-  m_StoppingDistance: 1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 14.39
-  m_BaseOffset: 1
+  m_BaseOffset: -0.06
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &3421886237767497727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,7 +1094,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 67.27
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1128,7 +1129,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1998,7 +1999,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7016868248815196611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3a2adf8a37719a840a185305c6465e7f, type: 2}
   m_CullingMode: 0

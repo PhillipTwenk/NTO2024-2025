@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8703065868010850275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EndPointWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3379743434024046391}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Miner
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 6614049831065760204}
   - component: {fileID: 7978139214364897254}
   - component: {fileID: 7319432759031063167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.072
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3074794091907422907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point (3)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 8264472881952892274}
   - component: {fileID: 4704666146425164656}
   - component: {fileID: 8413216263457278274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.034
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 3952047634658591917}
   - component: {fileID: 7658571048178436077}
   - component: {fileID: 8960675788310402197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TechTriggerScripts
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 574763103858177327}
   - component: {fileID: 5659648447827575243}
   - component: {fileID: 4491451056426635992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.032
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727464216805548623}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointForWork
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 4218468091158860253}
   - component: {fileID: 3605468693236232073}
   - component: {fileID: 7447165218664875648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BuildingVE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 7308375806044415972}
   - component: {fileID: 47438295417316024}
   - component: {fileID: 6556287542899566964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.035
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 2487306685347222096}
   - component: {fileID: 8710457523363367024}
   - component: {fileID: 2896495599155850722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.075
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 3734771768115477699}
   - component: {fileID: 2052801605654568975}
   - component: {fileID: 3800662887596085426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.071
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 5600572925869087375}
   - component: {fileID: 4584286743006005210}
   - component: {fileID: 1513671900941961247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.023
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1115,7 +1115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7004986064953722755}
   - component: {fileID: 2108290626658317418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MiningEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 7121200967479099765}
   - component: {fileID: 3756684431396859338}
   - component: {fileID: 8070275329507103736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1347,7 +1347,7 @@ GameObject:
   - component: {fileID: 7482813203202998912}
   - component: {fileID: 5390312818632534123}
   - component: {fileID: 3132777722246122448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.066
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 8788963645833894404}
   - component: {fileID: 3909136544905118182}
   - component: {fileID: 6704628741813621134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.073
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1517,7 +1517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7904999283450059594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point (2)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 4031225727010299297}
   - component: {fileID: 1093109392754891501}
   - component: {fileID: 5068727911284396048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.074
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1635,7 +1635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7567993789235495893}
   - component: {fileID: 3168462470459462132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlacementThisAS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1960861704675936411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point (1)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1794,7 +1794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3848195277624563470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1827,7 +1827,7 @@ GameObject:
   - component: {fileID: 1633188206842518485}
   - component: {fileID: 8685728038965908869}
   - component: {fileID: 3375530033559799443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "B\xE9zierCurve.009"
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -1913,7 +1913,7 @@ GameObject:
   - component: {fileID: 7564531049284198826}
   - component: {fileID: 4357989501619784187}
   - component: {fileID: 1066252068129457369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BuidingStatus
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: 4949075850624136732}
   - component: {fileID: 2917993541132888234}
   - component: {fileID: 7904100835157786856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.033
   m_TagString: Building
   m_Icon: {fileID: 0}

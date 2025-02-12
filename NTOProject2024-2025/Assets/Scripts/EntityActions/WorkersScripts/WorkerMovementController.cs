@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 public class WorkerMovementController : MonoBehaviour
@@ -23,6 +24,8 @@ public class WorkerMovementController : MonoBehaviour
     //[SerializeField] private Color OutlineColor;
     //[SerializeField] private Color BasedOutlineColor;
     [SerializeField] private GameObject OutlineRotate;
+    [SerializeField] private GameObject OutlinePOD;
+    private Rigidbody _rb;
     void Start()
     {
         ReadyForWork = true;
@@ -31,14 +34,16 @@ public class WorkerMovementController : MonoBehaviour
         isSelecting = false;
         anim = GetComponent<Animator>();
         Debug.Log(agent);
+        _rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y, 0); // Обнуляем горизонтальную скорость
     }
 
     void Update()
     {
-        // if(WorkersInterBuildingControl.SelectedWorker != gameObject && WorkersInterBuildingControl.SelectedWorker != null){
-        //     isSelected = false;
-        // }
-
         if(isSelected){
             if (Input.GetMouseButtonDown(0) && !isSelecting)
             {
@@ -62,24 +67,51 @@ public class WorkerMovementController : MonoBehaviour
             }
         }
 
-        if (WorkerPointOfDestination) {
-            //Debug.Log($"Moving to: {WorkerPointOfDestination.position}");
+        
+        if (WorkerPointOfDestination) 
+        {
+            
+            // Рабочий идет до точки назначения
             anim.SetBool("Idle", false);
             anim.SetBool("Running", true);
+            agent.isStopped = false;
             agent.destination = new Vector3(WorkerPointOfDestination.position.x, WorkerPointOfDestination.position.y, WorkerPointOfDestination.position.z);
-            if (agent.path.status == NavMeshPathStatus.PathComplete) {
-                
-                DrawPath(agent.path);
-            }
-        } else {
+            
+        } 
+        else 
+        {
+            // Рабочий дошел до точки назначения
+            agent.isStopped = true;
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
+            OutlinePOD.SetActive(false);
             if (SelectedBuilding){
                 SelectedBuilding = null;
             }
         }
     }
 
+    public Vector3 GetSelectedMapPosition()
+    {
+        Vector3 lastPosition = Vector3.zero;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = MainCamera.nearClipPlane;
+        Ray ray = MainCamera.ScreenPointToRay(mousePos);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 10000, placementLayerMask))
+        {
+            OutlinePOD.SetActive(true);
+            lastPosition = hit.point; // SELECTED WALKING POINT
+            if(hit.collider.tag == "Building"){
+                Debug.Log("Selected building");
+                SelectedBuilding = hit.collider.gameObject; // SELECTED BUILDING FOR PHILTWE!!!!!!!!!
+                Debug.Log(SelectedBuilding);
+            }
+        }
+        return lastPosition;
+    }
+    
+    
     public void SetWorkerDestination(Transform point, bool isAutomatic){
         if(isAutomatic && SelectedBuilding != null){
             currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
@@ -90,20 +122,15 @@ public class WorkerMovementController : MonoBehaviour
             Debug.Log($"Setting destination to: {point.position}");
         }
     }
-
-    public void ResetWorkerDestination(){
-        WorkerPointOfDestination = null;
-    }
-
     private void OnMouseDown() {
         if (!isSelected) {
             OutlineRotate.SetActive(true);
             isSelected = true;
-            WorkersInterBuildingControl.NumberOfSelectedWorkers += 1;
+            //WorkersInterBuildingControl.NumberOfSelectedWorkers += 1;
         } else {
             OutlineRotate.SetActive(false);
             isSelected = false;
-            WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
+            //WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
         }
     }
 
@@ -131,43 +158,26 @@ public class WorkerMovementController : MonoBehaviour
             WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
         }
     }
-
-    public Vector3 GetSelectedMapPosition()
-    {
-        Vector3 lastPosition = Vector3.zero;
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = MainCamera.nearClipPlane;
-        Ray ray = MainCamera.ScreenPointToRay(mousePos);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2000, placementLayerMask))
-        {
-            lastPosition = hit.point; // SELECTED WALKING POINT
-            if(hit.collider.tag == "Building"){
-                Debug.Log("Selected building");
-                SelectedBuilding = hit.collider.gameObject; // SELECTED BUILDING FOR PHILTWE!!!!!!!!!
-                Debug.Log(SelectedBuilding);
-            }
-        }
-        return lastPosition;
-    }
-
-    public void DrawPath(NavMeshPath path){
-        if(path.corners.Length < 2) return;
-        
-        for(var i = 1; i < path.corners.Length; i++){
-            
-        }
-    }
-
-    private void OnCollisionEnter(Collision other) {
-        Debug.Log("1");
-        if(other.collider.tag == "WalkingPoint"){
-            Debug.Log("2");
+    
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "WalkingPoint"){
             WorkerPointOfDestination = null;
+            UpdateWorkerAnimation();
+        } 
+    }
+    
+    private void UpdateWorkerAnimation()
+    {
+        if (WorkerPointOfDestination)
+        {
+            anim.SetBool("Idle", false);
+            anim.SetBool("Running", true);
+        }
+        else
+        {
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
-        } else if (other.collider.tag == "Building"){
-            // PHILTWE IS WORKING HERE!!!!!!!!!!!!!!!!!!!!
+            WorkerPointOfDestination = null;
         }
     }
 }
