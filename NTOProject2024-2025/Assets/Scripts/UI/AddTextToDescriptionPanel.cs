@@ -65,7 +65,7 @@ public class AddTextToDescriptionPanel : MonoBehaviour
     /// <param name="building"></param>
     public void ShowDescriptionPanel()
     {
-        if (buildingData.IsThisBuilt && Time.timeScale == 1f && !TutorialManager.IsTutorialActive && WorkersInterBuildingControl.NumberOfSelectedWorkers == 0)
+        if (buildingData.IsThisBuilt && Time.timeScale == 1f && !TutorialManager.IsTutorialActive && WorkersInterBuildingControl.SelectedWorker == null)
         {
             IsPanelActive = true;
         

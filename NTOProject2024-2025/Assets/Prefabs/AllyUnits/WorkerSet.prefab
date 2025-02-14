@@ -45,18 +45,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worker
       objectReference: {fileID: 0}
-    - target: {fileID: 4426162424371824740, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
-      propertyPath: m_Height
-      value: 17.644913
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426162424371824740, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
-      propertyPath: m_Radius
-      value: 5.7799997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426162424371824740, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
-      propertyPath: m_Center.y
-      value: 8.252576
-      objectReference: {fileID: 0}
     - target: {fileID: 4964045910102140477, guid: 2b8c70bf79e155548b26a1276899683d, type: 3}
       propertyPath: m_Height
       value: 14.42

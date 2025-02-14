@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: None
   DefaultName: None
-  speed: 80
+  speed: 60
   sprintSpeed: 80
   normalSpeed: 60
   speedTurn: 360

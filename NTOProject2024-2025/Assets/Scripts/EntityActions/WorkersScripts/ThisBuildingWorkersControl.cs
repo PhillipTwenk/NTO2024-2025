@@ -16,7 +16,6 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     public Transform buildingSpawnWorkerPointTransform;
 
     public GameObject WorkerPrefab;
-    public Camera MainCamera;
 
     /// <summary>
     /// Обновление текста панели

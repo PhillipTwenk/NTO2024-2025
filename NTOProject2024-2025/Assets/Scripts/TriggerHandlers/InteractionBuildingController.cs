@@ -58,57 +58,40 @@ public class InteractionBuildingController : MonoBehaviour
         // Если рабочий около здания
         if(other.gameObject.CompareTag("Worker"))
         {
-            // Если данное здание является текущим у данного рабочего
-            if (WorkersInterBuildingControl.CurrentBuilding == gameObject.GetComponent<BuildingData>() && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
+            WorkerMovementController workerMovementController =
+                other.gameObject.GetComponent<WorkerMovementController>();
+            
+            
+            Debug.Log("Рабочий около здания");
+            
+            // Если данное здание не построено, прибежавший рабочий занят постройкой, и это здание является для него выделенным
+            if (!_buildingData.IsThisBuilt && workerMovementController.ArriveForBuildBuidling && workerMovementController.SelectedBuilding.GetComponent<BuildingData>().buildingTypeSO.IDoB == GetComponent<BuildingData>().buildingTypeSO.IDoB)
             {
+                // у рабочего пропадает цель следования
+                WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
+                movementController.WorkerPointOfDestination = null;
+                    
+                other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
+                    
+                // Установка анимаций
+                //Animator animator = other.gameObject.GetComponent<Animator>();
+                //animator.SetBool("Running", false);
+                //animator.SetBool("Building", true);
+                //animator.SetBool("Idle", false);
+                    
+                Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
+                    
+                Debug.Log("Рабочий добрался, начинает строить здание");
+                WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
+
+                GameObject worker = other.gameObject;
+                WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
                 
-                // Если данное здание может содержать рабочих, и при этом рабочий не занят постройкой здания + здание вообще построено
-                if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive && _buildingData.IsThisBuilt)
-                {
-                    // Количество рабочих в этом здании увеливается
-                    GetComponent<ThisBuildingWorkersControl>()
-                        .CurrentNumberWorkersInThisBuilding += 1;
-                    
-                    // GetComponent<ThisBuildingWorkersControl>()
-                    //     .NumberOfActiveWorkersInThisBuilding -= 1;
-                    
-                    // Общее количество рабочих в зданиях увеличивается, количество занятых рабочих уменьшается
-                    WorkersInterBuildingControl.Instance.CurrentValueOfWorkers += 1;
-                    WorkersInterBuildingControl.Instance.NumberOfActiveWorkers -= 1;
-
-                    // Рабочий уничтожается
-                    Destroy(other.gameObject);
-
-                    BuildingManager.Instance.ProcessWorkerBuildingActive = false;
-                    return;
-                }
-                
-                // Если данное здание не построено, и прибежавший рабочий занят постройкой
-                if (!_buildingData.IsThisBuilt && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
-                {
-                    // у рабочего пропадает цель следования
-                    WorkerMovementController movementController = other.gameObject.GetComponent<WorkerMovementController>();
-                    movementController.WorkerPointOfDestination = null;
-                    
-                    other.transform.LookAt(WorkersInterBuildingControl.CurrentBuilding.transform);
-                    
-                    // Установка анимаций
-                    Animator animator = other.gameObject.GetComponent<Animator>();
-                    animator.SetBool("Running", false);
-                    animator.SetBool("Building", true);
-                    animator.SetBool("Idle", false);
-                    
-                    Debug.Log(WorkersInterBuildingControl.CurrentBuilding.Title);
-                    
-                    Debug.Log("Рабочий добрался, начинает строить здание");
-                    WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
-
-                    GameObject worker = other.gameObject;
-                    WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
-                    return;
-                }
+                worker.SetActive(false);
+                return;
             }
-            if ((other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding.GetComponent<BuildingData>().buildingTypeSO.IDoB == GetComponent<BuildingData>().buildingTypeSO.IDoB) && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+            // Рабочий прибыл не для строительства
+            else if (_buildingData.IsThisBuilt && !workerMovementController.ArriveForBuildBuidling && workerMovementController.SelectedBuilding.GetComponent<BuildingData>().buildingTypeSO.IDoB == GetComponent<BuildingData>().buildingTypeSO.IDoB)
             {
                 if (GetComponent<ThisBuildingWorkersControl>())
                 {
@@ -138,6 +121,25 @@ public class InteractionBuildingController : MonoBehaviour
                     }
                 }
             }
+            
+            
+            // Если данное здание является текущим у данного рабочего
+            //if (WorkersInterBuildingControl.CurrentBuilding == gameObject.GetComponent<BuildingData>() && WorkersInterBuildingControl.CurrentBuilding.Title == GetComponent<BuildingData>().Title)
+            //{
+                
+                // Если данное здание может содержать рабочих, и при этом рабочий не занят постройкой здания + здание вообще построено
+                //if (GetComponent<ThisBuildingWorkersControl>() && !other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork && BuildingManager.Instance.ProcessWorkerBuildingActive && _buildingData.IsThisBuilt)
+                //{
+                    //BuildingManager.Instance.ProcessWorkerBuildingActive = false;
+                    //return;
+                //} 
+            //}
+            
+            // Рабочий прибыл для работы на пасеке/пристани
+            //if ((other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding.GetComponent<BuildingData>().buildingTypeSO.IDoB == GetComponent<BuildingData>().buildingTypeSO.IDoB) && other.gameObject.GetComponent<WorkerMovementController>().ReadyForWork)
+            //{
+                
+            //}
         }
     }
     

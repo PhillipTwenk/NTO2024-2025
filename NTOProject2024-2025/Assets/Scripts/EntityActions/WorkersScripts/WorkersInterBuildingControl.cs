@@ -32,13 +32,12 @@ public class WorkersInterBuildingControl : MonoBehaviour
 
     private bool IsWorkersHere;
 
-    public static int NumberOfSelectedWorkers;
+    //public static int NumberOfSelectedWorkers;
 
 
     private void Awake()
     {
         Instance = this;
-        NumberOfSelectedWorkers = 0;
         MainCamera = mainCamera;
         CurrentBuilding = null;
     }
@@ -90,11 +89,11 @@ public class WorkersInterBuildingControl : MonoBehaviour
             
             Debug.Log("Рабочий отправился строить здание, ожидаем его прибытия");
             NumberOfActiveWorkers += 1;
-            CurrentValueOfWorkers -= 1;
+            //CurrentValueOfWorkers -= 1;
 
             buildingData.TextPanelBuildingControl(true, buildingData.AwaitWorkerActionText);
 
-            SendWorkerToBuildingAnimationControl(buildingTransform);
+            // SendWorkerToBuildingAnimationControl(buildingTransform);
             
             //Ожидаем прибытия рабочего
             await WaitForWorkerArrival();
@@ -102,7 +101,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
         }else if(!IsSend) // Отправка рабочего обратно на базу
         {
             NumberOfActiveWorkers -= 1;
-            CurrentValueOfWorkers += 1;
+            //CurrentValueOfWorkers += 1;
             CurrentBuilding = null;
         }else
         {
@@ -210,29 +209,15 @@ public class WorkersInterBuildingControl : MonoBehaviour
         
         movementController.ReadyForWork = false;
 
-        EndWorkingAnimationControl(movementController, animator);
+        EndWorkingAnimationControl(movementController, buildingData);
     }
 
-    public void EndWorkingAnimationControl(WorkerMovementController movementController, Animator animator)
+    public void EndWorkingAnimationControl(WorkerMovementController movementController, BuildingData buildingData)
     {
-        foreach (var buildingControl in listOfActiveBuildingWithWorkers)
-        {
-            if (buildingControl != null)
-            {
-                if (buildingControl.CurrentNumberWorkersInThisBuilding < buildingControl.MaxValueOfWorkersInThisBuilding)
-                {
-                    Debug.Log(789);
-
-                    CurrentBuilding = buildingControl.gameObject.GetComponent<BuildingData>();
-                    Debug.Log(CurrentBuilding.Title);
-                    Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
-                    
-                    buildingControl.StartMovementWorkerToBuilding(true, buildingSpawnWorkerPointTransform, movementController, animator);
-
-                    return;
-                }
-            }
-        }
+        movementController.transform.position = buildingData.gameObject.transform.parent.transform.Find("EndPointWalk")
+            .transform.position;
+        movementController.gameObject.SetActive(true);
+        return;
     }
     
     ///<summary> 

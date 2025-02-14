@@ -8,15 +8,16 @@ public class WorkerMovementController : MonoBehaviour
     [SerializeField] private TutorialObjective WorkerStartMovementToApiaryTutorial;
     private bool IsWorkerMove;
     private bool IsWorkerMovetoApiary;
-    
-    
+
+    [SerializeField] private string NameOfTTS;
     public Transform WorkerPointOfDestination;
     private NavMeshAgent agent;
     public bool ReadyForWork;
+    public bool ArriveForBuildBuidling;
     public bool isSelected;
     public bool isSelecting; // Мышь наведена на персонажа
     private Animator anim;
-    public GameObject SelectedBuilding;
+    public GameObject SelectedBuilding; // techTriggerScripts
     [SerializeField] private LayerMask placementLayerMask;
     public Camera MainCamera;
     [SerializeField] private Transform currentWalkingPoint;
@@ -25,16 +26,20 @@ public class WorkerMovementController : MonoBehaviour
     //[SerializeField] private Color BasedOutlineColor;
     [SerializeField] private GameObject OutlineRotate;
     [SerializeField] private GameObject OutlinePOD;
+    
     private Rigidbody _rb;
     void Start()
     {
+        currentWalkingPoint.gameObject.SetActive(false);
         ReadyForWork = true;
         agent = GetComponent<NavMeshAgent>();
         isSelected = false;
         isSelecting = false;
         anim = GetComponent<Animator>();
         Debug.Log(agent);
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>(); 
+        OutlinePOD.SetActive(false);
+        OutlineRotate.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -45,18 +50,44 @@ public class WorkerMovementController : MonoBehaviour
     void Update()
     {
         if(isSelected){
+            
             if (Input.GetMouseButtonDown(0) && !isSelecting)
             {
                 Vector3 point = GetSelectedMapPosition();
+                currentWalkingPoint.gameObject.SetActive(true);
+                
+                // Если клинкули не на здание
                 if(SelectedBuilding == null){
                     currentWalkingPoint.transform.position = new Vector3(point.x, point.y, point.z);
+                    ArriveForBuildBuidling = false;
                     if (!IsWorkerMove)
                     {
                         MovementWorkerTutorial.CheckAndUpdateTutorialState();
                         IsWorkerMove = true;
+                        Debug.Log("Рабочий начал движение");
                     }
                 } else {
+                    // Если выбранное здание в процессе строительства и рабочий свободен, он идет его строить
+                    if (!SelectedBuilding.gameObject.GetComponent<BuildingData>().IsThisBuilt)
+                    {
+                        if (ReadyForWork)
+                        {
+                            ArriveForBuildBuidling = true;
+                        }
+                    }
+                    else
+                    {
+                        // Если выбранное здание уже построено, проверяем есть ли у него возможность содержать рабочих
+                        // Если нет, рабочий не двинется
+                        if (!SelectedBuilding.GetComponent<ThisBuildingWorkersControl>())
+                        {
+                            return;
+                        }
+                    }
+                    
+                    
                     currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
+                    
                     if (!IsWorkerMovetoApiary)
                     {
                         WorkerStartMovementToApiaryTutorial.CheckAndUpdateTutorialState();
@@ -94,22 +125,31 @@ public class WorkerMovementController : MonoBehaviour
     public Vector3 GetSelectedMapPosition()
     {
         Vector3 lastPosition = Vector3.zero;
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = MainCamera.nearClipPlane;
-        Ray ray = MainCamera.ScreenPointToRay(mousePos);
+        Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition); 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 10000, placementLayerMask))
+    
+        if (Physics.Raycast(ray, out hit, 10000f, placementLayerMask))
         {
-            OutlinePOD.SetActive(true);
-            lastPosition = hit.point; // SELECTED WALKING POINT
-            if(hit.collider.tag == "Building"){
-                Debug.Log("Selected building");
-                SelectedBuilding = hit.collider.gameObject; // SELECTED BUILDING FOR PHILTWE!!!!!!!!!
-                Debug.Log(SelectedBuilding);
+            lastPosition = hit.point; // Выбранная точка
+
+            if (hit.collider.CompareTag("Building"))
+            {
+                if (hit.collider.gameObject.name == NameOfTTS)
+                {
+                    Debug.Log("Выбрано здание");
+                    SelectedBuilding = hit.collider.gameObject; // Выбранное здание
+                    Debug.Log(SelectedBuilding);   
+                }
+            }
+            else
+            {
+                OutlinePOD.SetActive(true);
             }
         }
+
         return lastPosition;
     }
+
     
     
     public void SetWorkerDestination(Transform point, bool isAutomatic){
@@ -126,11 +166,11 @@ public class WorkerMovementController : MonoBehaviour
         if (!isSelected) {
             OutlineRotate.SetActive(true);
             isSelected = true;
-            //WorkersInterBuildingControl.NumberOfSelectedWorkers += 1;
+            WorkersInterBuildingControl.SelectedWorker = this.gameObject;
         } else {
             OutlineRotate.SetActive(false);
             isSelected = false;
-            //WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
+            WorkersInterBuildingControl.SelectedWorker = this.gameObject;
         }
     }
 
@@ -155,29 +195,17 @@ public class WorkerMovementController : MonoBehaviour
     {
         if (isSelected)
         {
-            WorkersInterBuildingControl.NumberOfSelectedWorkers -= 1;
+            WorkersInterBuildingControl.SelectedWorker = null;
         }
     }
     
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "WalkingPoint"){
+            Debug.Log("Рабочий дошел до точки назначения");
+            currentWalkingPoint.gameObject.SetActive(false);
             WorkerPointOfDestination = null;
-            UpdateWorkerAnimation();
-        } 
-    }
-    
-    private void UpdateWorkerAnimation()
-    {
-        if (WorkerPointOfDestination)
-        {
-            anim.SetBool("Idle", false);
-            anim.SetBool("Running", true);
-        }
-        else
-        {
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
-            WorkerPointOfDestination = null;
-        }
+        } 
     }
 }
