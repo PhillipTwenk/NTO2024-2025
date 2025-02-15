@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using TMPro;
 using System.Threading.Tasks;
+using UnityEngine.Rendering.Universal;
 
 public class WorkersInterBuildingControl : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class WorkersInterBuildingControl : MonoBehaviour
     [TextArea] [SerializeField] private string HintAwaitArriveWorker;
     [TextArea] [SerializeField] private string HintAwaitBuilding;
 
-    public int CurrentValueOfWorkers;
-    public int MaxValueOfWorkers;
-    public int NumberOfActiveWorkers;
+    public int CurrentValueOfWorkers; // Общее текущее количество рабочих
+    public int MaxValueOfWorkers; // Максимальное количество рабочих при параметрах потребления еды
+    public int NumberOfFreeWorkers; // количество рабочих, участвующий на данный момент в постройке здания или на работе в пасеке/пристани
 
     public static BuildingData CurrentBuilding;
 
@@ -40,6 +41,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
         Instance = this;
         MainCamera = mainCamera;
         CurrentBuilding = null;
+        NumberOfFreeWorkers = 1;
     }
 
     /// <summary>
@@ -83,13 +85,11 @@ public class WorkersInterBuildingControl : MonoBehaviour
     ///</summary>
     public async Task SendWorkerToBuilding(bool IsSend, BuildingData buildingData, Transform buildingTransform)
     {
-        if(NumberOfActiveWorkers < CurrentValueOfWorkers && IsSend) // Ержана дернули с кровати и отправили строить крымский мост
+        if(IsSend) // Ержана дернули с кровати и отправили строить крымский мост
         {
             CurrentBuilding = buildingData;
             
             Debug.Log("Рабочий отправился строить здание, ожидаем его прибытия");
-            NumberOfActiveWorkers += 1;
-            //CurrentValueOfWorkers -= 1;
 
             buildingData.TextPanelBuildingControl(true, buildingData.AwaitWorkerActionText);
 
@@ -100,7 +100,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
             
         }else if(!IsSend) // Отправка рабочего обратно на базу
         {
-            NumberOfActiveWorkers -= 1;
+            //NumberOfFreeWorkers -= 1;
             //CurrentValueOfWorkers += 1;
             CurrentBuilding = null;
         }else
@@ -197,26 +197,30 @@ public class WorkersInterBuildingControl : MonoBehaviour
     /// <summary>
     /// Начинает анимацию строительства
     /// </summary>
-    public async void StartAnimationBuilding(Animator animator, WorkerMovementController movementController, BuildingData buildingData)
+    public async void StartAnimationBuilding(WorkerMovementController movementController, BuildingData buildingData, Transform spawnWorkerPosition)
     {
-        Debug.Log(123);
+        movementController.ReadyForWork = false;
+        
+        NumberOfFreeWorkers -= 1;
+        Debug.Log($"<color=green>Свободные рабочие - 1: {NumberOfFreeWorkers}</color>");
         
         await AwaitEndWorking(buildingData);
         
         buildingData.StartBuildingFunctionEvent?.Invoke();
-        
-        Debug.Log(456);
-        
-        movementController.ReadyForWork = false;
 
-        EndWorkingAnimationControl(movementController, buildingData);
+        EndWorkingAnimationControl(movementController, spawnWorkerPosition);
     }
 
-    public void EndWorkingAnimationControl(WorkerMovementController movementController, BuildingData buildingData)
+    public void EndWorkingAnimationControl(WorkerMovementController movementController, Transform spawnWorkerPosition)
     {
-        movementController.transform.position = buildingData.gameObject.transform.parent.transform.Find("EndPointWalk")
-            .transform.position;
+        movementController.transform.position = spawnWorkerPosition.position;
+        movementController.ReadyForWork = true;
+        movementController.SelectedBuilding = null;
+        movementController.ArriveForBuildBuidling = false;
         movementController.gameObject.SetActive(true);
+        
+        NumberOfFreeWorkers += 1;
+        Debug.Log($"<color=green>Свободные рабочие + 1: {NumberOfFreeWorkers}</color>");
         return;
     }
     

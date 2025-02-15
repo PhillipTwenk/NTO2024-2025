@@ -119,8 +119,8 @@ public class BuildingManager : MonoBehaviour
             {
                 int CNoW = WorkersInterBuildingControl.Instance.CurrentValueOfWorkers;
                 int MVoW = WorkersInterBuildingControl.Instance.MaxValueOfWorkers;
-                int AW = WorkersInterBuildingControl.Instance.NumberOfActiveWorkers;
-                if(CNoW <= MVoW && AW < CNoW)
+                int AW = WorkersInterBuildingControl.Instance.NumberOfFreeWorkers;
+                if(CNoW <= MVoW && AW > 0)
                 {
                     if ((playerResources.Energy - HoneyConsumptionBuilding) >= 0)
                     {
@@ -232,6 +232,9 @@ public class BuildingManager : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log($"Количество свободных рабочих: <color=blue>{AW}</color>");
+                    Debug.Log($"Всего рабочих: <color=blue>{CNoW}</color>");
+                    Debug.Log($"Максимальное количество рабочих: <color=blue>{MVoW}</color>");
                     TextNotEnoughResource.SetActive(true);
                     Utility.Invoke(this, () => TextNotEnoughResource.SetActive(false), TimeHint);
                     TextHintTMPRoUGUI.text = HintNotFreeWorkersText;

@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 7395810430896871564}
   m_Layer: 7
   m_Name: Cylinder.024
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 4961279712666811142}
   m_Layer: 7
   m_Name: Cube.058
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 436893505209418843}
   m_Layer: 7
   m_Name: Cylinder.027
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4063230704517696720}
   m_Layer: 7
   m_Name: Cube.064
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 8392863368894834520}
   m_Layer: 7
   m_Name: Cylinder.022
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 1054828738958020588}
   m_Layer: 7
   m_Name: Cylinder.026
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 2595277885101205713}
   m_Layer: 7
   m_Name: Cube.061
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 6097530378560224124}
   m_Layer: 7
   m_Name: Cylinder.031
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 6595687741505099333}
   m_Layer: 7
   m_Name: Cylinder.029
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 3250675845344771065}
   m_Layer: 7
   m_Name: Cube.068
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,6 +1176,7 @@ Transform:
   - {fileID: 4637991800669375034}
   - {fileID: 1623598621318962501}
   - {fileID: 5651346854950767813}
+  - {fileID: 3510437500765090220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2378822049212258383
@@ -1191,7 +1192,7 @@ GameObject:
   - component: {fileID: 8270004247170490921}
   m_Layer: 7
   m_Name: Cube.059
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,7 +1278,7 @@ GameObject:
   - component: {fileID: 3570027082782933818}
   m_Layer: 7
   m_Name: Cylinder.028
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1361,7 +1362,7 @@ GameObject:
   - component: {fileID: 3463582567249680583}
   m_Layer: 7
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1395,7 +1396,7 @@ GameObject:
   - component: {fileID: 1238421870071986691}
   m_Layer: 7
   m_Name: Cube.070
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1481,7 +1482,7 @@ GameObject:
   - component: {fileID: 8319330760213347999}
   m_Layer: 7
   m_Name: "B\xE9zierCurve.008"
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1566,7 @@ GameObject:
   - component: {fileID: 8428874051345189196}
   m_Layer: 7
   m_Name: PointOfShoot
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1598,7 +1599,7 @@ GameObject:
   - component: {fileID: 3213783640899008233}
   m_Layer: 7
   m_Name: Cube.063
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1684,7 +1685,7 @@ GameObject:
   - component: {fileID: 6303550072407896186}
   m_Layer: 7
   m_Name: Cylinder.025
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1859,6 +1860,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &4249007187712235064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3510437500765090220}
+  m_Layer: 7
+  m_Name: SpawnWorker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3510437500765090220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249007187712235064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.9995907, z: -0, w: -0.028609635}
+  m_LocalPosition: {x: -3.1, y: 0.104871035, z: 132.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8389100963388528525}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4274137640569792294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1902,7 @@ GameObject:
   - component: {fileID: 3392169469686084783}
   m_Layer: 7
   m_Name: model
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2157,7 +2189,7 @@ GameObject:
   - component: {fileID: 1120250691650647530}
   m_Layer: 7
   m_Name: Cylinder.030
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2241,7 +2273,7 @@ GameObject:
   - component: {fileID: 4601417686566825541}
   m_Layer: 7
   m_Name: "\u0421\u0442\u0432\u043E\u043B"
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2294,7 +2326,7 @@ GameObject:
   - component: {fileID: 2213664161780909487}
   m_Layer: 7
   m_Name: Cube.069
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2380,7 +2412,7 @@ GameObject:
   - component: {fileID: 7164927932013104524}
   m_Layer: 7
   m_Name: Cube.067
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2466,7 +2498,7 @@ GameObject:
   - component: {fileID: 8874908088288712463}
   m_Layer: 7
   m_Name: Cube.062
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2583,7 +2615,7 @@ GameObject:
   - component: {fileID: 5799951219700863566}
   m_Layer: 7
   m_Name: "B\xE9zierCurve.006"
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2701,7 @@ GameObject:
   - component: {fileID: 8433255615324548461}
   m_Layer: 7
   m_Name: Cube.065
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2756,7 +2788,7 @@ GameObject:
   - component: {fileID: 2215267912952396106}
   m_Layer: 7
   m_Name: TechTriggerScripts
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2859,6 +2891,7 @@ MonoBehaviour:
   - {fileID: 7933056880060321942}
   - {fileID: 5898296228664896998}
   - {fileID: 4823431320160003935}
+  spawnWorker: {fileID: 3510437500765090220}
 --- !u!1 &6897835705188544443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,7 +2936,7 @@ GameObject:
   - component: {fileID: 8709491646015740005}
   m_Layer: 7
   m_Name: "B\xE9zierCurve.007"
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3020,7 +3053,7 @@ GameObject:
   - component: {fileID: 4719711994686702678}
   m_Layer: 7
   m_Name: Muzzle Flash
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3133,7 +3166,7 @@ GameObject:
   - component: {fileID: 1317804891749247545}
   m_Layer: 7
   m_Name: ShootEffectAS
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3263,7 +3296,7 @@ GameObject:
   - component: {fileID: 7604740802077499587}
   m_Layer: 7
   m_Name: Cube.060
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3349,7 +3382,7 @@ GameObject:
   - component: {fileID: 6214911544216481506}
   m_Layer: 7
   m_Name: Cylinder.021
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3435,7 +3468,7 @@ GameObject:
   - component: {fileID: 3074903115375391030}
   m_Layer: 7
   m_Name: "B\xE9zierCurve.005"
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3587,7 +3620,7 @@ GameObject:
   - component: {fileID: 976325484666119815}
   m_Layer: 7
   m_Name: connector
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3673,7 +3706,7 @@ GameObject:
   - component: {fileID: 2792937188519578160}
   m_Layer: 7
   m_Name: connector 2
-  m_TagString: Untagged
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

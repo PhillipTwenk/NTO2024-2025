@@ -119,6 +119,18 @@ public class ResourceMiner : MonoBehaviour
                 await Task.Delay(TimeProduction);
             } else if ((playerResources.Iron + buildingData.Production[0]) > IronLimit)
             {
+                // Добрать недостающее количество металла до лимита
+                CanSendMessageToHint = true;
+                Debug.Log($"Старое количество металла: {playerResources.Iron}");
+                int OldIronValue = playerResources.Iron;
+                int DifferenceIron = (playerResources.Iron + buildingData.Production[0]) - IronLimit; // Разница между лимитом металла и значением текущего металла + производство
+                playerResources.Iron += buildingData.Production[0] - DifferenceIron;
+                Debug.Log($"Новое количество металла: {playerResources.Iron}");
+                LogSender(playerID.Name, OldIronValue, playerResources.Iron, IronMinerType);
+                await UpdateResources(playerResources, playerID);
+                await Task.Delay(TimeProduction);
+                
+                // Остановка работы
                 IsWorkStop = true;
                 OneCycle = false;
                 _animator.SetBool("StopMining",true);
@@ -177,7 +189,6 @@ public class ResourceMiner : MonoBehaviour
             if ((playerResources.CryoCrystal + buildingData.Production[1]) <= CCLimit && playerResources.Energy >= 0)
             {
                 _animator.SetBool("StopMining",false);
-                CanSendMessageToHint = true;
                 Debug.Log($"Старое количество КриоКристаллов: {playerResources.CryoCrystal}");
                 int OldCCValue = playerResources.CryoCrystal;
                 playerResources.CryoCrystal += buildingData.Production[1];
@@ -187,6 +198,17 @@ public class ResourceMiner : MonoBehaviour
                 await Task.Delay(TimeProduction);
             } else if ((playerResources.CryoCrystal + buildingData.Production[1]) > CCLimit)
             {
+                // Добрать значение криоКристалла до лимита
+                Debug.Log($"Старое количество КриоКристаллов: {playerResources.CryoCrystal}");
+                int OldCCValue = playerResources.CryoCrystal;
+                int DifferenceCC = (playerResources.CryoCrystal + buildingData.Production[1]) - CCLimit;
+                playerResources.CryoCrystal += buildingData.Production[1] - DifferenceCC;
+                Debug.Log($"Новое количество КриоКристаллов: {playerResources.CryoCrystal}");
+                LogSender(playerID.Name, OldCCValue, playerResources.CryoCrystal, CCMinerType);
+                await UpdateResources(playerResources, playerID);
+                await Task.Delay(TimeProduction);
+                
+                // Остановка работы
                 IsWorkStop = true;
                 OneCycle = false;
                 _animator.SetBool("StopMining",true);
@@ -196,7 +218,7 @@ public class ResourceMiner : MonoBehaviour
                     CanSendMessageToHint = false;
                 }
                 isRunning = false;
-            }else if (playerResources.Energy < 0)
+            }else if (playerResources.Energy <= 0)
             {
                 IsWorkStop = true;
                 OneCycle = false;

@@ -83,6 +83,11 @@ public class WorkerMovementController : MonoBehaviour
                         {
                             return;
                         }
+                        // Рабочий не побежит к зданию с возможностью содержать рабочих, если там не осталось места
+                        else if (SelectedBuilding.GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= SelectedBuilding.GetComponent<ThisBuildingWorkersControl>().MaxValueOfWorkersInThisBuilding)
+                        {
+                            return;
+                        }
                     }
                     
                     
@@ -116,9 +121,9 @@ public class WorkerMovementController : MonoBehaviour
             anim.SetBool("Running", false);
             anim.SetBool("Idle", true);
             OutlinePOD.SetActive(false);
-            if (SelectedBuilding){
-                SelectedBuilding = null;
-            }
+            //if (SelectedBuilding){
+                //SelectedBuilding = null;
+            //}
         }
     }
 
@@ -127,22 +132,29 @@ public class WorkerMovementController : MonoBehaviour
         Vector3 lastPosition = Vector3.zero;
         Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition); 
         RaycastHit hit;
-    
         if (Physics.Raycast(ray, out hit, 10000f, placementLayerMask))
         {
             lastPosition = hit.point; // Выбранная точка
 
-            if (hit.collider.CompareTag("Building"))
+            if (hit.collider.CompareTag("ClickOnBuilding"))
             {
+                Debug.Log("Выбрано здание");
                 if (hit.collider.gameObject.name == NameOfTTS)
                 {
-                    Debug.Log("Выбрано здание");
+                    
                     SelectedBuilding = hit.collider.gameObject; // Выбранное здание
-                    Debug.Log(SelectedBuilding);   
+                     
                 }
+                else
+                {
+                    SelectedBuilding = hit.collider.gameObject.transform.parent.gameObject; // Выбранное здание+
+                }
+                
+                Debug.Log(SelectedBuilding);  
             }
             else
             {
+                SelectedBuilding = null;
                 OutlinePOD.SetActive(true);
             }
         }
@@ -156,10 +168,10 @@ public class WorkerMovementController : MonoBehaviour
         if(isAutomatic && SelectedBuilding != null){
             currentWalkingPoint.transform.position = SelectedBuilding.transform.parent.transform.Find("EndPointWalk").transform.position;
             WorkerPointOfDestination = currentWalkingPoint.transform;
-            Debug.Log($"Setting destination to: {currentWalkingPoint.transform.position}");
+            //Debug.Log($"Setting destination to: {currentWalkingPoint.transform.position}");
         } else {
             WorkerPointOfDestination = point;
-            Debug.Log($"Setting destination to: {point.position}");
+            //Debug.Log($"Setting destination to: {point.position}");
         }
     }
     private void OnMouseDown() {

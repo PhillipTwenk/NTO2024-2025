@@ -34,6 +34,8 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     {
         if (CurrentNumberWorkersInThisBuilding > 0)
         {
+            WorkersInterBuildingControl.Instance.NumberOfFreeWorkers += 1;
+            Debug.Log($"<color=green>Свободные рабочие + 1: {WorkersInterBuildingControl.Instance.NumberOfFreeWorkers}</color>");
             CurrentNumberWorkersInThisBuilding -= 1;
             GameObject newWorker = Instantiate(WorkerPrefab, null);
             newWorker.transform.position = buildingSpawnWorkerPointTransform.position;

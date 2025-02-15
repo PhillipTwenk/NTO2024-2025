@@ -23,6 +23,8 @@ public class InteractionBuildingController : MonoBehaviour
 
     public List<Transform> PointsOfBuildings;
 
+    public Transform spawnWorker;
+
     private void Start()
     {
         _buildingData = GetComponent<BuildingData>();
@@ -56,7 +58,7 @@ public class InteractionBuildingController : MonoBehaviour
         }
         
         // Если рабочий около здания
-        if(other.gameObject.CompareTag("Worker"))
+        if(other.gameObject.CompareTag("Worker") && other.gameObject.GetComponent<WorkerMovementController>().SelectedBuilding != null)
         {
             WorkerMovementController workerMovementController =
                 other.gameObject.GetComponent<WorkerMovementController>();
@@ -85,7 +87,7 @@ public class InteractionBuildingController : MonoBehaviour
                 WorkersInterBuildingControl.Instance.NotifyWorkerArrival();
 
                 GameObject worker = other.gameObject;
-                WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<Animator>(), worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>());
+                WorkersInterBuildingControl.Instance.StartAnimationBuilding(worker.GetComponent<WorkerMovementController>(), GetComponent<BuildingData>(), spawnWorker);
                 
                 worker.SetActive(false);
                 return;
@@ -95,6 +97,8 @@ public class InteractionBuildingController : MonoBehaviour
             {
                 if (GetComponent<ThisBuildingWorkersControl>())
                 {
+                    WorkersInterBuildingControl.Instance.NumberOfFreeWorkers -= 1;
+                    Debug.Log($"<color=green>Свободные рабочие - 1: {WorkersInterBuildingControl.Instance.NumberOfFreeWorkers}</color>");
                     ThisBuildingWorkersControl thisBuildingWorkersControl = GetComponent<ThisBuildingWorkersControl>();
                     TextMeshPro text = Texthint.GetComponent<TextMeshPro>();
                     if (thisBuildingWorkersControl.CurrentNumberWorkersInThisBuilding < thisBuildingWorkersControl.MaxValueOfWorkersInThisBuilding)

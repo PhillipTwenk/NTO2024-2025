@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3717261112851502999}
   m_Layer: 7
   m_Name: Cube.002
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8078708799311507258}
   m_Layer: 7
   m_Name: "B\xE9zierCurve.002"
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 4691392798449850657}
   m_Layer: 7
   m_Name: Cube.030
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 8002386849331716402}
   m_Layer: 7
   m_Name: Cube.038
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 3185737863730569427}
   m_Layer: 7
   m_Name: Cube.024
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 6754184672387549631}
   m_Layer: 7
   m_Name: Cube.023
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 8901301411711329727}
   m_Layer: 7
   m_Name: Cube.001
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,6 +951,7 @@ Transform:
   - {fileID: 9159258606470651182}
   - {fileID: 3123533105030421494}
   - {fileID: 2270504719492220186}
+  - {fileID: 4046305015241928933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -88.591, z: 0}
 --- !u!1 &4560764129011724311
@@ -1095,7 +1096,7 @@ GameObject:
   - component: {fileID: 2356529967511560876}
   m_Layer: 7
   m_Name: Cube.025
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1420,7 +1421,7 @@ GameObject:
   - component: {fileID: 8437871356377438773}
   m_Layer: 7
   m_Name: TechTriggerScripts
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1509,6 +1510,7 @@ MonoBehaviour:
   - {fileID: 2777084632413483549}
   - {fileID: 7083726501330007807}
   - {fileID: 2923533582019243031}
+  spawnWorker: {fileID: 4046305015241928933}
 --- !u!65 &8437871356377438773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1543,7 +1545,7 @@ GameObject:
   - component: {fileID: 1346743295321617942}
   m_Layer: 7
   m_Name: Cube.003
-  m_TagString: Building
+  m_TagString: ClickOnBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1646,4 +1648,35 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5510187367645275383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7859007700218813771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4046305015241928933}
+  m_Layer: 7
+  m_Name: SpawnWorker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4046305015241928933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7859007700218813771}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7354355, z: -0, w: 0.6775948}
+  m_LocalPosition: {x: -25, y: -0.015247489, z: -0.8}
+  m_LocalScale: {x: 0.4347826, y: 0.4347826, z: 0.4347826}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1302777760609511827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
