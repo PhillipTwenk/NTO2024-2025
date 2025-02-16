@@ -113,8 +113,8 @@ public class EnergyProduction : MonoBehaviour
     {
         if (GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding >= 1)
         {
-            GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding -= 1;
-            _buildingData = GetComponent<BuildingData>();
+            // GetComponent<ThisBuildingWorkersControl>().CurrentNumberWorkersInThisBuilding -= 1;
+            // _buildingData = GetComponent<BuildingData>();
         
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(true);    
         
@@ -135,10 +135,10 @@ public class EnergyProduction : MonoBehaviour
                     playerResources.Food, playerResources.CryoCrystal);
             });
             ResourceUpdateEvent.TriggerEvent();
-            GameObject newWorker = Instantiate(GetComponent<ThisBuildingWorkersControl>().WorkerPrefab, null);
-            newWorker.transform.position = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.position;
-            newWorker.transform.rotation = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.rotation;
-            newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
+            // GameObject newWorker = Instantiate(GetComponent<ThisBuildingWorkersControl>().WorkerPrefab, null);
+            // newWorker.transform.position = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.position;
+            // newWorker.transform.rotation = GetComponent<ThisBuildingWorkersControl>().buildingSpawnWorkerPointTransform.rotation;
+            // newWorker.transform.GetChild(0).GetComponent<WorkerMovementController>().MainCamera = WorkersInterBuildingControl.MainCamera;
 
             TextChangerEnergy(text);
             LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);

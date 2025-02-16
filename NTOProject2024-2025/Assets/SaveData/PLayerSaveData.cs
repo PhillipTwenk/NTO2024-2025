@@ -97,7 +97,7 @@ public class PlayerSaveData : ScriptableObject, ISerializableSO
 
                 if (ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>())
                 {
-                    Debug.Log($"ЭТО оБЩАГА Э/ТО ОБЩАГА ТУТ СТУДЕНТЫ ЖИВУТ ЫЫЫЫ");
+                    Debug.Log($"Здание {buildingData.name}, количество рабочих в нем: <color=green>{BuildingWorkersInformationList[i].CurrentNumberOfWorkersInThisBuilding}</color>");
                     ThisBuildingWorkersControl workers = ComponentContainingBuilding.GetComponent<ThisBuildingWorkersControl>();
                     workers.CurrentNumberWorkersInThisBuilding = BuildingWorkersInformationList[i].CurrentNumberOfWorkersInThisBuilding;
                     workers.MaxValueOfWorkersInThisBuilding = BuildingWorkersInformationList[i].MaxValueOfWorkersInThisBuilding;

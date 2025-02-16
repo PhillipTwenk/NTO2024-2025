@@ -80,11 +80,11 @@ public class BuildingManager : MonoBehaviour
     /// <returns></returns>
     public Vector3 GetSelectedMapPosition()
     {
+        lastPosition = Vector3.zero;
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = MainCamera.nearClipPlane;
         Ray ray = MainCamera.ScreenPointToRay(mousePos);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2000, placementLayerMask))
+        if (Physics.Raycast(ray, out hit, 10000, placementLayerMask))
         {
             lastPosition = hit.point;
         }

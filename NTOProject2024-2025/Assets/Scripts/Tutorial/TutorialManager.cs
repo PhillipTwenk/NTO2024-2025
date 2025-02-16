@@ -130,12 +130,20 @@ public class TutorialManager : MonoBehaviour
 
         if (currentTutorialObjective.IsTimeStopOnThisStep)
         {
+            if (WorkersInterBuildingControl.SelectedWorker != null)
+            {
+                WorkersInterBuildingControl.SelectedWorker.possibilityClickOnWorker = false;
+            }
             FadeFone.SetActive(true);
             Time.timeScale = 0f;
             IsTutorialTimeStop = true;
         }
         else
         {
+            if (WorkersInterBuildingControl.SelectedWorker != null)
+            {
+                WorkersInterBuildingControl.SelectedWorker.possibilityClickOnWorker = true;
+            }
             FadeFone.SetActive(false);
             Time.timeScale = 1f;
             IsTutorialTimeStop = false;

@@ -27,7 +27,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
     // public TextMeshProUGUI HintTextTMPro;
 
     public event Action IsWorkerHereEvent; // Игрок прибыл
-    public static GameObject SelectedWorker;
+    public static WorkerMovementController SelectedWorker;
     public Camera mainCamera;
     public static Camera MainCamera;
 
@@ -175,7 +175,7 @@ public class WorkersInterBuildingControl : MonoBehaviour
             {
                 if (buildingControl.CurrentNumberWorkersInThisBuilding > 0)
                 {
-                    buildingControl.NumberOfActiveWorkersInThisBuilding += 1;
+                    //buildingControl.NumberOfActiveWorkersInThisBuilding += 1;
                     buildingControl.CurrentNumberWorkersInThisBuilding -= 1;
                     
                     Transform buildingSpawnWorkerPointTransform = buildingControl.buildingSpawnWorkerPointTransform;
@@ -217,6 +217,8 @@ public class WorkersInterBuildingControl : MonoBehaviour
         movementController.ReadyForWork = true;
         movementController.SelectedBuilding = null;
         movementController.ArriveForBuildBuidling = false;
+        movementController.isSelected = false;
+        movementController.isSelecting = false;
         movementController.gameObject.SetActive(true);
         
         NumberOfFreeWorkers += 1;

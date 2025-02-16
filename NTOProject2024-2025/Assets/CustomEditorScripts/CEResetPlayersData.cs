@@ -1,12 +1,30 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEditor;
 
+public static class PathsEditorWindow
+{
+    public static List<string> EntitiesPaths = new List<string>()
+    {
+        "Assets/Entities/EntitiesSOs/Players/Player1/Player1.asset",
+        "Assets/Entities/EntitiesSOs/Players/Player2/Player2.asset",
+        "Assets/Entities/EntitiesSOs/Players/Player3/Player3.asset"
+    };
+
+    public static List<string> PSDPaths = new List<string>()
+    {
+        "Assets/SaveData/playerSaveDatas/StartValues.asset",
+        "Assets/SaveData/playerSaveDatas/Player1SaveData.asset",
+        "Assets/SaveData/playerSaveDatas/Player2SaveData.asset",
+        "Assets/SaveData/playerSaveDatas/Player3SaveData.asset"
+        
+    };
+}
+
+#if UNITY_EDITOR
 public class CEResetPlayersData: EditorWindow
 {
-    private List<PlayerSaveData> playerSaves = new List<PlayerSaveData>();
     private PlayerSaveData DefaultPSD;
     private Vector2 scrollPosition;
 
@@ -35,70 +53,23 @@ public class CEResetPlayersData: EditorWindow
         }
         
         GUILayout.Space(20);
-        
+                
         GUILayout.Label("Reset PlayerSaveData", EditorStyles.boldLabel);
 
-        // Дефолтное значение
-        DefaultPSD
-            = (PlayerSaveData)EditorGUILayout.ObjectField("Default PSD SO", DefaultPSD, typeof(PlayerSaveData), false, GUILayout.Width(250));
-        
-        GUILayout.Space(10);
-
-        GUILayout.Label("Add playerSO", EditorStyles.label);
-        
-        // Кнопка для добавления нового пустого поля
-        if (GUILayout.Button("Add field"))
+        if (GUILayout.Button("Reset"))
         {
-            playerSaves.Add(null);
-        }
-
-        GUILayout.Space(5);
-        
-        if (playerSaves.Count == 0)
-        {
-            GUILayout.Label("None saved SOs", EditorStyles.label);
-        }
-        else
-        {
-            GUILayout.Label("Saved SOs:", EditorStyles.label);
-        }
-        
-        
-        // Скроллируемый список полей
-        scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Height(300));
-
-        for (int i = 0; i < playerSaves.Count; i++)
-        {
-            GUILayout.BeginHorizontal();
-
-            // Поле для перетаскивания ScriptableObject
-            playerSaves[i] = (PlayerSaveData)EditorGUILayout.ObjectField(
-                playerSaves[i], typeof(PlayerSaveData), false, GUILayout.Width(250));
-
-            // Кнопка удаления
-            if (GUILayout.Button("Delete", GUILayout.Width(70)))
-            {
-                playerSaves.RemoveAt(i);
-                break;
-            }
-
-            GUILayout.EndHorizontal();
+            ResetPlayerData();
         }
         
         GUILayout.Space(20);
         
-        if (GUILayout.Button("Reset player save datas"))
+        
+        GUILayout.Label("Reset Entities Datas");
+        
+        if (GUILayout.Button("Reset"))
         {
-            for (int i = 0; i < playerSaves.Count; i++)
-            {
-                playerSaves[i].playerBuildings = DefaultPSD.playerBuildings;
-                playerSaves[i].buildingsTransform = DefaultPSD.buildingsTransform;
-                playerSaves[i].BuildingDatas = DefaultPSD.BuildingDatas;
-                playerSaves[i].BuildingWorkersInformationList = DefaultPSD.BuildingWorkersInformationList;
-            }
+            ResetEntitiesDatas();
         }
-
-        GUILayout.EndScrollView();
     }
     
     private void DeleteJsonFilesFromDirectory()
@@ -135,4 +106,35 @@ public class CEResetPlayersData: EditorWindow
         }
     }
 
+    private void ResetPlayerData()
+    {
+        PlayerSaveData dPSD = AssetDatabase.LoadAssetAtPath<PlayerSaveData>(PathsEditorWindow.PSDPaths[0]);
+        for (int i = 0; i < PathsEditorWindow.PSDPaths.Count; i++)
+        {
+            PlayerSaveData PSD = AssetDatabase.LoadAssetAtPath<PlayerSaveData>(PathsEditorWindow.PSDPaths[i]);
+            
+            PSD.playerBuildings =  dPSD.playerBuildings;
+            PSD.buildingsTransform = dPSD.buildingsTransform;
+            PSD.BuildingDatas = dPSD.BuildingDatas;
+            PSD.BuildingWorkersInformationList = dPSD.BuildingWorkersInformationList;
+        }
+    }
+
+    private void ResetEntitiesDatas()
+    {
+        PlayerSaveData dPSD = AssetDatabase.LoadAssetAtPath<PlayerSaveData>(PathsEditorWindow.PSDPaths[0]);
+        
+        for (int i = 0; i < PathsEditorWindow.EntitiesPaths.Count; i++)
+        {
+            EntityID entityID = AssetDatabase.LoadAssetAtPath<EntityID>(PathsEditorWindow.EntitiesPaths[i]);
+            PlayerSaveData PSD = AssetDatabase.LoadAssetAtPath<PlayerSaveData>(PathsEditorWindow.PSDPaths[i + 1]);
+            
+            entityID.Name = entityID.DefaultName;
+            entityID._playerSaveData = PSD;
+            entityID.DefaultPlayerSaveData = dPSD;
+        }
+    }
+
 }
+
+#endif

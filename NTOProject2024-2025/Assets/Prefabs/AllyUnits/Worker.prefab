@@ -230,9 +230,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.78
-  m_Height: 18.95
+  m_Height: 18.167856
   m_Direction: 1
-  m_Center: {x: 0, y: 7.6, z: 0}
+  m_Center: {x: 0, y: 7.2089167, z: 0}
 --- !u!54 &3647611592747158119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -280,6 +280,7 @@ MonoBehaviour:
   ArriveForBuildBuidling: 0
   isSelected: 0
   isSelecting: 0
+  possibilityClickOnWorker: 0
   SelectedBuilding: {fileID: 0}
   placementLayerMask:
     serializedVersion: 2

@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
         failedRequestLimitExceededUITMP_Text.transform.parent.gameObject.SetActive(true);
         failedRequestLimitExceededUITMP_Text.text = failedRequestLimitExceededUIText;
 
-        Utility.Invoke(this, () => failedRequestLimitExceededUITMP_Text.transform.parent.gameObject.SetActive(true),
+        Utility.Invoke(this, () => failedRequestLimitExceededUITMP_Text.transform.parent.gameObject.SetActive(false),
             8f);
     }
 

@@ -11,7 +11,7 @@ public class ThisBuildingWorkersControl : MonoBehaviour
     
     public int CurrentNumberWorkersInThisBuilding;
     public int MaxValueOfWorkersInThisBuilding;
-    public int NumberOfActiveWorkersInThisBuilding;
+    //public int NumberOfActiveWorkersInThisBuilding;
 
     public Transform buildingSpawnWorkerPointTransform;
 

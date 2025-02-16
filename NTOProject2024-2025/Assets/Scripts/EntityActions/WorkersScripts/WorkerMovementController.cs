@@ -16,6 +16,7 @@ public class WorkerMovementController : MonoBehaviour
     public bool ArriveForBuildBuidling;
     public bool isSelected;
     public bool isSelecting; // Мышь наведена на персонажа
+    public bool possibilityClickOnWorker;
     private Animator anim;
     public GameObject SelectedBuilding; // techTriggerScripts
     [SerializeField] private LayerMask placementLayerMask;
@@ -30,6 +31,7 @@ public class WorkerMovementController : MonoBehaviour
     private Rigidbody _rb;
     void Start()
     {
+        possibilityClickOnWorker = true;
         currentWalkingPoint.gameObject.SetActive(false);
         ReadyForWork = true;
         agent = GetComponent<NavMeshAgent>();
@@ -49,7 +51,7 @@ public class WorkerMovementController : MonoBehaviour
 
     void Update()
     {
-        if(isSelected){
+        if(isSelected && possibilityClickOnWorker){
             
             if (Input.GetMouseButtonDown(0) && !isSelecting)
             {
@@ -175,20 +177,28 @@ public class WorkerMovementController : MonoBehaviour
         }
     }
     private void OnMouseDown() {
-        if (!isSelected) {
-            OutlineRotate.SetActive(true);
-            isSelected = true;
-            WorkersInterBuildingControl.SelectedWorker = this.gameObject;
-        } else {
-            OutlineRotate.SetActive(false);
-            isSelected = false;
-            WorkersInterBuildingControl.SelectedWorker = this.gameObject;
+        if (possibilityClickOnWorker)
+        {
+            if (!isSelected) {
+                if (WorkersInterBuildingControl.SelectedWorker != null)
+                {
+                    WorkersInterBuildingControl.SelectedWorker.isSelected = false;
+                    WorkersInterBuildingControl.SelectedWorker.isSelecting = false;
+                }
+                OutlineRotate.SetActive(true);
+                isSelected = true;
+                WorkersInterBuildingControl.SelectedWorker = this;
+            } else {
+                OutlineRotate.SetActive(false);
+                isSelected = false;
+                WorkersInterBuildingControl.SelectedWorker = this;
+            }
         }
     }
 
     private void OnMouseEnter() {
         isSelecting = true;
-        if(!isSelected)
+        if(!isSelected && possibilityClickOnWorker)
         {
             OutlineRotate.SetActive(true);
             //OutlineMaterial.color = OutlineColor;
@@ -197,7 +207,7 @@ public class WorkerMovementController : MonoBehaviour
 
     private void OnMouseExit() {
         isSelecting = false;
-        if(!isSelected){
+        if(!isSelected && possibilityClickOnWorker){
             OutlineRotate.SetActive(false);
             //OutlineMaterial.color = BasedOutlineColor;
         }

@@ -120,13 +120,20 @@ public class PlansInShopControl : MonoBehaviour
                     break;
             }
         }
-        
-        
+
+        if (WorkersInterBuildingControl.SelectedWorker != null)
+        {
+            WorkersInterBuildingControl.SelectedWorker.possibilityClickOnWorker = false;
+        }
         LoadingCanvasController.Instance.LoadingCanvasTransparent.SetActive(false);
     }
 
     private void OnDisable()
     {
+        if (WorkersInterBuildingControl.SelectedWorker != null)
+        {
+            WorkersInterBuildingControl.SelectedWorker.possibilityClickOnWorker = true;
+        }
         CloseShopTutorialTutorial.CheckAndUpdateTutorialState();
     }
 
